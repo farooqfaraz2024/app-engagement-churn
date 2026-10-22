@@ -81,3 +81,16 @@ def test_forward_chaining_never_fits_on_the_future(snapshots):
         val_snap = train["snapshot_date"].iloc[val].unique()
         assert len(val_snap) == 1
         assert (train["snapshot_date"].iloc[fit] + gap <= val_snap[0]).all()
+
+
+def test_bootstrap_difference_detects_a_better_score():
+    from appchurn.model import bootstrap_auc_difference
+
+    rng = np.random.default_rng(1)
+    y = rng.integers(0, 2, 600)
+    good = y + rng.normal(0, 0.5, 600)
+    noise = rng.normal(0, 1, 600)
+    users = np.repeat(np.arange(200), 3)
+    out = bootstrap_auc_difference(y, good, noise, users, n_boot=200)
+    assert out["ci_low"] > 0
+    assert out["share_of_resamples_model_better"] == 1.0

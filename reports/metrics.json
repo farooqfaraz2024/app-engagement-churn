@@ -1,0 +1,46 @@
+{
+  "selected_model": "Gradient boosting",
+  "model_vs_recency_rule_auc": {
+    "difference": 0.030530225384511556,
+    "ci_low": 0.01580441664424704,
+    "ci_high": 0.043355160765318895,
+    "share_of_resamples_model_better": 1.0
+  },
+  "population": ">= 3 active days in 28",
+  "all_user_snapshots": 52828,
+  "all_users_churn_rate": 0.7275687135609904,
+  "population_user_snapshots": 14064,
+  "population_churn_rate": 0.42946530147895334,
+  "train_rows": 9339,
+  "test_rows": 3573,
+  "train_users": 2776,
+  "test_users": 1661,
+  "train_snapshots": [
+    "2018-07-10",
+    "2018-07-17",
+    "2018-07-24",
+    "2018-07-31",
+    "2018-08-07",
+    "2018-08-14",
+    "2018-08-21"
+  ],
+  "test_snapshots": [
+    "2018-09-04",
+    "2018-09-11",
+    "2018-09-18"
+  ],
+  "test_churn_rate": 0.389028827315981,
+  "roc_auc": 0.7982091834548852,
+  "pr_auc": 0.7092498770806474,
+  "brier_score": 0.18223777226571156,
+  "mean_predicted_churn": 0.3410895872579109,
+  "forward_chaining_val_roc_auc": 0.8241075002910949,
+  "grouped_cv_roc_auc": 0.8879326593694943,
+  "recency_rule_roc_auc": 0.7676789580703737,
+  "recency_rule_pr_auc": 0.6728379183535719,
+  "top20_share_of_churners_model": 0.3877697841726619,
+  "top20_share_of_churners_rule": 0.3762589928057554,
+  "top20_lift_model": 1.9377642501383507,
+  "top20_lift_rule": 1.8802424913216278,
+  "top20_churn_rate_model": 0.7538461538461538
+}

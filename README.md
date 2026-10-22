@@ -19,7 +19,41 @@ demo dataset, obfuscated GA4/Firebase events from a puzzle game on Android and i
 
 ## Key results
 
-RESULTS_PENDING
+Out-of-time test on September 2018 (3 weekly snapshots, 3,573 user-snapshots,
+1,661 regular users, 38.9% churn), after training on July and August:
+
+| | ROC-AUC | PR-AUC | Churners reached, top 10% | Top 20% | Top 50% |
+|---|---:|---:|---:|---:|---:|
+| Gradient boosting | **0.798** | **0.709** | 21.2% | 38.8% | 76.8% |
+| Recency rule (no model) | 0.768 | 0.673 | 20.3% | 37.6% | 74.4% |
+| Random selection | 0.500 | 0.389 | 10.0% | 20.0% | 50.0% |
+
+- **The model beats the no-model rule, but modestly.** The ROC-AUC gain is +0.031
+  with a 95% interval of +0.016 to +0.043 (bootstrap over users), and it wins in each
+  of the three test weeks. In campaign terms that is 1 to 4 extra churners reached
+  per 100 users contacted, depending on campaign size. Of the 10% of users ranked riskiest, 83% did churn, 2.1 times the
+  base rate.
+- **Silence is most of the story.** Days since last activity matters about 2.5 times
+  more than the next feature (active days) and roughly as much as all others combined. Users last seen yesterday churn at 10%; users
+  silent for three weeks or more churn at 94%.
+- **Engagement level splits the base.** Across all users, 87% of one-day visitors
+  churn and 8% of users active on 11+ days do. The model targets regular users (3+
+  active days in 28), as a telecom retention team would; one-off visitors are an
+  onboarding problem.
+- **Friction events added almost nothing.** Counting fails, retries, running out of
+  extra steps, errors and crashes moved test ROC-AUC from 0.794 to 0.798. Their
+  signal is already captured by silence.
+- **Time-blind validation overstated performance.** User-grouped cross-validation
+  promised 0.888. Forward-in-time validation promised 0.824, and the September test
+  delivered 0.798. Model selection here uses the time-ordered method.
+
+![Churners reached by contacting the riskiest users first](reports/figures/gains_curve.png)
+
+![Churn rate by engagement level](reports/figures/churn_by_engagement.png)
+
+![Churn rate by days since last activity](reports/figures/churn_by_recency.png)
+
+![What predicts churn](reports/figures/feature_importance.png)
 
 ## Why a game dataset is a fair stand-in for a telecom app
 
@@ -37,10 +71,16 @@ names differ. Swapping the list of "journey" events in
 | Social / referral | `challenge_a_friend` | Refer a friend, family sharing |
 | Silence | days since last active | Days since last login or top-up |
 | Fading | last 7 days vs. 28-day average | This week's usage vs. normal |
+| Friction | `level_fail_quickplay`, `level_retry_quickplay` | Failed or retried payment or recharge |
+| Running out | `no_more_extra_steps` | Data bundle or balance exhausted |
+| Errors | `error`, `app_exception` | App errors, crashes, failed transactions |
+| Breadth of use | `select_content`, `level_start`, `level_up` | Browsing plans, a second product, upgrading |
 | Leaving for good | `app_remove` | App uninstall, port-out, line deactivation |
 
-The weak spot: a game is not a telecom service, and in-app spend here is tiny. The
-method transfers; the specific coefficients do not.
+The weak spot: a game is not a telecom service. In-app spend here is negligible
+(27 purchases in four months), so revenue features carry no signal, unlike a telecom
+app where payments and recharges are central. The method transfers; the specific
+results do not.
 
 ## How it works
 
@@ -52,8 +92,9 @@ BigQuery (raw events, one row per event)
    ▼
 user-snapshot table (one row per user per snapshot)  ──►  data/user_snapshots.parquet
    │
-   │  Python: out-of-time split  (train: Jul–Aug, test: Sep)
-   │          grouped cross-validation  (no user in both train and validation folds)
+   │  Python: population = regular users (3+ active days in 28)
+   │          out-of-time split  (train: Jul–Aug, test: Sep)
+   │          forward-chaining validation for model selection
    │          benchmarks: churn rate, and a "recency rule" with no model
    ▼
 model ──► gains / lift for campaign sizing, feature importance, stability per week
@@ -63,7 +104,9 @@ model ──► gains / lift for campaign sizing, feature importance, stability 
 
 At each weekly snapshot date **T**:
 
-- **In scope:** users active at least once in the 28 days before T.
+- **In scope:** users active on at least 3 of the 28 days before T. The SQL returns
+  everyone active at least once (52,828 user-snapshots, 12,849 users); the model uses
+  the 14,064 user-snapshots from 3,391 regular users.
 - **Features** describe those 28 days: active days, sessions, minutes of engagement,
   counts of each journey event, spend, days since last activity, tenure, the trend of
   the last 7 days against the 28-day average, platform, country.
@@ -80,11 +123,23 @@ predicts. Day T itself belongs to the future window only, and a test checks this
 - **Out-of-time test set.** The model trains on July and August snapshots and is
   tested on September, as it would be in production. A training snapshot is kept only
   if its 14-day label window ends before the first test snapshot.
-- **Grouped cross-validation.** The same user appears in several weekly snapshots,
-  so folds are split by user. Otherwise the model would be validated on people it had
-  already seen.
+- **Validation that respects time.** Models are compared by forward chaining: each of
+  the last three training weeks is predicted by a model fitted only on earlier weeks
+  whose labels were already known. User-grouped cross-validation is reported too, to
+  show how much a time-blind method overstates (0.888 vs. 0.798 on the test).
+- **Uncertainty, not just a point estimate.** The model's edge over the benchmark is
+  bootstrapped by user, because the same user appears in several weekly snapshots.
 - **A real benchmark.** Ranking users by "days since last seen" needs no model and
   is hard to beat. The model is only worth deploying if it clearly does better.
+
+### Data quality issues found and handled
+
+- BigQuery returns dates as a `dbdate` type that standard parquet readers reject; the
+  extract converts them before saving.
+- 12 of 52,828 user-snapshots had placeholder install dates (1970 and 1 January 2015)
+  in the obfuscated export, implying tenures of up to 48 years. Installs before 2016,
+  when the game's real install dates begin, are treated as unknown.
+- BigQuery integers arrive as nullable `Int64`, converted to floats for scikit-learn.
 
 ### Cost control in BigQuery
 
@@ -93,9 +148,24 @@ predicts. Day T itself belongs to the future window only, and a test checks this
   day before anything else.
 - Every query is **dry-run first** to report the bytes it will scan, then runs with
   `maximum_bytes_billed` as a hard cap (10 GB by default), so a mistake fails instead
-  of costing money.
+  of costing money. The full extract scans about 1.4 GB.
 - Authentication uses Application Default Credentials. No key file exists in the
   repository, and `.gitignore` blocks common credential file names.
+
+## Limitations
+
+- **Small edge over a simple rule.** Before deploying, a team would weigh +0.03 ROC-AUC
+  against the cost of running a model instead of a one-line rule. With richer data
+  (payments, plan, network quality, complaints) the gap would likely widen; here the
+  events mostly describe *how much* someone played.
+- **Under-predicted churn in September.** The model's average predicted churn was 34%
+  against an actual 39%, because behaviour shifted between summer and September. Risk
+  rankings hold, but probabilities should be recalibrated on recent weeks before
+  being used for budget planning.
+- **Predicts who will leave, not who can be saved.** Choosing whom to contact needs an
+  uplift model trained on the results of a real retention campaign.
+- **Three test weeks, one app, 2018 data.** The obfuscated export also adds
+  placeholder values, which limits how far any single number should be trusted.
 
 ## Testing without Google Cloud
 
@@ -107,7 +177,8 @@ tables, including the nested `event_params` structure. The tests cover:
 - uninstalls and other passive events not counting as a return
 - journey counts, engagement minutes, revenue, recency and tenure
 - an end-to-end run on synthetic users who fade out before leaving
-- the cost cap being passed to BigQuery
+- the cost cap being passed to BigQuery, and BigQuery date types being converted
+- forward-chaining validation never fitting on the future
 
 CI runs all of this on every push without any Google credentials.
 
@@ -120,10 +191,11 @@ app-engagement-churn/
 │   ├── sql/
 │   │   ├── user_snapshot_features.sql   # features + labels, BigQuery SQL
 │   │   ├── event_profile.sql            # which events exist and how often
+│   │   ├── copy_public_dataset.sql      # optional: copy the export into your project
 │   │   └── __init__.py                  # renders and validates the SQL
 │   ├── extract.py         # google-cloud-bigquery: dry run, cost cap, parquet cache
-│   ├── features.py        # derived trend features, out-of-time split
-│   ├── model.py           # pipelines, recency-rule benchmark, gains/lift
+│   ├── features.py        # cleaning, trend features, population, time-based splits
+│   ├── model.py           # pipelines, recency-rule benchmark, gains/lift, bootstrap
 │   ├── train.py           # CV, final evaluation, reports
 │   └── plots.py
 ├── tests/                 # SQL logic in DuckDB, end-to-end pipeline, extract
@@ -150,6 +222,7 @@ pip install -e ".[dev]"
 
 gcloud auth application-default login                   # one time
 export GCP_PROJECT=your-project-id                      # Windows: $env:GCP_PROJECT="your-project-id"
+# export EVENTS_TABLE=your-project-id.flood_it.events  # only if you made your own copy
 
 python -m appchurn.extract --dry-run    # how much data each query will scan (free)
 python -m appchurn.extract              # run in BigQuery, save data/user_snapshots.parquet

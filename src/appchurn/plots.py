@@ -34,7 +34,7 @@ def _style(ax: plt.Axes, title: str, xlabel: str, ylabel: str) -> None:
 
 
 def plot_gains(
-    curves: dict[str, tuple[np.ndarray, np.ndarray]], out: Path, mark: float = 0.2
+    curves: dict[str, tuple[np.ndarray, np.ndarray]], out: Path, mark: float = 0.5
 ) -> None:
     """Cumulative gains: share of churners reached vs. share of users contacted."""
     colors = [BLUE, ORANGE]
@@ -42,7 +42,8 @@ def plot_gains(
     ax.plot(
         [0, 100], [0, 100], color=INK_MUTED, linewidth=1, linestyle="--", label="Random selection"
     )
-    for (name, (x, y)), color in zip(curves.items(), colors, strict=False):
+    offsets = [(-34, 8), (8, -16)]  # first series labelled above-left, second below-right
+    for (name, (x, y)), color, offset in zip(curves.items(), colors, offsets, strict=False):
         ax.plot(x * 100, y * 100, color=color, linewidth=2, label=name)
         at = y[np.searchsorted(x, mark)] * 100
         ax.scatter([mark * 100], [at], s=50, color=color, zorder=3, edgecolor=SURFACE, linewidth=2)
@@ -50,7 +51,7 @@ def plot_gains(
             f"{at:.0f}%",
             (mark * 100, at),
             textcoords="offset points",
-            xytext=(8, -4),
+            xytext=offset,
             fontsize=9,
             color=INK,
         )
@@ -99,7 +100,7 @@ def plot_churn_by_recency(df: pd.DataFrame, out: Path) -> None:
         ax.text(i, rate * 100 + 1.5, f"{rate:.0%}", ha="center", fontsize=9, color=INK)
     _style(
         ax,
-        "Churn rate by days since last activity (all snapshots)",
+        "Churn rate by days since last activity (regular users, all snapshots)",
         "Days since the user was last active, at the snapshot date",
         "Churn rate (%)",
     )

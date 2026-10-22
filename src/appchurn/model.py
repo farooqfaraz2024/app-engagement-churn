@@ -98,3 +98,39 @@ def gains_curve(y_true: np.ndarray, score: np.ndarray) -> tuple[np.ndarray, np.n
     x = np.arange(1, len(y_sorted) + 1) / len(y_sorted)
     y = np.cumsum(y_sorted) / max(y_sorted.sum(), 1)
     return np.concatenate([[0], x]), np.concatenate([[0], y])
+
+
+def bootstrap_auc_difference(
+    y_true: np.ndarray,
+    score_a: np.ndarray,
+    score_b: np.ndarray,
+    groups: np.ndarray,
+    n_boot: int = 1000,
+    seed: int = RANDOM_STATE,
+) -> dict:
+    """95% interval for ROC-AUC(a) - ROC-AUC(b), resampling users, not rows.
+
+    The same user appears in several weekly snapshots, so rows are not independent;
+    resampling whole users keeps the interval honest.
+    """
+    from sklearn.metrics import roc_auc_score
+
+    y_true, score_a, score_b = map(np.asarray, (y_true, score_a, score_b))
+    users, idx = np.unique(np.asarray(groups), return_inverse=True)
+    rows_by_user = [np.flatnonzero(idx == i) for i in range(len(users))]
+    rng = np.random.default_rng(seed)
+    diffs = []
+    for _ in range(n_boot):
+        pick = rng.integers(0, len(users), len(users))
+        rows = np.concatenate([rows_by_user[i] for i in pick])
+        y = y_true[rows]
+        if y.min() == y.max():
+            continue
+        diffs.append(roc_auc_score(y, score_a[rows]) - roc_auc_score(y, score_b[rows]))
+    diffs = np.array(diffs)
+    return {
+        "difference": float(roc_auc_score(y_true, score_a) - roc_auc_score(y_true, score_b)),
+        "ci_low": float(np.percentile(diffs, 2.5)),
+        "ci_high": float(np.percentile(diffs, 97.5)),
+        "share_of_resamples_model_better": float((diffs > 0).mean()),
+    }

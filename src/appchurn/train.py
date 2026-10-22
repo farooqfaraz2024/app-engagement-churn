@@ -35,7 +35,13 @@ from appchurn.features import (
     numeric_features,
     out_of_time_split,
 )
-from appchurn.model import candidate_models, gains_curve, gains_table, recency_rule_score
+from appchurn.model import (
+    bootstrap_auc_difference,
+    candidate_models,
+    gains_curve,
+    gains_table,
+    recency_rule_score,
+)
 
 SCORING = {"roc_auc": "roc_auc", "pr_auc": "average_precision"}
 
@@ -152,8 +158,12 @@ def run(
     per_snapshot.to_csv(reports_dir / "test_by_snapshot.csv", index=False)
 
     top20 = gains.loc[np.isclose(gains["contacted_share"], 0.2)].iloc[0]
+    edge = bootstrap_auc_difference(
+        y_test, proba, rule, test["user_pseudo_id"].to_numpy(), n_boot=200 if fast else 1000
+    )
     metrics = {
         "selected_model": best_name,
+        "model_vs_recency_rule_auc": edge,
         "population": f">= {WINDOWS.min_active_days} active days in {WINDOWS.observation_days}",
         "all_user_snapshots": len(everyone),
         "all_users_churn_rate": float(everyone[TARGET].mean()),
@@ -240,6 +250,10 @@ def run(
     print(
         f"Top 20% riskiest reach {metrics['top20_share_of_churners_model']:.0%} of churners "
         f"(rule {metrics['top20_share_of_churners_rule']:.0%})"
+    )
+    print(
+        f"Model minus recency rule ROC-AUC: {edge['difference']:+.3f} "
+        f"(95% CI {edge['ci_low']:+.3f} to {edge['ci_high']:+.3f})"
     )
     print("\nTest by snapshot:")
     print(per_snapshot.round(3).to_string(index=False))
