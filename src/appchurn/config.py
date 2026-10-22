@@ -35,6 +35,10 @@ class DatasetConfig:
     )
     data_start: date = date(2018, 6, 12)
     data_end: date = date(2018, 10, 3)
+    # First-touch dates before this are placeholders in the obfuscated export
+    # (1970-01-01-style epochs, 2015-01-01); the app's real installs start in May 2016.
+    # Tenures implying an earlier start are treated as unknown.
+    earliest_valid_first_touch: date = date(2016, 1, 1)
 
     # Business-meaningful actions ("journeys"), counted per user in the observation
     # window. For a telecom app these would be e.g. login, bill_payment, recharge,
@@ -51,6 +55,16 @@ class DatasetConfig:
         "completed_5_levels",
         "use_extra_steps",
         "in_app_purchase",
+        # Friction and frustration: failed attempts, running out, errors, crashes
+        "level_fail_quickplay",
+        "level_retry_quickplay",
+        "no_more_extra_steps",
+        "error",
+        "app_exception",
+        # Breadth of use: browsing content, the second game mode, progression
+        "select_content",
+        "level_start",
+        "level_up",
     )
 
     # Automatic events that do not show the user actually chose to use the app.
@@ -74,12 +88,17 @@ class WindowConfig:
 
     At each snapshot date T:
       * features describe the user's behaviour in [T - observation_days, T)
-      * the user is in scope only if they were active at least once in that window
+      * the user is in the SQL output if they were active at least once in that
+        window, and in the model population if active on ``min_active_days`` days
       * churned = 1 if the user has no active event in [T, T + churn_days)
     """
 
     observation_days: int = 28
     churn_days: int = 14
+    # Model population: regular users only, as telecom retention models score the
+    # established base. One-off visitors (most of a casual game's traffic) churn at
+    # ~87% and are an onboarding problem, not a retention one.
+    min_active_days: int = 3
     snapshot_every_days: int = 7
     # Snapshots on or after this date form the out-of-time test set.
     test_from: date = date(2018, 9, 4)

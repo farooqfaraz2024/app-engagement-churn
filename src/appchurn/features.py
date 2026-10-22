@@ -7,7 +7,7 @@ from datetime import timedelta
 import numpy as np
 import pandas as pd
 
-from appchurn.config import WINDOWS, WindowConfig
+from appchurn.config import DATASET, WINDOWS, DatasetConfig, WindowConfig
 
 ID_COLUMNS = ["snapshot_date", "user_pseudo_id"]
 TARGET = "churned"
@@ -35,9 +35,19 @@ def add_derived_features(df: pd.DataFrame, windows: WindowConfig = WINDOWS) -> p
     return df.replace([np.inf, -np.inf], np.nan)
 
 
-def clean(df: pd.DataFrame) -> pd.DataFrame:
+def clean(df: pd.DataFrame, dataset: DatasetConfig = DATASET) -> pd.DataFrame:
     df = df.copy()
     df["snapshot_date"] = pd.to_datetime(df["snapshot_date"]).dt.date
+    # BigQuery integers arrive as nullable Int64; scikit-learn wants plain floats.
+    for col in df.columns:
+        if str(df[col].dtype) in {"Int64", "Int32", "Float64"}:
+            df[col] = df[col].astype("float64")
+    # Placeholder first-touch timestamps would give tenures of decades.
+    max_tenure = pd.Series(
+        [(d - dataset.earliest_valid_first_touch).days for d in df["snapshot_date"]],
+        index=df.index,
+    )
+    df["tenure_days"] = df["tenure_days"].where(df["tenure_days"] <= max_tenure)
     for col in CATEGORICAL:
         df[col] = df[col].fillna("Unknown").replace({"": "Unknown"}).astype(str)
     top = df["country"].value_counts().head(TOP_COUNTRIES).index
@@ -49,6 +59,12 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
 def numeric_features(df: pd.DataFrame) -> list[str]:
     excluded = set(ID_COLUMNS) | set(CATEGORICAL) | {TARGET}
     return [c for c in df.columns if c not in excluded and pd.api.types.is_numeric_dtype(df[c])]
+
+
+def model_population(df: pd.DataFrame, windows: WindowConfig = WINDOWS) -> pd.DataFrame:
+    """Regular users: active on at least ``min_active_days`` days of the window."""
+    col = f"active_days_{windows.observation_days}d"
+    return df[df[col] >= windows.min_active_days].reset_index(drop=True)
 
 
 def out_of_time_split(
@@ -67,3 +83,25 @@ def out_of_time_split(
     if train.empty or test.empty:
         raise ValueError("Out-of-time split produced an empty train or test set")
     return train.reset_index(drop=True), test.reset_index(drop=True)
+
+
+def forward_chaining_splits(
+    df: pd.DataFrame, windows: WindowConfig = WINDOWS, n_validation: int = 3
+) -> list[tuple[np.ndarray, np.ndarray]]:
+    """Validation that respects time, inside the training period.
+
+    Each of the last ``n_validation`` snapshots is validated by a model fitted only
+    on snapshots whose churn window had closed by then. Random or user-grouped folds
+    mix weeks together and overstate performance on the future; this does not.
+    """
+    gap = timedelta(days=windows.churn_days)
+    snaps = sorted(df["snapshot_date"].unique())
+    splits = []
+    for val_snap in snaps[-n_validation:]:
+        fit = np.flatnonzero((df["snapshot_date"] + gap <= val_snap).to_numpy())
+        val = np.flatnonzero((df["snapshot_date"] == val_snap).to_numpy())
+        if len(fit) and len(val):
+            splits.append((fit, val))
+    if not splits:
+        raise ValueError("Not enough snapshots for forward-chaining validation")
+    return splits

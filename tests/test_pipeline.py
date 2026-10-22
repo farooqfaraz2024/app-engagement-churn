@@ -60,3 +60,24 @@ def test_full_training_run(snapshots, tmp_path):
     assert saved["selected_model"] in {"Logistic regression", "Gradient boosting"}
     for fig in ("gains_curve.png", "feature_importance.png", "churn_by_recency.png"):
         assert (tmp_path / "reports" / "figures" / fig).exists()
+
+
+def test_placeholder_first_touch_tenure_becomes_missing(snapshots):
+    df = snapshots.copy()
+    df.loc[df.index[0], "tenure_days"] = 17_747  # first touch in 1970
+    cleaned = clean(df)
+    assert np.isnan(cleaned.loc[df.index[0], "tenure_days"])
+    assert cleaned["tenure_days"].notna().sum() == len(df) - 1
+
+
+def test_forward_chaining_never_fits_on_the_future(snapshots):
+    from appchurn.features import forward_chaining_splits
+
+    train, _ = out_of_time_split(clean(snapshots))
+    gap = timedelta(days=WINDOWS.churn_days)
+    splits = forward_chaining_splits(train)
+    assert len(splits) == 3
+    for fit, val in splits:
+        val_snap = train["snapshot_date"].iloc[val].unique()
+        assert len(val_snap) == 1
+        assert (train["snapshot_date"].iloc[fit] + gap <= val_snap[0]).all()

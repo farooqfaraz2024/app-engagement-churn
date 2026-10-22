@@ -52,6 +52,19 @@ def run_query(client, sql: str, max_gb: float = BIGQUERY.max_gb_billed) -> pd.Da
     job = client.query(sql, job_config=config)
     df = job.result().to_dataframe(create_bqstorage_client=False)
     print(f"  done: {len(df):,} rows, {job.total_bytes_billed / GB:.2f} GB billed")
+    return to_plain_dtypes(df)
+
+
+def to_plain_dtypes(df: pd.DataFrame) -> pd.DataFrame:
+    """Convert BigQuery's ``dbdate``/``dbtime`` columns to standard pandas types.
+
+    Otherwise the saved parquet file can only be read where the db-dtypes package
+    is imported first.
+    """
+    df = df.copy()
+    for col in df.columns:
+        if str(df[col].dtype) in {"dbdate", "dbtime"}:
+            df[col] = pd.to_datetime(df[col].astype(str))
     return df
 
 

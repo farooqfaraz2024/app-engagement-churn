@@ -49,3 +49,17 @@ def test_query_runs_with_a_hard_byte_cap():
 def test_missing_project_gives_a_clear_message():
     with pytest.raises(SystemExit, match="GCP_PROJECT"):
         extract.get_client(None)
+
+
+def test_bigquery_date_types_are_converted_for_parquet(tmp_path):
+    import db_dtypes  # noqa: F401
+
+    df = pd.DataFrame({"snapshot_date": pd.Series(["2018-07-10", "2018-07-17"], dtype="dbdate")})
+    plain = extract.to_plain_dtypes(df)
+    assert str(plain["snapshot_date"].dtype).startswith("datetime64")
+    path = tmp_path / "x.parquet"
+    plain.to_parquet(path)
+    # Readable without db-dtypes registered: the schema must hold no extension type
+    import pyarrow.parquet as pq
+
+    assert "dbdate" not in str(pq.read_schema(path).metadata)

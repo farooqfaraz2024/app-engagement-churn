@@ -108,3 +108,28 @@ def plot_churn_by_recency(df: pd.DataFrame, out: Path) -> None:
     fig.tight_layout()
     fig.savefig(out)
     plt.close(fig)
+
+
+def plot_churn_by_engagement(df: pd.DataFrame, out: Path, active_col: str, cutoff: int) -> None:
+    """Churn rate by active days in the window, across everyone seen in the data."""
+    bins = [0, 1, 2, 3, 5, 10, 28]
+    labels = ["1", "2", "3", "4–5", "6–10", "11–28"]
+    bucket = pd.cut(df[active_col], bins=bins, labels=labels)
+    rates = df.groupby(bucket, observed=False)["churned"].agg(["mean", "size"])
+    fig, ax = plt.subplots(figsize=(8, 4.5), dpi=150)
+    colors = [INK_MUTED if int(lbl.split("–")[0]) < cutoff else BLUE for lbl in labels]
+    ax.bar(labels, rates["mean"] * 100, color=colors, width=0.6)
+    for i, (rate, n) in enumerate(zip(rates["mean"], rates["size"], strict=True)):
+        ax.text(i, rate * 100 + 1.5, f"{rate:.0%}", ha="center", fontsize=9, color=INK)
+        ax.text(i, 2, f"n={n:,}", ha="center", fontsize=8, color=SURFACE)
+    _style(
+        ax,
+        "Churn rate by how often the user was active (all users, all snapshots)",
+        f"Active days in the 28 days before the snapshot (blue = modelled, {cutoff}+ days)",
+        "Churn rate (%)",
+    )
+    ax.set_ylim(0, 105)
+    ax.grid(axis="x", visible=False)
+    fig.tight_layout()
+    fig.savefig(out)
+    plt.close(fig)
