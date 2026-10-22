@@ -28,7 +28,7 @@ dev = ["pytest>=8", "ruff>=0.5", "duckdb>=1.0", "sqlglot>=25"]
 where = ["src"]
 
 [tool.setuptools.package-data]
-appchurn = ["sql/*.sql"]
+appchurn = ["sql/*.sql", "report_template.html"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

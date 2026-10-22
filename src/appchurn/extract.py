@@ -13,6 +13,7 @@ variable or ``--project``.
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 
 import pandas as pd
@@ -52,6 +53,7 @@ def run_query(client, sql: str, max_gb: float = BIGQUERY.max_gb_billed) -> pd.Da
     job = client.query(sql, job_config=config)
     df = job.result().to_dataframe(create_bqstorage_client=False)
     print(f"  done: {len(df):,} rows, {job.total_bytes_billed / GB:.2f} GB billed")
+    df.attrs["gb_billed"] = round(job.total_bytes_billed / GB, 3)
     return to_plain_dtypes(df)
 
 
@@ -61,7 +63,9 @@ def to_plain_dtypes(df: pd.DataFrame) -> pd.DataFrame:
     Otherwise the saved parquet file can only be read where the db-dtypes package
     is imported first.
     """
+    attrs = dict(df.attrs)
     df = df.copy()
+    df.attrs.update(attrs)
     for col in df.columns:
         if str(df[col].dtype) in {"dbdate", "dbtime"}:
             df[col] = pd.to_datetime(df[col].astype(str))
@@ -102,6 +106,9 @@ def main() -> None:
         print("\nUser snapshots")
         snapshots = run_query(client, queries["user snapshots"])
         snapshots.to_parquet(FEATURES_PATH, index=False)
+        (REPORTS_DIR / "extract_log.json").write_text(
+            json.dumps({"gb_billed": snapshots.attrs.get("gb_billed"), "rows": len(snapshots)})
+        )
         print(f"  saved {FEATURES_PATH.relative_to(FEATURES_PATH.parents[1])}")
 
 

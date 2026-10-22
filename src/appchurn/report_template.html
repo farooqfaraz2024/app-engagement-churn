@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>App Churn Risk Report</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: sticky section bar, then one 1120px column of panels; summary first, detail after */
+:root {
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --fg: #141820;
+  --muted: #5a6270;
+  --line: #dde1e8;
+  --grid: #eceef2;
+  --accent: #2a78d6;      /* the model */
+  --rule: #d4602c;        /* the no-model recency rule */
+  --high: #c33a3a;
+  --high-bg: #fbecec;
+  --med: #a86a00;
+  --med-bg: #fbf2df;
+  --low: #5a6270;
+  --low-bg: #eef0f3;
+  --banner-bg: #eef4fc;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111419; --surface: #191d24; --fg: #e7eaf0; --muted: #a0a8b5; --line: #2b313b; --grid: #232831;
+    --accent: #5b9ae8; --rule: #ea7a4a; --high: #ef7b7b; --high-bg: #3a2124; --med: #e5b04a; --med-bg: #362c17;
+    --low: #a0a8b5; --low-bg: #242932; --banner-bg: #17253a; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #111419; --surface: #191d24; --fg: #e7eaf0; --muted: #a0a8b5; --line: #2b313b; --grid: #232831;
+  --accent: #5b9ae8; --rule: #ea7a4a; --high: #ef7b7b; --high-bg: #3a2124; --med: #e5b04a; --med-bg: #362c17;
+  --low: #a0a8b5; --low-bg: #242932; --banner-bg: #17253a; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0; background: var(--bg); color: var(--fg); font-family: var(--sans);
+  font-size: 15px; line-height: 1.55; -webkit-font-smoothing: antialiased;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface); }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header.top { background: var(--surface); border-bottom: 1px solid var(--line); }
+header.top .wrap { padding-block: 26px 18px; display: grid; gap: 6px; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+h1 { margin: 0; font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.1rem); line-height: 1.2; font-weight: 600; text-wrap: balance; }
+h2 { margin: 0; font-size: 1.2rem; font-weight: 600; text-wrap: balance; }
+h3 { margin: 0; font-size: 1rem; font-weight: 600; }
+p { margin: 0; }
+.sub { color: var(--muted); max-width: 70ch; }
+nav.sections { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--surface); border-bottom: 1px solid var(--line); }
+nav.sections .wrap { display: flex; gap: 4px; overflow-x: auto; padding-block: 8px; scrollbar-width: thin; }
+nav.sections a { flex: none; color: var(--muted); text-decoration: none; font-size: 13.5px; padding: 6px 10px; border-radius: 6px; white-space: nowrap; }
+nav.sections a:hover, nav.sections a:focus-visible { color: var(--fg); background: var(--grid); outline: none; }
+.banner { background: var(--banner-bg); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; display: flex; gap: 10px; align-items: flex-start; font-size: 14px; }
+.banner strong { font-weight: 600; }
+main.wrap { display: grid; gap: 22px; padding-block: 22px 56px; }
+section.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 22px; display: grid; gap: 16px; min-width: 0; scroll-margin-top: 64px; }
+.panel-head { display: grid; gap: 4px; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+.kpi { border: 1px solid var(--line); border-radius: 8px; padding: 14px; display: grid; gap: 2px; align-content: start; }
+.kpi .label { font-size: 13px; color: var(--muted); }
+.kpi .value { font-size: 1.75rem; font-weight: 600; font-variant-numeric: tabular-nums; line-height: 1.2; }
+.kpi .note { font-size: 12.5px; color: var(--muted); }
+.kpi.high { border-left: 4px solid var(--high); }
+.kpi.medium { border-left: 4px solid var(--med); }
+.kpi.low { border-left: 4px solid var(--low); }
+.chip { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 500; padding: 2px 9px; border-radius: 999px; white-space: nowrap; }
+.chip::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.chip.High { color: var(--high); background: var(--high-bg); }
+.chip.Medium { color: var(--med); background: var(--med-bg); }
+.chip.Low { color: var(--low); background: var(--low-bg); }
+.controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; }
+.field { display: grid; gap: 4px; font-size: 13px; color: var(--muted); }
+select, input[type="search"] { font: inherit; font-size: 14px; color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 7px 9px; min-width: 0; }
+input[type="search"] { width: min(260px, 100%); }
+button { font: inherit; font-size: 14px; cursor: pointer; border-radius: 6px; padding: 7px 12px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); }
+button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+button:hover { filter: brightness(0.97); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.count { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+th, td { padding: 9px 10px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+thead th { position: sticky; top: 0; background: var(--surface); font-weight: 600; white-space: nowrap; }
+th button.sort { all: unset; cursor: pointer; display: inline-flex; gap: 4px; align-items: center; }
+th button.sort:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+th[aria-sort="ascending"] .arrow::after { content: "▲"; font-size: 10px; }
+th[aria-sort="descending"] .arrow::after { content: "▼"; font-size: 10px; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+td.id { font-family: var(--mono); font-size: 12.5px; white-space: nowrap; }
+td.reasons { min-width: 260px; color: var(--fg); }
+tbody tr:hover { background: var(--grid); }
+.down { color: var(--high); }
+.up { color: var(--muted); }
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px; }
+.grid-2 > * { min-width: 0; }
+.chart { width: 100%; min-height: 300px; }
+.chart.tall { min-height: 380px; }
+.caption { font-size: 13px; color: var(--muted); max-width: 72ch; }
+.planner-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+.stat { border-top: 3px solid var(--line); padding-top: 8px; display: grid; gap: 2px; }
+.stat.model { border-color: var(--accent); }
+.stat.rule { border-color: var(--rule); }
+.stat .big { font-size: 1.45rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.stat .small { font-size: 13px; color: var(--muted); }
+input[type="range"] { width: min(420px, 100%); accent-color: var(--accent); }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 13px; color: var(--muted); }
+.legend span { display: inline-flex; gap: 6px; align-items: center; }
+.swatch { width: 14px; height: 3px; border-radius: 2px; display: inline-block; }
+.dl { display: grid; grid-template-columns: minmax(180px, 280px) 1fr; border-top: 1px solid var(--line); }
+.dl > div { padding: 9px 10px 9px 0; border-bottom: 1px solid var(--line); min-width: 0; }
+.dl > div:nth-child(odd) { color: var(--muted); }
+.dl > div:nth-child(even) { font-variant-numeric: tabular-nums; }
+@media (max-width: 560px) { .dl { grid-template-columns: 1fr; } .dl > div:nth-child(odd) { border-bottom: 0; padding-bottom: 0; } }
+.prose { display: grid; gap: 10px; max-width: 76ch; }
+.prose ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+code { font-family: var(--mono); font-size: .9em; }
+footer { color: var(--muted); font-size: 13px; padding-bottom: 24px; }
+.empty { color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow">App engagement churn · retention scoring</div>
+    <h1 id="title">App churn risk report</h1>
+    <p class="sub" id="subtitle"></p>
+  </div>
+</header>
+<nav class="sections" aria-label="Report sections">
+  <div class="wrap">
+    <a href="#summary">Summary</a><a href="#customers">At-risk users</a><a href="#reasons">Reasons</a>
+    <a href="#planner">Campaign planner</a><a href="#performance">Model performance</a>
+    <a href="#segments">Segments</a><a href="#drivers">Drivers</a><a href="#calibration">Calibration</a>
+    <a href="#quality">Data quality</a><a href="#method">Method</a>
+  </div>
+</nav>
+<main class="wrap">
+  <div class="banner" role="note"><div><strong>Demo dates.</strong> <span id="banner-text"></span></div></div>
+
+  <section class="panel" id="summary">
+    <div class="panel-head">
+      <h2>Who is likely to stop using the app in the next 14 days</h2>
+      <p class="sub" id="summary-sub"></p>
+    </div>
+    <div class="kpis" id="kpis"></div>
+  </section>
+
+  <section class="panel" id="customers">
+    <div class="panel-head">
+      <h2>At-risk users</h2>
+      <p class="sub">Ranked by predicted risk. Filter, sort, then copy the user IDs for a campaign list. Bands are by rank: High is the riskiest 20%, Medium the next 30%.</p>
+    </div>
+    <div class="controls">
+      <label class="field">Risk band
+        <select id="f-band"><option value="">All bands</option><option>High</option><option>Medium</option><option>Low</option></select>
+      </label>
+      <label class="field">Platform <select id="f-platform"><option value="">All platforms</option></select></label>
+      <label class="field">Country <select id="f-country"><option value="">All countries</option></select></label>
+      <label class="field">User ID <input type="search" id="f-search" placeholder="Search ID" autocomplete="off"></label>
+      <button type="button" class="primary" id="copy-ids">Copy filtered IDs</button>
+    </div>
+    <p class="count" id="table-count" aria-live="polite"></p>
+    <div class="tablewrap">
+      <table id="users">
+        <thead><tr id="users-head"></tr></thead>
+        <tbody id="users-body"></tbody>
+      </table>
+    </div>
+    <div><button type="button" id="more">Show 25 more</button></div>
+  </section>
+
+  <section class="panel" id="reasons">
+    <div class="panel-head">
+      <h2>Why users rank as risky</h2>
+      <p class="sub">Each user gets up to three plain-language reasons. They explain the ranking; they do not prove that acting on a reason will change the outcome.</p>
+    </div>
+    <div class="controls">
+      <label class="field">Band <select id="reason-band"><option>High</option><option>Medium</option></select></label>
+    </div>
+    <div id="chart-reasons" class="chart"></div>
+  </section>
+
+  <section class="panel" id="planner">
+    <div class="panel-head">
+      <h2>Campaign planner</h2>
+      <p class="sub" id="planner-sub"></p>
+    </div>
+    <div class="controls">
+      <label class="field" for="contact-share">Contact the riskiest <strong id="share-label" style="color:var(--fg)"></strong> of users</label>
+    </div>
+    <input type="range" id="contact-share" min="5" max="100" step="5" value="20" aria-describedby="planner-sub">
+    <div class="planner-stats" id="planner-stats"></div>
+    <div class="legend"><span><i class="swatch" style="background:var(--accent)"></i>Model</span><span><i class="swatch" style="background:var(--rule)"></i>Recency rule (no model)</span><span><i class="swatch" style="background:var(--muted)"></i>Random selection</span></div>
+    <div id="chart-planner" class="chart tall"></div>
+  </section>
+
+  <section class="panel" id="performance">
+    <div class="panel-head">
+      <h2>Model performance</h2>
+      <p class="sub">Tested on weeks the model never saw during training. The benchmark is the recency rule: rank users by days since last seen, no model at all.</p>
+    </div>
+    <div class="kpis" id="perf-kpis"></div>
+    <div class="grid-2">
+      <div><h3>ROC-AUC by test week</h3><div id="chart-weeks" class="chart"></div></div>
+      <div><h3>Which validation predicted the test result</h3><div id="chart-validation" class="chart"></div>
+        <p class="caption">Validation that mixes weeks overstates performance on the future. Validating in time order is what the model selection used.</p></div>
+    </div>
+  </section>
+
+  <section class="panel" id="segments">
+    <div class="panel-head">
+      <h2>Risk by segment</h2>
+      <p class="sub">Share of each segment in the High band. Hover for user counts and what actually happened. Segments under 15 users are hidden.</p>
+    </div>
+    <div class="controls">
+      <label class="field">Segment by <select id="segment-dim"></select></label>
+    </div>
+    <div id="chart-segments" class="chart"></div>
+  </section>
+
+  <section class="panel" id="drivers">
+    <div class="panel-head">
+      <h2>What drives churn</h2>
+      <p class="sub">Feature importance is the drop in ROC-AUC when a feature is shuffled. Silence dominates: the longer since a user was last active, the less likely they return.</p>
+    </div>
+    <div class="grid-2">
+      <div><h3>Most important features</h3><div id="chart-importance" class="chart tall"></div></div>
+      <div><h3>Churn rate by days since last active</h3><div id="chart-silence" class="chart tall"></div></div>
+    </div>
+  </section>
+
+  <section class="panel" id="calibration">
+    <div class="panel-head">
+      <h2>Calibration: are the probabilities right?</h2>
+      <p class="sub" id="calib-sub"></p>
+    </div>
+    <div class="grid-2">
+      <div><h3>Predicted vs actual, test period by decile</h3><div id="chart-calib" class="chart"></div></div>
+      <div><h3>Expected vs actual churn by band, score date</h3><div id="chart-bands" class="chart"></div></div>
+    </div>
+  </section>
+
+  <section class="panel" id="quality">
+    <div class="panel-head">
+      <h2>Data quality</h2>
+      <p class="sub">Checks run on the BigQuery extract before modelling.</p>
+    </div>
+    <div class="dl" id="quality-list"></div>
+  </section>
+
+  <section class="panel" id="method">
+    <div class="panel-head"><h2>Method and caveats</h2></div>
+    <div class="prose" id="method-text"></div>
+  </section>
+  <footer id="footer"></footer>
+</main>
+
+<script id="report-data" type="application/json">__REPORT_DATA__</script>
+<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
+<script>
+(function () {
+  "use strict";
+  const D = JSON.parse(document.getElementById("report-data").textContent);
+  const $ = (id) => document.getElementById(id);
+  const nf = new Intl.NumberFormat("en-US");
+  const pct = (v, d = 0) => (v == null ? "—" : (v * 100).toFixed(d) + "%");
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const S = D.summary, M = D.meta;
+
+  // ---------- header, banner, summary ----------
+  $("subtitle").textContent = `Regular app users scored as of ${S.score_date}. Risk window: the next ${M.churn_days} days, to ${S.horizon_end}.`;
+  $("banner-text").textContent = `Built on Google's public Flood-It! game data from 2018, with every date shifted forward ${M.shift_weeks} weeks so the report reads as current. Weekdays are kept and every figure is computed from the real data. The original score date is ${M.original_score_date}.`;
+  $("summary-sub").textContent = `${nf.format(S.users)} regular users (active on ${M.min_active_days}+ of the last ${M.obs_days} days) scored by a ${S.model.toLowerCase()} model trained on ${nf.format(S.train_rows)} user-weeks from ${S.train_from} to ${S.train_to}.`;
+  const kp = [
+    { cls: "", label: "Users scored", value: nf.format(S.users), note: `as of ${S.score_date}` },
+    { cls: "high", label: "High risk", value: nf.format(S.bands.High), note: "riskiest 20%" },
+    { cls: "medium", label: "Medium risk", value: nf.format(S.bands.Medium), note: "next 30%" },
+    { cls: "low", label: "Low risk", value: nf.format(S.bands.Low), note: "remaining 50%" },
+    { cls: "", label: "Expected to churn", value: "≈ " + nf.format(S.expected_churners), note: `model estimate for the next ${M.churn_days} days` },
+  ];
+  $("kpis").innerHTML = kp.map((k) => `<div class="kpi ${k.cls}"><span class="label">${k.label}</span><span class="value">${k.value}</span><span class="note">${esc(k.note)}</span></div>`).join("");
+
+  // ---------- at-risk table ----------
+  const COLS = [
+    { key: 0, label: "Rank", num: true },
+    { key: 1, label: "User ID" },
+    { key: 2, label: "Risk" },
+    { key: 3, label: "Score", num: true },
+    { key: 4, label: "Days silent", num: true },
+    { key: 5, label: "Active days", num: true },
+    { key: 6, label: "This week vs usual", num: true },
+    { key: 7, label: "Tenure (days)", num: true },
+    { key: 8, label: "Platform" },
+    { key: 9, label: "Country" },
+    { key: 10, label: "Reasons", sortable: false },
+  ];
+  const BAND_ORDER = { High: 0, Medium: 1, Low: 2 };
+  const state = { band: "", platform: "", country: "", q: "", sort: 0, dir: 1, shown: 25 };
+  const rows = D.rows;
+  const uniq = (i) => [...new Set(rows.map((r) => r[i]))].sort();
+  uniq(8).forEach((v) => $("f-platform").insertAdjacentHTML("beforeend", `<option>${esc(v)}</option>`));
+  uniq(9).forEach((v) => $("f-country").insertAdjacentHTML("beforeend", `<option>${esc(v)}</option>`));
+  $("users-head").innerHTML = COLS.map((c, i) => {
+    const cls = c.num ? ' class="num"' : "";
+    if (c.sortable === false) return `<th${cls} scope="col">${c.label}</th>`;
+    return `<th${cls} scope="col" data-col="${i}" aria-sort="none"><button type="button" class="sort">${c.label}<span class="arrow"></span></button></th>`;
+  }).join("");
+
+  function filtered() {
+    const q = state.q.trim().toLowerCase();
+    const out = rows.filter((r) =>
+      (!state.band || r[2] === state.band) &&
+      (!state.platform || r[8] === state.platform) &&
+      (!state.country || r[9] === state.country) &&
+      (!q || r[1].toLowerCase().includes(q)));
+    const k = COLS[state.sort].key;
+    out.sort((a, b) => {
+      let x = a[k], y = b[k];
+      if (k === 2) { x = BAND_ORDER[x]; y = BAND_ORDER[y]; }
+      if (x == null) return 1;
+      if (y == null) return -1;
+      return (x < y ? -1 : x > y ? 1 : 0) * state.dir;
+    });
+    return out;
+  }
+  function trendCell(t) {
+    if (t == null) return "—";
+    const d = Math.round((t - 1) * 100);
+    return `<span class="${d < 0 ? "down" : "up"}">${d > 0 ? "+" : d < 0 ? "−" : ""}${Math.abs(d)}%</span>`;
+  }
+  function renderTable() {
+    const list = filtered();
+    const page = list.slice(0, state.shown);
+    $("users-body").innerHTML = page.map((r) => `<tr>
+      <td class="num">${r[0]}</td>
+      <td class="id" title="${esc(r[1])}">${esc(r[1].slice(0, 12))}…</td>
+      <td><span class="chip ${r[2]}">${r[2]}</span></td>
+      <td class="num">${(r[3] * 100).toFixed(0)}</td>
+      <td class="num">${r[4] ?? "—"}</td>
+      <td class="num">${r[5]}</td>
+      <td class="num">${trendCell(r[6])}</td>
+      <td class="num">${r[7] ?? "—"}</td>
+      <td>${esc(r[8])}</td>
+      <td>${esc(r[9])}</td>
+      <td class="reasons">${esc(r[10])}</td></tr>`).join("") ||
+      `<tr><td colspan="11" class="empty">No users match these filters.</td></tr>`;
+    $("table-count").textContent = `Showing ${nf.format(page.length)} of ${nf.format(list.length)} users${list.length < rows.length ? " (filtered)" : ""}. Score is the model's churn probability ×100.`;
+    $("more").hidden = page.length >= list.length;
+    document.querySelectorAll("#users-head th[data-col]").forEach((th) => {
+      const i = +th.dataset.col;
+      th.setAttribute("aria-sort", i === state.sort ? (state.dir === 1 ? "ascending" : "descending") : "none");
+    });
+  }
+  ["band", "platform", "country"].forEach((f) => $("f-" + f).addEventListener("change", (e) => { state[f] = e.target.value; state.shown = 25; renderTable(); }));
+  $("f-search").addEventListener("input", (e) => { state.q = e.target.value; state.shown = 25; renderTable(); });
+  $("more").addEventListener("click", () => { state.shown += 25; renderTable(); });
+  $("users-head").addEventListener("click", (e) => {
+    const th = e.target.closest("th[data-col]");
+    if (!th) return;
+    const i = +th.dataset.col;
+    state.dir = state.sort === i ? -state.dir : (COLS[i].num && i !== 0 ? -1 : 1);
+    state.sort = i;
+    renderTable();
+  });
+  $("copy-ids").addEventListener("click", () => {
+    const ids = filtered().map((r) => r[1]).join("\n");
+    const btn = $("copy-ids");
+    const done = (msg) => { btn.textContent = msg; setTimeout(() => (btn.textContent = "Copy filtered IDs"), 2200); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(ids).then(() => done(`Copied ${nf.format(filtered().length)} IDs`), () => done("Copy blocked by browser"));
+    } else { done("Copy not available"); }
+  });
+  renderTable();
+
+  // ---------- charts ----------
+  const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+  const isObj = (o) => o && typeof o === "object" && !Array.isArray(o);
+  function merge(a, b) {
+    const out = Object.assign({}, a);
+    for (const k in b) out[k] = isObj(a[k]) && isObj(b[k]) ? merge(a[k], b[k]) : b[k];
+    return out;
+  }
+  function axis() {
+    return { gridcolor: css("--grid"), linecolor: css("--line"), zerolinecolor: css("--line"), tickfont: { color: css("--muted") }, title: { font: { color: css("--muted"), size: 12 } }, automargin: true };
+  }
+  function layout(extra) {
+    return merge({
+      paper_bgcolor: "rgba(0,0,0,0)", plot_bgcolor: "rgba(0,0,0,0)",
+      font: { family: "IBM Plex Sans, system-ui, sans-serif", color: css("--fg"), size: 12.5 },
+      margin: { l: 12, r: 18, t: 10, b: 12 }, showlegend: false,
+      xaxis: axis(), yaxis: axis(),
+      hoverlabel: { bgcolor: css("--surface"), bordercolor: css("--line"), font: { color: css("--fg"), family: "IBM Plex Sans, sans-serif" } },
+    }, extra || {});
+  }
+  const CONFIG = { displayModeBar: false, responsive: true };
+  const charts = {};
+  function draw(id, fn) { charts[id] = fn; if (window.Plotly) { const [t, l] = fn(); Plotly.react(id, t, l, CONFIG); } }
+  function redrawAll() { if (!window.Plotly) return; for (const id in charts) { const [t, l] = charts[id](); Plotly.react(id, t, l, CONFIG); } }
+
+  // Reasons
+  function reasonsChart() {
+    const band = $("reason-band").value;
+    const counts = D.reasons[band] || {};
+    const n = S.bands[band];
+    const entries = Object.entries(counts).filter(([k]) => k !== "No single strong signal").sort((a, b) => a[1] - b[1]);
+    return [[{
+      type: "bar", orientation: "h", y: entries.map((e) => e[0].replace(/N/g, "n")), x: entries.map((e) => e[1] / n),
+      marker: { color: band === "High" ? css("--high") : css("--med") },
+      text: entries.map((e) => pct(e[1] / n)), textposition: "outside", cliponaxis: false,
+      hovertemplate: "%{y}<br>%{customdata} of " + nf.format(n) + " users<extra></extra>", customdata: entries.map((e) => nf.format(e[1])),
+    }], layout({ xaxis: { tickformat: ".0%", range: [0, 1.08], title: { text: `Share of ${band} band users with this reason` } }, yaxis: { gridcolor: "rgba(0,0,0,0)" } })];
+  }
+  $("reason-band").addEventListener("change", () => draw("chart-reasons", reasonsChart));
+  draw("chart-reasons", reasonsChart);
+
+  // Campaign planner
+  const P = D.planner;
+  if (!P) {
+    $("planner-sub").textContent = "Outcomes for the score date are not known yet, so the planner is unavailable.";
+  } else {
+    $("planner-sub").textContent = `Backtest on the ${S.score_date} list: the data continues ${M.churn_days} days past the score date, so we know which users did churn (${nf.format(P.total_churners)} of ${nf.format(S.users)}, ${pct(P.base_rate)}). Move the slider to size a campaign.`;
+    const n = P.model_cum.length;
+    const xs = P.model_cum.map((_, i) => ((i + 1) / n) * 100);
+    function plannerChart() {
+      const share = +$("contact-share").value;
+      return [[
+        { type: "scatter", mode: "lines", x: [0, 100], y: [0, 100], line: { color: css("--muted"), width: 1.5, dash: "dash" }, hoverinfo: "skip" },
+        { type: "scatter", mode: "lines", x: [0, ...xs], y: [0, ...P.rule_cum.map((v) => (v / P.total_churners) * 100)], line: { color: css("--rule"), width: 2 }, name: "Recency rule", hovertemplate: "Rule: contact %{x:.0f}% → reach %{y:.0f}% of churners<extra></extra>" },
+        { type: "scatter", mode: "lines", x: [0, ...xs], y: [0, ...P.model_cum.map((v) => (v / P.total_churners) * 100)], line: { color: css("--accent"), width: 2.5 }, name: "Model", hovertemplate: "Model: contact %{x:.0f}% → reach %{y:.0f}% of churners<extra></extra>" },
+      ], layout({
+        xaxis: { range: [0, 100], ticksuffix: "%", title: { text: "Users contacted, riskiest first" } },
+        yaxis: { range: [0, 102], ticksuffix: "%", title: { text: "Churners reached" } },
+        shapes: [{ type: "line", x0: share, x1: share, y0: 0, y1: 100, line: { color: css("--fg"), width: 1, dash: "dot" } }],
+      })];
+    }
+    function plannerStats() {
+      const share = +$("contact-share").value;
+      const k = Math.max(1, Math.round((n * share) / 100));
+      const m = P.model_cum[k - 1], r = P.rule_cum[k - 1], rnd = Math.round(P.base_rate * k);
+      $("share-label").textContent = share + "%";
+      $("planner-stats").innerHTML = `
+        <div class="stat"><span class="small">Users contacted</span><span class="big">${nf.format(k)}</span><span class="small">of ${nf.format(n)}</span></div>
+        <div class="stat model"><span class="small">Churners reached, model</span><span class="big">${nf.format(m)}</span><span class="small">${pct(m / P.total_churners)} of all churners · ${pct(m / k)} of contacts</span></div>
+        <div class="stat rule"><span class="small">Recency rule (no model)</span><span class="big">${nf.format(r)}</span><span class="small">${m - r >= 0 ? "model reaches " + nf.format(m - r) + " more" : "rule reaches " + nf.format(r - m) + " more"}</span></div>
+        <div class="stat"><span class="small">Random selection</span><span class="big">≈ ${nf.format(rnd)}</span><span class="small">model is ${(m / Math.max(rnd, 1)).toFixed(1)}× random</span></div>`;
+    }
+    $("contact-share").addEventListener("input", () => { plannerStats(); draw("chart-planner", plannerChart); });
+    plannerStats();
+    draw("chart-planner", plannerChart);
+  }
+
+  // Performance
+  const PF = D.performance;
+  $("perf-kpis").innerHTML = [
+    { label: "ROC-AUC, model", value: PF.roc_auc.toFixed(3), note: `recency rule ${PF.rule_roc_auc.toFixed(3)}` },
+    { label: "Gain over the rule", value: "+" + PF.edge.difference.toFixed(3), note: `95% interval +${PF.edge.ci_low.toFixed(3)} to +${PF.edge.ci_high.toFixed(3)}, resampling users` },
+    { label: "PR-AUC, model", value: PF.pr_auc.toFixed(3), note: `rule ${PF.rule_pr_auc.toFixed(3)} · random ${PF.test_churn_rate.toFixed(3)}` },
+    { label: "Test set", value: nf.format(PF.test_rows), note: `user-weeks over ${PF.weeks.length} weeks · ${pct(PF.test_churn_rate)} churned` },
+  ].map((k) => `<div class="kpi"><span class="label">${k.label}</span><span class="value">${k.value}</span><span class="note">${esc(k.note)}</span></div>`).join("");
+  draw("chart-weeks", () => {
+    const w = PF.weeks.map((x) => x.week.replace(/^\w+ /, ""));
+    return [[
+      { type: "scatter", mode: "lines+markers", x: w, y: PF.weeks.map((x) => x.rule), name: "Recency rule", line: { color: css("--rule"), width: 2 }, marker: { size: 9 }, hovertemplate: "%{x}<br>Rule %{y:.3f}<extra></extra>" },
+      { type: "scatter", mode: "lines+markers", x: w, y: PF.weeks.map((x) => x.model), name: "Model", line: { color: css("--accent"), width: 2.5 }, marker: { size: 9 }, hovertemplate: "%{x}<br>Model %{y:.3f}<extra></extra>" },
+    ], layout({ showlegend: true, legend: { orientation: "h", y: 1.12, x: 0, font: { color: css("--muted") } }, yaxis: { range: [0.7, 0.86], title: { text: "ROC-AUC" }, tickformat: ".2f" }, xaxis: { type: "category" }, margin: { t: 30 } })];
+  });
+  draw("chart-validation", () => {
+    const v = PF.validation.slice().reverse();
+    const colors = v.map((x) => (x.method.startsWith("Out-of-time") ? css("--accent") : css("--muted")));
+    return [[{
+      type: "scatter", mode: "markers+text", orientation: "h", y: v.map((x) => x.method), x: v.map((x) => x.roc_auc),
+      marker: { size: 13, color: colors }, text: v.map((x) => x.roc_auc.toFixed(3)), textposition: "middle right", textfont: { color: css("--fg") },
+      hovertemplate: "%{y}: %{x:.3f}<extra></extra>",
+    }], layout({ xaxis: { range: [0.76, 0.93], title: { text: "ROC-AUC" }, tickformat: ".2f" }, yaxis: { gridcolor: "rgba(0,0,0,0)" } })];
+  });
+
+  // Segments
+  const dims = Object.keys(D.segments);
+  dims.forEach((d) => $("segment-dim").insertAdjacentHTML("beforeend", `<option>${esc(d)}</option>`));
+  function segmentChart() {
+    const rowsS = D.segments[$("segment-dim").value].slice().reverse();
+    return [[{
+      type: "bar", orientation: "h", y: rowsS.map((r) => r.segment), x: rowsS.map((r) => r.high_share),
+      marker: { color: css("--high") }, text: rowsS.map((r) => pct(r.high_share)), textposition: "outside", cliponaxis: false,
+      customdata: rowsS.map((r) => [nf.format(r.users), pct(r.mean_score), r.actual_churn == null ? "not yet known" : pct(r.actual_churn)]),
+      hovertemplate: "<b>%{y}</b><br>%{x:.0%} in High band<br>%{customdata[0]} users<br>Average risk %{customdata[1]}<br>Actually churned %{customdata[2]}<extra></extra>",
+    }], layout({ xaxis: { tickformat: ".0%", range: [0, Math.max(0.5, ...rowsS.map((r) => r.high_share)) * 1.15], title: { text: "Share in High risk band" } }, yaxis: { gridcolor: "rgba(0,0,0,0)" } })];
+  }
+  $("segment-dim").addEventListener("change", () => draw("chart-segments", segmentChart));
+  draw("chart-segments", segmentChart);
+
+  // Drivers
+  draw("chart-importance", () => {
+    const imp = D.drivers.importance.slice().reverse();
+    return [[{ type: "bar", orientation: "h", y: imp.map((r) => r.feature), x: imp.map((r) => r.importance), marker: { color: css("--accent") },
+      text: imp.map((r) => r.importance.toFixed(3)), textposition: "outside", cliponaxis: false, hovertemplate: "%{y}: %{x:.4f}<extra></extra>" }],
+      layout({ xaxis: { title: { text: "Drop in ROC-AUC when shuffled" }, range: [0, Math.max(...imp.map((r) => r.importance)) * 1.22] }, yaxis: { gridcolor: "rgba(0,0,0,0)" } })];
+  });
+  draw("chart-silence", () => {
+    const s = D.drivers.silence;
+    return [[{ type: "bar", x: s.map((r) => r.days), y: s.map((r) => r.churn_rate), marker: { color: css("--accent") },
+      text: s.map((r) => pct(r.churn_rate)), textposition: "outside", cliponaxis: false,
+      customdata: s.map((r) => nf.format(r.users)), hovertemplate: "%{x} days silent<br>%{y:.0%} churned<br>%{customdata} user-weeks<extra></extra>" }],
+      layout({ xaxis: { type: "category", title: { text: "Days since last active, at the snapshot" } }, yaxis: { tickformat: ".0%", range: [0, 1.1], title: { text: "Churn rate" } } })];
+  });
+
+  // Calibration
+  const C = D.calibration;
+  $("calib-sub").textContent = C.test_mean_predicted != null
+    ? (() => {
+        const dir = (a, b) => (a < b ? "too low" : a > b ? "too high" : "on target");
+        const testDir = dir(C.test_mean_predicted, C.test_actual);
+        const scoreDir = C.expected_total != null ? dir(C.expected_total, C.actual_total) : null;
+        let t = `Over the test period the evaluation model predicted ${pct(C.test_mean_predicted)} churn on average and ${pct(C.test_actual)} actually churned (${testDir}).`;
+        if (scoreDir) t += ` On the score date the scoring model expected ≈ ${nf.format(C.expected_total)} churners and ${nf.format(C.actual_total)} actually churned (${scoreDir}).`;
+        return t + " Probabilities drift as behaviour changes from week to week, while the ranking of users holds up, which is why risk bands are set by rank. Before using the probabilities for budgeting, recalibrate them on the most recent weeks.";
+      })()
+    : "Run the training step first to include the calibration check.";
+  if (C.deciles && C.deciles.length) {
+    draw("chart-calib", () => [[
+      { type: "scatter", mode: "lines", x: [0, 1], y: [0, 1], line: { color: css("--muted"), dash: "dash", width: 1.5 }, hoverinfo: "skip" },
+      { type: "scatter", mode: "lines+markers", x: C.deciles.map((d) => d.predicted), y: C.deciles.map((d) => d.actual), line: { color: css("--accent"), width: 2.5 }, marker: { size: 8 },
+        customdata: C.deciles.map((d) => nf.format(d.users)), hovertemplate: "Predicted %{x:.0%}<br>Actual %{y:.0%}<br>%{customdata} user-weeks<extra></extra>" },
+    ], layout({ xaxis: { range: [0, 1], tickformat: ".0%", title: { text: "Average predicted churn" } }, yaxis: { range: [0, 1], tickformat: ".0%", title: { text: "Actual churn" } } })]);
+  }
+  if (C.bands && C.bands.length) {
+    draw("chart-bands", () => [[
+      { type: "bar", name: "Expected", x: C.bands.map((b) => b.band), y: C.bands.map((b) => b.expected), marker: { color: css("--muted") }, text: C.bands.map((b) => pct(b.expected)), textposition: "outside", cliponaxis: false, hovertemplate: "%{x}: expected %{y:.0%}<extra></extra>" },
+      { type: "bar", name: "Actual", x: C.bands.map((b) => b.band), y: C.bands.map((b) => b.actual), marker: { color: css("--accent") }, text: C.bands.map((b) => pct(b.actual)), textposition: "outside", cliponaxis: false, hovertemplate: "%{x}: actually churned %{y:.0%}<extra></extra>" },
+    ], layout({ barmode: "group", bargap: 0.35, bargroupgap: 0.08, showlegend: true, legend: { orientation: "h", y: 1.12, x: 0, font: { color: css("--muted") } }, yaxis: { tickformat: ".0%", range: [0, 1.1], title: { text: "Churn rate" } }, xaxis: { type: "category" }, margin: { t: 30 } })]);
+  }
+
+  // Data quality and method
+  $("quality-list").innerHTML = D.quality.map(([k, v]) => `<div>${esc(k)}</div><div>${esc(v)}</div>`).join("");
+  $("method-text").innerHTML = `
+    <p><strong>Churn definition.</strong> At each weekly snapshot date, a user churns if they have no active event in the next ${M.churn_days} days. Automatic events such as uninstalls and OS updates do not count as activity.</p>
+    <p><strong>Who is scored.</strong> Regular users: active on at least ${M.min_active_days} of the previous ${M.obs_days} days. One-off visitors churn at very high rates and are an onboarding problem rather than a retention one.</p>
+    <p><strong>Features.</strong> Built in BigQuery SQL from the raw event export: active days, sessions, minutes in app, counts of each meaningful event, days since last activity, tenure, and this week against the user's usual week.</p>
+    <p><strong>Model and bands.</strong> ${esc(S.model)}, chosen by validation in time order. For scoring it is refitted on every week whose outcome was known by the score date. Bands are by rank because probabilities drift between periods.</p>
+    <p><strong>Caveats.</strong></p>
+    <ul>
+      <li>The model beats a simple "days since last seen" rule, but modestly (+${PF.edge.difference.toFixed(3)} ROC-AUC). With payment, plan and network data the gap would likely widen.</li>
+      <li>It predicts who will leave, not who can be persuaded to stay. Choosing whom to contact needs an uplift model trained on a real campaign with a holdout group.</li>
+      <li>Reason codes describe the ranking and are not causes.</li>
+      <li>Single app, 2018 data, obfuscated by Google, with dates shifted for display. User IDs are Google's pseudonymous app-instance IDs.</li>
+    </ul>`;
+  $("footer").textContent = `Generated ${M.generated} from the app-engagement-churn pipeline · charts by plotly.js`;
+
+  // Redraw charts in the active theme when it changes
+  if (!window.Plotly) {
+    document.querySelectorAll(".chart").forEach((el) => (el.innerHTML = '<p class="empty">Charts need plotly.js from cdn.jsdelivr.net, which could not load.</p>'));
+  }
+  const mq = window.matchMedia("(prefers-color-scheme: dark)");
+  if (mq.addEventListener) mq.addEventListener("change", redrawAll);
+  new MutationObserver(redrawAll).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+})();
+</script>
+</body>
+</html>

@@ -23,7 +23,11 @@ flowchart LR
         PQ[("user_snapshots.parquet<br/>52,828 rows")]
         TRAIN["train.py · scikit-learn<br/>regular users · out-of-time split<br/>forward-chaining validation<br/>recency-rule benchmark · bootstrap"]
         REP["reports/<br/>metrics · gains · importance<br/>charts"]
+        SCORE["score.py<br/>latest snapshot · risk bands<br/>reason codes · at-risk CSV"]
+        HTML["docs/index.html<br/>interactive report<br/>GitHub Pages"]
         EXT --> PQ --> TRAIN --> REP
+        PQ --> SCORE --> HTML
+        REP --> HTML
     end
 
     subgraph CI["GitHub Actions · no Google credentials"]
@@ -38,8 +42,8 @@ flowchart LR
 
     classDef store fill:#eef4fc,stroke:#2a78d6,color:#0b0b0b
     classDef step fill:#fcfcfb,stroke:#52514e,color:#0b0b0b
-    class RAW,COPY,PQ,REP store
-    class SQL,EXT,TRAIN,SYN,DUCK,TESTS step
+    class RAW,COPY,PQ,REP,HTML store
+    class SQL,EXT,TRAIN,SCORE,SYN,DUCK,TESTS step
 ```
 
 ## 2. Reference design for a telecom operator (production)
@@ -70,7 +74,7 @@ flowchart LR
     subgraph ACT["Activation"]
         ELIG["Eligibility<br/>consent · contact caps<br/>10% random holdout"]
         EXP["Daily file or API<br/>e.g. Cloud Storage CSV"]
-        NBA["Next-best-action platform<br/>e.g. Pega CDH<br/>chooses offer and message"]
+        NBA["Next-best-action platform<br/>e.g. Pega CDH, Salesforce MC<br/>chooses offer and message"]
         PUSH["Push notification<br/>FCM / APNs"]
         ELIG --> EXP --> NBA --> PUSH
     end

@@ -55,6 +55,40 @@ Out-of-time test on September 2018 (3 weekly snapshots, 3,573 user-snapshots,
 
 ![What predicts churn](reports/figures/feature_importance.png)
 
+## Interactive report
+
+**[Open the live report](https://GITHUB_USER.github.io/app-engagement-churn/)** (GitHub Pages)
+
+`python -m appchurn.report` scores every regular user as of the latest snapshot and
+writes one self-contained page, [`docs/index.html`](docs/index.html), with interactive
+plotly.js charts:
+
+| Section | What it answers |
+|---|---|
+| Summary | How many users are at risk, by band, and how many are expected to churn |
+| At-risk users | Who to contact: sortable, filterable list with reasons; copy IDs for a campaign |
+| Reasons | Why users rank as risky (silence, falling activity, failures, errors, new users) |
+| Campaign planner | How many churners a campaign of a given size reaches, vs. the simple rule and random |
+| Model performance | Test results per week, the gain over the rule with its interval, and which validation method predicted the test |
+| Segments | Risk mix by platform, device, country and tenure |
+| Drivers | Feature importance; churn rate by days since last active |
+| Calibration | Whether predicted probabilities match what happened, by decile and by band |
+| Data quality | Coverage, row counts, placeholder values handled, data scanned |
+| Method | Definitions and caveats in plain language |
+
+**Scoring like production.** The scoring model is refitted only on weeks whose outcome
+was already known on the score date, as a scheduled job would be. Because the public
+data continues 14 days past the latest score date, the report can also show what
+actually happened to that list: on the riskiest half of users, the model reached 330
+of the 402 users who churned, against 303 for the recency rule and about 201 at random.
+The exported list ([`reports/at_risk_customers.csv`](reports/at_risk_customers.csv))
+never contains outcomes.
+
+**Demo dates.** The page shows dates shifted forward 365 weeks (18 Sep 2018 is shown as
+Tue 16 Sep 2025) so it reads as current. Weekdays are preserved, a banner on the page
+says so, and every figure comes from the real 2018 data. Set `DISPLAY_SHIFT_WEEKS=0` to
+show the original dates. No events or users are simulated.
+
 ## Architecture
 
 ```mermaid
@@ -73,7 +107,11 @@ flowchart LR
         PQ[("user_snapshots.parquet<br/>52,828 rows")]
         TRAIN["train.py · scikit-learn<br/>regular users · out-of-time split<br/>forward-chaining validation<br/>recency-rule benchmark · bootstrap"]
         REP["reports/<br/>metrics · gains · importance<br/>charts"]
+        SCORE["score.py<br/>latest snapshot · risk bands<br/>reason codes · at-risk CSV"]
+        HTML["docs/index.html<br/>interactive report<br/>GitHub Pages"]
         EXT --> PQ --> TRAIN --> REP
+        PQ --> SCORE --> HTML
+        REP --> HTML
     end
 
     subgraph CI["GitHub Actions · no Google credentials"]
@@ -88,8 +126,8 @@ flowchart LR
 
     classDef store fill:#eef4fc,stroke:#2a78d6,color:#0b0b0b
     classDef step fill:#fcfcfb,stroke:#52514e,color:#0b0b0b
-    class RAW,COPY,PQ,REP store
-    class SQL,EXT,TRAIN,SYN,DUCK,TESTS step
+    class RAW,COPY,PQ,REP,HTML store
+    class SQL,EXT,TRAIN,SCORE,SYN,DUCK,TESTS step
 ```
 
 ### From prototype to production
@@ -126,7 +164,7 @@ flowchart LR
     subgraph ACT["Activation"]
         ELIG["Eligibility<br/>consent · contact caps<br/>10% random holdout"]
         EXP["Daily file or API<br/>e.g. Cloud Storage CSV"]
-        NBA["Next-best-action platform<br/>e.g. Pega CDH<br/>chooses offer and message"]
+        NBA["Next-best-action platform<br/>e.g. Pega CDH, Salesforce MC<br/>chooses offer and message"]
         PUSH["Push notification<br/>FCM / APNs"]
         ELIG --> EXP --> NBA --> PUSH
     end
@@ -257,10 +295,10 @@ predicts. Day T itself belongs to the future window only, and a test checks this
   against the cost of running a model instead of a one-line rule. With richer data
   (payments, plan, network quality, complaints) the gap would likely widen; here the
   events mostly describe *how much* someone played.
-- **Under-predicted churn in September.** The model's average predicted churn was 34%
-  against an actual 39%, because behaviour shifted between summer and September. Risk
-  rankings hold, but probabilities should be recalibrated on recent weeks before
-  being used for budget planning.
+- **Probabilities drift; rankings hold.** Over the September test the model predicted
+  34% churn against an actual 39%; on the latest score date the scoring model expected
+  463 churners against an actual 402. Risk bands are therefore set by rank, and
+  probabilities should be recalibrated on recent weeks before any budget planning.
 - **Predicts who will leave, not who can be saved.** Choosing whom to contact needs an
   uplift model trained on the results of a real retention campaign.
 - **Three test weeks, one app, 2018 data.** The obfuscated export also adds
@@ -296,9 +334,14 @@ app-engagement-churn/
 │   ├── features.py        # cleaning, trend features, population, time-based splits
 │   ├── model.py           # pipelines, recency-rule benchmark, gains/lift, bootstrap
 │   ├── train.py           # CV, final evaluation, reports
+│   ├── score.py           # production scoring: bands, reason codes, at-risk CSV
+│   ├── report.py          # builds the interactive report from the scores
+│   ├── report_template.html
 │   └── plots.py
 ├── tests/                 # SQL logic in DuckDB, end-to-end pipeline, extract
-├── docs/architecture.md   # architecture diagrams and design decisions
+├── docs/
+│   ├── index.html         # the interactive report (served by GitHub Pages)
+│   └── architecture.md    # architecture diagrams and design decisions
 └── reports/               # metrics, CV, gains, per-week results, figures
 ```
 
@@ -327,6 +370,8 @@ export GCP_PROJECT=your-project-id                      # Windows: $env:GCP_PROJ
 python -m appchurn.extract --dry-run    # how much data each query will scan (free)
 python -m appchurn.extract              # run in BigQuery, save data/user_snapshots.parquet
 python -m appchurn.train                # train, evaluate, write reports/
+python -m appchurn.report               # score latest snapshot, write docs/index.html
+open docs/index.html                    # view the report (Windows: start docs\index.html)
 pytest                                  # tests, no Google account needed
 ```
 

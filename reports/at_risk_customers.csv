@@ -1,0 +1,1257 @@
+score_date,rank,user_pseudo_id,risk_band,churn_score,reasons,days_since_last_active,active_days_28d,active_days_7d,events_7d_vs_weekly_avg,tenure_days,platform,country,device_category
+2018-09-18,1,3D9CD866FA73F2327C3B63DF16A477D9,High,0.9787,Silent 18 days; New user (23 days); Hit app errors (7),18.0,5.0,0.0,0.0,23.0,ANDROID,Taiwan,mobile
+2018-09-18,2,8F77C59AF991EEA6CEC54EE8AD78E23D,High,0.9785,Silent 21 days; Only 3 active days in 28; New user (29 days),21.0,3.0,0.0,0.0,29.0,ANDROID,Australia,mobile
+2018-09-18,3,27C88E1533471126F779ADE591D7915D,High,0.9766,Silent 15 days; Only 3 active days in 28; New user (20 days),15.0,3.0,0.0,0.0,20.0,IOS,Canada,tablet
+2018-09-18,4,DFDE5425237185986327A054407A09B4,High,0.9662,Silent 17 days; Only 3 active days in 28; New user (21 days),17.0,3.0,0.0,0.0,21.0,IOS,Canada,tablet
+2018-09-18,5,9FF3330617722CBCB12644B02BFC5EF5,High,0.965,Silent 17 days; Only 3 active days in 28; New user (26 days),17.0,3.0,0.0,0.0,26.0,ANDROID,Brazil,mobile
+2018-09-18,6,3A66B71F62FBDEF60DED96B73BA783A8,High,0.9644,Silent 25 days; Only 3 active days in 28; New user (28 days),25.0,3.0,0.0,0.0,28.0,ANDROID,India,mobile
+2018-09-18,7,7EB0099C021CF1B2C0688CB1C9D42ED0,High,0.9634,Silent 15 days; Only 4 active days in 28; New user (22 days),15.0,4.0,0.0,0.0,22.0,ANDROID,United States,mobile
+2018-09-18,8,5D84066876D8650792B2DB37277D67C0,High,0.9609,Silent 25 days; Only 3 active days in 28; New user (27 days),25.0,3.0,0.0,0.0,27.0,ANDROID,Other,mobile
+2018-09-18,9,E659018965C45C6546EAC732D07DABB3,High,0.9605,Silent 23 days; Only 3 active days in 28; New user (25 days),23.0,3.0,0.0,0.0,25.0,ANDROID,United States,mobile
+2018-09-18,10,8F75FAE8C9129A7B666A7DBA014898E4,High,0.9598,Silent 16 days; Only 4 active days in 28; New user (20 days),16.0,4.0,0.0,0.0,20.0,IOS,United States,mobile
+2018-09-18,11,94C7225B71EBBFD33183DD3B59591546,High,0.9591,Silent 23 days; Only 3 active days in 28; New user (27 days),23.0,3.0,0.0,0.0,27.0,ANDROID,United States,mobile
+2018-09-18,12,27951B102A564E3FF875726564A141FF,High,0.9586,Silent 23 days; Only 4 active days in 28,23.0,4.0,0.0,0.0,30.0,ANDROID,United States,mobile
+2018-09-18,13,6AE4C2E59BEAD8C97D0CE344CA7A1AE5,High,0.9584,Silent 21 days; Only 4 active days in 28,21.0,4.0,0.0,0.0,31.0,ANDROID,Other,mobile
+2018-09-18,14,A7A82810484F6D99DDFF8A737E8BFC41,High,0.9563,Silent 25 days; Only 3 active days in 28; New user (27 days),25.0,3.0,0.0,0.0,27.0,IOS,Other,mobile
+2018-09-18,15,40E48F9F86A546EF73EDE7855625E2B2,High,0.9559,Silent 17 days,17.0,9.0,0.0,0.0,30.0,ANDROID,Other,mobile
+2018-09-18,16,5C5F8A64F22132C7EA6D2C6CCA016990,High,0.9516,Silent 16 days; Only 3 active days in 28,16.0,3.0,0.0,0.0,412.0,IOS,Canada,tablet
+2018-09-18,17,EB18B2001B1A2D61AC02C803D66689A7,High,0.9433,Silent 20 days; Hit app errors (3),20.0,5.0,0.0,0.0,30.0,ANDROID,Other,mobile
+2018-09-18,18,A829171B86E4B3C3CD9191BED13833D6,High,0.9425,Silent 21 days; Only 3 active days in 28; New user (29 days),21.0,3.0,0.0,0.02,29.0,ANDROID,Taiwan,mobile
+2018-09-18,19,BF709EB51D61C3A7BF68C4CFD7F236BE,High,0.9422,Silent 17 days,17.0,5.0,0.0,0.0,60.0,ANDROID,Other,mobile
+2018-09-18,20,A100243833A4A2AC7041C41B4807F961,High,0.9417,Silent 18 days; Only 4 active days in 28; New user (21 days),18.0,4.0,0.0,0.0,21.0,ANDROID,Japan,mobile
+2018-09-18,21,3CB265E3644506572FFFC80A7DAD0E78,High,0.9405,Silent 20 days; Only 3 active days in 28; New user (27 days),20.0,3.0,0.0,0.0,27.0,ANDROID,United States,mobile
+2018-09-18,22,737A4B3FA732A68EB049B71E5CF15550,High,0.9399,Silent 26 days; Only 3 active days in 28; New user (28 days),26.0,3.0,0.0,0.0,28.0,ANDROID,United States,mobile
+2018-09-18,23,8BF1C5D95C6295C583F5E84D70FDDEA9,High,0.9373,Silent 10 days; Only 3 active days in 28,10.0,3.0,0.0,0.0,164.0,IOS,United States,mobile
+2018-09-18,24,6722ACD286AC0F5CA22E745302CAEB89,High,0.9371,Silent 17 days; New user (22 days),17.0,5.0,0.0,0.0,22.0,ANDROID,Other,tablet
+2018-09-18,25,7BD92FD0756E6D260B45D7B6D9670C17,High,0.9366,Silent 22 days,22.0,6.0,0.0,0.0,495.0,ANDROID,United States,mobile
+2018-09-18,26,3536FADE33CA15E5B12B304CB93F7C6F,High,0.9338,Silent 18 days; Only 3 active days in 28; New user (21 days),18.0,3.0,0.0,0.0,21.0,ANDROID,Taiwan,mobile
+2018-09-18,27,B24B8B30B5849E3E9AB68263BD1A66EF,High,0.9299,Silent 20 days; Only 3 active days in 28; New user (23 days),20.0,3.0,0.0,0.0,23.0,ANDROID,Other,mobile
+2018-09-18,28,A0F1D068A8E7FA561AC7B4174DD5E2A5,High,0.9276,Silent 15 days; Only 4 active days in 28; New user (21 days),15.0,4.0,0.0,0.0,21.0,ANDROID,Other,mobile
+2018-09-18,29,CDC9A224610417F5F1E97C8B96168950,High,0.9272,Silent 9 days; Fails often (50% of attempts),9.0,5.0,0.0,0.0,148.0,IOS,United States,tablet
+2018-09-18,30,F89FB7FA61F2B6CAA3679E739CAB2477,High,0.9227,Silent 26 days; Only 3 active days in 28,26.0,3.0,0.0,0.0,35.0,ANDROID,Taiwan,mobile
+2018-09-18,31,DC19D85E54278EC4524A1C057042FE2A,High,0.9181,Silent 18 days; Only 4 active days in 28; New user (24 days),18.0,4.0,0.0,0.0,24.0,ANDROID,Other,mobile
+2018-09-18,32,8A0DCF53673262EF517F80989EE60BB3,High,0.9165,Silent 19 days; Fails often (78% of attempts),19.0,6.0,0.0,0.0,702.0,IOS,Netherlands,tablet
+2018-09-18,33,63148850FA7088E55C0AFC34082DEC7A,High,0.9147,Silent 23 days; Only 3 active days in 28,23.0,3.0,0.0,0.0,776.0,IOS,United States,tablet
+2018-09-18,34,0DB2864E7EC7D29DA4EC1540FFDC419A,High,0.9141,Silent 20 days,20.0,8.0,0.0,0.0,40.0,ANDROID,Canada,mobile
+2018-09-18,35,1857669A1D474842D10E74B20FDA20CB,High,0.9133,Silent 25 days; Only 3 active days in 28,25.0,3.0,0.0,0.0,743.0,IOS,United States,mobile
+2018-09-18,36,CF092C279C3407DD69A44008D7511A2E,High,0.9119,Silent 13 days; Only 3 active days in 28; New user (20 days),13.0,3.0,0.0,0.0,20.0,ANDROID,Other,mobile
+2018-09-18,37,8375B114AFAD8A31DE54283525108F75,High,0.9107,Silent 22 days; Only 4 active days in 28,22.0,4.0,0.0,0.0,31.0,IOS,Japan,mobile
+2018-09-18,38,CB3247B1C1CDA46A0F086191DB3FF5B2,High,0.9069,Silent 17 days; Only 4 active days in 28; New user (20 days),17.0,4.0,0.0,0.0,20.0,ANDROID,Taiwan,mobile
+2018-09-18,39,2A43899555261D422AF07565EE51395E,High,0.9068,Silent 15 days; Only 3 active days in 28,15.0,3.0,0.0,0.0,32.0,ANDROID,United States,mobile
+2018-09-18,40,0FD8410E5528FC512E551697BB8911C8,High,0.9061,Silent 9 days; Only 3 active days in 28,9.0,3.0,0.0,0.0,624.0,ANDROID,Canada,mobile
+2018-09-18,41,DC14701AE5C2808151BE7008898B13B8,High,0.9054,Silent 17 days; New user (24 days); Fails often (47% of attempts),17.0,7.0,0.0,0.0,24.0,ANDROID,United States,mobile
+2018-09-18,42,71EA9B02B9A28A57EEEC43DFAA11C75E,High,0.9027,Silent 24 days; Only 3 active days in 28,24.0,3.0,0.0,0.0,327.0,ANDROID,Other,mobile
+2018-09-18,43,13C303BADAA654EAF82FF64A8764C27E,High,0.9013,Silent 10 days; Only 3 active days in 28,10.0,3.0,0.0,0.0,282.0,IOS,Japan,mobile
+2018-09-18,44,34421ED88E86B273A72045EFD913B5F4,High,0.9,Silent 21 days; Only 3 active days in 28; New user (28 days),21.0,3.0,0.0,0.0,28.0,ANDROID,United States,mobile
+2018-09-18,45,9DB70702AD6350C1150E2AD452047208,High,0.8977,Silent 18 days; Only 4 active days in 28,18.0,4.0,0.0,0.0,30.0,ANDROID,Other,mobile
+2018-09-18,46,948F3BFCC25E62DB748373AB4EB8A12B,High,0.8971,Not seen for 5 days; Activity down 94% vs usual week; Only 3 active days in 28,5.0,3.0,1.0,0.06,22.0,ANDROID,Other,mobile
+2018-09-18,47,0979A3E58FC8F7FFB1F9FB7C69AF99FE,High,0.8961,Silent 16 days; Only 3 active days in 28; New user (20 days),16.0,3.0,0.0,0.0,20.0,ANDROID,India,mobile
+2018-09-18,48,DDDF330206C8FD63B6C78C3BFB13F801,High,0.8957,Silent 17 days; New user (28 days); Hit app errors (3),17.0,5.0,0.0,0.0,28.0,ANDROID,Pakistan,mobile
+2018-09-18,49,13AC12EF4C6A0EAF72795F720752AD98,High,0.8956,Silent 15 days,15.0,9.0,0.0,0.0,414.0,ANDROID,United States,mobile
+2018-09-18,50,F454E0D882BF2C7E1E0DF7F96DF78F3B,High,0.891,Silent 17 days,17.0,6.0,0.0,0.0,47.0,IOS,United States,mobile
+2018-09-18,51,8B38AE00504B75A9ABAA20843DF4976A,High,0.8887,Silent 16 days; Only 4 active days in 28; New user (24 days),16.0,4.0,0.0,0.0,24.0,ANDROID,United States,mobile
+2018-09-18,52,B50E2B0888440679A84A3D861332531C,High,0.8851,Silent 16 days; Only 3 active days in 28; New user (18 days),16.0,3.0,0.0,0.0,18.0,ANDROID,India,mobile
+2018-09-18,53,B810EC88D69D961A2FA7ECC0F323D9EE,High,0.8833,Silent 22 days; Only 3 active days in 28,22.0,3.0,0.0,0.0,30.0,IOS,United States,tablet
+2018-09-18,54,53C62BFF7D715334B8C3C4904EC34880,High,0.8831,Silent 16 days; Fails often (94% of attempts),16.0,6.0,0.0,0.0,46.0,IOS,United States,tablet
+2018-09-18,55,0BF28246916A6D54E16290E925B16593,High,0.8831,Silent 10 days; New user (14 days),10.0,5.0,0.0,0.0,14.0,IOS,United States,mobile
+2018-09-18,56,63DC7D4093165CA24BEDD80FD22B0DD0,High,0.8815,Silent 21 days; Only 3 active days in 28,21.0,3.0,0.0,0.0,329.0,IOS,Other,tablet
+2018-09-18,57,87FD184B22403BC8671DC8B7A5575FFF,High,0.8807,Silent 7 days; Only 3 active days in 28; New user (12 days),7.0,3.0,1.0,0.05,12.0,IOS,China,mobile
+2018-09-18,58,F08B1B35DEBD180CE71143816201C298,High,0.8801,Silent 10 days; New user (18 days); Fails often (45% of attempts),10.0,5.0,0.0,0.0,18.0,IOS,United Kingdom,mobile
+2018-09-18,59,D87680443BED6AFC4AA7528AD8C2861F,High,0.8799,Silent 10 days; Only 3 active days in 28,10.0,3.0,0.0,0.0,612.0,IOS,United States,mobile
+2018-09-18,60,FF20E4EE129C3700FC1C6CEF188E17BB,High,0.8783,Silent 15 days; Only 4 active days in 28,15.0,4.0,0.0,0.0,303.0,ANDROID,Australia,mobile
+2018-09-18,61,155263A40D769D42880C8E43690F3E70,High,0.8781,Silent 12 days; Only 4 active days in 28; New user (25 days),12.0,4.0,0.0,0.0,25.0,ANDROID,United States,mobile
+2018-09-18,62,50DF4D37167497C4DD0F00E2CCAE39C0,High,0.8762,Silent 9 days; Only 4 active days in 28; Fails often (45% of attempts),9.0,4.0,0.0,0.0,73.0,IOS,United States,mobile
+2018-09-18,63,AE158E6238A048413B91B5A50D08810D,High,0.8758,Silent 10 days; Only 4 active days in 28; New user (13 days),10.0,4.0,0.0,0.0,13.0,IOS,United States,mobile
+2018-09-18,64,0D352ACDE1D7322582DA190A12324AC7,High,0.8746,Silent 7 days; Only 3 active days in 28; New user (19 days),7.0,3.0,1.0,1.15,19.0,IOS,Japan,mobile
+2018-09-18,65,1B7FF293CEB974A6F4E4788D705FF314,High,0.8744,Silent 10 days; New user (19 days),10.0,7.0,0.0,0.0,19.0,IOS,United Kingdom,mobile
+2018-09-18,66,1B55AE3879DC30ADF72CDF8A0A7A87CD,High,0.8742,Silent 9 days,9.0,6.0,0.0,0.0,386.0,IOS,United States,mobile
+2018-09-18,67,DBAA5E206382E89FAA956A2D927DBC94,High,0.8697,Silent 18 days; Only 3 active days in 28; New user (27 days),18.0,3.0,0.0,0.0,27.0,ANDROID,Other,mobile
+2018-09-18,68,55BF8BB2457C1E8B554058947A484334,High,0.8667,Silent 21 days; Only 3 active days in 28; New user (23 days),21.0,3.0,0.0,0.0,23.0,IOS,United States,mobile
+2018-09-18,69,4F34EA13CE343BE6955B67914BD4DF9E,High,0.8666,Silent 12 days; Only 4 active days in 28; New user (26 days),12.0,4.0,0.0,0.01,26.0,ANDROID,India,mobile
+2018-09-18,70,94DCA111F00495D16D2D36CBB3879EEC,High,0.8632,Silent 18 days; Only 3 active days in 28,18.0,3.0,0.0,0.0,388.0,IOS,United States,mobile
+2018-09-18,71,301F3E03F1C38FAD17155B25DF64D09B,High,0.8626,Silent 10 days; Only 3 active days in 28; Fails often (55% of attempts),10.0,3.0,0.0,0.0,88.0,IOS,United States,mobile
+2018-09-18,72,9FCA0F0AF9D385AB53DD8742397B25ED,High,0.8623,Silent 17 days; Only 4 active days in 28,17.0,4.0,0.0,0.0,42.0,ANDROID,India,mobile
+2018-09-18,73,21DA809CF1B07A7E8D2D73D9030FEEBC,High,0.8602,Silent 18 days; Only 3 active days in 28; New user (26 days),18.0,3.0,0.0,0.0,26.0,ANDROID,India,mobile
+2018-09-18,74,14DE6B1CDA3BFD44679C7E9382644AC7,High,0.859,Silent 15 days; Only 4 active days in 28; Hit app errors (1),15.0,4.0,0.0,0.0,34.0,ANDROID,United States,mobile
+2018-09-18,75,891646F131CE2CCADB5D6676A104CB9D,High,0.8574,Silent 10 days; Only 3 active days in 28; New user (12 days),10.0,3.0,0.0,0.0,12.0,IOS,Japan,mobile
+2018-09-18,76,75C00378B3BA26B12559020A83A74355,High,0.8567,Silent 15 days; Only 3 active days in 28,15.0,3.0,0.0,0.0,36.0,IOS,United States,tablet
+2018-09-18,77,0A74C26349ABD323C5CE34AB8DD52164,High,0.8557,Silent 10 days; Only 3 active days in 28; New user (15 days),10.0,3.0,0.0,0.0,15.0,ANDROID,India,mobile
+2018-09-18,78,3114BB0EE700894607B258BC4706797C,High,0.8553,Silent 12 days; Only 3 active days in 28; New user (15 days),12.0,3.0,0.0,0.02,15.0,ANDROID,India,mobile
+2018-09-18,79,FBC96171D55D518A86075798B95B7FF9,High,0.8538,Silent 11 days; Only 3 active days in 28,11.0,3.0,0.0,0.0,43.0,IOS,Japan,mobile
+2018-09-18,80,BCC3E8C43D2F91EAA6BCCB6476ECAA07,High,0.8527,Silent 9 days; Only 3 active days in 28; New user (19 days),9.0,3.0,0.0,0.0,19.0,IOS,United States,mobile
+2018-09-18,81,52674FCAD5A82E22BFA5EB24BDB2ED99,High,0.8527,Silent 10 days; Only 3 active days in 28; Fails often (40% of attempts),10.0,3.0,0.0,0.0,243.0,IOS,United Kingdom,mobile
+2018-09-18,82,CB98189F91A9943BDE5B67C59903CB27,High,0.8515,Silent 11 days; Only 3 active days in 28; New user (24 days),11.0,3.0,0.0,0.0,24.0,IOS,China,mobile
+2018-09-18,83,3BBBF9670FF8A13D25833DE6965F6555,High,0.8508,Silent 18 days; Only 4 active days in 28; New user (28 days),18.0,4.0,0.0,0.0,28.0,ANDROID,United States,mobile
+2018-09-18,84,94B02BA3020E382B3456932FA88A03AC,High,0.8476,Silent 9 days; Only 3 active days in 28; New user (12 days),9.0,3.0,0.0,0.0,12.0,ANDROID,Canada,mobile
+2018-09-18,85,8AFAFD6D7E79149C91BCAE1995E0CF47,High,0.8474,Silent 11 days; Only 4 active days in 28; New user (15 days),11.0,4.0,0.0,0.0,15.0,IOS,Other,mobile
+2018-09-18,86,85CA6318E0119F70B454E10A63103655,High,0.8471,Silent 14 days; Only 3 active days in 28; Fails often (58% of attempts),14.0,3.0,0.0,0.0,127.0,IOS,Canada,mobile
+2018-09-18,87,12BED4389CF843C35F5B746C52539321,High,0.8459,Silent 15 days; Only 3 active days in 28; New user (26 days),15.0,3.0,0.0,0.0,26.0,ANDROID,India,tablet
+2018-09-18,88,33544E9CEC0874FB3EB8759352A455ED,High,0.8444,Silent 19 days; Only 3 active days in 28; New user (28 days),19.0,3.0,0.0,0.0,28.0,ANDROID,United States,mobile
+2018-09-18,89,10C65E08F958FE2115B67505742C2CA5,High,0.8428,Silent 7 days; Only 3 active days in 28; New user (11 days),7.0,3.0,1.0,0.65,11.0,ANDROID,India,mobile
+2018-09-18,90,B100E7D54CE769CF55AC6949A18EC4CE,High,0.8403,Silent 21 days; Only 3 active days in 28; New user (23 days),21.0,3.0,0.0,0.0,23.0,ANDROID,Taiwan,mobile
+2018-09-18,91,108522345C425B9AEB5F83FE07C1A3A4,High,0.8397,Silent 10 days; Only 3 active days in 28; New user (18 days),10.0,3.0,0.0,0.0,18.0,ANDROID,India,mobile
+2018-09-18,92,2500D631A3882096CFBE33B0EFBE08FE,High,0.8394,Silent 16 days; Only 3 active days in 28; Fails often (61% of attempts),16.0,3.0,0.0,0.0,31.0,IOS,United States,tablet
+2018-09-18,93,AB714CB216CB456740B54DD82E11FDB9,High,0.8383,Silent 18 days; Only 4 active days in 28,18.0,4.0,0.0,0.0,45.0,IOS,Canada,tablet
+2018-09-18,94,25A2EF10D3114392D96650E16A1F02CC,High,0.8369,Silent 12 days; Only 3 active days in 28,12.0,3.0,0.0,0.0,174.0,IOS,United Kingdom,tablet
+2018-09-18,95,E2C73393E938B51088B200E971667B8A,High,0.8358,Silent 20 days; Only 4 active days in 28,20.0,4.0,0.0,0.0,590.0,ANDROID,United States,mobile
+2018-09-18,96,663EAD1943AE7594E0633D10ADB5EF52,High,0.8357,Silent 23 days; Only 3 active days in 28,23.0,3.0,0.0,0.0,64.0,ANDROID,Other,mobile
+2018-09-18,97,C8859B7C8D60558E642617CFDACEFB80,High,0.8336,Silent 9 days; Only 3 active days in 28,9.0,3.0,0.0,0.0,338.0,IOS,Germany,mobile
+2018-09-18,98,A68C4D0A3F32C3F7621CA7675E9F39A6,High,0.8333,Silent 20 days; Only 3 active days in 28,20.0,3.0,0.0,0.0,31.0,ANDROID,India,mobile
+2018-09-18,99,0C621E64FC5D74AC60AADCF0EA9D640A,High,0.8325,Silent 11 days; Only 4 active days in 28,11.0,4.0,0.0,0.0,254.0,IOS,United States,mobile
+2018-09-18,100,E1A3C786B2E4D56629EE808A3A174995,High,0.8325,Silent 13 days; Only 4 active days in 28; Hit app errors (6),13.0,4.0,0.0,0.0,45.0,ANDROID,United States,mobile
+2018-09-18,101,528939A93F1D3693AD8A56F340B7D777,High,0.8317,Silent 18 days; Only 3 active days in 28,18.0,3.0,0.0,0.0,46.0,IOS,United States,tablet
+2018-09-18,102,DC89D90D5DFB91ACC0F70A8831861F4D,High,0.8291,Silent 20 days; Only 4 active days in 28; New user (28 days),20.0,4.0,0.0,0.0,28.0,IOS,United States,tablet
+2018-09-18,103,F73A0D4A6FB35C664DDAE0F4F145F8B0,High,0.8286,Silent 12 days; Only 4 active days in 28; New user (15 days),12.0,4.0,0.0,0.0,15.0,IOS,Japan,mobile
+2018-09-18,104,9A10BF8F0166076BD918A5027396A46B,High,0.8277,Silent 10 days; Only 3 active days in 28; New user (14 days),10.0,3.0,0.0,0.0,14.0,ANDROID,India,mobile
+2018-09-18,105,BA889BE17F356F33412A42AC1CE6C51D,High,0.826,Silent 26 days; Only 3 active days in 28; Hit app errors (1),26.0,3.0,0.0,0.0,663.0,IOS,United States,tablet
+2018-09-18,106,426DCE5BE2FF9B12B8981D18DE56B87C,High,0.8256,Silent 25 days; Only 3 active days in 28,25.0,3.0,0.0,0.0,99.0,IOS,Germany,tablet
+2018-09-18,107,32C1DCB54AA38EDE6064F9574F80FF92,High,0.8255,Silent 13 days; Only 4 active days in 28; Hit app errors (1),13.0,4.0,0.0,0.0,320.0,IOS,United Kingdom,mobile
+2018-09-18,108,A3BF370CA79411DED3D5E806B291933D,High,0.8233,Not seen for 6 days; Activity down 74% vs usual week; Only 3 active days in 28,6.0,3.0,1.0,0.26,14.0,ANDROID,Other,mobile
+2018-09-18,109,78B5D31EFEA7F4689CEB2CF7A9E4C4E5,High,0.8221,Silent 9 days; Only 3 active days in 28,9.0,3.0,0.0,0.0,73.0,ANDROID,India,mobile
+2018-09-18,110,3D0D0AB12593E5C8B5C8BE2450ABDC6E,High,0.8218,Silent 22 days; Only 3 active days in 28,22.0,3.0,0.0,0.0,169.0,ANDROID,United States,mobile
+2018-09-18,111,D6B1DA30ACF49364F456E28F554F6C17,High,0.8209,Silent 11 days; Only 3 active days in 28,11.0,3.0,0.0,0.0,38.0,IOS,United States,mobile
+2018-09-18,112,EDDD1F09F32BB54134A50D174BD26137,High,0.8175,Silent 10 days; Only 3 active days in 28; New user (25 days),10.0,3.0,0.0,0.0,25.0,ANDROID,Other,mobile
+2018-09-18,113,D6C62D17A18603EEE645F28835D54DEA,High,0.8163,Silent 10 days; Only 4 active days in 28; New user (14 days),10.0,4.0,0.0,0.0,14.0,IOS,United States,mobile
+2018-09-18,114,F4EA0F2888792BD62555AD46ED534839,High,0.8125,Silent 19 days,19.0,6.0,0.0,0.0,48.0,IOS,United States,tablet
+2018-09-18,115,7064BC64E47E869B36967E854748969E,High,0.8108,Silent 10 days; Only 4 active days in 28; New user (15 days),10.0,4.0,0.0,0.0,15.0,ANDROID,India,mobile
+2018-09-18,116,6158C7CD861E2F83D6AA22CCF92AEE97,High,0.8099,Silent 11 days; Only 3 active days in 28; New user (29 days),11.0,3.0,0.0,0.0,29.0,IOS,Australia,mobile
+2018-09-18,117,22DF34962481295121082D8C105EB436,High,0.8076,Silent 17 days; Only 4 active days in 28,17.0,4.0,0.0,0.0,64.0,ANDROID,India,mobile
+2018-09-18,118,97760F8A4E9C0DA4B02684343A2BB046,High,0.8074,Silent 9 days,9.0,7.0,0.0,0.0,57.0,IOS,Brazil,mobile
+2018-09-18,119,F6F73677A4E6A0F7AACEE96107700035,High,0.8062,Silent 7 days; Only 3 active days in 28; New user (10 days),7.0,3.0,1.0,1.39,10.0,ANDROID,Australia,mobile
+2018-09-18,120,ECC6975EB9808FBB45390E3EDB75B2A1,High,0.8048,Silent 20 days; Only 3 active days in 28,20.0,3.0,0.0,0.0,554.0,ANDROID,United States,mobile
+2018-09-18,121,67D3D76504CC5C4CBFC78EE4FC397C8B,High,0.8023,Silent 15 days; Only 3 active days in 28; Fails often (64% of attempts),15.0,3.0,0.0,0.0,38.0,IOS,United States,tablet
+2018-09-18,122,63550F65F0818B874ADA2B18C463AB21,High,0.8002,Silent 12 days; Only 4 active days in 28; New user (16 days),12.0,4.0,0.0,0.0,16.0,IOS,Australia,mobile
+2018-09-18,123,80F152611EE983C7ED2200A2233684C1,High,0.7983,Silent 19 days; Only 4 active days in 28; Fails often (41% of attempts),19.0,4.0,0.0,0.0,231.0,IOS,United States,mobile
+2018-09-18,124,488BE19C45D3D8B2DF02214BC19B44B4,High,0.7959,Silent 18 days,18.0,10.0,0.0,0.0,217.0,ANDROID,India,mobile
+2018-09-18,125,56A24F4F7FE20C66839EB77FC558A160,High,0.7938,Silent 9 days; Only 3 active days in 28,9.0,3.0,0.0,0.0,125.0,ANDROID,United States,mobile
+2018-09-18,126,CCC7BB053BBC6824C53FAA4A8C63E3FE,High,0.7936,Activity down 91% vs usual week; Only 4 active days in 28; New user (14 days),2.0,4.0,1.0,0.09,14.0,ANDROID,Other,mobile
+2018-09-18,127,3DEBAA02D7EF77D34458C8294FC4D51F,High,0.7928,Silent 11 days; Only 3 active days in 28; Fails often (48% of attempts),11.0,3.0,0.0,0.0,62.0,IOS,United States,mobile
+2018-09-18,128,2B708DD984888F5852F691361699D80B,High,0.7923,Silent 22 days; Only 3 active days in 28,22.0,3.0,0.0,0.0,54.0,ANDROID,Germany,mobile
+2018-09-18,129,E6B92CC2D56E83206D33E752DADEAB5C,High,0.7897,Silent 21 days; Only 3 active days in 28,21.0,3.0,0.0,0.0,827.0,ANDROID,United States,mobile
+2018-09-18,130,2F72E1976C24D8DFEA138BBCFD304BAC,High,0.7893,Silent 20 days; Only 3 active days in 28,20.0,3.0,0.0,0.0,729.0,ANDROID,Other,mobile
+2018-09-18,131,C7DD86F06FD4AA8A0967E27E20750FCD,High,0.7875,Silent 14 days; Only 4 active days in 28; New user (17 days),14.0,4.0,0.0,0.0,17.0,ANDROID,United States,mobile
+2018-09-18,132,D8D3527A513C3EEACF9D5BA1B612D9C4,High,0.7872,Silent 19 days; Only 4 active days in 28; New user (29 days),19.0,4.0,0.0,0.0,29.0,IOS,United States,mobile
+2018-09-18,133,A305B55D5049F38F5139DA95B3DCE247,High,0.7841,Not seen for 6 days; Only 3 active days in 28; New user (17 days),6.0,3.0,1.0,0.57,17.0,ANDROID,Other,mobile
+2018-09-18,134,6A71951BC1C5F03C22E9E892AEB90B19,High,0.784,Silent 15 days; Only 3 active days in 28,15.0,3.0,0.0,0.0,130.0,ANDROID,Other,mobile
+2018-09-18,135,89AB6B5C88E9585DFE75C45F60BC2E72,High,0.7838,Not seen for 6 days; Only 3 active days in 28; New user (15 days),6.0,3.0,2.0,3.95,15.0,IOS,India,mobile
+2018-09-18,136,30C9F1FCEBB2E40593350BBB662344E7,High,0.7829,Silent 15 days; Only 4 active days in 28,15.0,4.0,0.0,0.0,37.0,ANDROID,United States,mobile
+2018-09-18,137,DAD23DD885EEE844890417FC965052F0,High,0.7828,Not seen for 4 days; Activity down 90% vs usual week; Only 4 active days in 28,4.0,4.0,1.0,0.1,37.0,ANDROID,India,mobile
+2018-09-18,138,B458770ED6E295374FEEB3A68902CC28,High,0.7824,Silent 9 days; Fails often (47% of attempts),9.0,8.0,0.0,0.0,841.0,IOS,Mexico,mobile
+2018-09-18,139,9579E7DBD8A319DA696921143F654855,High,0.7824,Not seen for 5 days; Only 3 active days in 28; New user (17 days),5.0,3.0,1.0,1.98,17.0,IOS,Other,mobile
+2018-09-18,140,5A44D0AF57DD95C0F5301649B7A23509,High,0.781,Not seen for 5 days; Activity down 55% vs usual week; Only 4 active days in 28,5.0,4.0,1.0,0.45,16.0,IOS,Other,mobile
+2018-09-18,141,626009813D7731D71D9DD3D396969BB8,High,0.7788,Silent 12 days; Only 3 active days in 28; New user (14 days),12.0,3.0,0.0,0.0,14.0,IOS,Australia,mobile
+2018-09-18,142,04F397E482E77FD2B7CAEB81E732790C,High,0.7766,Silent 20 days; Only 3 active days in 28,20.0,3.0,0.0,0.0,39.0,ANDROID,United States,mobile
+2018-09-18,143,D2646F13137D19B32F44D7873FADDE79,High,0.7751,Silent 10 days; Only 4 active days in 28; Fails often (50% of attempts),10.0,4.0,0.0,0.0,86.0,IOS,Australia,mobile
+2018-09-18,144,1440D2F8CDB64BFAA5621779B8C92571,High,0.7749,Not seen for 5 days; Only 3 active days in 28; New user (7 days),5.0,3.0,3.0,4.0,7.0,ANDROID,India,mobile
+2018-09-18,145,7E1F5A1FBB0C91B0D735AD7DE507CB8F,High,0.7742,Not seen for 6 days; Only 3 active days in 28; New user (12 days),6.0,3.0,1.0,1.32,12.0,ANDROID,Other,mobile
+2018-09-18,146,A70504A67EE34DD45EF82BFF86E9F94D,High,0.7672,Silent 13 days; Only 3 active days in 28,13.0,3.0,0.0,0.0,49.0,ANDROID,Pakistan,mobile
+2018-09-18,147,B1C093A32996E59C0298E81A14398491,High,0.764,Silent 11 days; Only 3 active days in 28; New user (14 days),11.0,3.0,0.0,0.0,14.0,ANDROID,India,mobile
+2018-09-18,148,0CF1172485E8FC12110F04AB2374B308,High,0.7639,Silent 22 days; Only 4 active days in 28,22.0,4.0,0.0,0.0,422.0,ANDROID,United States,mobile
+2018-09-18,149,19AB27B8A0F2C7C738683CA2F5FFEBE1,High,0.7636,Silent 22 days,22.0,6.0,0.0,0.0,614.0,ANDROID,United States,mobile
+2018-09-18,150,8F6C5F7611B67A4A437FF283B6C10181,High,0.7623,Silent 16 days; Fails often (61% of attempts); Hit app errors (10),16.0,9.0,0.0,0.0,800.0,IOS,United States,tablet
+2018-09-18,151,645ADF1505EA560FF95D65650EAB212A,High,0.7608,Silent 23 days; Fails often (48% of attempts),23.0,6.0,0.0,0.0,702.0,IOS,United States,tablet
+2018-09-18,152,4ED2EE747CD9582D0E7D0FD40AC126F9,High,0.7608,Not seen for 3 days; Only 4 active days in 28; New user (6 days),3.0,4.0,4.0,4.0,6.0,ANDROID,Other,mobile
+2018-09-18,153,9690B6E46BD58A8B118514973F0B57D0,High,0.7594,Not seen for 6 days; Only 3 active days in 28; Hit app errors (1),6.0,3.0,2.0,1.54,44.0,ANDROID,India,mobile
+2018-09-18,154,A7993B3D9E693DFD3EA57CF4D1B8D00F,High,0.7588,Silent 10 days; New user (26 days),10.0,9.0,0.0,0.0,26.0,ANDROID,United States,mobile
+2018-09-18,155,3AA6FAABA6A18AA2F8927EFF931DD736,High,0.7587,Silent 10 days; Only 4 active days in 28,10.0,4.0,0.0,0.0,352.0,IOS,United Kingdom,mobile
+2018-09-18,156,BE46B64DFFEE5B00F197D666EB57E781,High,0.7562,Silent 12 days; Only 3 active days in 28,12.0,3.0,0.0,0.0,385.0,IOS,United States,tablet
+2018-09-18,157,0A367084F9CA18D023CF9A8B8FF81905,High,0.7511,Silent 12 days; Only 3 active days in 28,12.0,3.0,0.0,0.0,588.0,IOS,United Kingdom,mobile
+2018-09-18,158,8DC5189969449E1BF8588B3EA64974A1,High,0.7505,Silent 18 days; Hit app errors (1),18.0,8.0,0.0,0.0,61.0,IOS,United States,tablet
+2018-09-18,159,2F0F260BD7B876C346B41977D0D03D62,High,0.748,Silent 20 days; Fails often (40% of attempts); Hit app errors (5),20.0,6.0,0.0,0.0,805.0,ANDROID,United States,mobile
+2018-09-18,160,539BD685A2A648C47BE6269949FDFF2A,High,0.7478,Silent 8 days; Only 4 active days in 28; New user (25 days),8.0,4.0,0.0,0.0,25.0,ANDROID,United States,mobile
+2018-09-18,161,E271C38BE1E3E9E9A1D4DE0A5CF3FA3E,High,0.7475,Silent 9 days; Only 3 active days in 28; New user (15 days),9.0,3.0,0.0,0.0,15.0,ANDROID,India,mobile
+2018-09-18,162,A48E8402E01E93E43524A2746524FF73,High,0.7461,Silent 18 days; Only 4 active days in 28; Fails often (62% of attempts),18.0,4.0,0.0,0.0,30.0,IOS,United States,tablet
+2018-09-18,163,46940B869F002DCFDDA860189AF77F23,High,0.746,Silent 13 days; Only 3 active days in 28; Fails often (93% of attempts),13.0,3.0,0.0,0.0,33.0,IOS,Japan,tablet
+2018-09-18,164,F652FFF92DC543ACF621ACC7511B3822,High,0.7452,Silent 9 days; New user (29 days); Hit app errors (1),9.0,5.0,0.0,0.0,29.0,ANDROID,United States,mobile
+2018-09-18,165,7107B8B93B285616D099D9010F6AD834,High,0.7434,Silent 11 days; Only 4 active days in 28; New user (14 days),11.0,4.0,0.0,0.0,14.0,IOS,United States,mobile
+2018-09-18,166,B8B20A9B77B516AC51BD7C96E3F1866C,High,0.7422,Not seen for 4 days; Only 4 active days in 28,4.0,4.0,1.0,2.81,843.0,ANDROID,United States,mobile
+2018-09-18,167,5217AB1A454DAED6243E1C9818BE6A20,High,0.7414,Silent 22 days; Only 3 active days in 28,22.0,3.0,0.0,0.0,86.0,ANDROID,United States,mobile
+2018-09-18,168,CD575100771330FF6EE90088BBAF121C,High,0.7409,Not seen for 5 days; Only 4 active days in 28,5.0,4.0,1.0,1.28,32.0,ANDROID,India,mobile
+2018-09-18,169,690DA199396D35B845005CCD13ED8D67,High,0.7407,Silent 15 days,15.0,6.0,0.0,0.0,293.0,ANDROID,Germany,mobile
+2018-09-18,170,B525B8771E5D7F146BDEB716A99FFB1C,High,0.7404,Silent 11 days; Only 3 active days in 28,11.0,3.0,0.0,0.0,684.0,IOS,United States,mobile
+2018-09-18,171,7CB4F979C9025D90BBBA34B3F3BF80C4,High,0.739,Silent 12 days; Hit app errors (1),12.0,5.0,0.0,0.0,90.0,ANDROID,Other,mobile
+2018-09-18,172,2F2B5C88B72A5253AAF448B1E29333F5,High,0.7387,Silent 17 days,17.0,9.0,0.0,0.0,785.0,ANDROID,United States,mobile
+2018-09-18,173,1B959D672ABAE4A3BFB9D720D415E064,High,0.738,Silent 17 days,17.0,5.0,0.0,0.0,45.0,ANDROID,United States,mobile
+2018-09-18,174,7A6600E01EF14A0E5BDC0F0C653243FA,High,0.7375,Silent 11 days,11.0,9.0,0.0,0.0,85.0,IOS,Australia,mobile
+2018-09-18,175,D8B8615DDE319FEBE0A2AC1364E2C2EC,High,0.7366,Silent 15 days; Only 4 active days in 28; New user (18 days),15.0,4.0,0.0,0.0,18.0,IOS,United States,tablet
+2018-09-18,176,E30E8756808AB219B28276F129C51552,High,0.7364,Silent 17 days; Only 4 active days in 28; Hit app errors (1),17.0,4.0,0.0,0.0,128.0,ANDROID,Australia,mobile
+2018-09-18,177,6423FBDB63333D5EF6E628446EDE5635,High,0.7326,Not seen for 4 days; Only 3 active days in 28; New user (15 days),4.0,3.0,1.0,2.41,15.0,ANDROID,Other,mobile
+2018-09-18,178,0B74484DD41F519B4810A14A953CAA18,High,0.73,Silent 19 days; Only 4 active days in 28; Fails often (42% of attempts),19.0,4.0,0.0,0.0,54.0,ANDROID,United States,tablet
+2018-09-18,179,8581D07F873789998E8929C212D70CA4,High,0.7298,Not seen for 4 days; Only 4 active days in 28,4.0,4.0,2.0,1.57,329.0,IOS,United States,tablet
+2018-09-18,180,4965FA5C2DC955BF49BD33BDB25EC127,High,0.7293,Silent 12 days; Only 4 active days in 28,12.0,4.0,0.0,0.0,672.0,IOS,United States,mobile
+2018-09-18,181,5AE684C539DC4038371EDCBF649BFED1,High,0.729,Silent 8 days; Only 4 active days in 28; New user (12 days),8.0,4.0,0.0,0.0,12.0,IOS,Other,tablet
+2018-09-18,182,D31F0611DE6B94A5F001584286883AB7,High,0.7261,Silent 9 days; Only 3 active days in 28; New user (17 days),9.0,3.0,0.0,0.0,17.0,IOS,United States,tablet
+2018-09-18,183,D1C8EF768AA75348EE9EC5629903E194,High,0.7261,Only 3 active days in 28,1.0,3.0,1.0,2.0,231.0,IOS,Japan,mobile
+2018-09-18,184,FEEAEF16683900608922225433583714,High,0.7259,Not seen for 6 days; Activity down 89% vs usual week; Only 3 active days in 28,6.0,3.0,1.0,0.11,10.0,ANDROID,India,mobile
+2018-09-18,185,B76F1841464BFF8CF3155EF7C1FD91E4,High,0.7256,Silent 15 days; Only 4 active days in 28; Hit app errors (1),15.0,4.0,0.0,0.0,659.0,ANDROID,United States,mobile
+2018-09-18,186,D5DC23095804625CE1E4D293E2BA6F92,High,0.7254,Silent 11 days; Only 4 active days in 28,11.0,4.0,0.0,0.0,141.0,IOS,United States,mobile
+2018-09-18,187,66E8EE325A3E6369E607998DFE9E13F1,High,0.725,Silent 15 days; Only 3 active days in 28; Fails often (75% of attempts),15.0,3.0,0.0,0.0,732.0,IOS,Australia,tablet
+2018-09-18,188,7B12B56BE42BA15EE493BDC9902B54E4,High,0.7235,Not seen for 4 days; Only 3 active days in 28; New user (7 days),4.0,3.0,3.0,4.0,7.0,ANDROID,India,mobile
+2018-09-18,189,9434EE4CFDFE0F5BCFE40126A569F3BB,High,0.7223,Silent 8 days; Only 3 active days in 28; New user (12 days),8.0,3.0,0.0,0.0,12.0,ANDROID,United States,mobile
+2018-09-18,190,6E824AF7F592793A79DAD4E66F66755C,High,0.7205,Silent 9 days; Only 4 active days in 28; New user (24 days),9.0,4.0,0.0,0.0,24.0,ANDROID,United States,mobile
+2018-09-18,191,06620D97BAC22D30DDE66F80BC5E7EA3,High,0.7185,Silent 19 days; Only 3 active days in 28,19.0,3.0,0.0,0.0,841.0,ANDROID,United States,mobile
+2018-09-18,192,BC1AF9C485B77D96242B88EE5085B1E5,High,0.7184,Silent 9 days,9.0,5.0,0.0,0.0,841.0,IOS,United States,mobile
+2018-09-18,193,2E6EC20A3654CA05985204703A90B801,High,0.7181,Silent 19 days; Only 4 active days in 28,19.0,4.0,0.0,0.0,171.0,ANDROID,United States,mobile
+2018-09-18,194,B8C8015FECAD94364B76E74CA9C1A946,High,0.7173,Silent 8 days; Only 3 active days in 28; New user (11 days),8.0,3.0,0.0,0.0,11.0,IOS,Other,mobile
+2018-09-18,195,88A41BFED275BB69125BE1F5524F3B42,High,0.7159,Silent 15 days; Only 3 active days in 28,15.0,3.0,0.0,0.0,376.0,ANDROID,United States,tablet
+2018-09-18,196,1762CA37B5E74A04C62CFEE59A9A5111,High,0.7156,Silent 9 days; Only 3 active days in 28; Fails often (56% of attempts),9.0,3.0,0.0,0.0,678.0,IOS,United States,mobile
+2018-09-18,197,FB9AD160115DC0E6F045BB654344287B,High,0.7154,Silent 15 days; Only 4 active days in 28,15.0,4.0,0.0,0.0,194.0,ANDROID,Japan,mobile
+2018-09-18,198,A15A1DCDB0A2928E29DA90A68A2D5764,High,0.7124,Silent 11 days; Only 3 active days in 28,11.0,3.0,0.0,0.0,226.0,ANDROID,Other,mobile
+2018-09-18,199,D5A644624E0D407445643D503F43B944,High,0.7099,Not seen for 6 days; Activity down 72% vs usual week,6.0,9.0,1.0,0.28,31.0,IOS,Other,mobile
+2018-09-18,200,DAD2E26F6C0E4C6631490AC31BF2DBC8,High,0.7085,Only 3 active days in 28; New user (18 days),2.0,3.0,1.0,1.16,18.0,ANDROID,Other,mobile
+2018-09-18,201,B2F772F0D926158EE1C7ABDA43100D33,High,0.7082,Silent 7 days; Only 3 active days in 28; New user (22 days),7.0,3.0,1.0,1.16,22.0,IOS,United States,mobile
+2018-09-18,202,C98FE4C10160A105798C65E6AA160974,High,0.7051,Silent 11 days; Only 3 active days in 28; New user (28 days),11.0,3.0,0.0,0.0,28.0,ANDROID,Other,mobile
+2018-09-18,203,03A9D32C44665A9E15CFCCEDC9F68EDB,High,0.7043,Not seen for 4 days; Activity down 93% vs usual week,4.0,12.0,1.0,0.07,92.0,ANDROID,United States,mobile
+2018-09-18,204,0DF6A14F536F6514A6F18BC12A532A82,High,0.7043,Not seen for 6 days; Only 4 active days in 28; Hit app errors (19),6.0,4.0,1.0,2.6,46.0,ANDROID,United States,tablet
+2018-09-18,205,68A9524E56BA07A82BBC48AE25F2C246,High,0.7033,Silent 9 days; Only 3 active days in 28; Fails often (62% of attempts),9.0,3.0,0.0,0.0,165.0,IOS,United States,tablet
+2018-09-18,206,DCEFBF52331910FC267F07111AD868F9,High,0.7024,Silent 9 days; Only 3 active days in 28,9.0,3.0,0.0,0.0,132.0,ANDROID,Other,mobile
+2018-09-18,207,AE257B45A80D36AAE84F28E46DBF6644,High,0.6988,Silent 8 days; Only 3 active days in 28; New user (10 days),8.0,3.0,0.0,0.0,10.0,ANDROID,India,mobile
+2018-09-18,208,DFC2120907EE81E1836E3A9E257498C9,High,0.698,Silent 9 days; Only 3 active days in 28,9.0,3.0,0.0,0.0,75.0,ANDROID,Other,mobile
+2018-09-18,209,8715F32A9C6E70EAB6895C0581400E6B,High,0.6961,Not seen for 6 days; Only 3 active days in 28; New user (11 days),6.0,3.0,1.0,0.58,11.0,IOS,Other,mobile
+2018-09-18,210,21D29079D74D0CA82E5850EB9C86F820,High,0.6949,Silent 9 days; Only 4 active days in 28,9.0,4.0,0.0,0.0,58.0,ANDROID,United States,mobile
+2018-09-18,211,8DD9EE9E89281B74B0CF63B5614189E7,High,0.6944,Silent 16 days; Only 3 active days in 28,16.0,3.0,0.0,0.0,837.0,IOS,United States,mobile
+2018-09-18,212,0468A3491A70948EFEBE92DAA699F4CF,High,0.6933,Silent 11 days; Only 4 active days in 28,11.0,4.0,0.0,0.0,235.0,IOS,United States,mobile
+2018-09-18,213,E080406D26F71C9B8F331779CE8B82BA,High,0.6931,Silent 20 days; Only 3 active days in 28; Fails often (42% of attempts),20.0,3.0,0.0,0.0,622.0,ANDROID,United States,mobile
+2018-09-18,214,C164946D2A79F9A024EB96B6C555B29B,High,0.6913,Silent 8 days; Only 3 active days in 28,8.0,3.0,0.0,0.0,247.0,ANDROID,Japan,mobile
+2018-09-18,215,EEA7994C33475920620AC49055AA96D8,High,0.6911,Not seen for 6 days; Only 3 active days in 28; New user (18 days),6.0,3.0,1.0,2.2,18.0,ANDROID,United States,mobile
+2018-09-18,216,DEBFB520A77B520CA36FD8C9C9A269AD,High,0.6887,Silent 15 days; Only 3 active days in 28; Fails often (73% of attempts),15.0,3.0,0.0,0.0,821.0,IOS,United States,tablet
+2018-09-18,217,82072F48F4EF171AAA1D605D5E205F2A,High,0.6873,Not seen for 6 days; Only 4 active days in 28; New user (23 days),6.0,4.0,1.0,1.91,23.0,IOS,Other,mobile
+2018-09-18,218,D9E0B99D114ACD55A2349149F3BC96F7,High,0.6867,Not seen for 4 days; Only 3 active days in 28; New user (12 days),4.0,3.0,2.0,2.54,12.0,ANDROID,Other,tablet
+2018-09-18,219,5ACF1A6BFE350F7BB661BF389AF7E2F0,High,0.6863,Silent 13 days; Only 4 active days in 28,13.0,4.0,0.0,0.0,42.0,ANDROID,India,mobile
+2018-09-18,220,89427602D4335C85A7205E64B3347655,High,0.685,Silent 10 days; Only 3 active days in 28; Hit app errors (1),10.0,3.0,0.0,0.0,46.0,IOS,Australia,tablet
+2018-09-18,221,1998E771F5C24E7FEA242074595E52FE,High,0.6849,Activity down 64% vs usual week; New user (25 days); Fails often (58% of attempts),2.0,6.0,1.0,0.36,25.0,IOS,China,mobile
+2018-09-18,222,34ADF71F1AADCA26EC8008496F7CC87E,High,0.6847,Not seen for 3 days; Activity down 98% vs usual week; Only 4 active days in 28,3.0,4.0,1.0,0.02,18.0,ANDROID,India,mobile
+2018-09-18,223,57CEF48816FE7CE296E7BDBD7F43F646,High,0.6831,Not seen for 5 days; Only 3 active days in 28; New user (12 days),5.0,3.0,1.0,2.19,12.0,IOS,China,mobile
+2018-09-18,224,96685CED0793A219EFE8976477D7DA56,High,0.6829,Not seen for 4 days; Activity down 73% vs usual week; Only 3 active days in 28,4.0,3.0,1.0,0.27,13.0,ANDROID,United States,mobile
+2018-09-18,225,FE3331C93B8A54B8C9145532FFAD704A,High,0.6826,Silent 10 days; Fails often (86% of attempts),10.0,9.0,0.0,0.0,54.0,IOS,China,tablet
+2018-09-18,226,84AFEFA3875BA1F17232CB41D06B6EF4,High,0.6826,Silent 9 days; Only 3 active days in 28,9.0,3.0,0.0,0.0,409.0,ANDROID,Other,mobile
+2018-09-18,227,B65315819D817477B810CA2370FB5935,High,0.6796,Not seen for 4 days; Only 3 active days in 28; New user (6 days),4.0,3.0,3.0,4.0,6.0,ANDROID,Other,mobile
+2018-09-18,228,0B08423CCD5F1503B5A8B306FFED999C,High,0.6787,Silent 9 days; Hit app errors (4),9.0,7.0,0.0,0.0,820.0,IOS,Brazil,mobile
+2018-09-18,229,AC14799A5E8C340D6CADCBAE72037D81,High,0.6784,Silent 7 days; Only 4 active days in 28; Fails often (86% of attempts),7.0,4.0,1.0,0.29,48.0,ANDROID,Other,mobile
+2018-09-18,230,5E3CBF1204F069C8F4474D492A361CCD,High,0.6771,Silent 15 days; Hit app errors (7),15.0,9.0,0.0,0.0,40.0,IOS,United States,tablet
+2018-09-18,231,5D61E6AC342F01CDCAF3A20B02426C70,High,0.6749,Silent 9 days; Only 3 active days in 28; New user (15 days),9.0,3.0,0.0,0.0,15.0,IOS,United States,tablet
+2018-09-18,232,A0E93D033E25966AB516BE78D143DE7A,High,0.6744,Silent 8 days; Only 3 active days in 28,8.0,3.0,0.0,0.0,66.0,ANDROID,Japan,mobile
+2018-09-18,233,880C220698D2A32CF0709DD95857AB60,High,0.669,Not seen for 4 days; New user (14 days),4.0,5.0,3.0,1.54,14.0,ANDROID,Australia,mobile
+2018-09-18,234,4F09BB9CBF9E3C4A742B1D8B42D2E60A,High,0.6679,Not seen for 5 days; Only 3 active days in 28; New user (7 days),5.0,3.0,3.0,4.0,7.0,ANDROID,India,mobile
+2018-09-18,235,BC7EA6EAB18533AF121D4115DDB03673,High,0.6666,Silent 10 days; Only 3 active days in 28,10.0,3.0,0.0,0.0,131.0,ANDROID,Other,mobile
+2018-09-18,236,6080ACBD76F27089523A73026969036D,High,0.6663,Silent 17 days; Only 4 active days in 28,17.0,4.0,0.0,0.0,591.0,ANDROID,United States,mobile
+2018-09-18,237,18688C841952131D9A6A01B81C8F65F3,High,0.6654,Not seen for 5 days; Only 4 active days in 28; New user (21 days),5.0,4.0,1.0,0.75,21.0,IOS,Other,tablet
+2018-09-18,238,8EB99B177B914F63CE215683892205AD,High,0.6634,Silent 13 days,13.0,5.0,0.0,0.0,157.0,ANDROID,Other,mobile
+2018-09-18,239,0AFE3DE6A443BD660CDD5B1FA36686F6,High,0.6628,Silent 18 days; Only 3 active days in 28,18.0,3.0,0.0,0.0,37.0,ANDROID,Other,mobile
+2018-09-18,240,5739392D677D5C10C44F446DD14DBF60,High,0.6621,Silent 8 days; Only 3 active days in 28,8.0,3.0,0.0,0.0,87.0,IOS,Canada,mobile
+2018-09-18,241,78119035B1798D27E62402E7ADB498BC,High,0.6621,Silent 19 days; Only 3 active days in 28; Hit app errors (9),19.0,3.0,0.0,0.0,117.0,IOS,United States,tablet
+2018-09-18,242,841727B396264112EC75FEB26C57E25C,High,0.6591,Silent 8 days; New user (28 days); Hit app errors (1),8.0,6.0,0.0,0.0,28.0,ANDROID,United States,mobile
+2018-09-18,243,A7642D8075588A1BE483081F553C97DF,High,0.6587,Not seen for 5 days; Activity down 64% vs usual week; New user (14 days),5.0,5.0,1.0,0.36,14.0,IOS,United States,mobile
+2018-09-18,244,5499A650A5095E94AADDBEAE43F374D1,High,0.6578,Silent 7 days; Only 4 active days in 28,7.0,4.0,1.0,0.37,81.0,IOS,United States,tablet
+2018-09-18,245,E7F45BD93A980C6443443893DCDC0048,High,0.6572,Silent 7 days; Only 3 active days in 28; New user (13 days),7.0,3.0,1.0,1.77,13.0,ANDROID,Australia,mobile
+2018-09-18,246,0A9D7004114F34B9CD49538E173E01A7,High,0.657,Silent 11 days,11.0,6.0,0.0,0.0,324.0,IOS,United Kingdom,mobile
+2018-09-18,247,5E9B9E20975EF45745B511D401456619,High,0.657,Not seen for 4 days; Only 3 active days in 28,4.0,3.0,1.0,0.88,68.0,ANDROID,Australia,mobile
+2018-09-18,248,7439CA3E049F434742CB5C63A55FC24D,High,0.6537,Silent 13 days; Only 3 active days in 28,13.0,3.0,0.0,0.0,41.0,ANDROID,United States,mobile
+2018-09-18,249,9F8D4A18FC571082BD1D7AA5597756AD,High,0.6523,Not seen for 3 days; Activity down 70% vs usual week; New user (16 days),3.0,6.0,1.0,0.3,16.0,ANDROID,India,mobile
+2018-09-18,250,7709833232AD9720F6DD21A2F5D8690A,High,0.6505,Not seen for 3 days; Only 4 active days in 28; New user (19 days),3.0,4.0,1.0,3.12,19.0,IOS,United States,tablet
+2018-09-18,251,C96F1CB586725A7D165BCF665C131114,High,0.648,Silent 8 days; Only 3 active days in 28; New user (12 days),8.0,3.0,0.0,0.0,12.0,IOS,United States,tablet
+2018-09-18,252,03B685883D78D1DB9F67A86635F9D788,Medium,0.6477,Silent 15 days; Only 3 active days in 28,15.0,3.0,0.0,0.0,37.0,ANDROID,United States,mobile
+2018-09-18,253,9B18A1CBA96D52D05CFA7CB7C9011EDE,Medium,0.6473,Silent 14 days; Hit app errors (1),14.0,5.0,0.0,0.04,72.0,ANDROID,United States,mobile
+2018-09-18,254,35DDC37EB72373793E703516725BB2FE,Medium,0.6465,Silent 18 days; Only 3 active days in 28,18.0,3.0,0.0,0.0,143.0,ANDROID,United States,mobile
+2018-09-18,255,011A541DBC3D5ADB8450B051AC69A304,Medium,0.6465,Silent 11 days; Only 3 active days in 28,11.0,3.0,0.0,0.0,217.0,ANDROID,United States,mobile
+2018-09-18,256,D924713CB1AF85AED83BC394B164B9DC,Medium,0.6455,Silent 15 days; Only 3 active days in 28,15.0,3.0,0.0,0.0,781.0,IOS,United States,tablet
+2018-09-18,257,E97CDE5EB1DF03050A5B1181B8769ABE,Medium,0.6439,Not seen for 5 days; Activity down 94% vs usual week; Only 3 active days in 28,5.0,3.0,2.0,0.06,8.0,ANDROID,India,mobile
+2018-09-18,258,01A2266B0F0188829C230F90721CE95D,Medium,0.6439,Silent 13 days; Only 3 active days in 28; Hit app errors (1),13.0,3.0,0.0,0.0,547.0,IOS,France,mobile
+2018-09-18,259,5BB701762E3D47A7D00680C9C76FC5B8,Medium,0.6418,Silent 9 days,9.0,5.0,0.0,0.0,821.0,IOS,United States,tablet
+2018-09-18,260,386EE7D00E029293C53C2ED7319EF520,Medium,0.6404,Not seen for 3 days; New user (15 days); Hit app errors (22),3.0,5.0,2.0,0.99,15.0,IOS,United States,mobile
+2018-09-18,261,7842C62D45ECE888132F21C9F4417B21,Medium,0.6374,Silent 15 days; Only 3 active days in 28,15.0,3.0,0.0,0.0,255.0,ANDROID,United States,mobile
+2018-09-18,262,ECB85C458DBA7656D2B30C51AA590F13,Medium,0.6362,Silent 15 days; Only 4 active days in 28,15.0,4.0,0.0,0.0,332.0,ANDROID,United States,mobile
+2018-09-18,263,BA6AC3E59787946CFE7804B39352E10F,Medium,0.6352,Silent 15 days; Only 4 active days in 28; New user (29 days),15.0,4.0,0.0,0.0,29.0,ANDROID,Japan,mobile
+2018-09-18,264,3625F3FD85FD9056BCC10747317EAD2C,Medium,0.6345,Not seen for 4 days; Only 3 active days in 28; New user (24 days),4.0,3.0,1.0,1.24,24.0,ANDROID,India,mobile
+2018-09-18,265,01B358175084B5B44F1C83C2A42FE33A,Medium,0.6337,Silent 13 days; Only 4 active days in 28,13.0,4.0,0.0,0.0,133.0,ANDROID,United States,mobile
+2018-09-18,266,720BE680F69D58BD26EB4381D36F2B6E,Medium,0.6332,Silent 11 days; Only 4 active days in 28; Fails often (53% of attempts),11.0,4.0,0.0,0.0,209.0,IOS,France,mobile
+2018-09-18,267,6B79073DC6A4D08D7718ABD38722ED70,Medium,0.6323,Silent 19 days; Only 3 active days in 28; Fails often (42% of attempts),19.0,3.0,0.0,0.0,829.0,ANDROID,United Kingdom,mobile
+2018-09-18,268,509912E9FC4BB4F9DA00D524E76B9DB7,Medium,0.6294,Not seen for 3 days; Only 3 active days in 28,3.0,3.0,2.0,3.8,126.0,ANDROID,United States,tablet
+2018-09-18,269,196CDAC439AE9EB9B70F6868A05FAD3D,Medium,0.6289,Not seen for 6 days; Only 3 active days in 28; New user (10 days),6.0,3.0,2.0,3.23,10.0,ANDROID,India,mobile
+2018-09-18,270,E6850F5E0DAB3E339C6A36BDEECCA26F,Medium,0.6253,Silent 20 days; Only 4 active days in 28; Fails often (50% of attempts),20.0,4.0,0.0,0.0,102.0,ANDROID,United States,mobile
+2018-09-18,271,2CEF0B3F63A7FD536BD7A1D7EBDAA82A,Medium,0.6249,Silent 8 days; New user (28 days),8.0,11.0,0.0,0.0,28.0,ANDROID,United States,mobile
+2018-09-18,272,09A826527E24EFA70A0B7A8BDCD38962,Medium,0.6242,Silent 8 days; Only 4 active days in 28,8.0,4.0,0.0,0.0,462.0,ANDROID,United States,mobile
+2018-09-18,273,310228A29216613C01B08D8B37AA21E1,Medium,0.6237,Not seen for 4 days; Activity down 85% vs usual week; Only 3 active days in 28,4.0,3.0,1.0,0.15,19.0,ANDROID,Other,mobile
+2018-09-18,274,1E5DBD09EFA45FAD3B46F67DB12A9CA9,Medium,0.6236,Silent 8 days; Only 3 active days in 28; Hit app errors (1),8.0,3.0,0.0,0.0,836.0,IOS,Other,mobile
+2018-09-18,275,3DC1C89C927D2FC9D264FBC21E401E5B,Medium,0.6233,Silent 17 days; Only 3 active days in 28,17.0,3.0,0.0,0.0,95.0,ANDROID,Mexico,mobile
+2018-09-18,276,5E1D7A0315BB5D52CBFC3607DDC0ACD5,Medium,0.6222,Not seen for 5 days; Only 3 active days in 28; Hit app errors (1),5.0,3.0,1.0,0.53,282.0,IOS,Australia,mobile
+2018-09-18,277,F1F2C328BF34010DBA50842CA03956E2,Medium,0.6207,Silent 16 days,16.0,5.0,0.0,0.0,817.0,IOS,United States,tablet
+2018-09-18,278,5C5D78DD8E3D3B7FFC9118D4511E76BF,Medium,0.6205,Silent 10 days; New user (21 days),10.0,8.0,0.0,0.0,21.0,ANDROID,Japan,mobile
+2018-09-18,279,C302332F1B2DC5162E47913A708C479B,Medium,0.6188,Not seen for 4 days; Activity down 99% vs usual week; New user (26 days),4.0,7.0,1.0,0.01,26.0,ANDROID,United States,mobile
+2018-09-18,280,D86F6932B877ABF570297F4A5BD9F6F8,Medium,0.6182,Not seen for 6 days; Only 3 active days in 28; New user (14 days),6.0,3.0,1.0,2.24,14.0,ANDROID,Brazil,mobile
+2018-09-18,281,A27845038DBE9F9F965FDE3F5742BB77,Medium,0.6179,Only 3 active days in 28; New user (28 days); Hit app errors (1),2.0,3.0,2.0,3.44,28.0,IOS,Canada,mobile
+2018-09-18,282,E48A64DA907583189751D6FF988D14F6,Medium,0.6168,Silent 9 days; Only 3 active days in 28,9.0,3.0,0.0,0.0,350.0,ANDROID,Canada,mobile
+2018-09-18,283,66EE0DB049AA1A3B92B41375C1263B05,Medium,0.6161,Silent 13 days; Only 3 active days in 28,13.0,3.0,0.0,0.0,252.0,ANDROID,Other,mobile
+2018-09-18,284,29BC86DCA0D500C9410F392B57C28DD3,Medium,0.6139,Silent 17 days,17.0,7.0,0.0,0.0,367.0,IOS,United States,tablet
+2018-09-18,285,E1476D29DC7A91F5A54C2231D409F879,Medium,0.6133,Not seen for 5 days; Only 3 active days in 28; Fails often (70% of attempts),5.0,3.0,1.0,2.49,40.0,IOS,United States,mobile
+2018-09-18,286,6BEB06D064B7393657B25234BFF14E1D,Medium,0.613,Silent 15 days; Hit app errors (2),15.0,5.0,0.0,0.0,85.0,IOS,United Kingdom,tablet
+2018-09-18,287,D3F06F9B7BD9D7FC8758BF78BF0705E9,Medium,0.6117,Silent 17 days; Only 4 active days in 28; Hit app errors (7),17.0,4.0,0.0,0.0,654.0,ANDROID,Netherlands,mobile
+2018-09-18,288,86BA12A559647CBA7F81E11FB5658902,Medium,0.6095,Not seen for 3 days; Only 3 active days in 28; New user (9 days),3.0,3.0,2.0,2.56,9.0,ANDROID,Other,mobile
+2018-09-18,289,25DFBAA3823DDC3B5D4C6F7B59CBF8B4,Medium,0.609,Silent 7 days; Only 4 active days in 28; Fails often (50% of attempts),7.0,4.0,1.0,1.19,264.0,ANDROID,United Kingdom,mobile
+2018-09-18,290,1AC4053414419B71EA8C2117801E12DF,Medium,0.6078,Activity down 75% vs usual week; Only 3 active days in 28,1.0,3.0,1.0,0.25,266.0,IOS,Germany,mobile
+2018-09-18,291,E53BC2A0AD86417B443AF14EE3082C0F,Medium,0.6073,Silent 15 days; Fails often (80% of attempts),15.0,5.0,0.0,0.0,211.0,IOS,United States,tablet
+2018-09-18,292,58230465C695B0FDDDAE08A481FAEECC,Medium,0.6069,Silent 17 days; Only 4 active days in 28,17.0,4.0,0.0,0.0,680.0,ANDROID,United States,mobile
+2018-09-18,293,D842320AECB686B41C2F8E8876794D34,Medium,0.6063,Silent 15 days; Only 3 active days in 28; Fails often (44% of attempts),15.0,3.0,0.0,0.0,227.0,ANDROID,United States,mobile
+2018-09-18,294,C8DC7E5DCC6A705EE7201AEB725A523B,Medium,0.6055,Activity down 97% vs usual week; New user (19 days); Hit app errors (2),1.0,5.0,1.0,0.03,19.0,ANDROID,Japan,mobile
+2018-09-18,295,E0562323C1BAADE462D8D1BD783C75EA,Medium,0.6048,Silent 15 days; Only 4 active days in 28,15.0,4.0,0.0,0.0,828.0,ANDROID,United States,mobile
+2018-09-18,296,910D89B4C5015DC78D0AB413FE5325E1,Medium,0.6033,Not seen for 6 days; Only 3 active days in 28; Fails often (42% of attempts),6.0,3.0,1.0,1.29,334.0,IOS,Canada,mobile
+2018-09-18,297,1A7F253A85B952C329518608DEC20138,Medium,0.6014,Silent 15 days; Only 3 active days in 28,15.0,3.0,0.0,0.0,182.0,ANDROID,United States,mobile
+2018-09-18,298,F3A2F44C99758CC6006BFE28AC78EBFE,Medium,0.6014,Not seen for 5 days,5.0,5.0,1.0,0.68,41.0,ANDROID,Japan,mobile
+2018-09-18,299,0175F289F0878C46DCA6B0AF3C5677F1,Medium,0.5996,Activity down 64% vs usual week; Hit app errors (2),2.0,6.0,1.0,0.36,412.0,IOS,United States,tablet
+2018-09-18,300,5877BD06E811B7BE0BCFA8F2D5F72FD8,Medium,0.5984,Silent 9 days; Only 3 active days in 28,9.0,3.0,0.0,0.0,825.0,ANDROID,United States,mobile
+2018-09-18,301,018D9A140B327998E49E56FF12ECE76D,Medium,0.5968,Not seen for 6 days; Only 3 active days in 28; Fails often (90% of attempts),6.0,3.0,2.0,2.25,403.0,IOS,United Kingdom,tablet
+2018-09-18,302,579700B60FE8D8C382D5421FBBF7535D,Medium,0.5942,Silent 18 days; Only 4 active days in 28,18.0,4.0,0.0,0.0,98.0,ANDROID,Canada,mobile
+2018-09-18,303,6B07E90CD14662B55877A7CBC80A1133,Medium,0.5911,Silent 10 days; Only 3 active days in 28,10.0,3.0,0.0,0.0,842.0,IOS,United Kingdom,tablet
+2018-09-18,304,7CE5EA721C3169E682540F2C897A3904,Medium,0.5907,Silent 7 days; Only 3 active days in 28,7.0,3.0,1.0,2.04,544.0,IOS,Japan,mobile
+2018-09-18,305,08F419D33605DA4495326A1D22DBD6B3,Medium,0.5907,Not seen for 3 days; Only 3 active days in 28,3.0,3.0,3.0,4.0,723.0,ANDROID,Other,mobile
+2018-09-18,306,E91B8667BC9A7EB2299B2EAFBCF1B9E7,Medium,0.5891,Not seen for 4 days; Activity down 74% vs usual week; New user (21 days),4.0,6.0,1.0,0.26,21.0,ANDROID,Taiwan,mobile
+2018-09-18,307,679B4D02880718EBD462BC9F221810C5,Medium,0.587,Silent 11 days; Only 3 active days in 28; Fails often (68% of attempts),11.0,3.0,0.0,0.0,356.0,IOS,Canada,mobile
+2018-09-18,308,608CEA53C39E0A3EAB36C8E8B075F161,Medium,0.5865,Not seen for 4 days; Activity down 73% vs usual week; Only 3 active days in 28,4.0,3.0,1.0,0.27,523.0,ANDROID,Netherlands,mobile
+2018-09-18,309,301AFECE7DEEE17ACC059F6C18017D80,Medium,0.5864,Silent 10 days; Only 4 active days in 28,10.0,4.0,0.0,0.0,250.0,ANDROID,United States,mobile
+2018-09-18,310,075EBEDBF28134BE41FB4E7D943F858C,Medium,0.5841,Not seen for 6 days; Only 3 active days in 28; Hit app errors (1),6.0,3.0,1.0,1.17,761.0,IOS,United States,mobile
+2018-09-18,311,C5DCA2292596A382EA616396AF69780E,Medium,0.5831,Silent 14 days; Hit app errors (1),14.0,6.0,0.0,0.0,331.0,ANDROID,United States,mobile
+2018-09-18,312,497308A94C26945E008226F51C49C706,Medium,0.5819,Silent 9 days; Only 3 active days in 28,9.0,3.0,0.0,0.0,46.0,ANDROID,Other,mobile
+2018-09-18,313,835890EDAF174BA817F63BC3F3F637EE,Medium,0.5809,Not seen for 4 days; Only 3 active days in 28,4.0,3.0,1.0,2.88,177.0,IOS,Japan,mobile
+2018-09-18,314,B80ECCB77CF6F259FFD4AD79A3304B03,Medium,0.5797,Not seen for 6 days; Activity down 59% vs usual week,6.0,5.0,1.0,0.41,64.0,ANDROID,Canada,mobile
+2018-09-18,315,1845E883F5E20391CD3BD68F488A3C5E,Medium,0.5786,Silent 9 days; Only 3 active days in 28,9.0,3.0,0.0,0.0,40.0,IOS,United States,tablet
+2018-09-18,316,5AE88E24439A254C9D55BA3BEFE323F3,Medium,0.5786,Not seen for 6 days; Only 3 active days in 28; New user (8 days),6.0,3.0,2.0,2.3,8.0,ANDROID,United States,mobile
+2018-09-18,317,CA374E053CF35114C98D40A23CAFA777,Medium,0.5777,Silent 18 days; Only 3 active days in 28,18.0,3.0,0.0,0.0,549.0,ANDROID,United States,mobile
+2018-09-18,318,1B3AD9683D475EFB398E131DFE65AE61,Medium,0.5774,Silent 15 days; Only 3 active days in 28,15.0,3.0,0.0,0.0,419.0,ANDROID,United States,mobile
+2018-09-18,319,71381569682468BBBB8936278290D669,Medium,0.5769,Only 3 active days in 28; New user (5 days); Fails often (59% of attempts),1.0,3.0,3.0,4.0,5.0,IOS,Other,mobile
+2018-09-18,320,390CFE5F2487173EC95DCF3CEECDB837,Medium,0.5756,Not seen for 4 days; Only 4 active days in 28; Fails often (48% of attempts),4.0,4.0,3.0,3.72,249.0,ANDROID,Other,mobile
+2018-09-18,321,68D40373F4BC1FDD9BD02B56526D9D7B,Medium,0.5749,Silent 11 days; Only 3 active days in 28; Hit app errors (1),11.0,3.0,0.0,0.0,779.0,IOS,Japan,mobile
+2018-09-18,322,B141B75E5E5D48DAD8298F91B94A2E07,Medium,0.5746,Not seen for 6 days; Only 4 active days in 28,6.0,4.0,2.0,2.45,475.0,ANDROID,United States,mobile
+2018-09-18,323,18E411FDAAC1721AA04F64BC6193F968,Medium,0.574,Not seen for 3 days; Only 3 active days in 28; New user (8 days),3.0,3.0,2.0,1.37,8.0,ANDROID,United States,mobile
+2018-09-18,324,5C0B5019D09A484ECA0AF6E636D4205E,Medium,0.5718,Not seen for 3 days; Only 4 active days in 28; Hit app errors (2),3.0,4.0,1.0,2.0,135.0,IOS,France,mobile
+2018-09-18,325,879503A3ED5F2DCB6592E99C42E1BDFE,Medium,0.571,Not seen for 5 days; New user (17 days); Fails often (49% of attempts),5.0,5.0,2.0,0.81,17.0,ANDROID,India,mobile
+2018-09-18,326,098868D9626624131122714C36A5D069,Medium,0.5702,Not seen for 6 days; Only 3 active days in 28,6.0,3.0,1.0,1.09,42.0,ANDROID,United States,mobile
+2018-09-18,327,60603343AB8FEECD78B1009C957D193D,Medium,0.5689,Silent 15 days,15.0,8.0,0.0,0.0,840.0,ANDROID,United States,mobile
+2018-09-18,328,5145D8121071A9EA903A1098034962F6,Medium,0.5679,Silent 11 days; Hit app errors (6),11.0,9.0,0.0,0.0,81.0,ANDROID,United States,mobile
+2018-09-18,329,488908B4727978E9813DD50CB3E7F330,Medium,0.5669,Silent 20 days; Only 3 active days in 28,20.0,3.0,0.0,0.0,370.0,ANDROID,United States,mobile
+2018-09-18,330,F3C82C9DB04064BA7965BBBD95864189,Medium,0.5656,Not seen for 4 days; Activity down 63% vs usual week; New user (19 days),4.0,7.0,1.0,0.37,19.0,IOS,Mexico,tablet
+2018-09-18,331,3BAD85C975EE5466BCC56F77BA433DB2,Medium,0.5645,Not seen for 5 days; Only 4 active days in 28; New user (26 days),5.0,4.0,1.0,1.1,26.0,IOS,Other,mobile
+2018-09-18,332,D14D2E97033107F3810C23B89C93BFCA,Medium,0.5636,Activity down 65% vs usual week; Only 3 active days in 28; New user (11 days),1.0,3.0,1.0,0.35,11.0,IOS,Australia,mobile
+2018-09-18,333,F42D1E33344A24A3F6868327BE121E5D,Medium,0.5633,Not seen for 5 days; Only 3 active days in 28; New user (11 days),5.0,3.0,2.0,3.36,11.0,IOS,United States,mobile
+2018-09-18,334,BDF5C54603EA724BB06956930ADFBF0A,Medium,0.5608,Silent 7 days; Only 3 active days in 28,7.0,3.0,1.0,1.35,464.0,IOS,United States,mobile
+2018-09-18,335,C40F22701672A6B7AFF9F4F6FBC235EA,Medium,0.5603,Not seen for 6 days; Only 3 active days in 28; New user (8 days),6.0,3.0,2.0,2.96,8.0,ANDROID,Taiwan,mobile
+2018-09-18,336,EF5251E1700D0283DDF3538BC27BB932,Medium,0.5599,Silent 16 days; Only 3 active days in 28,16.0,3.0,0.0,0.0,298.0,IOS,United States,tablet
+2018-09-18,337,934A101CA7B97944D05E0FC2ED3E203D,Medium,0.5599,Silent 16 days,16.0,7.0,0.0,0.0,674.0,IOS,United States,tablet
+2018-09-18,338,908D6EB0646A0411AB2B0D6DB73A241F,Medium,0.5579,Only 3 active days in 28; New user (12 days),1.0,3.0,2.0,1.16,12.0,IOS,Japan,mobile
+2018-09-18,339,243234771C2024373C594E34A55E7A54,Medium,0.5567,Not seen for 6 days; Only 4 active days in 28,6.0,4.0,1.0,1.91,398.0,IOS,United Kingdom,tablet
+2018-09-18,340,96333A5A97DA9F4AEBC7A70483AF6C5C,Medium,0.556,New user (17 days),1.0,6.0,3.0,1.09,17.0,ANDROID,India,mobile
+2018-09-18,341,00B6D40595249C8532BCA9846389C411,Medium,0.5557,Activity down 88% vs usual week; Only 3 active days in 28; New user (11 days),1.0,3.0,1.0,0.12,11.0,ANDROID,India,mobile
+2018-09-18,342,09FCF0FC0E0F04B3DD8DFE96DA57DDF6,Medium,0.5554,Silent 17 days; Hit app errors (1),17.0,5.0,0.0,0.0,684.0,IOS,United States,tablet
+2018-09-18,343,FFD44153572065E379B7E96916F730B8,Medium,0.5553,Silent 8 days; Fails often (56% of attempts),8.0,10.0,0.0,0.0,32.0,ANDROID,United States,mobile
+2018-09-18,344,F4FA177913ACA8661529D01C94863AC6,Medium,0.5531,Not seen for 6 days; Only 3 active days in 28,6.0,3.0,1.0,1.58,522.0,ANDROID,United States,tablet
+2018-09-18,345,FDDFE28C3B0A73F93F593514F578760A,Medium,0.5526,Silent 7 days; Only 3 active days in 28,7.0,3.0,1.0,1.95,354.0,IOS,United States,mobile
+2018-09-18,346,2BB1C46E7BC72893130A3F8D3FB9E9F4,Medium,0.5524,Silent 7 days; Only 3 active days in 28,7.0,3.0,1.0,0.71,231.0,IOS,United States,mobile
+2018-09-18,347,459FD97ABE14D7762CD58C3A3104D183,Medium,0.5521,Activity down 68% vs usual week; Only 3 active days in 28,2.0,3.0,1.0,0.32,41.0,ANDROID,United States,mobile
+2018-09-18,348,1E75C68279B302D2B8FA89C6BF4710A8,Medium,0.5519,Silent 7 days; Only 3 active days in 28,7.0,3.0,1.0,1.23,320.0,IOS,United States,mobile
+2018-09-18,349,4BDC831A6940071E2461D0B5293A329E,Medium,0.551,Silent 17 days; Hit app errors (1),17.0,5.0,0.0,0.0,564.0,ANDROID,United States,mobile
+2018-09-18,350,7FD3ECDE609533E2BC60B7733DB6CFCB,Medium,0.5503,Silent 16 days,16.0,7.0,0.0,0.0,559.0,IOS,United States,tablet
+2018-09-18,351,5E316975A9F0FCFD2E4AD4967A06C260,Medium,0.5478,Silent 19 days; Only 3 active days in 28,19.0,3.0,0.0,0.0,436.0,ANDROID,United States,tablet
+2018-09-18,352,2FCF88BD94734DFF9348293720DD1DA0,Medium,0.5477,Silent 7 days; Only 3 active days in 28; Fails often (45% of attempts),7.0,3.0,1.0,1.45,157.0,IOS,United Kingdom,mobile
+2018-09-18,353,A9E807665E94FF89025596B115E09C5C,Medium,0.5466,Not seen for 5 days; Only 3 active days in 28,5.0,3.0,1.0,1.09,91.0,ANDROID,India,mobile
+2018-09-18,354,325CCD0662FC4EA9853B7D3E3B6693A5,Medium,0.5462,Silent 15 days; Only 3 active days in 28,15.0,3.0,0.0,0.0,810.0,IOS,United States,tablet
+2018-09-18,355,234DF385B94B51B87B2A5BF5B185739E,Medium,0.5446,Not seen for 5 days; Only 4 active days in 28; New user (8 days),5.0,4.0,3.0,1.43,8.0,IOS,Other,mobile
+2018-09-18,356,DDE1287D72B28B1143095BDF14BA67C5,Medium,0.543,Not seen for 4 days; Activity down 83% vs usual week; New user (24 days),4.0,9.0,1.0,0.17,24.0,IOS,United States,mobile
+2018-09-18,357,50D529BFD3EFEB1C8216DF9A321A552A,Medium,0.5424,Not seen for 5 days; Activity down 74% vs usual week; New user (21 days),5.0,11.0,2.0,0.26,21.0,ANDROID,Japan,mobile
+2018-09-18,358,85BD2BA62BDC8185DC768BF79A288DC4,Medium,0.5416,Not seen for 5 days; Only 3 active days in 28; Fails often (70% of attempts),5.0,3.0,1.0,2.89,344.0,IOS,United States,mobile
+2018-09-18,359,4BB019F8F6D1FE7BA78CA42A4698EF56,Medium,0.5409,Not seen for 4 days; Activity down 70% vs usual week; Hit app errors (4),4.0,9.0,1.0,0.3,54.0,ANDROID,India,mobile
+2018-09-18,360,46A9EAE235915B94D92A07A4E592D206,Medium,0.5385,Silent 15 days; Fails often (46% of attempts),15.0,9.0,0.0,0.0,606.0,IOS,United States,tablet
+2018-09-18,361,508787DC5F034BE21A1F6B441F12440A,Medium,0.5362,Only 4 active days in 28; New user (22 days),1.0,4.0,1.0,0.92,22.0,IOS,Germany,mobile
+2018-09-18,362,C63823EADC246DD7B610933FF5854022,Medium,0.5352,Not seen for 5 days; Only 3 active days in 28; New user (20 days),5.0,3.0,1.0,0.75,20.0,ANDROID,India,mobile
+2018-09-18,363,D77D42A6F7543597131BC27BDD70E117,Medium,0.5346,Not seen for 5 days; Only 3 active days in 28,5.0,3.0,1.0,1.41,360.0,IOS,United Kingdom,mobile
+2018-09-18,364,85F571A8A9878C55EB15F93449EB5447,Medium,0.5346,Silent 17 days,17.0,6.0,0.0,0.0,807.0,ANDROID,Mexico,mobile
+2018-09-18,365,B87DAB32D92C9A71F45E3DDE2CF02F93,Medium,0.5327,Silent 15 days; Fails often (43% of attempts),15.0,5.0,0.0,0.0,450.0,ANDROID,United States,mobile
+2018-09-18,366,91D637F0D9FB259AD52773B1B20151BE,Medium,0.5316,Silent 9 days; Hit app errors (6),9.0,14.0,0.0,0.0,219.0,ANDROID,United States,tablet
+2018-09-18,367,23FD6C65AB271F4DD5FC2FDEA888032D,Medium,0.5312,Silent 12 days; Only 4 active days in 28; New user (16 days),12.0,4.0,0.0,0.0,16.0,IOS,United States,tablet
+2018-09-18,368,8A1C79A7DD82197D40A2F4845010CF67,Medium,0.5282,Silent 10 days; Only 3 active days in 28; Hit app errors (14),10.0,3.0,0.0,0.0,134.0,ANDROID,United Kingdom,mobile
+2018-09-18,369,C96C96A3BFA142C6B393183BDB2B9DDB,Medium,0.5275,Silent 17 days; Only 3 active days in 28,17.0,3.0,0.0,0.0,55.0,IOS,United States,tablet
+2018-09-18,370,2F48607C41ECC4015FA296500F0A2C4B,Medium,0.5274,Silent 19 days; Fails often (42% of attempts),19.0,8.0,0.0,0.0,275.0,ANDROID,United States,mobile
+2018-09-18,371,12143EF181F781F1731844BAB656CFAA,Medium,0.5258,Silent 7 days; Only 3 active days in 28,7.0,3.0,1.0,1.7,360.0,IOS,United States,tablet
+2018-09-18,372,93DA73B120BE64477ED6F5EDB6D014DB,Medium,0.5256,Only 3 active days in 28; New user (9 days); Hit app errors (1),1.0,3.0,1.0,1.84,9.0,IOS,Other,tablet
+2018-09-18,373,EBC93C4A364F6830FECB16C6482F0D58,Medium,0.5256,Not seen for 6 days; Activity down 56% vs usual week; Only 4 active days in 28,6.0,4.0,1.0,0.44,11.0,ANDROID,Australia,mobile
+2018-09-18,374,1C261CF14E530870D1889225A434B8EE,Medium,0.5253,Not seen for 6 days; Only 4 active days in 28; New user (29 days),6.0,4.0,1.0,1.45,29.0,IOS,Canada,tablet
+2018-09-18,375,D13AD8E2C50768FF1CAE163EF068EA52,Medium,0.5235,Not seen for 6 days; Only 4 active days in 28; Hit app errors (3),6.0,4.0,2.0,3.08,296.0,ANDROID,United States,tablet
+2018-09-18,376,6AC7BFEC4A74E77E7B267A984BF3F0E6,Medium,0.5234,Silent 10 days; Only 3 active days in 28,10.0,3.0,0.0,0.0,274.0,ANDROID,United States,mobile
+2018-09-18,377,A6112956075518E4697E3A60A55715A6,Medium,0.5234,Not seen for 4 days; Only 3 active days in 28; Hit app errors (1),4.0,3.0,2.0,3.73,655.0,ANDROID,United States,mobile
+2018-09-18,378,AFF1262CCD472757FC92B2A93C75CD81,Medium,0.5233,Not seen for 4 days; Only 4 active days in 28,4.0,4.0,1.0,0.52,39.0,IOS,United States,tablet
+2018-09-18,379,85B9BAA3105AD395E7D84C61108F0D7E,Medium,0.5231,Not seen for 6 days; Only 4 active days in 28,6.0,4.0,2.0,0.61,64.0,ANDROID,India,mobile
+2018-09-18,380,E34E6316A764086F0FA07ED08BE3C63A,Medium,0.5228,Not seen for 6 days; Only 3 active days in 28,6.0,3.0,1.0,1.9,839.0,ANDROID,United States,mobile
+2018-09-18,381,14A1B4FCC57E0BAD032F0213A4BF8D78,Medium,0.5226,Silent 11 days; Only 3 active days in 28; Fails often (55% of attempts),11.0,3.0,0.0,0.0,108.0,IOS,United States,tablet
+2018-09-18,382,C3DDDD01BC219197FCB862218F7DC494,Medium,0.5223,Only 3 active days in 28,2.0,3.0,1.0,1.31,842.0,IOS,United States,tablet
+2018-09-18,383,CB2A03B9DC1894380C75344D15BC0BE6,Medium,0.5202,Silent 15 days; Only 3 active days in 28,15.0,3.0,0.0,0.0,167.0,IOS,United States,tablet
+2018-09-18,384,F09FE67FD10A14FED0F12CA0FFF83DD2,Medium,0.5194,Not seen for 6 days; Only 3 active days in 28; Fails often (40% of attempts),6.0,3.0,1.0,2.94,468.0,IOS,Other,mobile
+2018-09-18,385,14294180CB3279D586A86522F7FC7F4B,Medium,0.5191,Not seen for 3 days; Activity down 85% vs usual week; Only 4 active days in 28,3.0,4.0,1.0,0.15,29.0,IOS,United States,tablet
+2018-09-18,386,150372F747C719DC8DCC28EC8CBCD93E,Medium,0.5191,Silent 9 days; Only 3 active days in 28,9.0,3.0,0.0,0.0,392.0,IOS,United States,tablet
+2018-09-18,387,56B9CBB6CB58106DCCF3CAD660232CB2,Medium,0.5181,Silent 12 days,12.0,11.0,0.0,0.0,541.0,IOS,United States,tablet
+2018-09-18,388,F2ACDC8D64D4218BA63EB8732C110BA5,Medium,0.5171,Silent 9 days; Only 3 active days in 28,9.0,3.0,0.0,0.0,477.0,IOS,United States,tablet
+2018-09-18,389,91F5161F80D1083CA7B37A08DEC9EC78,Medium,0.517,Silent 12 days; Only 4 active days in 28,12.0,4.0,0.0,0.0,695.0,IOS,United States,tablet
+2018-09-18,390,B610130AAE86629ABC20C036A4076CC2,Medium,0.5169,Silent 18 days; Only 3 active days in 28; Fails often (76% of attempts),18.0,3.0,0.0,0.0,257.0,IOS,United States,tablet
+2018-09-18,391,A7722F61A84758A6CAE3E2C03B9EF742,Medium,0.5163,Only 4 active days in 28,2.0,4.0,1.0,0.71,620.0,ANDROID,United States,mobile
+2018-09-18,392,AED41960DDA933F8914955C5EF2A852E,Medium,0.516,Silent 7 days; New user (14 days),7.0,5.0,1.0,0.05,14.0,IOS,Australia,mobile
+2018-09-18,393,F6E51B0691F25D96F3DA1B58DA07170F,Medium,0.514,Not seen for 4 days; Only 3 active days in 28,4.0,3.0,1.0,2.15,294.0,IOS,United States,tablet
+2018-09-18,394,12225CC7E9BF710AB6AD6EE9DE761259,Medium,0.5129,Silent 7 days; Only 4 active days in 28; New user (11 days),7.0,4.0,1.0,0.26,11.0,IOS,United States,mobile
+2018-09-18,395,CC88655DF7CDE5E8225BA20B5D6EC59B,Medium,0.5106,Silent 20 days; Only 3 active days in 28,20.0,3.0,0.0,0.0,334.0,ANDROID,United States,mobile
+2018-09-18,396,6F6CBC414BAA987475A1F0B41D3C9315,Medium,0.5102,Not seen for 6 days; Only 3 active days in 28,6.0,3.0,1.0,1.42,327.0,IOS,United States,tablet
+2018-09-18,397,CF4E3EC122584053D89B93E888572464,Medium,0.51,Silent 7 days; Only 3 active days in 28,7.0,3.0,1.0,1.68,681.0,IOS,United States,mobile
+2018-09-18,398,FA5FB2ADC812A5B3696A11990CE91691,Medium,0.5095,Only 4 active days in 28; New user (14 days); Fails often (88% of attempts),1.0,4.0,2.0,0.71,14.0,ANDROID,Pakistan,mobile
+2018-09-18,399,55EEC95A163C7791E528B12D5FA32CA9,Medium,0.5091,Not seen for 4 days; Only 3 active days in 28,4.0,3.0,1.0,1.14,511.0,IOS,United States,tablet
+2018-09-18,400,6C11E535AACB16C5B016AF468CC0904B,Medium,0.5053,Silent 7 days; Only 3 active days in 28; Hit app errors (2),7.0,3.0,1.0,1.18,65.0,IOS,United Kingdom,mobile
+2018-09-18,401,933A379D75E03C0CC1316F4956C9240F,Medium,0.5048,Not seen for 6 days; Only 3 active days in 28; Hit app errors (3),6.0,3.0,2.0,1.92,557.0,IOS,Japan,mobile
+2018-09-18,402,00D49153E0790E34D76523EEBEF459B2,Medium,0.5038,Silent 19 days; Fails often (70% of attempts),19.0,7.0,0.0,0.0,684.0,IOS,Canada,mobile
+2018-09-18,403,61EFA39AAF762A2AC3F4A31D6E23C892,Medium,0.5008,Silent 8 days; Only 3 active days in 28,8.0,3.0,0.0,0.0,681.0,IOS,United States,mobile
+2018-09-18,404,45EB0927832513B89E58E6C6C93D841C,Medium,0.5007,Silent 18 days; Only 4 active days in 28; Hit app errors (1),18.0,4.0,0.0,0.0,261.0,ANDROID,United States,mobile
+2018-09-18,405,805BDC95D94B57B88F9128E6B6708692,Medium,0.4966,Only 3 active days in 28,1.0,3.0,1.0,0.94,170.0,IOS,United States,mobile
+2018-09-18,406,1F0D27B8A7E058446D4A6409E2E73B19,Medium,0.4962,Silent 14 days,14.0,5.0,0.0,0.0,134.0,IOS,United States,tablet
+2018-09-18,407,CAE6C20FF0801BB13EF417120900B5DD,Medium,0.4873,Silent 8 days; Only 3 active days in 28,8.0,3.0,0.0,0.0,335.0,IOS,United States,tablet
+2018-09-18,408,976BB56C06EEE11F68C3DC740E155049,Medium,0.4872,Not seen for 5 days; Activity down 69% vs usual week; Only 3 active days in 28,5.0,3.0,2.0,0.31,242.0,ANDROID,United States,mobile
+2018-09-18,409,A94FF1DB15116F965C00A2566F604043,Medium,0.4851,Silent 8 days; Only 4 active days in 28; Hit app errors (1),8.0,4.0,0.0,0.0,626.0,IOS,United States,mobile
+2018-09-18,410,DB94DC4E024BDB1CE1627F9A694ABFA9,Medium,0.485,Silent 10 days; Only 3 active days in 28,10.0,3.0,0.0,0.0,130.0,ANDROID,United Kingdom,mobile
+2018-09-18,411,EA8FCE9C5611B63C839669082B578E78,Medium,0.4843,Not seen for 4 days; Only 4 active days in 28; New user (21 days),4.0,4.0,1.0,1.44,21.0,ANDROID,United States,mobile
+2018-09-18,412,901824488E5C49BCB4D19613F3E5892B,Medium,0.482,Silent 7 days; Only 3 active days in 28; Fails often (78% of attempts),7.0,3.0,1.0,2.96,800.0,IOS,United States,tablet
+2018-09-18,413,B51FED7F1C67B068DDC84959FE0E14DB,Medium,0.4813,New user (16 days); Hit app errors (1),2.0,5.0,1.0,0.86,16.0,ANDROID,Other,mobile
+2018-09-18,414,CC4B09FF7E5171AF18408F2F0903D225,Medium,0.4807,Only 4 active days in 28; New user (29 days),2.0,4.0,2.0,1.23,29.0,IOS,India,tablet
+2018-09-18,415,64EA802089E68A699EC86438C9504F94,Medium,0.4804,Silent 15 days,15.0,6.0,0.0,0.0,655.0,IOS,Australia,tablet
+2018-09-18,416,38D5FCD878ADCCC31D6410D6B1F81C20,Medium,0.4796,Not seen for 5 days; Only 3 active days in 28; Hit app errors (2),5.0,3.0,1.0,2.64,574.0,ANDROID,United States,mobile
+2018-09-18,417,4413B641371BD05F62537FA843705BAD,Medium,0.4794,Not seen for 3 days; Only 3 active days in 28,3.0,3.0,2.0,2.4,221.0,ANDROID,United States,mobile
+2018-09-18,418,A74C05E503F6274BAA9457B2265471F5,Medium,0.4794,Silent 19 days,19.0,8.0,0.0,0.0,578.0,ANDROID,United States,tablet
+2018-09-18,419,037DAC225F0C1E54657770CD201CDDA7,Medium,0.4786,Silent 13 days,13.0,7.0,0.0,0.0,508.0,ANDROID,United States,mobile
+2018-09-18,420,E89F2404C6A657A9C1E7FEAD87188A47,Medium,0.478,Not seen for 5 days; Only 3 active days in 28,5.0,3.0,1.0,0.87,253.0,IOS,United States,mobile
+2018-09-18,421,D8A6BDFA89F65FC9B5159A3031C33004,Medium,0.4769,Silent 18 days; Only 3 active days in 28,18.0,3.0,0.0,0.0,769.0,IOS,United States,tablet
+2018-09-18,422,EAE280AC3E0FD529D1C8A9D83598A8C2,Medium,0.4766,Silent 17 days; Only 4 active days in 28,17.0,4.0,0.0,0.0,300.0,ANDROID,United States,mobile
+2018-09-18,423,75DD2382B6FE2A38F4BF08BC18746D5A,Medium,0.4759,Not seen for 3 days; Only 3 active days in 28,3.0,3.0,2.0,1.61,350.0,ANDROID,United States,mobile
+2018-09-18,424,3376C102EBF491B5CB84B43759FE3433,Medium,0.4752,Silent 15 days; Only 3 active days in 28,15.0,3.0,0.0,0.0,814.0,ANDROID,United States,tablet
+2018-09-18,425,FEC117631F54C2699CB76603EBB98CF0,Medium,0.4742,Silent 9 days; Only 3 active days in 28,9.0,3.0,0.0,0.0,454.0,ANDROID,United States,mobile
+2018-09-18,426,24662C2299FBDFDBBBB3F340655200F1,Medium,0.4737,Not seen for 6 days; Only 4 active days in 28; New user (25 days),6.0,4.0,1.0,0.69,25.0,ANDROID,United States,mobile
+2018-09-18,427,31AAC4CB1A4E09F959E460458C8AAF9D,Medium,0.4734,Not seen for 4 days; Only 3 active days in 28; Fails often (69% of attempts),4.0,3.0,1.0,1.26,506.0,ANDROID,United States,mobile
+2018-09-18,428,BBDC3A9EF7D25E1DFF0803FC79CE833E,Medium,0.4701,Silent 19 days; Only 3 active days in 28; Hit app errors (1),19.0,3.0,0.0,0.0,432.0,IOS,United States,tablet
+2018-09-18,429,551130953A7F37F23035F9A91CA41C15,Medium,0.469,Silent 12 days; Only 4 active days in 28; Fails often (74% of attempts),12.0,4.0,0.0,0.0,835.0,IOS,United States,mobile
+2018-09-18,430,5B874F7994400F6943C134F21CA452A7,Medium,0.4686,Silent 15 days; Fails often (50% of attempts),15.0,7.0,0.0,0.0,265.0,IOS,United States,tablet
+2018-09-18,431,AA52DB057E726629BB1A6A8D31896556,Medium,0.4685,Only 4 active days in 28,2.0,4.0,1.0,0.83,838.0,IOS,Other,mobile
+2018-09-18,432,F266753CA2B28C65DE2762CEE177AA78,Medium,0.4684,Not seen for 6 days,6.0,5.0,1.0,0.63,819.0,ANDROID,United States,mobile
+2018-09-18,433,BC68DA6C18C9634E924871C65BB339A1,Medium,0.4678,Silent 10 days; Only 4 active days in 28,10.0,4.0,0.0,0.0,155.0,ANDROID,Other,mobile
+2018-09-18,434,AC31184536F28AD520C398EC582A3537,Medium,0.4676,Silent 11 days,11.0,5.0,0.0,0.0,808.0,IOS,United States,tablet
+2018-09-18,435,F2A1FD8B142EB4C6CAAE415FA1917F50,Medium,0.467,Silent 17 days; Only 3 active days in 28,17.0,3.0,0.0,0.0,340.0,ANDROID,United States,tablet
+2018-09-18,436,80D8B94D9BCBA0C07218A15293BC91B9,Medium,0.4668,Not seen for 3 days; Only 4 active days in 28; Fails often (64% of attempts),3.0,4.0,1.0,1.71,182.0,ANDROID,United States,mobile
+2018-09-18,437,323ED96F616318450A01A0C17ABF9E97,Medium,0.4654,Not seen for 5 days; Only 3 active days in 28,5.0,3.0,2.0,3.68,92.0,ANDROID,Pakistan,mobile
+2018-09-18,438,644C1993FE93C6E2B214E3B7B7D94D8E,Medium,0.4641,Silent 9 days; Only 3 active days in 28,9.0,3.0,0.0,0.0,707.0,ANDROID,United States,tablet
+2018-09-18,439,2779422065F5685DFCBC3179B5E6E38F,Medium,0.4636,Not seen for 3 days; New user (14 days); Hit app errors (1),3.0,5.0,3.0,3.84,14.0,ANDROID,India,mobile
+2018-09-18,440,7C57740B0C2F1851CBD39127A6C7CB05,Medium,0.4632,Not seen for 3 days; Only 4 active days in 28,3.0,4.0,3.0,3.71,630.0,IOS,United States,mobile
+2018-09-18,441,F511AFF156DE0B44E9808F9FB43E3AE7,Medium,0.4626,Not seen for 4 days; Only 3 active days in 28,4.0,3.0,3.0,4.0,37.0,ANDROID,Other,mobile
+2018-09-18,442,87A95949D12E9C9263482FB202E791BD,Medium,0.462,Not seen for 3 days; Activity down 94% vs usual week; New user (28 days),3.0,13.0,1.0,0.06,28.0,IOS,United States,tablet
+2018-09-18,443,031C80448233703EE640E230EAB4BD74,Medium,0.4614,Silent 8 days; Only 3 active days in 28,8.0,3.0,0.0,0.0,381.0,IOS,United States,mobile
+2018-09-18,444,B56E67847E1AE8D6411A5ECCA26585CA,Medium,0.4608,Silent 13 days; Only 3 active days in 28,13.0,3.0,0.0,0.0,842.0,ANDROID,United States,mobile
+2018-09-18,445,295D9E24D8DE65A010313E667131EF19,Medium,0.4577,Silent 11 days; Fails often (46% of attempts),11.0,9.0,0.0,0.0,72.0,ANDROID,Japan,mobile
+2018-09-18,446,75120F32A68A6C4FB643349E125D8C31,Medium,0.4562,Silent 15 days; Hit app errors (5),15.0,14.0,0.0,0.0,239.0,IOS,United States,tablet
+2018-09-18,447,3A6E4010B115AA8EB99461DA8E9A7275,Medium,0.4544,Not seen for 6 days; Only 3 active days in 28,6.0,3.0,1.0,0.84,112.0,ANDROID,Japan,mobile
+2018-09-18,448,460DBC1808E6954E66FA4D5B1223B9BB,Medium,0.4537,Not seen for 4 days; Only 4 active days in 28; New user (29 days),4.0,4.0,1.0,0.59,29.0,IOS,United States,tablet
+2018-09-18,449,36390262EE0C669101AD7ACFE181689C,Medium,0.4532,Not seen for 6 days; Only 4 active days in 28,6.0,4.0,2.0,2.86,839.0,IOS,United Kingdom,tablet
+2018-09-18,450,92E23FB6799CAF5FE84A802124E698E3,Medium,0.4499,Silent 8 days; Only 3 active days in 28,8.0,3.0,0.0,0.0,160.0,ANDROID,Brazil,mobile
+2018-09-18,451,ADD0757874A418957AAA60903AA5F62D,Medium,0.4486,Only 3 active days in 28; New user (7 days),2.0,3.0,3.0,4.0,7.0,IOS,Japan,mobile
+2018-09-18,452,6864FAEF53F37A2ED51664DCD0F0BAB0,Medium,0.4478,Only 4 active days in 28; New user (13 days); Fails often (50% of attempts),1.0,4.0,1.0,0.94,13.0,IOS,Other,mobile
+2018-09-18,453,F26EC6056E284FDDEA7771F203B6BB8F,Medium,0.4477,Not seen for 5 days,5.0,5.0,2.0,1.29,651.0,ANDROID,United States,mobile
+2018-09-18,454,D9FEC4E4418413FCE771B203FD7D48D2,Medium,0.4475,Silent 9 days,9.0,7.0,0.0,0.0,629.0,ANDROID,United States,mobile
+2018-09-18,455,7B4884B8AA78518C3EC6B4B3FECD526E,Medium,0.4472,Activity down 98% vs usual week; Only 3 active days in 28,1.0,3.0,1.0,0.02,261.0,IOS,United States,tablet
+2018-09-18,456,DC6051D104A07C8E1FFB5718A68238BB,Medium,0.447,Not seen for 6 days,6.0,5.0,2.0,2.59,191.0,ANDROID,Netherlands,mobile
+2018-09-18,457,494B61721C2E110A6DFEC3218F03A17D,Medium,0.4457,Not seen for 5 days; Only 3 active days in 28,5.0,3.0,1.0,1.48,191.0,ANDROID,Other,mobile
+2018-09-18,458,D42E14385EA632BF749E328A201A3AE8,Medium,0.4408,Only 3 active days in 28; New user (15 days),1.0,3.0,2.0,2.88,15.0,ANDROID,Other,mobile
+2018-09-18,459,377303AA2F5C5C80E5AAAD26C029BD5A,Medium,0.4407,Silent 16 days; Hit app errors (2),16.0,5.0,0.0,0.0,263.0,IOS,United States,tablet
+2018-09-18,460,98578513E0F25350F961CDCBA9D3656F,Medium,0.4406,Not seen for 5 days; Only 3 active days in 28,5.0,3.0,1.0,1.49,751.0,ANDROID,Germany,mobile
+2018-09-18,461,6C14B6297FCC1782508E14996A4DBB7C,Medium,0.4402,Silent 17 days; Only 3 active days in 28,17.0,3.0,0.0,0.0,269.0,ANDROID,United States,mobile
+2018-09-18,462,752946614C0220F566150D50BF202292,Medium,0.4393,Only 3 active days in 28,2.0,3.0,3.0,4.0,47.0,IOS,Australia,mobile
+2018-09-18,463,E8950841C7635FFAE97EE03DE2A92072,Medium,0.4387,Silent 7 days; Fails often (41% of attempts),7.0,7.0,1.0,0.18,38.0,IOS,Australia,mobile
+2018-09-18,464,F98CFD1DE0862FE7834C55DE6C9ADEF5,Medium,0.4383,Silent 7 days; Fails often (52% of attempts); Hit app errors (1),7.0,5.0,1.0,0.05,542.0,IOS,United States,mobile
+2018-09-18,465,F8872DCEB31C5B4844CE378BFD161F58,Medium,0.4372,Only 3 active days in 28,2.0,3.0,1.0,0.93,841.0,IOS,Australia,tablet
+2018-09-18,466,850B0D07591E5AEF71E97AB739BAD953,Medium,0.435,Not seen for 4 days; Activity down 85% vs usual week; Only 3 active days in 28,4.0,3.0,1.0,0.15,13.0,IOS,United States,tablet
+2018-09-18,467,D8F0003FCBEE71C9DDA3B5E7F71E2E87,Medium,0.4346,Not seen for 4 days; Only 3 active days in 28; Fails often (53% of attempts),4.0,3.0,1.0,1.04,40.0,IOS,United States,tablet
+2018-09-18,468,90D99AC8BC1551757037513287A3B8B4,Medium,0.434,Silent 9 days; Only 4 active days in 28,9.0,4.0,0.0,0.0,429.0,ANDROID,United States,mobile
+2018-09-18,469,DBCA64144E263291E94297193210F051,Medium,0.4333,Only 3 active days in 28,1.0,3.0,1.0,0.76,191.0,IOS,United States,mobile
+2018-09-18,470,635808C1DDFBC662DC3015097E26E62A,Medium,0.4308,Silent 10 days,10.0,13.0,0.0,0.0,56.0,ANDROID,United Kingdom,mobile
+2018-09-18,471,3D4D86AC719A6FF6D461DD5B3A82988C,Medium,0.4305,Not seen for 6 days; Activity down 60% vs usual week; Only 4 active days in 28,6.0,4.0,1.0,0.4,434.0,IOS,Canada,mobile
+2018-09-18,472,D4F52F2C7C2482724A6FCCF02E1AF71D,Medium,0.4299,Silent 8 days; Fails often (40% of attempts),8.0,5.0,0.0,0.0,134.0,IOS,Spain,mobile
+2018-09-18,473,525E3BEE74AD824923CC04FE45E45B40,Medium,0.4298,Silent 14 days; Only 3 active days in 28; Hit app errors (1),14.0,3.0,0.0,0.0,734.0,ANDROID,United States,mobile
+2018-09-18,474,8EFA45B60DF34986EDC7C7CC0CD7CD69,Medium,0.4294,Silent 8 days,8.0,5.0,0.0,0.0,141.0,IOS,United States,mobile
+2018-09-18,475,C089DEEB2EA27CF072D17A89C956AFF3,Medium,0.4293,Silent 9 days,9.0,7.0,0.0,0.0,222.0,IOS,United States,tablet
+2018-09-18,476,17DC0E89E3ECED8B312BCC88BCE23548,Medium,0.4282,Silent 9 days; Only 4 active days in 28,9.0,4.0,0.0,0.0,182.0,ANDROID,Australia,mobile
+2018-09-18,477,0AF67C1A1C8F3785609B4210C3E04FC8,Medium,0.4272,Silent 9 days; Only 4 active days in 28,9.0,4.0,0.0,0.0,444.0,ANDROID,United States,mobile
+2018-09-18,478,7D05DF6F0141D016FD20F7B8E71FAB0A,Medium,0.4267,Silent 20 days; Only 3 active days in 28,20.0,3.0,0.0,0.0,70.0,ANDROID,Pakistan,mobile
+2018-09-18,479,518CDCF91C158C552E1F183710D02AE7,Medium,0.426,Silent 8 days; Only 4 active days in 28,8.0,4.0,0.0,0.0,682.0,IOS,United States,mobile
+2018-09-18,480,FB581F2AC74E08CD38CCAAA9A99F0217,Medium,0.4254,Not seen for 4 days; Only 3 active days in 28,4.0,3.0,1.0,1.25,76.0,ANDROID,United Kingdom,mobile
+2018-09-18,481,EF7772819E807EDBD8DB0F0B5210030E,Medium,0.4253,Silent 13 days,13.0,5.0,0.0,0.0,48.0,IOS,Japan,tablet
+2018-09-18,482,734ADBB5D0874A5007E58B2F99625EE0,Medium,0.4247,Not seen for 4 days; Activity down 75% vs usual week; Hit app errors (3),4.0,8.0,1.0,0.25,843.0,IOS,United States,mobile
+2018-09-18,483,8A36D1D846123090C677E3E184B30614,Medium,0.424,Silent 11 days; Only 4 active days in 28; Hit app errors (2),11.0,4.0,0.0,0.0,790.0,IOS,United States,mobile
+2018-09-18,484,F187F3F6C0DFB1FA23483A67AA31A16D,Medium,0.4235,Not seen for 4 days; Fails often (40% of attempts),4.0,5.0,1.0,1.5,155.0,ANDROID,United States,mobile
+2018-09-18,485,99ED19E25F424068C78C51C1C51F9E3C,Medium,0.4234,Only 3 active days in 28,2.0,3.0,1.0,1.37,332.0,IOS,United States,mobile
+2018-09-18,486,51AE09760820E12217697F7007D6C78B,Medium,0.4204,Silent 7 days; Only 3 active days in 28; Fails often (40% of attempts),7.0,3.0,1.0,0.35,110.0,ANDROID,France,mobile
+2018-09-18,487,56F37FD95FB21AB3976C83E803D7AEA7,Medium,0.42,Silent 8 days; Only 3 active days in 28,8.0,3.0,0.0,0.0,843.0,IOS,United States,tablet
+2018-09-18,488,D8B8FF56FBBB076848DD2A31E637A170,Medium,0.4191,Only 3 active days in 28,2.0,3.0,1.0,0.97,242.0,IOS,Canada,tablet
+2018-09-18,489,44561FB4558913850A7857FC521C1C42,Medium,0.4186,Only 3 active days in 28,1.0,3.0,1.0,0.89,150.0,ANDROID,Other,tablet
+2018-09-18,490,57A64EB2ABD60937979A683D71025060,Medium,0.4179,Not seen for 3 days; Only 4 active days in 28; New user (13 days),3.0,4.0,2.0,0.85,13.0,IOS,Australia,mobile
+2018-09-18,491,3D03A380687FE3369E93915D50C572CB,Medium,0.4174,Silent 13 days,13.0,12.0,0.0,0.0,404.0,ANDROID,United States,mobile
+2018-09-18,492,548C38A983EB2EB88DC1DEEA9DE6DED9,Medium,0.4167,Not seen for 6 days; Only 3 active days in 28,6.0,3.0,1.0,1.33,415.0,ANDROID,United States,mobile
+2018-09-18,493,5BAF661B350C5EA33F775BFCBDD97BEA,Medium,0.4165,Only 4 active days in 28; New user (12 days),1.0,4.0,2.0,2.8,12.0,IOS,United States,mobile
+2018-09-18,494,A1FA05C0618ED3CB04CDB44FBE35DDB6,Medium,0.4153,Not seen for 4 days; Activity down 74% vs usual week,4.0,7.0,1.0,0.26,60.0,ANDROID,United States,mobile
+2018-09-18,495,BEC04B2A3A5CC892BE0907C44F5F921F,Medium,0.4151,Only 3 active days in 28,2.0,3.0,1.0,1.62,601.0,ANDROID,United States,mobile
+2018-09-18,496,9ECE81C526D4A7F85115B8D9C398AFC2,Medium,0.4148,Silent 19 days; Only 3 active days in 28,19.0,3.0,0.0,0.0,245.0,ANDROID,Canada,mobile
+2018-09-18,497,278213F4C6CD188CD0B75EE22180520B,Medium,0.4139,No single strong signal,2.0,5.0,5.0,4.0,43.0,ANDROID,Other,mobile
+2018-09-18,498,53A5A4C271525BAA74298747E100C376,Medium,0.4121,Silent 9 days; Fails often (54% of attempts),9.0,6.0,0.0,0.0,756.0,ANDROID,United States,mobile
+2018-09-18,499,86B8B276CF182074D6995751D2171075,Medium,0.4119,Not seen for 5 days; Only 3 active days in 28; Fails often (73% of attempts),5.0,3.0,1.0,0.94,676.0,IOS,United Kingdom,mobile
+2018-09-18,500,1F54AC7A413B33C6023DA0AF8F489684,Medium,0.4116,Silent 15 days,15.0,5.0,0.0,0.0,521.0,IOS,United States,tablet
+2018-09-18,501,799D5E5223988F35611AC9B641C0A4A1,Medium,0.4102,Not seen for 6 days; Activity down 83% vs usual week,6.0,7.0,1.0,0.17,364.0,IOS,United States,mobile
+2018-09-18,502,81BAD3FD80119DBA49D2B55CAFFACED1,Medium,0.4091,Not seen for 5 days; Only 4 active days in 28,5.0,4.0,1.0,1.51,312.0,IOS,United States,mobile
+2018-09-18,503,E9DCE2D958652BD58E846DCE86BDD90A,Medium,0.4088,Silent 20 days; Fails often (45% of attempts),20.0,6.0,0.0,0.0,231.0,IOS,United States,tablet
+2018-09-18,504,DABC5234774C4E18EF0B59DE32DEFD2D,Medium,0.4078,Silent 9 days; Fails often (48% of attempts),9.0,7.0,0.0,0.0,676.0,IOS,United States,tablet
+2018-09-18,505,EEA00C45CDC47167CBA1E443296B5B64,Medium,0.4069,Silent 9 days; Only 3 active days in 28,9.0,3.0,0.0,0.0,827.0,IOS,Australia,tablet
+2018-09-18,506,A59FC5F402D7AE3D44C0D9F819282FFE,Medium,0.4069,Not seen for 4 days; Only 3 active days in 28; New user (11 days),4.0,3.0,2.0,1.33,11.0,ANDROID,Other,mobile
+2018-09-18,507,46D808E730894AB0AC6E0F493B6FC864,Medium,0.4056,Not seen for 3 days,3.0,7.0,2.0,1.2,83.0,IOS,United States,tablet
+2018-09-18,508,7A8D1CAA45CDE7652260DA6E71068A13,Medium,0.4047,Not seen for 5 days; Activity down 67% vs usual week,5.0,5.0,1.0,0.33,184.0,ANDROID,Japan,tablet
+2018-09-18,509,CDF197BA3ADEA5DD50A1EE99D11D41F1,Medium,0.4033,Silent 15 days; Only 4 active days in 28,15.0,4.0,0.0,0.0,268.0,ANDROID,United States,mobile
+2018-09-18,510,AC1B8C257039C7FB911CA9AE69D4C614,Medium,0.4029,Not seen for 6 days; Only 4 active days in 28,6.0,4.0,1.0,1.03,272.0,ANDROID,Other,mobile
+2018-09-18,511,A6F93D542BC785A045FD8B94CC3CFEC8,Medium,0.4022,Not seen for 6 days; Only 4 active days in 28,6.0,4.0,1.0,0.74,206.0,ANDROID,United States,mobile
+2018-09-18,512,0D89BDE5933A1F28396DFEEB234619C3,Medium,0.4007,Not seen for 3 days; Only 3 active days in 28,3.0,3.0,1.0,0.79,200.0,IOS,United States,mobile
+2018-09-18,513,3AA042E36A2D0E0469FB22A945BE920F,Medium,0.399,Only 3 active days in 28; New user (6 days),1.0,3.0,3.0,4.0,6.0,ANDROID,United States,mobile
+2018-09-18,514,BA799687DAB1885D1D8624FD0FDB1B27,Medium,0.399,Not seen for 5 days; Activity down 81% vs usual week; Only 3 active days in 28,5.0,3.0,1.0,0.19,362.0,IOS,France,tablet
+2018-09-18,515,45FB547C5857493104687C234EDCDE37,Medium,0.3982,Not seen for 5 days; Hit app errors (3),5.0,6.0,1.0,0.6,44.0,ANDROID,Pakistan,mobile
+2018-09-18,516,898B790ACC7834117A9B2C98A8B6F1F5,Medium,0.3979,Silent 19 days; Only 4 active days in 28,19.0,4.0,0.0,0.0,276.0,IOS,United States,tablet
+2018-09-18,517,5CC5F51FFBA6289E36363D9C2F835B0C,Medium,0.3968,Silent 9 days,9.0,6.0,0.0,0.0,259.0,ANDROID,France,mobile
+2018-09-18,518,0A0EBC33126893C86F3F6272037A5003,Medium,0.396,Only 3 active days in 28,2.0,3.0,1.0,2.17,295.0,IOS,Other,mobile
+2018-09-18,519,C7FB256C360417AAB8249DF90112D8BE,Medium,0.3945,Silent 9 days; Only 3 active days in 28,9.0,3.0,0.0,0.0,113.0,IOS,United States,tablet
+2018-09-18,520,6DC8E9960F2EAE5C05215ADFC160359C,Medium,0.3941,Not seen for 5 days; Fails often (68% of attempts),5.0,5.0,2.0,2.89,811.0,ANDROID,United States,tablet
+2018-09-18,521,E9AE54B0E6927E9E1DD0AD3AAC87107E,Medium,0.3936,Not seen for 4 days; New user (25 days); Fails often (56% of attempts),4.0,6.0,2.0,0.75,25.0,IOS,United States,mobile
+2018-09-18,522,812C25744DA187D0D3E93A0AE53B4B59,Medium,0.3934,Not seen for 5 days; Only 3 active days in 28,5.0,3.0,1.0,2.21,464.0,IOS,United States,mobile
+2018-09-18,523,06D8AAEACE405BEB27DC4AE30FAAAFF1,Medium,0.3927,Silent 8 days,8.0,5.0,0.0,0.0,473.0,IOS,United States,mobile
+2018-09-18,524,F0186BDA8E7BF76675999CFDCFB10F6B,Medium,0.3925,New user (24 days),2.0,5.0,3.0,1.11,24.0,ANDROID,India,mobile
+2018-09-18,525,021E703A207ECD0CC248918F28426D95,Medium,0.3922,Silent 9 days; Only 3 active days in 28,9.0,3.0,0.0,0.0,563.0,ANDROID,France,mobile
+2018-09-18,526,9C0C2042CCB259EE08C5B17E499BE153,Medium,0.3922,Not seen for 5 days; Only 3 active days in 28,5.0,3.0,2.0,3.14,61.0,IOS,Japan,mobile
+2018-09-18,527,8E150A8839C964819CC821BABA13E2A7,Medium,0.3921,Only 3 active days in 28; New user (5 days),1.0,3.0,3.0,4.0,5.0,IOS,United States,mobile
+2018-09-18,528,BD2A511409EB3EBC45D4CEB4F876ED49,Medium,0.3911,Only 4 active days in 28; Fails often (47% of attempts),1.0,4.0,2.0,1.23,30.0,IOS,Other,tablet
+2018-09-18,529,81B593104D9F960033D17F056E51C92B,Medium,0.3911,Not seen for 3 days; Only 3 active days in 28; Fails often (51% of attempts),3.0,3.0,1.0,0.92,708.0,IOS,United States,mobile
+2018-09-18,530,4CDB160C7A0483695AE6DB265C4E038F,Medium,0.3907,Not seen for 6 days; Only 3 active days in 28,6.0,3.0,1.0,0.62,738.0,ANDROID,United States,mobile
+2018-09-18,531,CC62213661BE43BF92836F37DF9B3ADD,Medium,0.3901,Silent 17 days,17.0,5.0,0.0,0.0,598.0,ANDROID,United States,tablet
+2018-09-18,532,47117CCF2E3E8759A590F4B58E5F8E35,Medium,0.3897,Only 3 active days in 28; Fails often (50% of attempts),1.0,3.0,1.0,3.31,136.0,IOS,Other,mobile
+2018-09-18,533,82486A3B62D50DB914F1C6857733DAB2,Medium,0.3892,Silent 16 days,16.0,6.0,0.0,0.0,692.0,IOS,United States,tablet
+2018-09-18,534,98B86BDEF58B4D640EC13B5190734875,Medium,0.3881,Not seen for 5 days; Only 3 active days in 28,5.0,3.0,2.0,1.94,343.0,IOS,United States,mobile
+2018-09-18,535,CFA0F8C5E25A71062E573EF8E6BC9F76,Medium,0.3876,Silent 8 days; Fails often (49% of attempts),8.0,17.0,0.0,0.0,107.0,IOS,United States,tablet
+2018-09-18,536,DF2C3B7E8FB37490F6F265867863951C,Medium,0.3875,Silent 15 days; Only 3 active days in 28,15.0,3.0,0.0,0.0,329.0,IOS,United States,tablet
+2018-09-18,537,9DB59A6220E6D63AE53FD08FDDB59602,Medium,0.3873,Silent 18 days; Hit app errors (1),18.0,9.0,0.0,0.0,341.0,ANDROID,United States,tablet
+2018-09-18,538,C1327B694B124442335CFFD6FD3B15EC,Medium,0.3864,Not seen for 6 days; Only 4 active days in 28,6.0,4.0,1.0,1.75,261.0,IOS,United States,tablet
+2018-09-18,539,D0E31F472E977281F3682285AC8346F1,Medium,0.3855,Activity down 89% vs usual week; Only 4 active days in 28; New user (28 days),1.0,4.0,1.0,0.11,28.0,ANDROID,Japan,mobile
+2018-09-18,540,079A0986730A27E47BDE659B49D0F1FC,Medium,0.3832,Hit app errors (1),2.0,5.0,2.0,0.84,480.0,ANDROID,Japan,mobile
+2018-09-18,541,CF2439F24FF3E5C1B14DAE41335E2FEA,Medium,0.3815,Not seen for 6 days; Activity down 91% vs usual week,6.0,8.0,1.0,0.09,621.0,ANDROID,United States,mobile
+2018-09-18,542,3F15DB0A6DA7D3B3456291BC1F5BF8F3,Medium,0.3815,No single strong signal,1.0,7.0,4.0,2.43,43.0,ANDROID,India,mobile
+2018-09-18,543,1328725B72E37B343BC52191BEB5710E,Medium,0.3815,Not seen for 5 days; Activity down 55% vs usual week; Only 3 active days in 28,5.0,3.0,1.0,0.45,682.0,IOS,Australia,mobile
+2018-09-18,544,D47DCBB00B2B462C916A5A07DCFAB039,Medium,0.3811,Silent 15 days,15.0,5.0,0.0,0.0,665.0,IOS,United States,tablet
+2018-09-18,545,475B281839C403CCF826D0D44890BFA5,Medium,0.3796,Not seen for 6 days; Only 4 active days in 28,6.0,4.0,2.0,2.07,488.0,ANDROID,Australia,mobile
+2018-09-18,546,2CA82928A35949DF7775D4BC04F0AEA1,Medium,0.3789,No single strong signal,2.0,15.0,3.0,0.7,685.0,IOS,United States,mobile
+2018-09-18,547,779CF5C0B96F17F1BC49C2A7BF09BF95,Medium,0.378,Not seen for 3 days; Only 3 active days in 28,3.0,3.0,1.0,1.45,747.0,ANDROID,United States,mobile
+2018-09-18,548,4FAE9F054706890DC522E924EBF17286,Medium,0.3777,Only 3 active days in 28; Fails often (44% of attempts),1.0,3.0,1.0,1.0,786.0,IOS,Taiwan,tablet
+2018-09-18,549,6BFD41CC10EB8CFDDFE0F4BDDA556E6D,Medium,0.377,Only 3 active days in 28; Hit app errors (1),2.0,3.0,2.0,2.86,596.0,IOS,United States,tablet
+2018-09-18,550,34BA06C3D751444A218BC22E0092EE8E,Medium,0.3769,Only 3 active days in 28; New user (5 days),1.0,3.0,3.0,4.0,5.0,IOS,Australia,mobile
+2018-09-18,551,C1A0D9FB3527654CA715A732B5FB5202,Medium,0.3764,Silent 15 days; Only 3 active days in 28,15.0,3.0,0.0,0.0,106.0,IOS,United States,tablet
+2018-09-18,552,61BB31EC7781341B1D7B8D8A85688DA3,Medium,0.3758,New user (17 days); Fails often (73% of attempts),2.0,6.0,3.0,1.87,17.0,IOS,United States,tablet
+2018-09-18,553,7331597E5500811253BA85AF851A193C,Medium,0.373,Not seen for 4 days; Only 3 active days in 28; New user (17 days),4.0,3.0,1.0,0.73,17.0,ANDROID,United States,mobile
+2018-09-18,554,332FF17A7140DA319A07A72CA1CB6A5A,Medium,0.3727,Not seen for 6 days; Only 4 active days in 28,6.0,4.0,1.0,1.18,727.0,ANDROID,Other,mobile
+2018-09-18,555,940DA8879BB594A5E154B6B0FBA323C4,Medium,0.3726,Not seen for 6 days; Only 4 active days in 28,6.0,4.0,2.0,2.57,422.0,IOS,United Kingdom,tablet
+2018-09-18,556,00B6295EC351DBFE0E31015296871E35,Medium,0.3713,Silent 13 days; Only 4 active days in 28; Hit app errors (2),13.0,4.0,0.0,0.0,196.0,ANDROID,United States,mobile
+2018-09-18,557,6CD2676098B3E076AD66D10BF4565BFA,Medium,0.3713,Silent 9 days,9.0,5.0,0.0,0.0,418.0,ANDROID,Spain,tablet
+2018-09-18,558,3F6EEEB2D589AF8A25897D2851CA23A6,Medium,0.371,Silent 15 days,15.0,7.0,0.0,0.0,238.0,ANDROID,United States,mobile
+2018-09-18,559,6870FFBF31EA0EC710FF2A8A867B99DF,Medium,0.3704,Not seen for 4 days; Only 4 active days in 28; Fails often (73% of attempts),4.0,4.0,1.0,0.52,46.0,IOS,United States,tablet
+2018-09-18,560,6C333017CEA199B69BB27611BA5DE7B5,Medium,0.3696,Silent 7 days; Only 3 active days in 28; New user (17 days),7.0,3.0,1.0,3.39,17.0,ANDROID,United States,tablet
+2018-09-18,561,D41AA91B61872612B5F5F4E42870042C,Medium,0.369,Not seen for 6 days,6.0,5.0,1.0,0.66,832.0,IOS,United States,tablet
+2018-09-18,562,13148B50F2A87AC0E5257F3529ABFB3D,Medium,0.3688,Only 4 active days in 28,1.0,4.0,2.0,2.14,49.0,IOS,United States,mobile
+2018-09-18,563,E594F4CE9B23146A461021258CC7ACA2,Medium,0.3684,Not seen for 6 days; Activity down 85% vs usual week; Hit app errors (20),6.0,14.0,1.0,0.15,344.0,IOS,United States,tablet
+2018-09-18,564,A4442ED82DBC31EB300EE7BD825C85E1,Medium,0.3669,Not seen for 4 days; Only 3 active days in 28,4.0,3.0,1.0,1.33,812.0,IOS,Taiwan,tablet
+2018-09-18,565,0E05F56141200FF41FCC0C7FA297FF08,Medium,0.3669,Silent 15 days; Fails often (87% of attempts),15.0,12.0,0.0,0.0,493.0,ANDROID,United States,mobile
+2018-09-18,566,19DEEA6B15B314DB0ED2A4936959D8F9,Medium,0.3665,Silent 21 days; Hit app errors (2),21.0,6.0,0.0,0.0,369.0,ANDROID,United States,mobile
+2018-09-18,567,F94E005EB49AFB8DA0A78030D4ABB44B,Medium,0.3642,Activity down 85% vs usual week,1.0,5.0,1.0,0.15,786.0,ANDROID,United States,mobile
+2018-09-18,568,920DB84FCC0F4421650B9E257E33180B,Medium,0.3641,Silent 9 days,9.0,8.0,0.0,0.0,101.0,ANDROID,Other,mobile
+2018-09-18,569,951C483048D3CD18A7F27AC9C1B4DD0A,Medium,0.3633,Not seen for 3 days; Only 3 active days in 28,3.0,3.0,1.0,1.64,444.0,ANDROID,United States,mobile
+2018-09-18,570,59D8611FBC5328E495C4063D35B5861D,Medium,0.3613,Fails often (56% of attempts),2.0,6.0,2.0,1.76,542.0,IOS,Australia,mobile
+2018-09-18,571,CCE4BDDE62CA393AC9563B8718F5CFB9,Medium,0.3609,Silent 15 days; Only 4 active days in 28,15.0,4.0,0.0,0.0,834.0,ANDROID,Canada,mobile
+2018-09-18,572,3686DE7B4C85F5F0AF385348F03492C9,Medium,0.3603,New user (10 days),2.0,5.0,3.0,1.79,10.0,ANDROID,India,mobile
+2018-09-18,573,7A920F1813471AC79FD7F7677A56BA75,Medium,0.3596,Not seen for 3 days; Only 3 active days in 28; Hit app errors (4),3.0,3.0,1.0,0.64,144.0,ANDROID,United States,mobile
+2018-09-18,574,F91F493916395FE4E16DE98B24388985,Medium,0.3588,Not seen for 4 days; Activity down 96% vs usual week; Hit app errors (5),4.0,9.0,1.0,0.04,80.0,ANDROID,United States,mobile
+2018-09-18,575,CABE7E24215A5C36862658A36AE5CE12,Medium,0.3543,Not seen for 5 days,5.0,5.0,2.0,1.39,137.0,ANDROID,Japan,mobile
+2018-09-18,576,2684EA4DDB1F988E3C979AB15CFF601F,Medium,0.3541,Not seen for 6 days; Only 4 active days in 28; Fails often (73% of attempts),6.0,4.0,1.0,1.26,732.0,IOS,United States,tablet
+2018-09-18,577,CAF56C529515B05D8F3A84933A047D40,Medium,0.3513,Silent 8 days,8.0,5.0,0.0,0.0,493.0,ANDROID,United States,mobile
+2018-09-18,578,B1D1ED35873581A23E48C4CD03DDFF81,Medium,0.3507,Silent 9 days; Only 3 active days in 28,9.0,3.0,0.0,0.0,189.0,IOS,United States,tablet
+2018-09-18,579,030D58D3258598A9563844AD6A28FA61,Medium,0.3494,Silent 7 days; Only 4 active days in 28,7.0,4.0,1.0,0.56,534.0,IOS,United States,tablet
+2018-09-18,580,7740CD7CDD8F6CD275974FC8C81065CD,Medium,0.3493,Not seen for 4 days; Activity down 76% vs usual week; Fails often (41% of attempts),4.0,11.0,1.0,0.24,684.0,IOS,United States,mobile
+2018-09-18,581,BBDCBE2491658165B7F20540DE652E3A,Medium,0.3453,Silent 9 days,9.0,5.0,0.0,0.0,150.0,ANDROID,United States,mobile
+2018-09-18,582,EEBCB25D5F056CCF59DDE654388ACD2B,Medium,0.3438,Not seen for 4 days; Activity down 84% vs usual week; Hit app errors (11),4.0,14.0,1.0,0.16,504.0,IOS,United States,tablet
+2018-09-18,583,7CA838857E3B7B8C9FC6A34E975FBF22,Medium,0.3436,Silent 16 days,16.0,6.0,0.0,0.0,423.0,IOS,United States,tablet
+2018-09-18,584,68EA8FDC3D7F8984530BB60FAE9A42FD,Medium,0.3432,No single strong signal,1.0,7.0,2.0,1.13,188.0,ANDROID,United States,mobile
+2018-09-18,585,72D04A6D10CF624A03592099F6312E9B,Medium,0.3429,Only 3 active days in 28; New user (4 days),1.0,3.0,3.0,4.0,4.0,ANDROID,Other,mobile
+2018-09-18,586,1CE24AF6A53E7565CB3661566E11FAC1,Medium,0.3426,Only 3 active days in 28,2.0,3.0,1.0,0.55,603.0,IOS,Canada,mobile
+2018-09-18,587,8CCA0719F08368F316CB951B266ED5FC,Medium,0.3425,Silent 8 days; Only 4 active days in 28; Fails often (80% of attempts),8.0,4.0,0.0,0.0,120.0,IOS,United States,mobile
+2018-09-18,588,6A07135DA41B81E278341576A26672E4,Medium,0.3425,Not seen for 4 days; Only 4 active days in 28,4.0,4.0,1.0,0.97,196.0,ANDROID,United States,mobile
+2018-09-18,589,DC8F11F217104C5DD43E99C36899D17A,Medium,0.3424,Not seen for 6 days,6.0,5.0,1.0,0.77,63.0,IOS,United States,mobile
+2018-09-18,590,6D544296013D3F7E5FF708DFE81C3C18,Medium,0.3416,Not seen for 6 days; Only 4 active days in 28,6.0,4.0,1.0,0.83,208.0,IOS,United States,mobile
+2018-09-18,591,12E5626928FE0885DEEF068683E8BD63,Medium,0.3415,Silent 18 days; Fails often (41% of attempts); Hit app errors (2),18.0,5.0,0.0,0.0,79.0,IOS,United States,tablet
+2018-09-18,592,D89B48940A82055957DE10984356E6F9,Medium,0.3403,Only 3 active days in 28,2.0,3.0,2.0,3.07,811.0,ANDROID,United States,mobile
+2018-09-18,593,EC205455CE8108A86587F94C680017C2,Medium,0.339,Only 3 active days in 28,2.0,3.0,1.0,1.1,588.0,IOS,United States,mobile
+2018-09-18,594,8801506473240883EA7084FCF3B3EDD9,Medium,0.3385,Not seen for 3 days; Only 3 active days in 28; Fails often (68% of attempts),3.0,3.0,2.0,1.48,277.0,IOS,United States,mobile
+2018-09-18,595,B356F07DE7BAC4F30965983C9AB608A5,Medium,0.3366,Silent 9 days; Only 3 active days in 28,9.0,3.0,0.0,0.0,817.0,ANDROID,United States,mobile
+2018-09-18,596,08A1668F786A08C724B1F99689AAF716,Medium,0.3359,Only 3 active days in 28; Hit app errors (1),2.0,3.0,2.0,1.7,173.0,IOS,United States,tablet
+2018-09-18,597,B2D359D114428D8DD085DFAFF11195CE,Medium,0.3351,Not seen for 4 days; Activity down 93% vs usual week; Hit app errors (3),4.0,14.0,1.0,0.07,37.0,ANDROID,United States,tablet
+2018-09-18,598,E063775534D380684BCA33B63B11B213,Medium,0.3337,Not seen for 4 days; Activity down 84% vs usual week,4.0,6.0,1.0,0.16,107.0,ANDROID,United States,mobile
+2018-09-18,599,6A5F60408CAFD78C48447547A30BA926,Medium,0.3331,Not seen for 4 days; Only 4 active days in 28,4.0,4.0,1.0,1.0,363.0,ANDROID,United States,mobile
+2018-09-18,600,4059062E59F3605CE7A574DCD9997571,Medium,0.3328,Only 4 active days in 28; New user (11 days); Fails often (40% of attempts),2.0,4.0,2.0,0.67,11.0,ANDROID,Other,mobile
+2018-09-18,601,2FA077E00B9A119EF4772C441710E49E,Medium,0.3321,Silent 7 days; Only 3 active days in 28,7.0,3.0,1.0,0.47,485.0,IOS,France,tablet
+2018-09-18,602,D4FCE743B2A234845C047831938DA30D,Medium,0.3317,Only 3 active days in 28,1.0,3.0,1.0,0.68,833.0,IOS,United Kingdom,mobile
+2018-09-18,603,A62611DA6D4B45AC3DB2450BF3A24C23,Medium,0.3312,Not seen for 6 days; New user (18 days),6.0,6.0,2.0,0.91,18.0,IOS,United Kingdom,mobile
+2018-09-18,604,ECB676BED33FDF42E1B0DCF234E1344B,Medium,0.3275,Silent 10 days; Only 3 active days in 28,10.0,3.0,0.0,0.0,600.0,ANDROID,United States,tablet
+2018-09-18,605,B826D0314CC34EE6E9E5B888AA73AF93,Medium,0.3274,Silent 7 days; Only 3 active days in 28; Fails often (85% of attempts),7.0,3.0,1.0,1.29,192.0,IOS,United States,mobile
+2018-09-18,606,B6A174B1E55B3CB60DA1B9DBE341AECF,Medium,0.3274,Activity down 73% vs usual week; New user (22 days); Hit app errors (1),2.0,6.0,1.0,0.27,22.0,IOS,United States,tablet
+2018-09-18,607,D56D7CF970E38DD1E5F3D515D9E2D75E,Medium,0.3262,Only 4 active days in 28,1.0,4.0,2.0,3.48,833.0,IOS,Netherlands,mobile
+2018-09-18,608,32691653B988011A1D8855300C372CE4,Medium,0.3259,Not seen for 4 days; New user (9 days),4.0,5.0,3.0,1.83,9.0,IOS,Other,tablet
+2018-09-18,609,D43C78CF770D3656CCACC19EDA823358,Medium,0.3219,Only 3 active days in 28; Hit app errors (1),2.0,3.0,2.0,3.54,421.0,IOS,United States,mobile
+2018-09-18,610,17636078D57884AD7EA5406C60E2BD10,Medium,0.3217,Activity down 59% vs usual week; Fails often (56% of attempts),2.0,13.0,1.0,0.41,45.0,ANDROID,United States,mobile
+2018-09-18,611,F5CA9C70FB5ACA0C36279A6FB407A7B7,Medium,0.3201,Not seen for 4 days; Activity down 90% vs usual week,4.0,8.0,1.0,0.1,332.0,ANDROID,United States,mobile
+2018-09-18,612,A976A39B8E08829A5BC5CD3827C942A2,Medium,0.319,Not seen for 4 days; Activity down 87% vs usual week; Hit app errors (1),4.0,10.0,1.0,0.13,37.0,ANDROID,United States,mobile
+2018-09-18,613,C92D6BB6EEA1571B5E7EE6F4D221EBAB,Medium,0.3188,Only 3 active days in 28,1.0,3.0,2.0,3.07,64.0,ANDROID,Taiwan,mobile
+2018-09-18,614,D62EDD239EF72D80713B3414F1A7C541,Medium,0.3181,Only 3 active days in 28; New user (16 days); Fails often (50% of attempts),1.0,3.0,1.0,1.54,16.0,IOS,Australia,mobile
+2018-09-18,615,CAE8683FCC2445DDABFB1FF2516E0B5D,Medium,0.3179,Silent 12 days; Only 3 active days in 28,12.0,3.0,0.0,0.0,800.0,IOS,United States,tablet
+2018-09-18,616,FC4888091ED663FDCFAA0790470AA17C,Medium,0.3172,Not seen for 6 days,6.0,7.0,2.0,0.52,48.0,IOS,Japan,mobile
+2018-09-18,617,3B7E8F870CDE1AB43BA70658FFA68C5B,Medium,0.317,Silent 15 days,15.0,5.0,0.0,0.0,266.0,IOS,United States,tablet
+2018-09-18,618,501EC0B173398B023AB5B9A315FFD673,Medium,0.3155,New user (10 days),2.0,7.0,5.0,2.77,10.0,ANDROID,India,mobile
+2018-09-18,619,EF500E0CF578004836D1D38C8901862B,Medium,0.3145,Not seen for 4 days; Activity down 92% vs usual week; Fails often (90% of attempts),4.0,16.0,1.0,0.08,623.0,IOS,United States,mobile
+2018-09-18,620,1B308AABE0C0776DA813D7284F8B1C18,Medium,0.3138,Not seen for 5 days; Only 3 active days in 28,5.0,3.0,2.0,2.71,522.0,IOS,Japan,mobile
+2018-09-18,621,1F16A98F69E96370596275D5228E766B,Medium,0.3138,Silent 7 days; Only 4 active days in 28,7.0,4.0,1.0,1.31,706.0,ANDROID,United States,mobile
+2018-09-18,622,B711923F02FB2923F0A4DBC8CA2CE3AD,Medium,0.3133,Only 3 active days in 28; New user (14 days),1.0,3.0,1.0,0.52,14.0,IOS,United States,mobile
+2018-09-18,623,31E8B3EB3D9167E813FDFB812898F2F6,Medium,0.3127,Silent 15 days,15.0,5.0,0.0,0.0,93.0,ANDROID,United States,tablet
+2018-09-18,624,C677D4AC75F093F984D7881B299C8C12,Medium,0.3112,Silent 7 days,7.0,7.0,1.0,0.67,839.0,IOS,United States,mobile
+2018-09-18,625,8B47681C5D1B19C3927E92404548290D,Medium,0.311,Not seen for 4 days; Only 3 active days in 28,4.0,3.0,2.0,2.41,655.0,IOS,Australia,tablet
+2018-09-18,626,F0B84ECACD578E9B52D68AA288A5F2ED,Medium,0.3095,Silent 8 days; Fails often (42% of attempts),8.0,6.0,0.0,0.0,292.0,IOS,Other,mobile
+2018-09-18,627,E36C1A5299789BD1C3794ECBCC0BB2FC,Medium,0.3091,Not seen for 5 days; Only 4 active days in 28,5.0,4.0,2.0,1.22,119.0,IOS,United States,tablet
+2018-09-18,628,D6F5820E5B2C721C1677E1BC873B074A,Medium,0.3089,Not seen for 6 days; Hit app errors (5),6.0,9.0,1.0,1.13,213.0,IOS,United States,tablet
+2018-09-18,629,4411385D52B71A3242BDEFDF60609E55,Low,0.3085,Not seen for 6 days; Only 4 active days in 28,6.0,4.0,1.0,1.17,684.0,IOS,Canada,tablet
+2018-09-18,630,1D89281562AC3FEFB76A42ED406BF1B5,Low,0.3084,Only 4 active days in 28,1.0,4.0,1.0,1.5,41.0,ANDROID,India,mobile
+2018-09-18,631,99E78457F26E31A98AFFD54C3DCC36C5,Low,0.3056,Activity down 72% vs usual week; Fails often (54% of attempts),2.0,6.0,1.0,0.28,685.0,IOS,United States,mobile
+2018-09-18,632,F1555004E0D95599AF2F2B8EA130A9C3,Low,0.3054,Silent 9 days; Fails often (66% of attempts),9.0,14.0,0.0,0.0,731.0,IOS,United States,tablet
+2018-09-18,633,CCE60CE7DBE296A7828A028094E21D51,Low,0.3045,Only 3 active days in 28,2.0,3.0,2.0,2.54,76.0,IOS,Brazil,mobile
+2018-09-18,634,8FA82E7952616AA4904B29201BDC06FB,Low,0.3033,Silent 15 days; Only 4 active days in 28,15.0,4.0,0.0,0.0,264.0,IOS,United States,tablet
+2018-09-18,635,9F833A0D7CCA8E4BB64D57511989AF5A,Low,0.3032,Only 4 active days in 28,2.0,4.0,1.0,0.55,251.0,IOS,Australia,mobile
+2018-09-18,636,A6C87EE4B7B875BCAB0C650365236072,Low,0.302,Not seen for 5 days; Only 4 active days in 28,5.0,4.0,1.0,0.58,212.0,ANDROID,Other,mobile
+2018-09-18,637,A82658237C6118780A6009C01F05DDEB,Low,0.3016,Not seen for 4 days; Activity down 82% vs usual week,4.0,14.0,1.0,0.18,403.0,IOS,United States,tablet
+2018-09-18,638,92C9E3FA3B35FC5A5ED1B36CF4D114B9,Low,0.3014,Not seen for 3 days; Activity down 97% vs usual week,3.0,9.0,1.0,0.03,151.0,ANDROID,Other,mobile
+2018-09-18,639,817C3E590030EB56A11A38D56919B6C5,Low,0.3014,Not seen for 5 days; Only 4 active days in 28,5.0,4.0,3.0,2.92,595.0,ANDROID,United Kingdom,mobile
+2018-09-18,640,5D82187C741C813547E1333574E32712,Low,0.3009,Only 3 active days in 28,2.0,3.0,2.0,3.26,821.0,IOS,United States,mobile
+2018-09-18,641,03780EE9CFF9761E7D40266B65D30158,Low,0.3008,Only 3 active days in 28; Fails often (54% of attempts),1.0,3.0,1.0,0.83,565.0,IOS,Canada,mobile
+2018-09-18,642,F1D06AE5E4870002D05A561B32C8C7BB,Low,0.2993,Not seen for 6 days; Only 4 active days in 28,6.0,4.0,2.0,1.6,843.0,IOS,Japan,mobile
+2018-09-18,643,3828BE5E2F158C7E5831478F63DAE9E4,Low,0.2992,Not seen for 5 days; Activity down 67% vs usual week,5.0,5.0,1.0,0.33,176.0,ANDROID,United States,mobile
+2018-09-18,644,57EC50FBC6C7277B8EDCCE44C1352BD4,Low,0.2986,Not seen for 4 days; Activity down 81% vs usual week; Hit app errors (2),4.0,14.0,2.0,0.19,44.0,ANDROID,United States,mobile
+2018-09-18,645,25E47FA1836137C0429FABD59B15C11D,Low,0.2982,Silent 15 days,15.0,6.0,0.0,0.0,730.0,ANDROID,United States,mobile
+2018-09-18,646,51E859FD9D682533C094B37DC85EAF87,Low,0.297,Only 3 active days in 28,2.0,3.0,2.0,2.95,346.0,IOS,United States,mobile
+2018-09-18,647,EE843FD90E2498AB3E634DF7D42F57BC,Low,0.297,Not seen for 4 days; Only 3 active days in 28,4.0,3.0,1.0,1.36,683.0,IOS,Canada,tablet
+2018-09-18,648,D7D1BA6ED11F3F862998ED8B8DB94249,Low,0.2953,Activity down 75% vs usual week; Hit app errors (1),1.0,7.0,1.0,0.25,813.0,ANDROID,United States,mobile
+2018-09-18,649,176303D3809058BEA84AD4B59E6B6AF5,Low,0.2952,Not seen for 5 days; Only 3 active days in 28,5.0,3.0,2.0,3.16,660.0,IOS,United States,mobile
+2018-09-18,650,87B1F896770D48526901F75489E30535,Low,0.2947,Not seen for 4 days,4.0,5.0,1.0,0.93,353.0,IOS,Australia,mobile
+2018-09-18,651,597F9110E80E489913E979145ABD72DB,Low,0.2937,Only 3 active days in 28; Fails often (43% of attempts),1.0,3.0,2.0,3.0,97.0,IOS,United States,mobile
+2018-09-18,652,F506E5B5D610285BF94A2A917A1858D4,Low,0.2932,Not seen for 6 days; Only 4 active days in 28,6.0,4.0,1.0,0.97,352.0,IOS,France,mobile
+2018-09-18,653,0896F71BD17284AEC7C97C4841CB650F,Low,0.2929,Not seen for 3 days; Only 4 active days in 28,3.0,4.0,2.0,0.98,675.0,IOS,Japan,mobile
+2018-09-18,654,BE2CD71418F84CF52FCB144658DFCBAC,Low,0.2928,Only 3 active days in 28,2.0,3.0,1.0,1.45,270.0,IOS,France,mobile
+2018-09-18,655,7EB8B50B477E89CDF0E953176470C8B7,Low,0.2922,Only 4 active days in 28; Fails often (50% of attempts),2.0,4.0,3.0,3.19,611.0,IOS,Other,mobile
+2018-09-18,656,27EBD3EEECD253B2A30B2255280DD32D,Low,0.2904,Only 3 active days in 28,1.0,3.0,2.0,1.92,288.0,IOS,United States,mobile
+2018-09-18,657,7985246BD5745B2B4E04B5356903FAD0,Low,0.2903,Silent 10 days; Only 4 active days in 28,10.0,4.0,0.0,0.0,254.0,IOS,United Kingdom,tablet
+2018-09-18,658,ED90CC7C8BC768DBF3B8B87A75422721,Low,0.29,Silent 12 days; Only 3 active days in 28,12.0,3.0,0.0,0.0,396.0,IOS,United States,tablet
+2018-09-18,659,92A48D7600829C37EA0ED6FA7830B4EC,Low,0.2893,Not seen for 5 days; Fails often (57% of attempts); Hit app errors (2),5.0,6.0,2.0,0.79,450.0,IOS,United States,mobile
+2018-09-18,660,D32344BA5A0153E336B5F73ED2979785,Low,0.289,Not seen for 4 days; Activity down 85% vs usual week; Fails often (46% of attempts),4.0,12.0,1.0,0.15,30.0,IOS,Canada,tablet
+2018-09-18,661,A6A77DA8F2C4102A83EED1D5216EB318,Low,0.2884,Not seen for 6 days; Activity down 78% vs usual week; Fails often (60% of attempts),6.0,9.0,2.0,0.22,41.0,ANDROID,United States,tablet
+2018-09-18,662,66305184E3B422FE39E3465AB9C7FE60,Low,0.2877,Only 3 active days in 28; New user (5 days); Fails often (45% of attempts),1.0,3.0,3.0,4.0,5.0,ANDROID,Japan,mobile
+2018-09-18,663,12A0B6E613AC52FAAA4EA602FAB670FE,Low,0.2877,No single strong signal,1.0,5.0,1.0,1.08,842.0,IOS,Other,mobile
+2018-09-18,664,DA1D3A39658D50A5B0C7C7C28097FBA5,Low,0.2876,Only 3 active days in 28,1.0,3.0,2.0,2.98,358.0,IOS,Japan,mobile
+2018-09-18,665,51FB83B864E295B2E3961F703F37C945,Low,0.287,Not seen for 3 days; Only 4 active days in 28,3.0,4.0,1.0,1.43,330.0,IOS,United States,mobile
+2018-09-18,666,05AFD9CC6BE47271BCD774268D50ACCC,Low,0.2867,Only 3 active days in 28; New user (9 days); Fails often (44% of attempts),2.0,3.0,2.0,1.89,9.0,IOS,United States,tablet
+2018-09-18,667,8D47F88F41DB72ACC9BD419D0CEDD02E,Low,0.2867,Not seen for 4 days; Activity down 53% vs usual week,4.0,7.0,1.0,0.47,342.0,ANDROID,United States,mobile
+2018-09-18,668,B081E087ABDC8FE6FB390ACF48CD61D8,Low,0.2867,Silent 10 days,10.0,5.0,0.0,0.0,785.0,ANDROID,Spain,mobile
+2018-09-18,669,6A8061EE9C5A6A6A48545DA3A6713C0A,Low,0.2867,Silent 15 days,15.0,6.0,0.0,0.0,678.0,IOS,United States,tablet
+2018-09-18,670,D031112AF5E886F8CB7B5D88C2A6EB2A,Low,0.2837,Silent 12 days; Only 4 active days in 28,12.0,4.0,0.0,0.0,52.0,IOS,Australia,tablet
+2018-09-18,671,091F09F594F7507A1D6D34D006A49CD9,Low,0.2825,Not seen for 4 days; Fails often (60% of attempts),4.0,6.0,1.0,0.56,118.0,IOS,United States,tablet
+2018-09-18,672,C7D0D209383F232092E47A1655F5B907,Low,0.2818,Silent 8 days,8.0,6.0,0.0,0.0,685.0,IOS,United States,mobile
+2018-09-18,673,B63075B53A750A67A12F7F19ED5AA835,Low,0.2817,Not seen for 4 days; Activity down 75% vs usual week; Hit app errors (4),4.0,12.0,1.0,0.25,511.0,ANDROID,United States,mobile
+2018-09-18,674,F505D39D04A5141F7A113A0AE18B0475,Low,0.279,Only 4 active days in 28; New user (14 days),1.0,4.0,2.0,1.44,14.0,IOS,Japan,mobile
+2018-09-18,675,7F09D6EB541953172D88BE6D341A29DA,Low,0.2786,Only 4 active days in 28; Fails often (61% of attempts); Hit app errors (1),2.0,4.0,2.0,0.6,360.0,IOS,United States,mobile
+2018-09-18,676,3A110988C8149D12D9F52341B8FDFFD2,Low,0.2785,Only 3 active days in 28; Hit app errors (1),1.0,3.0,1.0,1.15,183.0,IOS,Germany,mobile
+2018-09-18,677,424C01CD3ACB4454BB6B2D2899511997,Low,0.2776,Not seen for 4 days,4.0,7.0,1.0,0.67,341.0,ANDROID,United States,mobile
+2018-09-18,678,58354B860DB131CB73C0F6355151587A,Low,0.2773,Silent 15 days; Only 4 active days in 28,15.0,4.0,0.0,0.0,682.0,IOS,United States,tablet
+2018-09-18,679,B4F84493B3F693345C3561122EBEAEA2,Low,0.2769,Activity down 52% vs usual week,1.0,7.0,1.0,0.48,127.0,ANDROID,Other,mobile
+2018-09-18,680,E50F7AC0680FD87AD6CE6B6700D209A7,Low,0.2765,Silent 11 days; Only 4 active days in 28,11.0,4.0,0.0,0.0,91.0,ANDROID,United States,mobile
+2018-09-18,681,6A8D61827CD1A7E5300673C05DEEDBCC,Low,0.2761,Silent 9 days,9.0,5.0,0.0,0.0,570.0,ANDROID,United States,tablet
+2018-09-18,682,9F7B0D1BFB822F5E26E91E184E2E437C,Low,0.2754,Activity down 71% vs usual week,1.0,7.0,1.0,0.29,842.0,ANDROID,Other,mobile
+2018-09-18,683,708E876A9807A8C1DBCA9A19BC35B702,Low,0.2734,Not seen for 4 days; Activity down 68% vs usual week,4.0,6.0,1.0,0.32,838.0,ANDROID,United States,tablet
+2018-09-18,684,751B06814F2E7EFE53CF17EA6A435B58,Low,0.2723,Not seen for 3 days; Activity down 87% vs usual week; Hit app errors (1),3.0,6.0,1.0,0.13,31.0,IOS,Japan,tablet
+2018-09-18,685,B087A865A90AD52D1864A36482983BD2,Low,0.2718,Not seen for 4 days; Activity down 89% vs usual week,4.0,14.0,2.0,0.11,40.0,ANDROID,United States,mobile
+2018-09-18,686,76690E22DDCE2B1FFA98C6A4376B8EA2,Low,0.2714,Not seen for 4 days,4.0,6.0,2.0,1.53,287.0,IOS,United States,tablet
+2018-09-18,687,1C6A9F02E05398B13FBB2C403A1E1B0F,Low,0.2679,Silent 11 days; Only 3 active days in 28; Fails often (47% of attempts),11.0,3.0,0.0,0.0,680.0,IOS,United States,tablet
+2018-09-18,688,E642A5334B708A0A18F5590AB4554780,Low,0.2677,Silent 7 days,7.0,6.0,1.0,0.79,321.0,IOS,United States,mobile
+2018-09-18,689,E88B3068A8A94917F950332FB8074A02,Low,0.2672,Activity down 63% vs usual week; Hit app errors (1),2.0,6.0,2.0,0.37,684.0,IOS,United States,mobile
+2018-09-18,690,1213ED1E96B0A49B51C0F7683DB2ACCC,Low,0.2664,Silent 8 days,8.0,6.0,0.0,0.0,81.0,ANDROID,United States,mobile
+2018-09-18,691,7D7B319DFFF03520EF50236B2C3FB008,Low,0.2664,Only 3 active days in 28,1.0,3.0,1.0,1.12,107.0,IOS,United States,tablet
+2018-09-18,692,BBFC6FBB1E0C347719619D3C6326073D,Low,0.2664,Only 3 active days in 28; New user (10 days),1.0,3.0,2.0,1.24,10.0,IOS,Other,mobile
+2018-09-18,693,FDD20A9EF4FE8B5E51F9EC2F98F51991,Low,0.2663,Not seen for 5 days; Only 4 active days in 28; Hit app errors (1),5.0,4.0,1.0,0.59,449.0,ANDROID,Other,mobile
+2018-09-18,694,ABE5532A470836AEC9ABBAD3AFAB7759,Low,0.2661,Not seen for 4 days; Only 3 active days in 28,4.0,3.0,1.0,1.55,526.0,IOS,Canada,tablet
+2018-09-18,695,F799A70617ED99757C36193D90639416,Low,0.2658,Only 3 active days in 28,2.0,3.0,1.0,3.47,683.0,IOS,Japan,mobile
+2018-09-18,696,71CD1253D6BB1366E146BEC63E305CB3,Low,0.2657,Only 3 active days in 28,2.0,3.0,2.0,1.76,537.0,IOS,United States,tablet
+2018-09-18,697,68C5F7CFAEAB93924B7B55D7129C0286,Low,0.2655,Not seen for 3 days; Activity down 70% vs usual week,3.0,5.0,1.0,0.3,207.0,IOS,Australia,tablet
+2018-09-18,698,27293EA0B2F41A672E15EF7B1FA21298,Low,0.2639,Not seen for 4 days; Only 4 active days in 28,4.0,4.0,2.0,2.32,198.0,IOS,United Kingdom,tablet
+2018-09-18,699,FE05B2D8777F0842B15F8A7CF8350E99,Low,0.2632,Silent 11 days; Only 4 active days in 28; Hit app errors (1),11.0,4.0,0.0,0.0,385.0,IOS,United States,tablet
+2018-09-18,700,C679FF00E17790E7E16AB903212EE05C,Low,0.2627,Not seen for 4 days,4.0,13.0,4.0,0.79,39.0,ANDROID,Other,mobile
+2018-09-18,701,EE502024B7AC261CE1956BB599E020DE,Low,0.2626,Silent 8 days; Only 4 active days in 28,8.0,4.0,0.0,0.0,284.0,ANDROID,United Kingdom,mobile
+2018-09-18,702,82F141D1C5A86CB8F5F4DFC7E09E5513,Low,0.2614,Silent 7 days,7.0,14.0,1.0,0.11,46.0,IOS,United States,tablet
+2018-09-18,703,2741C47CC50AE98B39CC5B561BFEA504,Low,0.2611,Not seen for 4 days; Fails often (41% of attempts),4.0,7.0,2.0,0.69,841.0,ANDROID,United States,tablet
+2018-09-18,704,6683CAFB77FB7B60C78CD233EB2B62F7,Low,0.2605,Silent 10 days; Hit app errors (1),10.0,11.0,0.0,0.0,665.0,IOS,United States,tablet
+2018-09-18,705,5B888A06EFF60B86B10367EEC3B44E85,Low,0.2602,Not seen for 4 days; Activity down 74% vs usual week,4.0,10.0,1.0,0.26,680.0,ANDROID,United States,mobile
+2018-09-18,706,5E9BF00B469B284E028094EA15A9F1FE,Low,0.2597,Silent 16 days,16.0,7.0,0.0,0.0,262.0,IOS,United States,tablet
+2018-09-18,707,1E7B72B7E01E7DC66550B9B5B85BDFB7,Low,0.2568,Silent 8 days,8.0,5.0,0.0,0.0,79.0,IOS,United States,tablet
+2018-09-18,708,6FCD0FC6ABAD98C7738BD592F1B0689E,Low,0.256,Not seen for 4 days; Only 3 active days in 28,4.0,3.0,2.0,2.42,835.0,IOS,Japan,mobile
+2018-09-18,709,B7706BCDE12360F565E9F5DB0A5256D8,Low,0.2545,Not seen for 6 days; Activity down 56% vs usual week,6.0,9.0,2.0,0.44,376.0,IOS,Japan,tablet
+2018-09-18,710,0409A1CE83D1D4DC0F01E2DFA44ED555,Low,0.2538,Silent 10 days,10.0,6.0,0.0,0.0,281.0,ANDROID,United Kingdom,tablet
+2018-09-18,711,A5B69571180E5F3CEF2D0846E28211DE,Low,0.2527,Not seen for 5 days,5.0,5.0,2.0,1.79,273.0,IOS,Japan,mobile
+2018-09-18,712,84DC3AEDCF3C43821C0E4275217D9CC5,Low,0.2516,Not seen for 3 days,3.0,5.0,1.0,1.39,682.0,IOS,United States,mobile
+2018-09-18,713,E66C3B8A38C424C7CBE0B5388EE5F77E,Low,0.2509,Not seen for 6 days,6.0,7.0,1.0,0.91,361.0,IOS,United Kingdom,tablet
+2018-09-18,714,8802C1F08F68501AB77C5097CD19CE1A,Low,0.2503,Not seen for 3 days; Only 3 active days in 28; Hit app errors (3),3.0,3.0,1.0,2.03,274.0,IOS,United States,mobile
+2018-09-18,715,BD99C0F97B407F63AC6926BC84F79133,Low,0.25,Not seen for 5 days; Only 4 active days in 28,5.0,4.0,2.0,1.61,780.0,IOS,Australia,mobile
+2018-09-18,716,03915D9B9DC76855CC63C18E94C93760,Low,0.2493,Not seen for 4 days; New user (10 days),4.0,5.0,3.0,2.16,10.0,IOS,United States,tablet
+2018-09-18,717,2610ACECAB8147367D97BCE7F7B35F71,Low,0.2486,Activity down 66% vs usual week,2.0,6.0,1.0,0.34,531.0,IOS,United States,mobile
+2018-09-18,718,0808B3380E616BDF15E6F2FBAF38147F,Low,0.2475,No single strong signal,2.0,5.0,2.0,1.71,780.0,IOS,United States,tablet
+2018-09-18,719,A2E61D52E29C7A87CB8AD4911BC077FB,Low,0.2475,Silent 13 days; Only 4 active days in 28,13.0,4.0,0.0,0.0,679.0,IOS,Other,tablet
+2018-09-18,720,D4C8E3E0EFC45C3D60AB3F0F305489AF,Low,0.2473,Not seen for 6 days,6.0,12.0,1.0,0.96,684.0,IOS,United Kingdom,mobile
+2018-09-18,721,56275C50A29186725083DD9A9AE69338,Low,0.2472,Only 3 active days in 28,2.0,3.0,3.0,4.0,269.0,IOS,Other,mobile
+2018-09-18,722,4DC5C920B3CE1AE93FE81D37A34A70DD,Low,0.2463,Not seen for 4 days; Activity down 80% vs usual week,4.0,5.0,1.0,0.2,60.0,IOS,Canada,tablet
+2018-09-18,723,74253012A39B1F4DE53D4BFF1AB2B5DD,Low,0.2458,Not seen for 3 days; Fails often (55% of attempts),3.0,5.0,1.0,1.79,331.0,IOS,United States,tablet
+2018-09-18,724,9842E27FE3DF102CAC1B954D1D12B02C,Low,0.2457,Silent 12 days,12.0,6.0,0.0,0.0,248.0,IOS,United States,tablet
+2018-09-18,725,91F3AE7CB1BB50C0DBFFCEF6F4D0E038,Low,0.2457,No single strong signal,2.0,5.0,2.0,2.04,175.0,IOS,United States,mobile
+2018-09-18,726,EF555837976A611B777E071BAAB93380,Low,0.2454,No single strong signal,1.0,6.0,2.0,1.35,559.0,IOS,United States,mobile
+2018-09-18,727,79C6CEA7189615EF5319ED1BA55DDE9D,Low,0.2451,Not seen for 4 days; Fails often (56% of attempts),4.0,5.0,1.0,1.33,285.0,ANDROID,United States,mobile
+2018-09-18,728,03E05B9F728257B2F739CF0BB4497166,Low,0.2438,Only 3 active days in 28; Fails often (50% of attempts),2.0,3.0,3.0,4.0,65.0,IOS,Other,mobile
+2018-09-18,729,C27D61F5B4239A4FD5AB86D61342FBBF,Low,0.2433,Silent 9 days; Only 4 active days in 28,9.0,4.0,0.0,0.0,297.0,IOS,United States,tablet
+2018-09-18,730,BAE75BB7891B9CC60C9AF2DFECD764AB,Low,0.2431,Silent 7 days; Only 4 active days in 28,7.0,4.0,1.0,1.33,685.0,IOS,Japan,mobile
+2018-09-18,731,B17733EF033768334482E53DA2FD144E,Low,0.2424,Not seen for 5 days; Only 4 active days in 28; Hit app errors (1),5.0,4.0,2.0,2.16,239.0,IOS,United States,mobile
+2018-09-18,732,158D85747B252579015AE58305CBC8C1,Low,0.2418,Not seen for 4 days,4.0,6.0,1.0,1.03,68.0,IOS,United States,tablet
+2018-09-18,733,3DC258E32531148709A4BF575C0F076E,Low,0.2409,Not seen for 4 days; Activity down 63% vs usual week,4.0,5.0,1.0,0.37,272.0,ANDROID,United States,mobile
+2018-09-18,734,050231DF01854EFA691E0D5F4DB9ADB2,Low,0.2407,Not seen for 3 days; New user (17 days),3.0,6.0,1.0,1.22,17.0,IOS,United States,mobile
+2018-09-18,735,A09FB36DC9236D7C16606A65AB9F8799,Low,0.24,Only 3 active days in 28,1.0,3.0,1.0,1.78,837.0,IOS,Canada,mobile
+2018-09-18,736,38C93052B6B68913A433591107F8662C,Low,0.2387,Not seen for 4 days,4.0,8.0,1.0,0.62,281.0,ANDROID,United States,mobile
+2018-09-18,737,2DFF310A6B208FF63B6E7C83D02EBFB8,Low,0.2386,Not seen for 5 days,5.0,5.0,2.0,1.72,591.0,IOS,United States,mobile
+2018-09-18,738,7EE035CA8E6132A8877C39656896BA41,Low,0.2384,Not seen for 6 days; Activity down 54% vs usual week,6.0,11.0,1.0,0.46,315.0,ANDROID,United States,mobile
+2018-09-18,739,DC16CFBE43A591C7D18D4BE0BBC2E6CE,Low,0.2384,Activity down 67% vs usual week,1.0,9.0,1.0,0.33,254.0,ANDROID,Other,mobile
+2018-09-18,740,F2D0450D7EAE6470C9C41096A9E34EDA,Low,0.2382,Hit app errors (20),1.0,6.0,2.0,2.89,300.0,IOS,China,mobile
+2018-09-18,741,43179F39C4923E08D3CD9F3CC7D702B2,Low,0.2369,Not seen for 6 days; Only 4 active days in 28,6.0,4.0,2.0,3.0,360.0,IOS,Japan,mobile
+2018-09-18,742,67EAABE23BA806180D7012C66DD19CD5,Low,0.2362,Not seen for 5 days,5.0,5.0,2.0,1.0,80.0,IOS,United States,mobile
+2018-09-18,743,ADDE80C89BB3F6190538E50E541BACD5,Low,0.236,Silent 8 days; Hit app errors (1),8.0,11.0,0.0,0.0,276.0,ANDROID,United States,mobile
+2018-09-18,744,30851A76407C708D397A7D2341980D37,Low,0.236,No single strong signal,2.0,6.0,2.0,1.19,318.0,IOS,Taiwan,mobile
+2018-09-18,745,9E29F60A2AC264DFAB9AD5A7D9B0455F,Low,0.2353,Only 3 active days in 28,1.0,3.0,1.0,0.96,134.0,ANDROID,Japan,mobile
+2018-09-18,746,8E9AF5710AB209EBDB86A9E3263EC24F,Low,0.2352,Not seen for 3 days,3.0,6.0,4.0,1.04,320.0,IOS,United Kingdom,mobile
+2018-09-18,747,515AAFD9034956047895F9B357659047,Low,0.2352,Not seen for 5 days,5.0,6.0,2.0,1.2,191.0,IOS,United States,mobile
+2018-09-18,748,40BA3CE848E99626DACC46BCCEE3E568,Low,0.2351,Only 4 active days in 28,2.0,4.0,1.0,0.89,839.0,IOS,United States,tablet
+2018-09-18,749,47EF903C26610B033B8734C8159B2ECA,Low,0.2345,Not seen for 3 days,3.0,9.0,2.0,1.88,525.0,ANDROID,United States,mobile
+2018-09-18,750,DB9D0368B6DC1CD2E03CDDBE7060DE31,Low,0.2326,Silent 7 days; Hit app errors (1),7.0,13.0,1.0,0.25,331.0,IOS,United States,tablet
+2018-09-18,751,D961BD6AADAC53884DA8732A964CDFFD,Low,0.2323,No single strong signal,2.0,7.0,2.0,0.62,133.0,IOS,Canada,mobile
+2018-09-18,752,885E82D6963162F569C26BB9D9B3AE28,Low,0.2295,Silent 7 days,7.0,6.0,1.0,0.56,467.0,IOS,United States,mobile
+2018-09-18,753,240C8893DF203F0035A67CB25C761413,Low,0.2291,Not seen for 3 days,3.0,5.0,2.0,2.83,160.0,IOS,United States,mobile
+2018-09-18,754,99C20F2D20C197C5E106DE31C5B48277,Low,0.2285,Not seen for 3 days; Activity down 61% vs usual week; Fails often (42% of attempts),3.0,7.0,1.0,0.39,363.0,IOS,United States,mobile
+2018-09-18,755,F4634EFF4D9470DCA00051E3304B81AF,Low,0.2281,Silent 7 days; Only 4 active days in 28; Fails often (50% of attempts),7.0,4.0,1.0,1.14,108.0,IOS,Japan,tablet
+2018-09-18,756,96D78D93EA38723BCFD4AAAEE9DC6ACD,Low,0.2281,Only 3 active days in 28; New user (27 days),1.0,3.0,1.0,0.82,27.0,IOS,United States,mobile
+2018-09-18,757,85DB15BDADAB65F9CC1E33B872745B87,Low,0.2277,Not seen for 4 days,4.0,6.0,2.0,1.33,681.0,IOS,United States,tablet
+2018-09-18,758,2F2F1344A7423CA7B81B2F6E23B44CEA,Low,0.2258,Silent 7 days,7.0,7.0,1.0,0.07,600.0,IOS,United States,tablet
+2018-09-18,759,C464722AE0E9423DE721E72B8A524141,Low,0.2257,Not seen for 4 days; Fails often (43% of attempts),4.0,6.0,1.0,0.5,716.0,IOS,United States,tablet
+2018-09-18,760,3D1B58553D2E2D4DD5DFCF251D5E23B2,Low,0.2255,Not seen for 6 days; Activity down 71% vs usual week,6.0,14.0,1.0,0.29,474.0,ANDROID,United States,mobile
+2018-09-18,761,AB32482D193E2CE166B59F82EF78D8BB,Low,0.2252,Silent 7 days,7.0,7.0,1.0,1.19,836.0,ANDROID,United States,mobile
+2018-09-18,762,74456352647C13028F89D1EEFFB905F4,Low,0.2244,Silent 11 days,11.0,9.0,0.0,0.0,535.0,IOS,United States,tablet
+2018-09-18,763,44962B1EB7295E6C001F7F75CFA52D3C,Low,0.2241,Not seen for 5 days; Only 4 active days in 28,5.0,4.0,3.0,1.84,362.0,IOS,France,mobile
+2018-09-18,764,656D5E8FAC9D770179FDF7E9027AE2CE,Low,0.2236,Not seen for 3 days; Activity down 94% vs usual week,3.0,5.0,1.0,0.06,212.0,IOS,United Kingdom,mobile
+2018-09-18,765,9DE7361ACCDEA6541AD5EA55D59B1C78,Low,0.2234,Not seen for 4 days; Activity down 79% vs usual week,4.0,11.0,1.0,0.21,840.0,ANDROID,Canada,mobile
+2018-09-18,766,023A2DB99CC3F70A4B71869C36952D74,Low,0.2233,Not seen for 5 days; Activity down 56% vs usual week,5.0,9.0,1.0,0.44,57.0,ANDROID,Japan,mobile
+2018-09-18,767,7F089F4710219060252DB2AEF508A662,Low,0.2229,Not seen for 4 days,4.0,6.0,1.0,0.74,342.0,ANDROID,United States,mobile
+2018-09-18,768,EF2E072F6D5F65F2FC21785102F4D830,Low,0.2228,Only 3 active days in 28; Fails often (96% of attempts),2.0,3.0,1.0,1.9,143.0,IOS,France,mobile
+2018-09-18,769,E643F6549E6C7EA0FD01EF4BF7A40F76,Low,0.2214,Silent 9 days,9.0,9.0,0.0,0.0,146.0,IOS,United States,tablet
+2018-09-18,770,661DE248B0C158E25B5808B6661E6625,Low,0.221,No single strong signal,2.0,7.0,2.0,1.11,680.0,IOS,Germany,mobile
+2018-09-18,771,1B77FB1C92556A6ABC77D8A7B12CC2BE,Low,0.2208,Not seen for 5 days; Only 4 active days in 28,5.0,4.0,2.0,1.94,840.0,IOS,Netherlands,mobile
+2018-09-18,772,153C55ABB8207C667CC7DD1C08DB02AA,Low,0.2208,Not seen for 3 days,3.0,5.0,2.0,1.26,421.0,ANDROID,United States,tablet
+2018-09-18,773,EC69270A8257323F7E911D13FE39ADD8,Low,0.2206,Not seen for 5 days,5.0,5.0,1.0,2.16,571.0,IOS,United States,mobile
+2018-09-18,774,7EC89D833B1186688C4891B443292546,Low,0.2204,Not seen for 6 days; Activity down 66% vs usual week,6.0,6.0,1.0,0.34,630.0,ANDROID,United States,tablet
+2018-09-18,775,3883FF0DFAB40ECD4EA781FC0D1CE18A,Low,0.2197,Not seen for 3 days; Activity down 82% vs usual week; New user (27 days),3.0,17.0,3.0,0.18,27.0,ANDROID,United States,mobile
+2018-09-18,776,7FB0FA98A8949CD6D75B48C449DAE33B,Low,0.2193,Not seen for 3 days; Hit app errors (2),3.0,5.0,2.0,0.78,761.0,IOS,Japan,mobile
+2018-09-18,777,B8255C477C2A58B38CF4FEDC53B290A3,Low,0.218,Not seen for 5 days; Only 4 active days in 28,5.0,4.0,2.0,1.93,398.0,IOS,United Kingdom,mobile
+2018-09-18,778,0E3E6936E3AC681876BC1DD6ABE7E937,Low,0.2171,New user (7 days),1.0,5.0,5.0,4.0,7.0,IOS,Japan,mobile
+2018-09-18,779,E70E3F402C9F812B2735740C621D79EE,Low,0.217,Not seen for 6 days; New user (22 days),6.0,5.0,1.0,1.6,22.0,ANDROID,Brazil,mobile
+2018-09-18,780,8C33815E0A269B776AAB4B60A4F7BC63,Low,0.2158,Silent 10 days,10.0,6.0,0.0,0.0,723.0,IOS,Japan,tablet
+2018-09-18,781,587B7361E91394D3BB6B8214672C4B91,Low,0.2157,Only 3 active days in 28,1.0,3.0,2.0,2.75,438.0,ANDROID,Other,mobile
+2018-09-18,782,D48CD5208B2A9D30D9AE0D6019644EB2,Low,0.2155,Only 4 active days in 28,2.0,4.0,1.0,0.98,732.0,IOS,Netherlands,mobile
+2018-09-18,783,6F5FF93E2A273D4D80B6A21BE014217A,Low,0.2154,Not seen for 5 days; Activity down 70% vs usual week,5.0,7.0,1.0,0.3,530.0,IOS,Japan,mobile
+2018-09-18,784,05407E04B9FA64CB63D8FA1D966AD6A2,Low,0.2153,Not seen for 5 days; Activity down 57% vs usual week,5.0,8.0,1.0,0.43,821.0,ANDROID,Canada,mobile
+2018-09-18,785,DDB627A00E4213B6A69F35DB89681AF8,Low,0.2146,Silent 8 days,8.0,5.0,0.0,0.0,390.0,IOS,United States,tablet
+2018-09-18,786,D50D60807F5347EB64EF0CD5A3D4C4CD,Low,0.214,Not seen for 4 days; Only 3 active days in 28,4.0,3.0,2.0,2.35,648.0,ANDROID,United States,mobile
+2018-09-18,787,3FC333C921606374C67865B09B41C80A,Low,0.2138,Not seen for 5 days,5.0,5.0,3.0,2.6,367.0,IOS,Other,mobile
+2018-09-18,788,3FBB605D713B128EBF5A38DD845444EC,Low,0.2135,Only 4 active days in 28; Hit app errors (1),2.0,4.0,2.0,1.15,104.0,IOS,Japan,mobile
+2018-09-18,789,D45CF251C60626FDB4BB8D50ABB7BA46,Low,0.2122,Activity down 52% vs usual week,1.0,6.0,2.0,0.48,299.0,ANDROID,United States,mobile
+2018-09-18,790,B99FD965B0874192EE94E8A8FE85EA9E,Low,0.2118,Not seen for 5 days,5.0,9.0,2.0,0.55,62.0,ANDROID,Other,mobile
+2018-09-18,791,F6990003CD319DAE75CBFD590BA40CA9,Low,0.2114,No single strong signal,2.0,5.0,1.0,0.91,708.0,IOS,United States,tablet
+2018-09-18,792,00F541FA1C141575D0AD7048F809CC6E,Low,0.2108,Only 4 active days in 28,2.0,4.0,3.0,3.06,683.0,IOS,United States,mobile
+2018-09-18,793,374C6BC6369079CBFA252182A0A0FD91,Low,0.2106,Not seen for 4 days; Only 3 active days in 28; Hit app errors (7),4.0,3.0,2.0,3.96,252.0,ANDROID,United States,mobile
+2018-09-18,794,47D5BBC5FFF450A5A5F89B36431532A7,Low,0.2106,Only 4 active days in 28,1.0,4.0,2.0,1.87,172.0,IOS,United States,mobile
+2018-09-18,795,B7603B7B3324056CAF6E576ED8EE284D,Low,0.2105,No single strong signal,2.0,7.0,1.0,0.67,326.0,IOS,United States,tablet
+2018-09-18,796,AD8EC45CB90A8CEFC376341115A6E1E7,Low,0.2081,Silent 11 days,11.0,6.0,0.0,0.0,439.0,IOS,United States,tablet
+2018-09-18,797,3082CDD760FB4C2F5BAE25E78DD0B000,Low,0.2081,Only 3 active days in 28; New user (5 days),1.0,3.0,3.0,4.0,5.0,IOS,Other,mobile
+2018-09-18,798,19B2C810DED5665C0ADB9F938C156C29,Low,0.2069,No single strong signal,2.0,6.0,1.0,0.51,729.0,IOS,United States,tablet
+2018-09-18,799,E989ADC3B80B10A564559A60763BA8D1,Low,0.2064,Activity down 88% vs usual week,2.0,14.0,2.0,0.12,765.0,IOS,United States,tablet
+2018-09-18,800,00353D3418DD0707FE0A80A59FBD5705,Low,0.2041,Not seen for 4 days; Only 4 active days in 28; New user (7 days),4.0,4.0,4.0,4.0,7.0,IOS,Other,mobile
+2018-09-18,801,374B905520627374315AF272263C2DC7,Low,0.204,Only 4 active days in 28,2.0,4.0,2.0,2.3,143.0,IOS,Canada,mobile
+2018-09-18,802,25D0E6C77B170FE82258520015446DF4,Low,0.2039,Not seen for 4 days; Only 4 active days in 28,4.0,4.0,1.0,0.78,59.0,IOS,Japan,tablet
+2018-09-18,803,B84CFCC887AD27C4BED3C7AFED3B995F,Low,0.2036,Only 4 active days in 28,1.0,4.0,3.0,3.16,682.0,IOS,Australia,tablet
+2018-09-18,804,7566596A1D6ACA781692A7A0B89B06EF,Low,0.2019,Not seen for 6 days; Hit app errors (2),6.0,5.0,1.0,1.69,240.0,ANDROID,United States,mobile
+2018-09-18,805,7F811674D65C2E02A6A705E97799E372,Low,0.2013,Silent 8 days,8.0,7.0,0.0,0.0,486.0,ANDROID,United States,mobile
+2018-09-18,806,E080719BB47D2A7A842EDADDF82AB779,Low,0.1997,Only 3 active days in 28,1.0,3.0,1.0,1.15,618.0,IOS,Japan,tablet
+2018-09-18,807,8A1F255061DE6AFBDE0F9FE5226DCACA,Low,0.1994,New user (19 days); Fails often (56% of attempts),2.0,5.0,3.0,3.25,19.0,IOS,United States,mobile
+2018-09-18,808,48C3F922E22657E619B06BE11763E782,Low,0.1993,Not seen for 4 days,4.0,7.0,1.0,0.83,79.0,IOS,United States,tablet
+2018-09-18,809,D4EE19113FF597D1D320BFCB908DBED6,Low,0.1992,Only 3 active days in 28,1.0,3.0,1.0,0.75,476.0,IOS,Japan,mobile
+2018-09-18,810,2A0B5110E405737D03252E4149115CF0,Low,0.1991,Silent 8 days,8.0,5.0,0.0,0.0,361.0,IOS,United States,mobile
+2018-09-18,811,EBC3581ADA874D494FBE2C7CCF53BF99,Low,0.199,Fails often (47% of attempts),2.0,7.0,2.0,0.61,417.0,IOS,United States,tablet
+2018-09-18,812,8CFCCD1BCABB1E4C2B70E374EAD03092,Low,0.1972,Only 4 active days in 28,2.0,4.0,2.0,1.99,345.0,IOS,Canada,mobile
+2018-09-18,813,05FB3382D94C7E963B408FD6CC357D33,Low,0.1969,Not seen for 3 days,3.0,18.0,3.0,0.68,193.0,ANDROID,United States,mobile
+2018-09-18,814,757F371D73A59AA7B6FB5CF1E6483B33,Low,0.1967,Not seen for 4 days; Fails often (49% of attempts); Hit app errors (4),4.0,7.0,2.0,0.63,842.0,ANDROID,United States,mobile
+2018-09-18,815,A667CE2D931E7F14B2F92ACCCAF61B72,Low,0.1963,Only 3 active days in 28; New user (7 days),1.0,3.0,3.0,4.0,7.0,IOS,United States,mobile
+2018-09-18,816,58930F51C20661E89F5DFDB969131080,Low,0.1945,No single strong signal,1.0,7.0,4.0,1.93,416.0,ANDROID,Australia,mobile
+2018-09-18,817,65A948524500925FA194751A896C2BFF,Low,0.1943,Not seen for 3 days; New user (13 days),3.0,6.0,2.0,1.52,13.0,IOS,United States,mobile
+2018-09-18,818,2A26BB74FCE03DA9C70BC01E882C5886,Low,0.1935,Only 4 active days in 28,2.0,4.0,1.0,1.47,169.0,IOS,United States,tablet
+2018-09-18,819,3BF1D92C836CBAFACDD2063848BAB11C,Low,0.1935,Activity down 58% vs usual week,1.0,5.0,2.0,0.42,351.0,ANDROID,United States,mobile
+2018-09-18,820,EA35FE295A7C1F8F67836AEB608CEBBD,Low,0.1931,Not seen for 4 days; Only 4 active days in 28; Fails often (41% of attempts),4.0,4.0,1.0,1.58,752.0,IOS,United States,tablet
+2018-09-18,821,6EBDDD1BC5E5489D7FF0B41B8DAA9D86,Low,0.191,Not seen for 3 days; Hit app errors (3),3.0,6.0,2.0,0.89,339.0,ANDROID,United States,mobile
+2018-09-18,822,02F5084C948BF823B7261A0353E92EE3,Low,0.191,Not seen for 6 days; Hit app errors (1),6.0,6.0,1.0,0.63,268.0,ANDROID,United States,mobile
+2018-09-18,823,C28231099C78071ADF8D0BAEA7B9C1F2,Low,0.1901,Not seen for 5 days; Activity down 66% vs usual week,5.0,14.0,3.0,0.34,771.0,IOS,United Kingdom,mobile
+2018-09-18,824,42E6A7C3536775E3B8C3DB919AE9A452,Low,0.1876,Not seen for 4 days,4.0,15.0,2.0,0.63,361.0,ANDROID,United States,mobile
+2018-09-18,825,812A0C9302E7E1A711B416C0904C99CD,Low,0.1875,Not seen for 3 days; Only 4 active days in 28; Hit app errors (2),3.0,4.0,3.0,2.61,560.0,ANDROID,United States,mobile
+2018-09-18,826,D1D63C0846350CDA590027902A16C9A2,Low,0.1875,No single strong signal,1.0,5.0,1.0,1.57,538.0,IOS,United States,tablet
+2018-09-18,827,B49A351B1E8B5EB26B02B4D29AF7DAC2,Low,0.1848,Activity down 71% vs usual week; Only 3 active days in 28,1.0,3.0,1.0,0.29,684.0,IOS,Australia,mobile
+2018-09-18,828,9556C9CA087D6F1F8CEEB93600B40C44,Low,0.1848,Only 3 active days in 28; New user (8 days),1.0,3.0,3.0,4.0,8.0,IOS,United Kingdom,mobile
+2018-09-18,829,9C8494CDC3107F7BE54CCF3E820252D6,Low,0.1845,Silent 8 days,8.0,7.0,0.0,0.0,842.0,IOS,United States,mobile
+2018-09-18,830,6ADB388F73ED6F1EB13984556872A569,Low,0.1843,Silent 7 days,7.0,5.0,1.0,0.34,318.0,IOS,Japan,mobile
+2018-09-18,831,A19F659EA9BA36A3595F088F30A6B7E7,Low,0.1835,Not seen for 4 days; Activity down 83% vs usual week,4.0,15.0,1.0,0.17,342.0,ANDROID,United States,mobile
+2018-09-18,832,049A296C5B282AF7100E0BC093589617,Low,0.1819,Silent 7 days,7.0,7.0,1.0,0.18,477.0,IOS,United Kingdom,mobile
+2018-09-18,833,EAACE305D6DB2E8D80CF1E2932AE5CF4,Low,0.1818,Only 3 active days in 28; Hit app errors (2),1.0,3.0,2.0,3.42,696.0,ANDROID,United Kingdom,mobile
+2018-09-18,834,DF0E6C6C5E4F3F34FEC6EE54FD945B05,Low,0.1818,Not seen for 4 days; Activity down 54% vs usual week,4.0,15.0,2.0,0.46,339.0,ANDROID,United States,mobile
+2018-09-18,835,410456004F702B7F96B3B39BCC44051D,Low,0.1816,Not seen for 5 days,5.0,8.0,2.0,1.48,179.0,IOS,Other,mobile
+2018-09-18,836,AFA41EF5E9CDCC4DF87A199049813E45,Low,0.1806,Not seen for 6 days; Activity down 87% vs usual week; Fails often (69% of attempts),6.0,8.0,1.0,0.13,341.0,ANDROID,United States,mobile
+2018-09-18,837,96161BF2E55C7E32ED5F411432875ECB,Low,0.1799,Not seen for 4 days; Fails often (46% of attempts),4.0,7.0,1.0,0.55,90.0,IOS,United States,tablet
+2018-09-18,838,32DEB1F24ABD2430CC3EB1A917D1DD77,Low,0.1799,Only 4 active days in 28,1.0,4.0,2.0,2.41,769.0,IOS,United States,mobile
+2018-09-18,839,C8C53133B4F113D6B4A58839B5BB562C,Low,0.1797,Only 3 active days in 28,2.0,3.0,2.0,3.71,683.0,IOS,Canada,mobile
+2018-09-18,840,3B9DDD282F488869CFFCC057F70958B0,Low,0.1795,Not seen for 3 days; Only 3 active days in 28; Hit app errors (1),3.0,3.0,2.0,3.25,684.0,IOS,United States,mobile
+2018-09-18,841,C136A7CE1D0A52B8D4E5F144DF114EB7,Low,0.1788,Only 3 active days in 28; Hit app errors (1),1.0,3.0,2.0,3.18,825.0,ANDROID,Other,mobile
+2018-09-18,842,0609C988CD429DF8D706827547C9FC2D,Low,0.1786,Only 4 active days in 28,1.0,4.0,2.0,1.57,684.0,IOS,United States,mobile
+2018-09-18,843,4D084D38156128AAA060303AA91E689D,Low,0.1785,Not seen for 4 days,4.0,7.0,1.0,0.9,247.0,ANDROID,Brazil,mobile
+2018-09-18,844,D299D5763E03F1CC4DA8550AF1B4CEE4,Low,0.1775,Not seen for 6 days; Activity down 58% vs usual week,6.0,9.0,1.0,0.42,367.0,ANDROID,United States,mobile
+2018-09-18,845,806B89C2F8514374D2F9F4DD50EA681A,Low,0.1772,Activity down 89% vs usual week,2.0,11.0,1.0,0.11,680.0,IOS,United States,mobile
+2018-09-18,846,5E3CB701F06E57FB36C28741D182DDCE,Low,0.1757,New user (6 days),1.0,5.0,5.0,4.0,6.0,ANDROID,Taiwan,mobile
+2018-09-18,847,E7CCB643C1D0028BF305EDD85397255E,Low,0.175,Activity down 53% vs usual week; Hit app errors (1),1.0,6.0,1.0,0.47,302.0,IOS,United States,tablet
+2018-09-18,848,6AA133F6731526630B1D51BF557E485B,Low,0.1748,Not seen for 5 days,5.0,5.0,2.0,1.72,599.0,IOS,Canada,mobile
+2018-09-18,849,0D791C00AF304C3BDDA26EF979A320C8,Low,0.1737,Not seen for 6 days; Hit app errors (1),6.0,9.0,1.0,1.1,797.0,IOS,Canada,tablet
+2018-09-18,850,6DAA2DB5B93F3F8E0E3A9E0C4696B874,Low,0.1719,Only 4 active days in 28,1.0,4.0,2.0,2.48,84.0,IOS,United States,mobile
+2018-09-18,851,BA3E7A5857FD7BE68F02E4D2F5744BE8,Low,0.1716,Not seen for 4 days; Hit app errors (1),4.0,9.0,1.0,1.3,752.0,ANDROID,United States,tablet
+2018-09-18,852,66739352C8F94F55906F93AD35A7D894,Low,0.1713,New user (24 days),2.0,7.0,2.0,1.18,24.0,IOS,Other,mobile
+2018-09-18,853,5269565AB96D3D27ADEA4D7EF4DC2A88,Low,0.1711,No single strong signal,2.0,5.0,2.0,1.95,383.0,IOS,United States,tablet
+2018-09-18,854,B2ED849BBB2D152DF245B09A41687D4F,Low,0.1706,Silent 9 days,9.0,5.0,0.0,0.0,253.0,IOS,United States,tablet
+2018-09-18,855,925BE58770122AF0E71F68FBAD528825,Low,0.1705,Hit app errors (1),1.0,6.0,4.0,3.03,511.0,IOS,Japan,mobile
+2018-09-18,856,F0192BFEC0959BEE0FB12685539F4131,Low,0.1703,Not seen for 5 days; Hit app errors (1),5.0,6.0,2.0,1.63,423.0,IOS,United States,mobile
+2018-09-18,857,1C679E92B10C3EEDDD36467BE24D7449,Low,0.1699,Not seen for 6 days; Fails often (40% of attempts),6.0,7.0,1.0,0.87,363.0,ANDROID,United States,mobile
+2018-09-18,858,B390E09582A6DEF9545267A37C78B809,Low,0.1698,Only 4 active days in 28,1.0,4.0,2.0,1.14,819.0,ANDROID,Other,mobile
+2018-09-18,859,7DCD9440F2BF5EB73FFCC4F26E26F580,Low,0.1682,Activity down 70% vs usual week; Only 3 active days in 28; Hit app errors (2),1.0,3.0,1.0,0.3,183.0,IOS,United States,mobile
+2018-09-18,860,843FB380D196877C6C4AE1DA4727F1EE,Low,0.1679,New user (7 days); Hit app errors (1),1.0,5.0,5.0,4.0,7.0,IOS,Australia,mobile
+2018-09-18,861,C7E2273D8B11257FCCC915D27C1FCA24,Low,0.1675,Not seen for 4 days; Activity down 71% vs usual week,4.0,16.0,1.0,0.29,684.0,IOS,United States,tablet
+2018-09-18,862,73038968A6AC33439F79449DD2DB1584,Low,0.1666,Not seen for 6 days,6.0,8.0,2.0,0.59,106.0,IOS,Japan,mobile
+2018-09-18,863,3E93326F1DF43AF5F27987897F2BB819,Low,0.1664,Silent 9 days,9.0,7.0,0.0,0.0,307.0,IOS,United States,tablet
+2018-09-18,864,5249B4686BC5038FBFE36A3E6CCA5B72,Low,0.1663,Only 4 active days in 28,2.0,4.0,2.0,1.52,60.0,IOS,United States,tablet
+2018-09-18,865,9739CF7747700632F707FE234CEA7C00,Low,0.1657,Only 3 active days in 28; New user (4 days),1.0,3.0,3.0,4.0,4.0,ANDROID,India,mobile
+2018-09-18,866,2C8605D838AC52596D7B42B550C9E608,Low,0.1648,Only 3 active days in 28,1.0,3.0,1.0,0.57,787.0,ANDROID,United States,mobile
+2018-09-18,867,7BEC6B06860D25AE7E44CA49AB939BBF,Low,0.1646,Silent 8 days; Only 4 active days in 28,8.0,4.0,0.0,0.0,426.0,IOS,United States,tablet
+2018-09-18,868,39AE34F91B29542A8F0488F5B787B70F,Low,0.1641,No single strong signal,1.0,5.0,2.0,1.35,484.0,ANDROID,Australia,mobile
+2018-09-18,869,FE46EFC1DA3F3159AD9343EC53466F3F,Low,0.1639,Not seen for 4 days; Hit app errors (3),4.0,6.0,2.0,1.69,341.0,ANDROID,United States,mobile
+2018-09-18,870,6DC218CEE0AD1BC0663FF76DA21B06A1,Low,0.1632,Not seen for 5 days; Only 4 active days in 28,5.0,4.0,2.0,1.43,469.0,IOS,United States,mobile
+2018-09-18,871,8065F8E98407106A65D35195984B2258,Low,0.1625,Not seen for 6 days; Activity down 66% vs usual week,6.0,12.0,2.0,0.34,841.0,IOS,United Kingdom,tablet
+2018-09-18,872,EBFE0623EF1109A89B392B9DF4375951,Low,0.162,Not seen for 4 days; Activity down 92% vs usual week,4.0,14.0,2.0,0.08,842.0,ANDROID,United States,mobile
+2018-09-18,873,A0616D4E494DC3BCCB94B8B6E5B48380,Low,0.1613,Not seen for 4 days; Activity down 67% vs usual week,4.0,17.0,2.0,0.33,274.0,ANDROID,United States,mobile
+2018-09-18,874,2E03DB1924573F3131EEC916E5444F56,Low,0.1611,Not seen for 3 days; Fails often (56% of attempts),3.0,7.0,3.0,1.18,648.0,IOS,United States,tablet
+2018-09-18,875,800FD721DEBF4F653F559913D02291E9,Low,0.1608,Not seen for 5 days,5.0,7.0,2.0,1.12,345.0,IOS,Australia,mobile
+2018-09-18,876,096C23E69254818F7EE03C1239005F2B,Low,0.1606,Not seen for 4 days; Activity down 64% vs usual week,4.0,8.0,1.0,0.36,205.0,ANDROID,United States,mobile
+2018-09-18,877,1A34269052225805BDB10AE343A6DD29,Low,0.1606,Only 4 active days in 28,1.0,4.0,3.0,3.2,334.0,IOS,United States,mobile
+2018-09-18,878,062EFDCE1B385D06E7F44D063AF58A83,Low,0.1594,Only 4 active days in 28,1.0,4.0,3.0,3.24,416.0,IOS,United Kingdom,mobile
+2018-09-18,879,1E6348F7A97962E7EAA87C7FF638569F,Low,0.1593,No single strong signal,2.0,8.0,3.0,0.62,57.0,ANDROID,United States,mobile
+2018-09-18,880,7657E94F33F780A1D896FBC9237E5ECC,Low,0.1586,New user (11 days),2.0,5.0,3.0,0.62,11.0,IOS,Japan,mobile
+2018-09-18,881,B8B62795AD07E431D8565555C6882EA3,Low,0.1582,Activity down 61% vs usual week,1.0,11.0,1.0,0.39,826.0,ANDROID,Japan,mobile
+2018-09-18,882,32BAC5D1C4CC36D5962936DB0F4FAB3C,Low,0.1571,Not seen for 4 days; Only 4 active days in 28,4.0,4.0,1.0,0.93,682.0,IOS,United States,tablet
+2018-09-18,883,2DB65B29C41328FF8AB9AC27B7C05537,Low,0.1558,Silent 8 days; Fails often (53% of attempts),8.0,10.0,0.0,0.0,181.0,ANDROID,United States,mobile
+2018-09-18,884,BB29F8B0FF330F326605FA421BB37BC1,Low,0.1554,Fails often (53% of attempts); Hit app errors (2),2.0,11.0,2.0,0.75,812.0,IOS,United States,tablet
+2018-09-18,885,AC4C761C946B5E45F9A040FED66576D0,Low,0.1544,Not seen for 5 days; Fails often (92% of attempts); Hit app errors (5),5.0,7.0,2.0,1.19,45.0,IOS,United States,mobile
+2018-09-18,886,D6C51794FD1D140415F13CBA0366ABD2,Low,0.1536,Not seen for 5 days; Only 4 active days in 28,5.0,4.0,3.0,3.18,621.0,IOS,Other,mobile
+2018-09-18,887,ECA7E21BD6A07DF07E8F9E1DCC040EC5,Low,0.153,Only 4 active days in 28,2.0,4.0,3.0,3.27,230.0,IOS,United States,tablet
+2018-09-18,888,8D9D62A4402581BB1181D3AA73AD54E8,Low,0.1526,Not seen for 4 days; Activity down 89% vs usual week,4.0,14.0,1.0,0.11,683.0,IOS,United States,tablet
+2018-09-18,889,51B215871E81C64077434452838DE86A,Low,0.1524,Not seen for 3 days; Hit app errors (8),3.0,5.0,4.0,3.73,649.0,ANDROID,Other,mobile
+2018-09-18,890,825D36CBE9A65B6D3BBFACE4C8C3EE60,Low,0.1519,Not seen for 5 days,5.0,9.0,2.0,0.73,510.0,IOS,United Kingdom,mobile
+2018-09-18,891,88BA2493921D796D2E246973E3E9774B,Low,0.1512,Not seen for 4 days,4.0,5.0,2.0,2.24,684.0,IOS,France,tablet
+2018-09-18,892,30A25052A6890C93A4BE5DAC98A3E01E,Low,0.1492,No single strong signal,1.0,5.0,3.0,2.69,132.0,IOS,United States,mobile
+2018-09-18,893,48330526397378E0196AB2AE3EDA144A,Low,0.1483,No single strong signal,1.0,6.0,3.0,2.66,169.0,IOS,Australia,mobile
+2018-09-18,894,5800569BC32997BCE5774BA3C675C4E4,Low,0.1482,Not seen for 4 days,4.0,6.0,1.0,1.65,646.0,IOS,United States,tablet
+2018-09-18,895,229254D7C810F98F72C89A8060E194D4,Low,0.1478,Not seen for 4 days,4.0,14.0,2.0,0.64,440.0,ANDROID,United States,mobile
+2018-09-18,896,7392FB7027578690D48268EE642A3895,Low,0.146,Not seen for 3 days; Hit app errors (1),3.0,5.0,4.0,3.68,304.0,ANDROID,Other,mobile
+2018-09-18,897,5BA23094CD864C7FB5265F83652FA028,Low,0.1459,Hit app errors (1),1.0,6.0,2.0,0.93,294.0,IOS,United States,mobile
+2018-09-18,898,0AF862AFEB5358EBFDA7AFE3AC908844,Low,0.1449,Not seen for 4 days; Activity down 67% vs usual week; Hit app errors (7),4.0,12.0,2.0,0.33,218.0,ANDROID,United States,mobile
+2018-09-18,899,52332E7857233EC06090B1059F0C6292,Low,0.1441,Only 4 active days in 28,1.0,4.0,2.0,2.37,829.0,ANDROID,United Kingdom,mobile
+2018-09-18,900,49CF61B01BD5584B86EFC08E40F6EB03,Low,0.1437,Only 3 active days in 28,1.0,3.0,3.0,4.0,417.0,ANDROID,Other,mobile
+2018-09-18,901,62DD70123C14207F97E6515DDE77D76D,Low,0.1421,Activity down 66% vs usual week; Fails often (57% of attempts),2.0,8.0,1.0,0.34,840.0,IOS,United States,mobile
+2018-09-18,902,2D478AD4B8FD8BCC2D03256EE5DDAE63,Low,0.1418,Hit app errors (1),1.0,7.0,4.0,1.14,259.0,IOS,Japan,mobile
+2018-09-18,903,75C0C246DE2188E02D984C2E71B7B4C0,Low,0.1417,Fails often (79% of attempts),2.0,9.0,2.0,0.94,66.0,IOS,United States,tablet
+2018-09-18,904,AE0B1CA04B5C91B08FE47466B38A1A6B,Low,0.1415,Hit app errors (2),1.0,6.0,3.0,2.88,438.0,IOS,United States,mobile
+2018-09-18,905,A2B8271B8CE580EC92A8D8CCAD85FE5C,Low,0.1411,Only 4 active days in 28; Hit app errors (2),1.0,4.0,3.0,3.93,261.0,ANDROID,United Kingdom,mobile
+2018-09-18,906,4ABFD2281F974B00B844E8F97B2E6D38,Low,0.1401,Not seen for 3 days,3.0,6.0,2.0,3.15,810.0,ANDROID,United States,mobile
+2018-09-18,907,7410C5CC4FA11D31DB5F9B1D8ECD6BD0,Low,0.1398,Not seen for 3 days,3.0,10.0,2.0,0.74,344.0,IOS,Other,tablet
+2018-09-18,908,289F2AE59FE48FFF6DD12D0AB553C14E,Low,0.1394,Hit app errors (3),1.0,6.0,2.0,1.27,345.0,IOS,United States,tablet
+2018-09-18,909,AE55489045EA81B6DBB191298D293184,Low,0.1392,Only 4 active days in 28; Hit app errors (1),1.0,4.0,2.0,2.52,454.0,IOS,United Kingdom,mobile
+2018-09-18,910,2201BA84231D7CC8147F47074DF99E1F,Low,0.139,Not seen for 5 days; New user (21 days); Fails often (44% of attempts),5.0,9.0,3.0,1.01,21.0,IOS,China,mobile
+2018-09-18,911,3FD83714C2BC47927FA375E1FA7E2C7F,Low,0.139,Not seen for 6 days,6.0,5.0,1.0,0.83,125.0,ANDROID,Brazil,mobile
+2018-09-18,912,DCF02493CA8559E632F3E2FB070DBEF0,Low,0.1375,No single strong signal,2.0,6.0,1.0,0.81,487.0,IOS,United States,tablet
+2018-09-18,913,FDA4BBBCF1EA2D95CDD77BFC5F00A837,Low,0.1349,Silent 8 days; Fails often (78% of attempts),8.0,10.0,0.0,0.0,758.0,IOS,Japan,tablet
+2018-09-18,914,E7C4F8D9F6FD4CE1968FAF0D3D19FF54,Low,0.1349,Only 3 active days in 28; New user (5 days); Fails often (57% of attempts),1.0,3.0,3.0,4.0,5.0,ANDROID,India,mobile
+2018-09-18,915,508DBEBFA1177CC5FA7CC5ECCEE8D0B2,Low,0.1348,Fails often (62% of attempts); Hit app errors (2),2.0,6.0,2.0,1.08,58.0,IOS,United States,tablet
+2018-09-18,916,E92E2C4D69F2105354734304818059B6,Low,0.1346,No single strong signal,2.0,5.0,3.0,1.49,781.0,IOS,United States,mobile
+2018-09-18,917,1B2FC37816CC4DDAACA97A75E685756F,Low,0.1345,Not seen for 4 days; Activity down 87% vs usual week; Hit app errors (4),4.0,11.0,1.0,0.13,411.0,ANDROID,United States,mobile
+2018-09-18,918,AD99B4950F9D70E0FD5E8563F2A664FB,Low,0.1341,Activity down 84% vs usual week,2.0,16.0,1.0,0.16,329.0,IOS,United States,tablet
+2018-09-18,919,0B9739BFB4122E1863C894E34F812D56,Low,0.1322,Not seen for 3 days; Fails often (42% of attempts); Hit app errors (2),3.0,9.0,3.0,0.74,474.0,IOS,Mexico,mobile
+2018-09-18,920,6CDE3BE03DAF6243A5578BCBA2D2F398,Low,0.132,Not seen for 3 days; Hit app errors (1),3.0,11.0,2.0,0.73,531.0,IOS,United States,mobile
+2018-09-18,921,D9AA0EC27AF47514DDB5C664A6EF758A,Low,0.1316,Activity down 79% vs usual week; Hit app errors (2),2.0,15.0,2.0,0.21,150.0,IOS,United States,tablet
+2018-09-18,922,620DA7A49F07368EBCB917DB113BCEDC,Low,0.1314,Silent 7 days,7.0,10.0,1.0,0.28,683.0,IOS,Australia,tablet
+2018-09-18,923,0D9DE32D08364277A3406C8107F5763F,Low,0.1314,No single strong signal,2.0,7.0,1.0,0.5,799.0,IOS,United States,tablet
+2018-09-18,924,ABF803076F199C505F76E3B1CD0FB4ED,Low,0.1304,Not seen for 6 days,6.0,5.0,2.0,2.13,383.0,IOS,Japan,mobile
+2018-09-18,925,4BF98D09CA8359FC59ADAF56D00338F8,Low,0.1303,No single strong signal,2.0,9.0,3.0,0.93,129.0,ANDROID,United States,mobile
+2018-09-18,926,904877128B8889DDD71A38BDBCD21724,Low,0.1302,Activity down 85% vs usual week,1.0,7.0,1.0,0.15,585.0,ANDROID,India,mobile
+2018-09-18,927,09309F331FA528745E330964AF4AAAD8,Low,0.1299,New user (8 days),1.0,6.0,5.0,3.53,8.0,ANDROID,Japan,tablet
+2018-09-18,928,95BC3B2233ECAE0717CC70A45315365B,Low,0.1294,Not seen for 4 days,4.0,8.0,2.0,1.73,328.0,ANDROID,United Kingdom,mobile
+2018-09-18,929,2B5ABA17A30D32531C09DAF2865F9E55,Low,0.1293,No single strong signal,2.0,6.0,3.0,2.64,388.0,IOS,United States,tablet
+2018-09-18,930,0F93A84CB0774C5BAB3E5FF8A72A694D,Low,0.1288,Activity down 86% vs usual week; Hit app errors (1),2.0,14.0,1.0,0.14,743.0,IOS,Other,tablet
+2018-09-18,931,7EBEF9ABE5C8F7D340BC26927366D13C,Low,0.1284,Hit app errors (4),2.0,6.0,2.0,0.99,425.0,ANDROID,United States,mobile
+2018-09-18,932,1C2A732CC30E0D7FE298E9497F818CEE,Low,0.1283,Only 4 active days in 28,1.0,4.0,2.0,1.94,532.0,IOS,France,mobile
+2018-09-18,933,F655D26B0F7A4093F1D2FFBD5E61B09D,Low,0.1282,Activity down 72% vs usual week,2.0,11.0,1.0,0.28,253.0,IOS,United States,tablet
+2018-09-18,934,81BFFE61CAB181676917D75F1B617CB2,Low,0.1279,Silent 7 days,7.0,10.0,1.0,0.6,785.0,ANDROID,Other,mobile
+2018-09-18,935,4CC7B06FC12175C31ECBE1987A48DEA3,Low,0.1274,Fails often (42% of attempts); Hit app errors (2),2.0,7.0,3.0,1.39,464.0,IOS,Germany,mobile
+2018-09-18,936,F10D8E9E72F060EAA88ED8B006E560D7,Low,0.1273,Not seen for 5 days,5.0,9.0,2.0,0.57,231.0,IOS,Japan,mobile
+2018-09-18,937,1043C28A3DC504006CC45ADE96B95A96,Low,0.1268,No single strong signal,2.0,5.0,3.0,2.34,655.0,IOS,Other,tablet
+2018-09-18,938,E0937BA260FC4C21B4465D894F8BB1E6,Low,0.1266,Not seen for 4 days; Activity down 53% vs usual week; Fails often (41% of attempts),4.0,12.0,3.0,0.47,684.0,IOS,United States,mobile
+2018-09-18,939,45116F98E0EE54636FE629BA54228131,Low,0.1264,Activity down 51% vs usual week,2.0,13.0,2.0,0.49,265.0,IOS,United States,tablet
+2018-09-18,940,FA81D490D1A951F746467DFC2953A915,Low,0.1263,Hit app errors (1),1.0,6.0,3.0,1.6,667.0,IOS,United States,mobile
+2018-09-18,941,84D4A14B2F6F8A8AF3DF58E6C67A79D5,Low,0.1258,Activity down 68% vs usual week,2.0,9.0,1.0,0.32,568.0,IOS,United States,tablet
+2018-09-18,942,33E5EA9FE1E29AC3127D975A5494213D,Low,0.1247,Not seen for 4 days; Hit app errors (1),4.0,11.0,2.0,0.79,214.0,IOS,United States,tablet
+2018-09-18,943,717914316B7E4BD629C168B3A05634DC,Low,0.1247,No single strong signal,2.0,10.0,2.0,0.7,475.0,IOS,United States,mobile
+2018-09-18,944,5DFE4BCED0971B66FB1C57B3D19E94EC,Low,0.1243,New user (28 days),1.0,9.0,5.0,2.89,28.0,IOS,Spain,mobile
+2018-09-18,945,307AC87B6D76A6A1A19AC2B11E3FA4B5,Low,0.123,Not seen for 5 days; Hit app errors (4),5.0,10.0,2.0,0.51,187.0,ANDROID,United Kingdom,mobile
+2018-09-18,946,F9D3EF8F15C47548DE58055F0EF286BB,Low,0.1225,Fails often (48% of attempts); Hit app errors (1),1.0,7.0,3.0,1.38,781.0,IOS,United States,mobile
+2018-09-18,947,F815B0069F973BFA743EF90A85224109,Low,0.1224,Not seen for 6 days; Activity down 52% vs usual week,6.0,7.0,1.0,0.48,745.0,ANDROID,United States,mobile
+2018-09-18,948,632A7C9AE2D90B8FE972FC77CF40C7D8,Low,0.1219,Only 4 active days in 28,1.0,4.0,2.0,2.14,758.0,IOS,Japan,mobile
+2018-09-18,949,99C7EF05303C88ACFDE2A301AD578F59,Low,0.1218,Not seen for 5 days; Activity down 66% vs usual week,5.0,8.0,1.0,0.34,625.0,IOS,United States,tablet
+2018-09-18,950,45BDDEC4DF8773F88DC51D1AFD145521,Low,0.1215,Not seen for 4 days; Activity down 76% vs usual week,4.0,12.0,1.0,0.24,460.0,IOS,United States,tablet
+2018-09-18,951,1CE03BB4BFFE9960A4E94D81D89355BC,Low,0.1203,Hit app errors (1),1.0,7.0,3.0,1.36,119.0,IOS,Japan,mobile
+2018-09-18,952,89BD2B0E233951461CF06C9B4FDA0D81,Low,0.1202,Not seen for 3 days; Hit app errors (2),3.0,15.0,3.0,0.7,740.0,ANDROID,United States,mobile
+2018-09-18,953,E98AFA6BD0908A7BDF0FE75396B204DD,Low,0.1202,No single strong signal,1.0,9.0,3.0,0.63,833.0,IOS,Australia,mobile
+2018-09-18,954,82B5DB000108639FF0D38F39D7AC46FD,Low,0.1198,Silent 8 days,8.0,8.0,0.0,0.0,261.0,IOS,United States,tablet
+2018-09-18,955,AAADF44F1C6A57099FEF88D15C7CF64D,Low,0.1196,Activity down 65% vs usual week; Fails often (80% of attempts),1.0,7.0,1.0,0.35,724.0,IOS,Spain,tablet
+2018-09-18,956,4642EA5F1F7C9EEC53E4C7A923DF111C,Low,0.1194,Not seen for 3 days; Only 3 active days in 28,3.0,3.0,2.0,2.4,393.0,IOS,United States,mobile
+2018-09-18,957,8F030F26EB2BE0DF3C21FB0F13E6076F,Low,0.1168,Only 4 active days in 28,1.0,4.0,2.0,1.64,638.0,ANDROID,United Kingdom,mobile
+2018-09-18,958,667A8D0FDB2FA1BA819DAB6C0F5C7BC4,Low,0.1159,No single strong signal,1.0,7.0,2.0,0.91,578.0,ANDROID,United States,mobile
+2018-09-18,959,4ABCDA7B1B9D210CA08EDDABB800499A,Low,0.1157,Not seen for 3 days,3.0,5.0,4.0,3.35,124.0,IOS,United Kingdom,mobile
+2018-09-18,960,74375465CD17299EBC7C75A1B4047EE0,Low,0.1157,Not seen for 3 days; Activity down 79% vs usual week,3.0,18.0,3.0,0.21,842.0,ANDROID,United States,mobile
+2018-09-18,961,5FED8FE4B11878AAFC4E53BDA3FBB56D,Low,0.1155,Not seen for 6 days,6.0,12.0,2.0,0.55,683.0,IOS,United Kingdom,mobile
+2018-09-18,962,AF070F60DBF28F26A8885E8554418C0A,Low,0.1153,Hit app errors (1),2.0,8.0,3.0,1.76,392.0,IOS,Japan,mobile
+2018-09-18,963,B8FE9AD137A133A89389656F7989B36C,Low,0.1152,Not seen for 4 days,4.0,13.0,2.0,1.44,32.0,ANDROID,Brazil,mobile
+2018-09-18,964,D79D77E3F2698B89279D7C35AB034992,Low,0.1145,Hit app errors (2),2.0,7.0,2.0,1.49,524.0,IOS,United States,tablet
+2018-09-18,965,20B1942B628C7714F6A1C44B356CD652,Low,0.1136,Not seen for 4 days; Activity down 59% vs usual week,4.0,11.0,1.0,0.41,682.0,IOS,United States,tablet
+2018-09-18,966,FC3907C3039196E679F3C468FE5B1F9E,Low,0.1136,No single strong signal,1.0,6.0,2.0,1.45,156.0,IOS,United States,mobile
+2018-09-18,967,9DC28C78E7DD65F3CC6CB6C950EC7C7F,Low,0.1133,No single strong signal,1.0,5.0,3.0,2.57,337.0,ANDROID,Other,mobile
+2018-09-18,968,5B333FE2BC3875C6C3882279B51B8BAF,Low,0.1133,New user (22 days); Fails often (44% of attempts),2.0,9.0,3.0,1.1,22.0,IOS,United States,mobile
+2018-09-18,969,B99B2307868665ADBA04E3BB039E67A7,Low,0.1117,No single strong signal,1.0,6.0,3.0,2.06,799.0,IOS,Japan,mobile
+2018-09-18,970,B3A9A38A561B3648D280614B8E2D8E07,Low,0.1117,Hit app errors (5),2.0,15.0,2.0,0.58,285.0,IOS,United States,tablet
+2018-09-18,971,15DEF8BA7C049332809AAAF77295F3A8,Low,0.1109,Not seen for 4 days,4.0,8.0,4.0,2.22,667.0,IOS,Australia,mobile
+2018-09-18,972,34587F7996F20BE4CC7DDEB96753D110,Low,0.1108,Not seen for 3 days; Activity down 62% vs usual week; Fails often (46% of attempts),3.0,10.0,2.0,0.38,46.0,IOS,United States,tablet
+2018-09-18,973,72556FDF7DF77445D94FB19C87334F1D,Low,0.1106,Not seen for 5 days,5.0,9.0,3.0,1.42,193.0,IOS,France,mobile
+2018-09-18,974,3946E17DD4B99C0244B86633EC1BD7DF,Low,0.1104,Fails often (40% of attempts); Hit app errors (7),2.0,7.0,2.0,0.8,611.0,IOS,Canada,mobile
+2018-09-18,975,91F13956AAE16BDE5A39DE910888F78A,Low,0.1103,Not seen for 3 days; Activity down 82% vs usual week,3.0,14.0,1.0,0.18,716.0,IOS,United States,tablet
+2018-09-18,976,4640585DB6878F93C3212012A2A03348,Low,0.1103,Not seen for 3 days,3.0,9.0,2.0,1.1,715.0,ANDROID,United States,mobile
+2018-09-18,977,3B62912D9F9755A6EB1253032B84DF9F,Low,0.1103,No single strong signal,1.0,5.0,2.0,1.52,656.0,IOS,United States,mobile
+2018-09-18,978,446938DF13347E075AC68753A3ED4DFF,Low,0.1103,Not seen for 5 days,5.0,9.0,2.0,1.2,685.0,IOS,Other,mobile
+2018-09-18,979,04311C56F5F87F352C135466C7087618,Low,0.1102,No single strong signal,2.0,10.0,2.0,0.57,843.0,IOS,United States,tablet
+2018-09-18,980,DE765E31A41A126FED84748B910E6143,Low,0.1094,Only 4 active days in 28,1.0,4.0,2.0,2.71,412.0,IOS,United Kingdom,mobile
+2018-09-18,981,47216088A078D06F9220263FAF964F10,Low,0.1088,Not seen for 4 days,4.0,12.0,2.0,0.91,750.0,ANDROID,United States,mobile
+2018-09-18,982,DE3F49561A3E21ED2C9CC518F564961E,Low,0.1087,No single strong signal,2.0,10.0,4.0,2.06,323.0,IOS,United States,tablet
+2018-09-18,983,CA04708DA02378999ECB402481FF1AE4,Low,0.1081,Not seen for 4 days; Activity down 63% vs usual week,4.0,16.0,2.0,0.37,828.0,ANDROID,United States,mobile
+2018-09-18,984,058520E12010190322386C3E356AEE8F,Low,0.1073,Not seen for 3 days; Hit app errors (1),3.0,15.0,3.0,0.73,636.0,ANDROID,United States,mobile
+2018-09-18,985,E6FEE8B98E75EA5311FE004F98559A27,Low,0.1065,Not seen for 4 days; Activity down 73% vs usual week; Hit app errors (1),4.0,14.0,2.0,0.27,177.0,ANDROID,United States,mobile
+2018-09-18,986,9F32D2378EDF4458C499E49D778B1B6C,Low,0.106,Fails often (82% of attempts),1.0,6.0,2.0,1.13,176.0,IOS,United States,tablet
+2018-09-18,987,0F1B0F6CA38544C25AF8F668E7BED38A,Low,0.1059,Not seen for 3 days,3.0,8.0,2.0,1.77,340.0,IOS,Japan,mobile
+2018-09-18,988,44759496F6F519B1A4BEF55BE55C631C,Low,0.105,Not seen for 5 days,5.0,15.0,3.0,0.52,183.0,IOS,United States,tablet
+2018-09-18,989,2B90CE94C6039DF03E72FE15B5320ABA,Low,0.1041,No single strong signal,2.0,11.0,2.0,0.5,711.0,IOS,United States,tablet
+2018-09-18,990,8EA1829661F769B268D3718F3725BCEA,Low,0.1039,No single strong signal,1.0,5.0,2.0,1.43,493.0,IOS,United States,mobile
+2018-09-18,991,064753F4DE400882CBF47644C9FCF8EE,Low,0.1039,Activity down 70% vs usual week; Fails often (65% of attempts),2.0,12.0,3.0,0.3,842.0,IOS,Mexico,mobile
+2018-09-18,992,263C111D407C5E17AC6310581C3B9255,Low,0.1038,Hit app errors (1),2.0,9.0,2.0,1.58,260.0,IOS,United States,tablet
+2018-09-18,993,AFA6BA99FB329CB459E8E57FDE1DF9AE,Low,0.1029,No single strong signal,2.0,10.0,1.0,0.63,837.0,IOS,Canada,tablet
+2018-09-18,994,8B8CA0D1ACB551E3A654AD05FC0F2CE2,Low,0.1021,Hit app errors (2),2.0,12.0,3.0,0.57,587.0,IOS,Other,tablet
+2018-09-18,995,E5D16173400729E05DFFB4883FA6EF1C,Low,0.1019,No single strong signal,2.0,15.0,2.0,0.77,683.0,IOS,United States,tablet
+2018-09-18,996,60447643194E78F2D30F93CEC4EF967E,Low,0.1015,No single strong signal,2.0,7.0,2.0,1.29,683.0,IOS,United States,mobile
+2018-09-18,997,728398B33BFD42D1E1C4E909C1875843,Low,0.1011,Fails often (51% of attempts); Hit app errors (1),2.0,15.0,4.0,1.47,685.0,IOS,Canada,tablet
+2018-09-18,998,E5A2CB7A471E740E758BE5E2E0C79BC2,Low,0.101,Not seen for 6 days; Hit app errors (9),6.0,14.0,2.0,0.68,194.0,ANDROID,Other,mobile
+2018-09-18,999,6EC263DBA95206A1A9EB55CD93F58FD2,Low,0.0991,Activity down 66% vs usual week,2.0,12.0,2.0,0.34,559.0,IOS,United States,mobile
+2018-09-18,1000,17C1D1465E6099F5D860426524FE16EC,Low,0.0981,No single strong signal,2.0,6.0,3.0,2.51,234.0,IOS,Germany,tablet
+2018-09-18,1001,DCEEFEA4E1F5F24560FACF53A166F6A8,Low,0.0977,Not seen for 5 days,5.0,6.0,3.0,3.28,821.0,ANDROID,Japan,mobile
+2018-09-18,1002,8B404ABBCDCF859DB2E5ABE00B482621,Low,0.0973,Not seen for 3 days; Activity down 52% vs usual week,3.0,9.0,2.0,0.48,192.0,IOS,United States,tablet
+2018-09-18,1003,6776FBFA00EC922CDAE4003DED4C0B69,Low,0.0971,Silent 7 days,7.0,8.0,1.0,0.51,617.0,IOS,United Kingdom,tablet
+2018-09-18,1004,5B763E8410411FFFEC4ADC5EEE935A84,Low,0.0969,Silent 11 days; Fails often (44% of attempts); Hit app errors (2),11.0,7.0,0.0,0.0,122.0,IOS,United States,tablet
+2018-09-18,1005,938611E83B897B6F877992BF30D3E1FE,Low,0.0963,No single strong signal,2.0,7.0,3.0,1.71,458.0,IOS,Taiwan,tablet
+2018-09-18,1006,9F4600B013DC8E9AB3FDF054C6464440,Low,0.096,Fails often (51% of attempts); Hit app errors (1),1.0,7.0,3.0,1.84,537.0,IOS,Germany,mobile
+2018-09-18,1007,47641CFD956212B88DE89050A1218D3E,Low,0.096,Not seen for 5 days; New user (15 days); Fails often (66% of attempts),5.0,9.0,3.0,1.18,15.0,IOS,Japan,mobile
+2018-09-18,1008,EB96D4E588761A891B492920DB8CDC25,Low,0.0958,Fails often (50% of attempts),1.0,8.0,4.0,1.99,304.0,IOS,Germany,mobile
+2018-09-18,1009,F99CC3598522ABE54B9DCAC2969179CC,Low,0.0953,Not seen for 4 days; Hit app errors (1),4.0,9.0,2.0,0.93,592.0,ANDROID,United States,mobile
+2018-09-18,1010,136C3AB6E42E34223C8A7503EE355E12,Low,0.0951,Activity down 55% vs usual week; Fails often (44% of attempts),1.0,15.0,2.0,0.45,684.0,IOS,Japan,tablet
+2018-09-18,1011,E0664E9E7883956A6E3084FD68AA274B,Low,0.0948,Activity down 56% vs usual week; Fails often (41% of attempts); Hit app errors (55),2.0,19.0,2.0,0.44,40.0,IOS,United States,tablet
+2018-09-18,1012,B1A68CE17FE874CA7C589F05A39729E4,Low,0.0941,No single strong signal,1.0,6.0,3.0,2.69,218.0,IOS,Japan,mobile
+2018-09-18,1013,B76BF68579286F93FF10121993697E25,Low,0.0939,Only 3 active days in 28,2.0,3.0,1.0,0.8,797.0,IOS,United States,tablet
+2018-09-18,1014,7010E53372648835E07BC5A1B8D4D753,Low,0.0938,No single strong signal,1.0,7.0,1.0,0.76,718.0,IOS,France,tablet
+2018-09-18,1015,7ED8C235689771F6B0F29BBF295A346F,Low,0.0936,Activity down 62% vs usual week; Fails often (43% of attempts); Hit app errors (1),2.0,17.0,2.0,0.38,88.0,IOS,United States,tablet
+2018-09-18,1016,49E9C6C52FBDE2759897A72EB7C37165,Low,0.0935,Hit app errors (2),2.0,6.0,4.0,3.94,633.0,ANDROID,Taiwan,mobile
+2018-09-18,1017,3C58946C3178392A69D292F2F5A862E3,Low,0.0933,No single strong signal,2.0,9.0,1.0,0.56,146.0,IOS,United States,tablet
+2018-09-18,1018,4F78D8FDAC8011CCAB40816FED99403E,Low,0.0933,Only 4 active days in 28; Fails often (78% of attempts); Hit app errors (1),1.0,4.0,3.0,3.26,262.0,IOS,United States,mobile
+2018-09-18,1019,1066F603FD3716A38CAD800179614DE8,Low,0.0927,No single strong signal,2.0,7.0,3.0,1.95,284.0,IOS,Canada,mobile
+2018-09-18,1020,3EDE8E7A50DE76AA2EC12DDD2AE3F9F4,Low,0.0922,Not seen for 4 days; Activity down 55% vs usual week; Hit app errors (3),4.0,12.0,2.0,0.45,140.0,ANDROID,United States,mobile
+2018-09-18,1021,E4C6FF8288DD4BFCDE93E2218E20643B,Low,0.0921,No single strong signal,2.0,12.0,1.0,0.99,160.0,IOS,United States,tablet
+2018-09-18,1022,ADD82F1153554D07815E0ACFBD68A23F,Low,0.0915,No single strong signal,1.0,7.0,2.0,0.82,42.0,IOS,United States,mobile
+2018-09-18,1023,1CF315BC6864E7A71A81E47925E18A61,Low,0.091,Not seen for 4 days,4.0,11.0,2.0,0.93,386.0,ANDROID,United States,mobile
+2018-09-18,1024,D147313DDA176922E11FB96DC1C800B9,Low,0.0907,No single strong signal,1.0,7.0,3.0,1.57,247.0,IOS,United Kingdom,tablet
+2018-09-18,1025,1690882C6796582749CA6818CBF9773F,Low,0.0906,Not seen for 5 days; Hit app errors (2),5.0,8.0,1.0,0.55,134.0,ANDROID,Japan,mobile
+2018-09-18,1026,3D9A1566A6D35AC1D20B7D125637B637,Low,0.0904,Not seen for 3 days; Activity down 61% vs usual week,3.0,16.0,2.0,0.39,569.0,ANDROID,United States,mobile
+2018-09-18,1027,5E4B8BBBE58491A3A1B462A95DC287E4,Low,0.0902,Fails often (59% of attempts),2.0,15.0,3.0,0.96,685.0,IOS,United States,tablet
+2018-09-18,1028,BE89C8EA9D132E6BD866F4B3A8B1E384,Low,0.0901,No single strong signal,1.0,10.0,4.0,1.38,444.0,IOS,Australia,mobile
+2018-09-18,1029,5D7B75012F4A81127A627CF594A8ABF8,Low,0.0893,No single strong signal,1.0,8.0,4.0,1.78,469.0,ANDROID,Australia,mobile
+2018-09-18,1030,E6B6CAE2D200FC3EACF21DDE75402DCD,Low,0.0889,Not seen for 4 days; Fails often (50% of attempts),4.0,15.0,2.0,0.73,798.0,ANDROID,United States,mobile
+2018-09-18,1031,F4A3B9F9F0D4555ADC48F7BCBD5BEE9C,Low,0.0885,No single strong signal,2.0,10.0,2.0,0.74,834.0,IOS,United States,tablet
+2018-09-18,1032,85580828B10E0DBDD5D00D394989DFC0,Low,0.0883,Fails often (62% of attempts),1.0,9.0,4.0,1.72,684.0,IOS,Australia,mobile
+2018-09-18,1033,49309C5759610DBF6C829C0D4AB23943,Low,0.0875,No single strong signal,1.0,7.0,2.0,1.22,755.0,ANDROID,Germany,mobile
+2018-09-18,1034,F866B1D9D660101FF4C436E5D93D2C08,Low,0.087,Fails often (47% of attempts); Hit app errors (1),2.0,11.0,2.0,0.64,764.0,IOS,United States,mobile
+2018-09-18,1035,2B88F6144EE78D0EF8CF3489A6C4F50B,Low,0.0868,Hit app errors (10),2.0,7.0,3.0,1.81,441.0,IOS,United States,mobile
+2018-09-18,1036,102CC7D8CD5D3E861EACE1BAB97E61EC,Low,0.0855,Not seen for 3 days,3.0,8.0,3.0,1.53,103.0,ANDROID,United States,mobile
+2018-09-18,1037,7D613AF4DA0F508C7090E96FD73B7E6D,Low,0.0854,Not seen for 4 days; Activity down 71% vs usual week,4.0,15.0,2.0,0.29,837.0,ANDROID,United States,mobile
+2018-09-18,1038,4F447F2C6BB7966B771EEEA1E6DF3D42,Low,0.0852,Not seen for 4 days,4.0,5.0,3.0,2.32,744.0,IOS,Canada,tablet
+2018-09-18,1039,93A7A5C31807490E878F4164A6418BFC,Low,0.0847,Activity down 73% vs usual week,2.0,16.0,2.0,0.27,680.0,IOS,United States,tablet
+2018-09-18,1040,D4DDA67EF184AFBC5E2D52FBDEDD7837,Low,0.0847,No single strong signal,1.0,8.0,4.0,2.63,38.0,ANDROID,United States,mobile
+2018-09-18,1041,A79463D6757978B36380C173D1CA7B2E,Low,0.0846,Hit app errors (2),1.0,7.0,3.0,1.54,476.0,IOS,United States,mobile
+2018-09-18,1042,749D1C8A698B9549D1E4CEAD631A4610,Low,0.0846,No single strong signal,1.0,9.0,3.0,1.09,317.0,IOS,Germany,mobile
+2018-09-18,1043,8F41FC08B49819D339D864572A1CA136,Low,0.0846,Not seen for 3 days,3.0,5.0,2.0,2.54,36.0,IOS,United States,mobile
+2018-09-18,1044,A0363E7459DB1D7215EFD89C71F6C9D3,Low,0.0845,Fails often (75% of attempts),2.0,12.0,3.0,0.97,703.0,IOS,Japan,mobile
+2018-09-18,1045,7E38A396789F21724DDEFB0400305685,Low,0.0833,No single strong signal,2.0,10.0,3.0,0.8,571.0,IOS,United States,tablet
+2018-09-18,1046,706C748E6D1E0768BFEFE6362B5D3F67,Low,0.083,Not seen for 4 days,4.0,10.0,2.0,0.72,719.0,ANDROID,United States,mobile
+2018-09-18,1047,86F19DAB73E484FB7DD2F805DDD7957D,Low,0.0825,Hit app errors (4),2.0,9.0,2.0,2.78,543.0,IOS,United States,tablet
+2018-09-18,1048,63298E98F815474E6FBF26D341A1F741,Low,0.082,No single strong signal,1.0,6.0,4.0,2.18,339.0,IOS,India,mobile
+2018-09-18,1049,919364A97A32967836018EFB36C49ADA,Low,0.0815,Hit app errors (2),1.0,6.0,4.0,2.2,224.0,IOS,United States,mobile
+2018-09-18,1050,735123CE7AF980AD5B43F31CAF2890A0,Low,0.0812,Activity down 54% vs usual week,2.0,14.0,2.0,0.46,57.0,IOS,United States,mobile
+2018-09-18,1051,81F5705397CE9F0236B2B672AE113154,Low,0.0809,Activity down 66% vs usual week; Hit app errors (2),1.0,17.0,2.0,0.34,678.0,IOS,United States,tablet
+2018-09-18,1052,3682C2527BEE6BA0255321BB25DF44BB,Low,0.0809,Hit app errors (2),1.0,6.0,2.0,3.0,320.0,ANDROID,India,mobile
+2018-09-18,1053,80810BB18ADB73C9585D86058958AF35,Low,0.0806,Fails often (42% of attempts),1.0,10.0,2.0,1.2,803.0,IOS,Other,tablet
+2018-09-18,1054,0D05EABFC1DA51098487F5C027AB9EAB,Low,0.0799,Fails often (51% of attempts),1.0,6.0,3.0,1.13,769.0,IOS,United Kingdom,mobile
+2018-09-18,1055,FB49D03591104FB4CEC600157C3A2A0F,Low,0.0798,Not seen for 6 days; Activity down 54% vs usual week,6.0,9.0,2.0,0.46,359.0,IOS,United States,tablet
+2018-09-18,1056,56E8EC9522573BD1BAD8E18AD2E33C9A,Low,0.0794,Fails often (55% of attempts),1.0,11.0,4.0,1.69,241.0,IOS,United States,tablet
+2018-09-18,1057,45EC7F973F9C0FE50CBCC7B05D88B39C,Low,0.0774,Hit app errors (3),1.0,5.0,3.0,2.71,78.0,ANDROID,United States,mobile
+2018-09-18,1058,5A24FA671D66FF78C978D077245B4777,Low,0.0774,Hit app errors (1),1.0,10.0,2.0,1.07,355.0,ANDROID,United Kingdom,mobile
+2018-09-18,1059,664FEC313A016F2E48DCD1FAE7A28B85,Low,0.0767,No single strong signal,1.0,5.0,2.0,1.99,685.0,IOS,United Kingdom,mobile
+2018-09-18,1060,F3917138A3D4B03ADA1C2E77E3B84649,Low,0.0766,Activity down 58% vs usual week,1.0,14.0,3.0,0.42,837.0,ANDROID,United Kingdom,mobile
+2018-09-18,1061,53866E32BA0ABFD846772D4B7B9B5921,Low,0.0759,Activity down 74% vs usual week; Fails often (68% of attempts),1.0,10.0,1.0,0.26,91.0,ANDROID,Japan,mobile
+2018-09-18,1062,4EEF8695A84237BF3C479792381272EE,Low,0.0757,Only 4 active days in 28,1.0,4.0,2.0,3.38,348.0,IOS,Other,mobile
+2018-09-18,1063,6EDEC26E3CD2B1484254B15917E9F19B,Low,0.0757,Not seen for 4 days,4.0,10.0,2.0,0.74,483.0,ANDROID,United States,mobile
+2018-09-18,1064,3DEB0C12C49AD19D7ACE68FA59E7ACD6,Low,0.0752,Not seen for 3 days; Hit app errors (5),3.0,17.0,3.0,0.89,455.0,ANDROID,United States,mobile
+2018-09-18,1065,0C873D77670D1231E2C1DB2F833679D0,Low,0.0751,Only 4 active days in 28,1.0,4.0,3.0,2.73,684.0,IOS,United Kingdom,mobile
+2018-09-18,1066,B10AE521352392E4981BA07E0D86081C,Low,0.0751,No single strong signal,2.0,15.0,2.0,0.59,193.0,IOS,United States,tablet
+2018-09-18,1067,601B0461E5E64792BE7E000F34A040F6,Low,0.0749,No single strong signal,1.0,6.0,4.0,2.71,744.0,IOS,Other,mobile
+2018-09-18,1068,DB3B6E984B29883EA02F1A504A33730F,Low,0.0748,Hit app errors (1),2.0,10.0,1.0,1.52,624.0,IOS,United States,tablet
+2018-09-18,1069,07DB546A94677E3F3203A8C30B9A4F11,Low,0.0748,Not seen for 3 days; Activity down 82% vs usual week; Fails often (44% of attempts),3.0,8.0,1.0,0.18,766.0,IOS,United States,tablet
+2018-09-18,1070,709FCE78A03255D6EF6678E1D98783E7,Low,0.073,Not seen for 4 days; Fails often (41% of attempts),4.0,16.0,2.0,0.5,300.0,ANDROID,United States,mobile
+2018-09-18,1071,59BE43F3FE7AB3F91B016B56508D4C46,Low,0.0726,Not seen for 5 days,5.0,17.0,2.0,0.52,313.0,ANDROID,United States,mobile
+2018-09-18,1072,99F4AE4D59124072246056B3810A7324,Low,0.0723,Fails often (43% of attempts),2.0,7.0,4.0,1.38,710.0,IOS,Japan,mobile
+2018-09-18,1073,77F125B832C748232EDA6AF8C7D08ED1,Low,0.0712,No single strong signal,1.0,14.0,3.0,0.97,715.0,ANDROID,United States,tablet
+2018-09-18,1074,00900133892F41706582DFE78A7BB382,Low,0.0711,Not seen for 3 days,3.0,5.0,2.0,3.4,829.0,IOS,United States,mobile
+2018-09-18,1075,D7EA8E3645EFFBD6443946179ED704A6,Low,0.0711,Not seen for 4 days; Activity down 51% vs usual week,4.0,13.0,2.0,0.49,606.0,ANDROID,Other,mobile
+2018-09-18,1076,3FC8ECFC8F2976C5B56D0D782F36BD7F,Low,0.0709,Not seen for 4 days; Activity down 55% vs usual week; Hit app errors (1),4.0,11.0,2.0,0.45,106.0,IOS,United Kingdom,tablet
+2018-09-18,1077,686E8E8F73A49595EDE40F1BBDFB8C99,Low,0.0709,No single strong signal,1.0,10.0,5.0,2.06,122.0,IOS,Japan,mobile
+2018-09-18,1078,CA49B5B026DA9AC6345AE88642A2EE0C,Low,0.0704,Not seen for 4 days; Fails often (47% of attempts); Hit app errors (3),4.0,8.0,1.0,1.66,174.0,IOS,United States,tablet
+2018-09-18,1079,135BE5A161033D5A7BC7A0A8F4C80ACE,Low,0.0693,Hit app errors (1),2.0,11.0,4.0,1.1,683.0,IOS,Germany,mobile
+2018-09-18,1080,40B501E0460E254E289A776CFC31DCF2,Low,0.0687,Not seen for 3 days,3.0,17.0,3.0,0.79,838.0,ANDROID,United States,mobile
+2018-09-18,1081,A4DB05FC8E2542E121D371E0DF84D395,Low,0.0678,No single strong signal,2.0,8.0,4.0,0.92,127.0,IOS,Other,mobile
+2018-09-18,1082,328DC7FE55E8881B2EA668C9A2855BB7,Low,0.067,Activity down 94% vs usual week; Fails often (80% of attempts); Hit app errors (4),2.0,15.0,1.0,0.06,824.0,IOS,United States,tablet
+2018-09-18,1083,84E491A60BE52A4C6A438A89FADE283C,Low,0.0668,Hit app errors (1),2.0,15.0,2.0,0.57,581.0,IOS,United States,tablet
+2018-09-18,1084,9C2E5AEEBFD459AD8112A26F015C8D8C,Low,0.0658,Hit app errors (1),1.0,6.0,3.0,1.13,684.0,IOS,United Kingdom,mobile
+2018-09-18,1085,4EF964D59282E5A2C8692D30F011256B,Low,0.0657,Not seen for 4 days,4.0,13.0,2.0,0.87,396.0,ANDROID,United States,mobile
+2018-09-18,1086,17934EF7C1BC1CF2C7D942401FDE84CE,Low,0.0646,Activity down 53% vs usual week; Hit app errors (2),2.0,18.0,2.0,0.47,683.0,IOS,United States,tablet
+2018-09-18,1087,9FE14774A6A768A1C1BEBCE0DE0669A5,Low,0.0635,New user (14 days),1.0,10.0,4.0,1.19,14.0,IOS,United States,mobile
+2018-09-18,1088,65D1701E5BA0070CCF15F0CB0E1CF750,Low,0.0624,New user (28 days),1.0,11.0,3.0,0.71,28.0,IOS,United Kingdom,tablet
+2018-09-18,1089,964526CBEE730E91EB0A51E3E4B4BDB9,Low,0.0624,Fails often (76% of attempts),1.0,14.0,4.0,2.09,657.0,IOS,Australia,tablet
+2018-09-18,1090,EBE661044C1949546986A852F35083A1,Low,0.0619,Fails often (44% of attempts); Hit app errors (4),2.0,14.0,2.0,1.21,684.0,IOS,United States,tablet
+2018-09-18,1091,A66E12586B3B31AAEF02D1B1DD09EFDF,Low,0.0616,No single strong signal,1.0,11.0,3.0,2.03,85.0,IOS,United States,mobile
+2018-09-18,1092,308452C7E6D227ADD8D3F0BC2F267D1F,Low,0.0607,Hit app errors (1),1.0,10.0,3.0,1.28,662.0,IOS,United States,mobile
+2018-09-18,1093,F909F0B27E49138A93535DAE4B792C1C,Low,0.0599,Fails often (45% of attempts),2.0,11.0,4.0,0.87,843.0,IOS,Spain,mobile
+2018-09-18,1094,BE74418BE7B7466F6FE2969CA79FA919,Low,0.0597,Hit app errors (3),2.0,13.0,2.0,1.47,562.0,IOS,United States,tablet
+2018-09-18,1095,2C84CF723999D48F8F069AFFC184C4DC,Low,0.0593,Not seen for 5 days; Fails often (53% of attempts); Hit app errors (1),5.0,9.0,2.0,0.97,71.0,ANDROID,Japan,mobile
+2018-09-18,1096,584D2E4F744800A59C8C3F3AC63B675E,Low,0.0592,No single strong signal,1.0,9.0,3.0,1.16,246.0,IOS,United States,mobile
+2018-09-18,1097,4D97C9503EB24A495AED1C0163E3237C,Low,0.0586,No single strong signal,1.0,9.0,4.0,2.37,684.0,IOS,United States,mobile
+2018-09-18,1098,C3FCDF18C57A6F16E5EE6867CA6679E1,Low,0.0581,Fails often (68% of attempts),1.0,8.0,3.0,0.56,309.0,IOS,Other,mobile
+2018-09-18,1099,32B77CB85060150AF92F76E2745F2D7A,Low,0.058,Fails often (42% of attempts),1.0,7.0,4.0,1.97,670.0,IOS,France,mobile
+2018-09-18,1100,1B0397F7967E35746E7C3CBB652C0CE4,Low,0.0577,Not seen for 3 days; Fails often (68% of attempts),3.0,8.0,3.0,1.55,724.0,ANDROID,Japan,tablet
+2018-09-18,1101,8252847DECB3C31CAB9BDEE566F97BA2,Low,0.0573,Not seen for 3 days,3.0,18.0,3.0,0.66,70.0,ANDROID,United States,mobile
+2018-09-18,1102,AF7F48274AA5128EBCF3698F4FC8F61B,Low,0.0567,New user (7 days); Fails often (67% of attempts),1.0,5.0,5.0,4.0,7.0,IOS,United States,tablet
+2018-09-18,1103,1C6029D529C732F7269DA4DD944C8299,Low,0.0567,Not seen for 3 days,3.0,11.0,4.0,1.28,682.0,IOS,United Kingdom,mobile
+2018-09-18,1104,7E40E634997585B0C69B6F67C01C191B,Low,0.0565,Not seen for 3 days,3.0,17.0,3.0,0.89,487.0,ANDROID,United States,mobile
+2018-09-18,1105,51C511BDA46B8307F21527B455A1A59F,Low,0.0541,Fails often (59% of attempts),1.0,8.0,4.0,1.62,659.0,IOS,United States,mobile
+2018-09-18,1106,2B8C48BCEDF2703CC0AA7262FA09769E,Low,0.0541,Hit app errors (18),1.0,12.0,4.0,2.07,81.0,IOS,United States,mobile
+2018-09-18,1107,A7AAA5EF977926DBCF801D15F83EE4A5,Low,0.0541,Activity down 59% vs usual week; Fails often (42% of attempts),1.0,8.0,2.0,0.41,210.0,IOS,United Kingdom,tablet
+2018-09-18,1108,A8D7DCCA39D8703F2928AD2D7BBB6BE9,Low,0.0541,No single strong signal,2.0,13.0,3.0,1.01,586.0,IOS,United States,tablet
+2018-09-18,1109,E512079B53179DF9A608CF4ADE47DE9D,Low,0.0539,No single strong signal,1.0,14.0,5.0,1.65,754.0,ANDROID,Australia,tablet
+2018-09-18,1110,23A7E8D987ADCC38EB026096DC513F85,Low,0.0524,No single strong signal,1.0,6.0,4.0,2.73,785.0,ANDROID,United States,mobile
+2018-09-18,1111,3B4A6FCA6DCB4C2749409DC4188A306E,Low,0.0521,Hit app errors (48),2.0,18.0,3.0,0.53,125.0,IOS,United States,tablet
+2018-09-18,1112,13E6C8A193FF140F7D4222B569DD5B50,Low,0.0515,Activity down 74% vs usual week; Fails often (62% of attempts); Hit app errors (6),2.0,17.0,2.0,0.26,233.0,IOS,United States,tablet
+2018-09-18,1113,FB038B1647754ED4E3E7CFEABFC553A4,Low,0.0493,No single strong signal,1.0,10.0,3.0,0.94,45.0,IOS,Other,mobile
+2018-09-18,1114,EEED36297DE224E3E34468ECB0BA7AF5,Low,0.0492,No single strong signal,1.0,7.0,3.0,2.63,39.0,IOS,United States,mobile
+2018-09-18,1115,81C75CB599BE7E11A66110C3FE9D0050,Low,0.0491,Hit app errors (3),2.0,12.0,3.0,0.5,68.0,IOS,Japan,mobile
+2018-09-18,1116,91A06057C6272653B6006D7A8791DF81,Low,0.0488,No single strong signal,1.0,16.0,2.0,0.5,238.0,IOS,United States,tablet
+2018-09-18,1117,4AB0441290F6077849CBE9C74A828F0A,Low,0.0486,No single strong signal,1.0,12.0,6.0,3.34,467.0,ANDROID,India,mobile
+2018-09-18,1118,8942968E35FB64702050A08D544D2A4A,Low,0.0482,No single strong signal,1.0,12.0,5.0,2.33,808.0,IOS,United States,mobile
+2018-09-18,1119,0129188FE90E57C0A94813F1919AB27D,Low,0.0467,No single strong signal,1.0,7.0,4.0,2.75,683.0,IOS,United States,mobile
+2018-09-18,1120,F580B62369D32FBDE8928279DF764711,Low,0.0464,No single strong signal,2.0,11.0,2.0,0.68,684.0,IOS,United States,mobile
+2018-09-18,1121,4AEEE533D8FAED4AD0A9227618CD296B,Low,0.0463,Only 4 active days in 28; New user (5 days); Fails often (45% of attempts),1.0,4.0,4.0,4.0,5.0,ANDROID,Japan,mobile
+2018-09-18,1122,C5B527B0AA7603C4EF8C0ECBBCB5372E,Low,0.0463,Not seen for 4 days; Fails often (48% of attempts),4.0,14.0,4.0,1.03,270.0,IOS,United Kingdom,tablet
+2018-09-18,1123,487DE902636DD8A9844A2D61FE7BD568,Low,0.0458,Not seen for 3 days,3.0,16.0,3.0,1.1,202.0,ANDROID,United States,mobile
+2018-09-18,1124,751F1516AC974AC343F62070D3BA39F5,Low,0.0449,Fails often (42% of attempts),2.0,16.0,2.0,0.61,186.0,IOS,United States,tablet
+2018-09-18,1125,C80CEE0983AB5B21D3F4B46089FDD9EB,Low,0.0449,No single strong signal,2.0,16.0,3.0,0.94,745.0,IOS,United States,tablet
+2018-09-18,1126,396CD60DADAB9CBA7DDCAF239B477135,Low,0.0448,Fails often (96% of attempts); Hit app errors (1),2.0,15.0,2.0,0.92,221.0,IOS,United States,tablet
+2018-09-18,1127,4D3850D024352B02B9C8FC234C823669,Low,0.0441,Hit app errors (1),1.0,9.0,4.0,2.09,117.0,IOS,Japan,mobile
+2018-09-18,1128,175AEE22E34051C883F76BD73422AC72,Low,0.0438,Hit app errors (1),1.0,11.0,5.0,1.47,836.0,IOS,Other,mobile
+2018-09-18,1129,C3326C2CCF5D46173E4973A13512B163,Low,0.0429,Hit app errors (3),1.0,11.0,4.0,1.72,333.0,IOS,United States,tablet
+2018-09-18,1130,0B15684EDDCE9514EFC8DDE9F80C5E7E,Low,0.0424,Fails often (93% of attempts); Hit app errors (3),2.0,12.0,3.0,0.97,312.0,IOS,United States,mobile
+2018-09-18,1131,309D006B3FE6151EE530B0C6A79CFA11,Low,0.0407,Hit app errors (1),2.0,9.0,3.0,1.16,843.0,IOS,Japan,mobile
+2018-09-18,1132,26E86A2E3E01E89467AE434BBF204817,Low,0.0406,Hit app errors (1),1.0,10.0,4.0,1.77,598.0,ANDROID,United States,tablet
+2018-09-18,1133,BE51B6A4C9E61DA82581F026ABAD0359,Low,0.0397,Fails often (68% of attempts); Hit app errors (3),1.0,9.0,4.0,2.7,809.0,IOS,France,mobile
+2018-09-18,1134,1386E5CC85E430BBC566EC1019DC3C32,Low,0.0396,No single strong signal,1.0,9.0,4.0,1.09,252.0,IOS,United Kingdom,mobile
+2018-09-18,1135,1E9F6BA9BD8C45633C26F42995A77775,Low,0.0396,No single strong signal,2.0,11.0,4.0,1.5,403.0,ANDROID,Japan,mobile
+2018-09-18,1136,6F0928CF979D92A11C602CB5EFA37F49,Low,0.0395,No single strong signal,1.0,10.0,5.0,1.83,175.0,IOS,United Kingdom,mobile
+2018-09-18,1137,0289ACB4026B0C28A9FF7BF2560E2A7F,Low,0.0394,Hit app errors (4),2.0,8.0,3.0,1.71,740.0,IOS,Japan,tablet
+2018-09-18,1138,55F9FB7C14AA4BAB066EA326D4A2221B,Low,0.0393,Fails often (59% of attempts); Hit app errors (2),2.0,12.0,3.0,0.67,838.0,IOS,United States,mobile
+2018-09-18,1139,A878D073C2BA5201CD00FE73126C9145,Low,0.0381,Hit app errors (2),1.0,11.0,5.0,1.71,79.0,IOS,Japan,mobile
+2018-09-18,1140,2D910124E99E4CBCD46F2D24E9F4EEA4,Low,0.0365,No single strong signal,1.0,9.0,4.0,1.62,495.0,ANDROID,United States,mobile
+2018-09-18,1141,F9C021D9A8B84158F73A8662D76E9EE9,Low,0.0349,No single strong signal,1.0,13.0,5.0,0.88,437.0,IOS,United States,mobile
+2018-09-18,1142,DA856449658776EC6410C178742F54D7,Low,0.0346,Hit app errors (9),2.0,22.0,3.0,0.79,369.0,ANDROID,United States,mobile
+2018-09-18,1143,08CF007703DFB7779D094E50DD6E160C,Low,0.0343,Only 4 active days in 28,1.0,4.0,3.0,2.62,203.0,ANDROID,United States,mobile
+2018-09-18,1144,3C61120F4C807953BAE7A32CCE144B9B,Low,0.0328,No single strong signal,1.0,10.0,4.0,1.52,684.0,IOS,Japan,mobile
+2018-09-18,1145,7BD09067E1183BA65712D575B62685D3,Low,0.0321,No single strong signal,1.0,13.0,6.0,1.85,39.0,IOS,Germany,mobile
+2018-09-18,1146,46758A92B62273B1A72F73D3B58945CA,Low,0.0315,Hit app errors (3),1.0,10.0,5.0,2.55,88.0,IOS,Japan,mobile
+2018-09-18,1147,62402042F391117D481A9A618E54F84A,Low,0.0309,No single strong signal,1.0,11.0,5.0,1.64,682.0,IOS,Other,mobile
+2018-09-18,1148,C57026026F451C8B63B19481023BE944,Low,0.0307,Hit app errors (1),1.0,16.0,4.0,0.72,842.0,IOS,United States,mobile
+2018-09-18,1149,B5F3D00E28A57C9522F2DEE3CB903DD1,Low,0.0303,Activity down 67% vs usual week; Hit app errors (48),1.0,12.0,2.0,0.33,331.0,ANDROID,United States,mobile
+2018-09-18,1150,44386D9242DC9705DAFE219EC2C114F5,Low,0.0298,Fails often (45% of attempts); Hit app errors (2),2.0,12.0,3.0,0.68,802.0,IOS,Canada,mobile
+2018-09-18,1151,7436514EF3E15C5DF15939B047CEF45D,Low,0.0294,Hit app errors (1),1.0,8.0,3.0,1.73,233.0,IOS,United Kingdom,mobile
+2018-09-18,1152,CA51DAF1373B5C2A16C174AFBD2132A4,Low,0.0291,Activity down 64% vs usual week,2.0,19.0,2.0,0.36,514.0,IOS,United States,tablet
+2018-09-18,1153,28C4A09298C441D5AFD39E749D9F3DA3,Low,0.0286,Hit app errors (2),2.0,15.0,3.0,1.29,681.0,IOS,United States,tablet
+2018-09-18,1154,0ED6BC1D319AB5BD1F245628EA47EDBB,Low,0.0285,No single strong signal,2.0,15.0,5.0,1.32,840.0,ANDROID,Germany,mobile
+2018-09-18,1155,465B5DC1BA69633FE49EFA52F08CBB40,Low,0.028,Activity down 83% vs usual week; Hit app errors (2),1.0,13.0,1.0,0.17,114.0,IOS,United States,tablet
+2018-09-18,1156,FB149ABD1F42826AA82A9D0D3FB03342,Low,0.0277,No single strong signal,1.0,16.0,4.0,0.5,98.0,IOS,Australia,mobile
+2018-09-18,1157,86A6C9FB1A0C566CA168149788E71EFD,Low,0.0275,Fails often (73% of attempts); Hit app errors (7),1.0,13.0,6.0,1.91,539.0,IOS,Other,mobile
+2018-09-18,1158,27B1CD26769B068D16FAAF82D4F2C1A8,Low,0.0272,No single strong signal,1.0,8.0,6.0,3.44,79.0,IOS,Japan,tablet
+2018-09-18,1159,0E10123B79C73F4F30CC49462652D604,Low,0.0263,No single strong signal,1.0,11.0,4.0,1.43,800.0,IOS,Canada,mobile
+2018-09-18,1160,51012EB79345170B6D17DCD2528288D3,Low,0.0262,No single strong signal,1.0,10.0,4.0,2.45,666.0,IOS,United States,mobile
+2018-09-18,1161,F405ABC6E049921FB3587A2BE71559C9,Low,0.0262,No single strong signal,1.0,12.0,5.0,1.59,684.0,IOS,Germany,mobile
+2018-09-18,1162,1AE81ECA4F8037BEB8E0A33D8AA6F337,Low,0.0259,No single strong signal,1.0,11.0,5.0,2.42,390.0,IOS,United States,mobile
+2018-09-18,1163,751F059E1E4E3647C4E502FB7C51F462,Low,0.0253,No single strong signal,1.0,5.0,5.0,4.0,425.0,IOS,Japan,mobile
+2018-09-18,1164,A064A84CD3CF7058F39333D6212E8615,Low,0.0251,No single strong signal,1.0,13.0,4.0,1.3,421.0,ANDROID,Germany,mobile
+2018-09-18,1165,DB26CECA494F76A0F55941026125C0DB,Low,0.0251,Hit app errors (2),1.0,11.0,4.0,1.19,829.0,IOS,Other,mobile
+2018-09-18,1166,372D9BB5088C4E9000C65B06459B403A,Low,0.025,Fails often (60% of attempts),1.0,28.0,7.0,1.03,732.0,IOS,Other,tablet
+2018-09-18,1167,B77B8FADB7BA553F785EE7C3FAF08E7D,Low,0.0243,No single strong signal,1.0,9.0,3.0,1.27,836.0,IOS,United States,mobile
+2018-09-18,1168,4549717C06BAFE84FB1FFE5DDBD7EB2E,Low,0.024,New user (10 days); Hit app errors (4),1.0,7.0,5.0,3.51,10.0,ANDROID,India,mobile
+2018-09-18,1169,2DE9CB964C424DB7C1B6DE60E1C6A108,Low,0.0239,Fails often (43% of attempts),1.0,9.0,4.0,2.57,372.0,IOS,United States,mobile
+2018-09-18,1170,52CFA8EDD77C74FAE4D79AD25CF4717C,Low,0.0238,Hit app errors (3),1.0,9.0,4.0,1.96,30.0,IOS,United States,mobile
+2018-09-18,1171,359A34F575B808FEFE58BC5B40816F09,Low,0.0238,No single strong signal,1.0,13.0,4.0,1.32,40.0,IOS,United States,tablet
+2018-09-18,1172,B71CB5D517BE99FEEED64A0F57842032,Low,0.0237,No single strong signal,1.0,16.0,5.0,1.06,98.0,ANDROID,United States,mobile
+2018-09-18,1173,06A302E3A4767793ADBC884143708660,Low,0.0233,Not seen for 3 days,3.0,17.0,4.0,0.71,264.0,IOS,United Kingdom,tablet
+2018-09-18,1174,6CC62DC4D07B240209DC6837340DDF9F,Low,0.0228,Fails often (47% of attempts),1.0,14.0,5.0,2.13,106.0,IOS,United States,tablet
+2018-09-18,1175,184FAE1A4D9A74D077E3D2DDD433C1C9,Low,0.0227,No single strong signal,1.0,9.0,3.0,1.0,483.0,IOS,United States,mobile
+2018-09-18,1176,A135A27E4373605B2EB6E48DCA05720A,Low,0.0218,New user (23 days),1.0,8.0,4.0,1.75,23.0,ANDROID,India,mobile
+2018-09-18,1177,55BFC405FFA33C0781DE73101011E45B,Low,0.0217,Fails often (41% of attempts),1.0,14.0,5.0,1.57,629.0,IOS,United States,tablet
+2018-09-18,1178,A95BA9143018CA81430258E8A725C3E6,Low,0.0214,Hit app errors (1),1.0,18.0,4.0,1.98,474.0,ANDROID,Australia,mobile
+2018-09-18,1179,1A2C8AB161CC3D09C4454D30505C7DE2,Low,0.0209,Fails often (66% of attempts),1.0,9.0,5.0,1.62,153.0,IOS,United States,mobile
+2018-09-18,1180,58E204089E7397B4B3131D7232AA58C5,Low,0.0207,No single strong signal,1.0,12.0,5.0,1.8,680.0,IOS,United Kingdom,mobile
+2018-09-18,1181,31F8F98A5B838C7375267F10DADBDA24,Low,0.0204,No single strong signal,1.0,12.0,5.0,1.75,841.0,IOS,Other,mobile
+2018-09-18,1182,C639CACA07D03F536F537ED779CF6599,Low,0.02,No single strong signal,1.0,12.0,2.0,0.58,717.0,ANDROID,United States,mobile
+2018-09-18,1183,622E890EE63F0B83C532CC052BEE8A50,Low,0.0198,No single strong signal,1.0,7.0,5.0,3.24,59.0,ANDROID,Other,mobile
+2018-09-18,1184,7E74A2BB6BBF4746DEE15F957B315401,Low,0.0198,New user (19 days); Fails often (41% of attempts),1.0,14.0,5.0,1.41,19.0,ANDROID,Other,mobile
+2018-09-18,1185,D5F9D9AF22EF5073E10342973D48FB2C,Low,0.0196,No single strong signal,1.0,18.0,4.0,1.37,834.0,ANDROID,France,mobile
+2018-09-18,1186,AAA09F62893A41F0D9B2247AB87FA48C,Low,0.0194,Hit app errors (4),1.0,12.0,5.0,1.73,761.0,IOS,Japan,mobile
+2018-09-18,1187,83C1BFAF72CC9FF92E34D5A940101815,Low,0.0186,Fails often (45% of attempts); Hit app errors (1),1.0,10.0,4.0,1.3,144.0,IOS,United States,mobile
+2018-09-18,1188,A12A18ED5F1C2EE3C3C0C8A8641B5AAA,Low,0.0176,No single strong signal,1.0,6.0,4.0,3.17,632.0,IOS,Japan,mobile
+2018-09-18,1189,A5A56F3717C923CECBB9247595F6CA5F,Low,0.0171,No single strong signal,1.0,10.0,4.0,2.28,349.0,IOS,Other,mobile
+2018-09-18,1190,859BD5756C9635B9A657B90A7265679A,Low,0.0166,Hit app errors (1),1.0,12.0,5.0,1.66,843.0,IOS,Japan,mobile
+2018-09-18,1191,7AA6572327B5C45D273CCD8868760033,Low,0.0163,No single strong signal,1.0,18.0,4.0,0.8,513.0,ANDROID,Other,mobile
+2018-09-18,1192,30DA335301915FFBD0A384553805EA15,Low,0.0153,Hit app errors (1),1.0,12.0,4.0,1.6,755.0,IOS,Japan,mobile
+2018-09-18,1193,0CAAA1B6F161BA4D363EB7A2DEF64A08,Low,0.0153,Activity down 68% vs usual week; Hit app errors (2),1.0,19.0,3.0,0.32,311.0,ANDROID,United States,mobile
+2018-09-18,1194,1748CF87FC0F4E9B3997E2D8AEB022E9,Low,0.0151,Hit app errors (3),1.0,11.0,5.0,0.97,329.0,IOS,Japan,mobile
+2018-09-18,1195,625CF86657E00A4629BCE49F5B31A144,Low,0.015,Activity down 67% vs usual week,1.0,20.0,2.0,0.33,489.0,IOS,Germany,tablet
+2018-09-18,1196,21E94A46F6DF2AF6254F916EABA0084A,Low,0.0147,Hit app errors (1),1.0,9.0,3.0,1.21,683.0,IOS,Japan,mobile
+2018-09-18,1197,B9D8806148044938C86FA637A13431AA,Low,0.0146,Hit app errors (1),1.0,10.0,5.0,2.06,245.0,IOS,Japan,mobile
+2018-09-18,1198,B529E84EE03C578C7E92CE5836AB1C1D,Low,0.0145,Fails often (41% of attempts),1.0,19.0,3.0,0.63,35.0,IOS,United States,tablet
+2018-09-18,1199,EFB696A82D093B3AFBE92FF526DD5CEA,Low,0.0145,Fails often (84% of attempts); Hit app errors (15),1.0,23.0,3.0,0.52,83.0,IOS,United States,tablet
+2018-09-18,1200,906AF15E527A9E537C36E29216D0AFF9,Low,0.0144,Fails often (83% of attempts),1.0,9.0,4.0,1.08,841.0,IOS,Australia,mobile
+2018-09-18,1201,48AB910A8DE8485D4C34238EA61F782C,Low,0.0141,No single strong signal,1.0,18.0,6.0,1.5,349.0,ANDROID,Netherlands,mobile
+2018-09-18,1202,CAC4EB6A7DC80207923995F4BE2129DF,Low,0.0139,No single strong signal,1.0,10.0,4.0,1.61,85.0,IOS,United States,mobile
+2018-09-18,1203,186F51E5AACB37852E3650E7027E33B1,Low,0.0135,Hit app errors (1),1.0,19.0,5.0,1.11,609.0,ANDROID,India,mobile
+2018-09-18,1204,3875A92B5F5C2BBA1355CED06A986079,Low,0.0132,Fails often (59% of attempts),1.0,27.0,6.0,0.73,105.0,ANDROID,Japan,mobile
+2018-09-18,1205,69599C9ED33015D6A6AEE16414074147,Low,0.0125,Fails often (65% of attempts),1.0,8.0,4.0,2.78,497.0,IOS,United States,mobile
+2018-09-18,1206,959635567E419A061EECCCA478EDC718,Low,0.0124,Fails often (41% of attempts); Hit app errors (554),1.0,21.0,5.0,0.96,389.0,ANDROID,United States,mobile
+2018-09-18,1207,E4196C5E0A92A22F69DE4E3AA288D6EE,Low,0.0122,Activity down 56% vs usual week,2.0,20.0,3.0,0.44,832.0,ANDROID,United States,mobile
+2018-09-18,1208,0D17D0247F158FA3E40D21EFF46D1651,Low,0.0118,Fails often (66% of attempts),2.0,20.0,4.0,1.05,83.0,ANDROID,United States,mobile
+2018-09-18,1209,37DEF17DD3761C66B7F56806F978E726,Low,0.0117,Hit app errors (7),1.0,18.0,4.0,0.67,745.0,IOS,United States,mobile
+2018-09-18,1210,418C1FE4FF01EA36F511E5D9073F11BD,Low,0.0117,No single strong signal,2.0,18.0,3.0,1.11,340.0,ANDROID,United States,tablet
+2018-09-18,1211,9DE945166BCD4709696C5836317DDE47,Low,0.0115,Fails often (55% of attempts),1.0,20.0,4.0,0.93,166.0,ANDROID,United States,mobile
+2018-09-18,1212,6D24F421B34B2CFDCF3A9983CF63D647,Low,0.0114,Fails often (73% of attempts); Hit app errors (6),1.0,9.0,5.0,3.35,336.0,IOS,Japan,mobile
+2018-09-18,1213,8BD465AC77DC9D8B4C597BF35950FDA3,Low,0.0111,Hit app errors (14),1.0,16.0,5.0,1.44,498.0,ANDROID,India,mobile
+2018-09-18,1214,3C6C26FF511307BFC3304161BE7109E5,Low,0.0111,No single strong signal,1.0,10.0,5.0,2.66,736.0,IOS,Japan,mobile
+2018-09-18,1215,74EFA3B9E98982CB94246D7F95DF29D0,Low,0.0103,No single strong signal,1.0,19.0,6.0,1.2,684.0,IOS,Netherlands,mobile
+2018-09-18,1216,3C6A83811DD50E0CFDBD876259FA6D6E,Low,0.0102,Not seen for 4 days; Fails often (74% of attempts); Hit app errors (5),4.0,21.0,4.0,0.63,316.0,IOS,United Kingdom,tablet
+2018-09-18,1217,136F2C0A18FA7D6A967EEBDC2C7E3346,Low,0.0102,Fails often (60% of attempts),1.0,18.0,6.0,2.03,806.0,IOS,United States,mobile
+2018-09-18,1218,2F74E23BEA1E45E3897274EE4903DCC5,Low,0.0093,Fails often (61% of attempts); Hit app errors (3),1.0,22.0,6.0,1.29,539.0,IOS,Other,tablet
+2018-09-18,1219,2927B0054220D4D4565BD60B590F82B0,Low,0.0092,No single strong signal,1.0,14.0,5.0,1.86,483.0,ANDROID,Other,mobile
+2018-09-18,1220,FBE5BE5E3836527EC27D14834D72B911,Low,0.0088,New user (15 days); Fails often (54% of attempts),1.0,11.0,5.0,1.36,15.0,IOS,Japan,mobile
+2018-09-18,1221,79D16DA26AB14780B3F4723E0E57769F,Low,0.0086,Hit app errors (4),1.0,9.0,4.0,1.17,141.0,IOS,Japan,mobile
+2018-09-18,1222,FC48EDE912EDD9F8D7ED45F697EE7193,Low,0.0085,Fails often (46% of attempts),2.0,21.0,3.0,0.73,829.0,ANDROID,United States,tablet
+2018-09-18,1223,FF2667B2C3C60D19E7B7D63C99BB4CAA,Low,0.0083,No single strong signal,1.0,18.0,4.0,1.05,252.0,IOS,United States,tablet
+2018-09-18,1224,0A26E7281EC31038AD42F28C930FFF90,Low,0.0077,New user (21 days); Hit app errors (2),1.0,19.0,7.0,1.85,21.0,ANDROID,United States,mobile
+2018-09-18,1225,018F03084C88E944163F76A0D0C2FBA1,Low,0.0076,No single strong signal,1.0,14.0,5.0,1.4,353.0,ANDROID,Spain,mobile
+2018-09-18,1226,10B0D468B5E036E16D13DB53A65F2D49,Low,0.0072,No single strong signal,1.0,22.0,5.0,0.54,475.0,ANDROID,Germany,mobile
+2018-09-18,1227,205AE83B43BB3A54E25E55E605AF6431,Low,0.007,Hit app errors (1),1.0,16.0,5.0,2.59,682.0,IOS,United States,mobile
+2018-09-18,1228,E80C958E3C33898989A30B8F5A4514F0,Low,0.007,Hit app errors (7),1.0,17.0,5.0,1.38,50.0,ANDROID,Other,mobile
+2018-09-18,1229,932AAF56DDE9C55359B9CCFA18E7FB95,Low,0.0068,No single strong signal,1.0,20.0,4.0,0.89,271.0,ANDROID,Canada,mobile
+2018-09-18,1230,C2D17D9066EE1EB9FAE1C8A521BFD4E5,Low,0.0067,Hit app errors (2),1.0,12.0,5.0,1.48,335.0,IOS,United States,mobile
+2018-09-18,1231,FEDC59699D8832A11B88BFCCCAD0951D,Low,0.0065,Activity down 53% vs usual week,2.0,22.0,3.0,0.47,490.0,ANDROID,United States,mobile
+2018-09-18,1232,724B99CB6F41846F3F6BB46C2F663F5E,Low,0.0063,Fails often (43% of attempts),1.0,24.0,6.0,1.24,148.0,IOS,France,tablet
+2018-09-18,1233,343B740C7B3BD9C2CFA46BF097A8856E,Low,0.0062,Not seen for 3 days,3.0,21.0,4.0,1.04,666.0,ANDROID,Japan,mobile
+2018-09-18,1234,A51BF75239709A5494645BEAABC3453D,Low,0.0057,Fails often (57% of attempts); Hit app errors (1),1.0,10.0,4.0,1.75,139.0,IOS,United Kingdom,mobile
+2018-09-18,1235,BE36C49B1AB3968D420923AEC4FDD7AE,Low,0.0055,No single strong signal,2.0,22.0,4.0,0.51,173.0,ANDROID,Japan,mobile
+2018-09-18,1236,5E09265F12D64B9FA85FF9427A0A7FB0,Low,0.0054,Fails often (51% of attempts); Hit app errors (5),1.0,25.0,6.0,0.92,122.0,IOS,Japan,tablet
+2018-09-18,1237,D55D4E5B60368F4BE64F16EFD78B2BE7,Low,0.0051,Fails often (58% of attempts); Hit app errors (7),1.0,15.0,5.0,1.91,611.0,IOS,Japan,tablet
+2018-09-18,1238,472451071AED6FF801BC0FE66706FD27,Low,0.0048,No single strong signal,1.0,21.0,4.0,0.68,92.0,ANDROID,United States,mobile
+2018-09-18,1239,53CAAF361073109F66760692FA12673B,Low,0.0047,No single strong signal,1.0,18.0,4.0,1.01,491.0,IOS,United States,tablet
+2018-09-18,1240,48C8A04DA2A666406E943C164A94D0B3,Low,0.0044,No single strong signal,1.0,13.0,4.0,0.98,322.0,ANDROID,United Kingdom,mobile
+2018-09-18,1241,DA48D36D07835B1918BDF831AF83B5EF,Low,0.0043,Fails often (54% of attempts); Hit app errors (10),1.0,26.0,6.0,1.03,830.0,IOS,United States,tablet
+2018-09-18,1242,EB1A430BACB37E6EA72592BF838E64A6,Low,0.0042,No single strong signal,1.0,21.0,5.0,1.27,100.0,ANDROID,United States,mobile
+2018-09-18,1243,C3817B35D57C5C1BF6225FEC9BD16534,Low,0.0038,Hit app errors (1),1.0,21.0,5.0,0.99,68.0,IOS,United States,tablet
+2018-09-18,1244,EF0FBB41BE6F40A5CC1D68D8E1CD3591,Low,0.0038,Activity down 76% vs usual week,1.0,21.0,4.0,0.24,681.0,IOS,France,mobile
+2018-09-18,1245,B78DB4E683651327A612372A48B5734C,Low,0.0038,No single strong signal,1.0,20.0,6.0,0.95,684.0,IOS,Other,tablet
+2018-09-18,1246,682A8CD0767A569DC68E7AA0201BFBA3,Low,0.0032,Hit app errors (5),1.0,22.0,5.0,1.51,106.0,IOS,United States,tablet
+2018-09-18,1247,B8ABD1FA94CF24CDEF5E10768CD6EF5C,Low,0.0032,Hit app errors (1),1.0,21.0,3.0,0.64,473.0,IOS,United States,tablet
+2018-09-18,1248,59454BAC415BB1F18517C6FD2C023E49,Low,0.0031,No single strong signal,1.0,22.0,6.0,0.8,253.0,ANDROID,India,mobile
+2018-09-18,1249,FA30269453141794E79B8F15EE0BA5B9,Low,0.003,Hit app errors (24),1.0,25.0,6.0,0.51,843.0,ANDROID,Japan,mobile
+2018-09-18,1250,8211CABE9A3F1FE1BF3154E0C8D30368,Low,0.003,Fails often (41% of attempts),1.0,27.0,6.0,0.93,680.0,IOS,Other,tablet
+2018-09-18,1251,B5395F8C2077B59B3D6C5719C0CA0339,Low,0.0028,No single strong signal,1.0,27.0,6.0,0.88,767.0,ANDROID,Japan,mobile
+2018-09-18,1252,C6DE585349744A40725DB0AB17041BA3,Low,0.0027,Hit app errors (5),1.0,18.0,3.0,0.61,176.0,ANDROID,United Kingdom,mobile
+2018-09-18,1253,7386D239899D55E3D62DA619F359A7C0,Low,0.0026,Fails often (66% of attempts),1.0,27.0,6.0,0.89,684.0,IOS,Netherlands,tablet
+2018-09-18,1254,FEC0B30EED7870C4D46230D73032E5CA,Low,0.0022,Fails often (63% of attempts); Hit app errors (3),1.0,24.0,6.0,1.06,522.0,IOS,United States,tablet
+2018-09-18,1255,F5DAD8DD17B689CF672D65A0A81CF4AC,Low,0.0017,Hit app errors (2),1.0,23.0,5.0,0.74,682.0,IOS,Japan,mobile
+2018-09-18,1256,0C777BD44F304574371C97674DCD0702,Low,0.0017,Hit app errors (1),1.0,28.0,7.0,0.78,644.0,IOS,Other,tablet
