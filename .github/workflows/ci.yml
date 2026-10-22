@@ -1,0 +1,29 @@
+name: CI
+
+# CI never calls BigQuery: the production SQL is executed locally in DuckDB against
+# synthetic GA4-shaped events, so no Google credentials are needed or stored.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install
+        run: pip install -e ".[dev]"
+      - name: Lint
+        run: |
+          ruff check .
+          ruff format --check .
+      - name: Tests (SQL logic in DuckDB + end-to-end pipeline)
+        run: pytest -q

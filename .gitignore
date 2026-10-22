@@ -1,0 +1,26 @@
+# Extracted data and trained models are reproducible from BigQuery
+data/
+models/
+*.joblib
+*.parquet
+
+# Never commit credentials
+*.json.key
+*credentials*.json
+service-account*.json
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/

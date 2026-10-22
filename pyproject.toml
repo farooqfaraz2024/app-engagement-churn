@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "app-engagement-churn"
+version = "1.0.0"
+description = "App-user churn prediction from Firebase / GA4 event exports in Google BigQuery"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "google-cloud-bigquery>=3.20",
+    "db-dtypes>=1.2",
+    "pyarrow>=14",
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "scikit-learn>=1.4",
+    "matplotlib>=3.7",
+    "joblib>=1.3",
+]
+
+[project.optional-dependencies]
+# duckdb + sqlglot run the production BigQuery SQL locally in the tests
+dev = ["pytest>=8", "ruff>=0.5", "duckdb>=1.0", "sqlglot>=25"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+appchurn = ["sql/*.sql"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
