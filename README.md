@@ -55,6 +55,105 @@ Out-of-time test on September 2018 (3 weekly snapshots, 3,573 user-snapshots,
 
 ![What predicts churn](reports/figures/feature_importance.png)
 
+## Architecture
+
+```mermaid
+flowchart LR
+    subgraph GCP["Google Cloud · BigQuery"]
+        RAW[("Flood-It! GA4 / Firebase export<br/>5.7M events · 15k users<br/>public dataset")]
+        COPY[("Optional copy<br/>your-project.flood_it.events")]
+        SQL["Feature + label SQL<br/>events → user-days → weekly snapshots<br/>28-day features · 14-day churn label"]
+        RAW -.-> COPY
+        RAW --> SQL
+        COPY -.-> SQL
+    end
+
+    subgraph PY["Python · runs on a laptop"]
+        EXT["extract.py<br/>google-cloud-bigquery<br/>dry run · 10 GB cost cap"]
+        PQ[("user_snapshots.parquet<br/>52,828 rows")]
+        TRAIN["train.py · scikit-learn<br/>regular users · out-of-time split<br/>forward-chaining validation<br/>recency-rule benchmark · bootstrap"]
+        REP["reports/<br/>metrics · gains · importance<br/>charts"]
+        EXT --> PQ --> TRAIN --> REP
+    end
+
+    subgraph CI["GitHub Actions · no Google credentials"]
+        SYN["Synthetic GA4 events"]
+        DUCK["Same SQL run in DuckDB<br/>via sqlglot"]
+        TESTS["26 tests<br/>windows · leakage · cost cap<br/>end-to-end pipeline"]
+        SYN --> DUCK --> TESTS
+    end
+
+    SQL --> EXT
+    SQL -. "identical SQL" .-> DUCK
+
+    classDef store fill:#eef4fc,stroke:#2a78d6,color:#0b0b0b
+    classDef step fill:#fcfcfb,stroke:#52514e,color:#0b0b0b
+    class RAW,COPY,PQ,REP store
+    class SQL,EXT,TRAIN,SYN,DUCK,TESTS step
+```
+
+### From prototype to production
+
+The same approach, run daily at a telecom operator: scheduled scoring, monthly
+retraining behind a promotion gate, consent and a random holdout before any message
+is sent, and campaign outcomes fed back for measurement. Generic and vendor-neutral;
+product names are examples. Design decisions are in
+[`docs/architecture.md`](docs/architecture.md).
+
+```mermaid
+flowchart LR
+    subgraph SRC["Sources"]
+        APP["Self-care mobile app<br/>Firebase SDK<br/>logged-in user ID set"]
+        CRM["CRM / billing<br/>customer ID · plan · consent"]
+    end
+
+    subgraph BQ["Data warehouse · e.g. BigQuery"]
+        EV[("App events<br/>daily export")]
+        IDM[("Identity map<br/>app user → customer ID")]
+        FEAT["Daily feature build<br/>scheduled SQL"]
+        SCORE["Daily scoring<br/>BigQuery ML or Python job"]
+        RISK[("at_risk_customers<br/>score · band · reasons")]
+        OUT[("Campaign outcomes<br/>contacted · holdout · churned")]
+        EV --> FEAT --> SCORE --> RISK
+    end
+
+    subgraph ML["Model lifecycle · monthly"]
+        RETRAIN["Retrain on recent weeks"]
+        GATE{"Beats current model<br/>and recency rule<br/>out-of-time?"}
+        RETRAIN --> GATE
+    end
+
+    subgraph ACT["Activation"]
+        ELIG["Eligibility<br/>consent · contact caps<br/>10% random holdout"]
+        EXP["Daily file or API<br/>e.g. Cloud Storage CSV"]
+        NBA["Next-best-action platform<br/>e.g. Pega CDH<br/>chooses offer and message"]
+        PUSH["Push notification<br/>FCM / APNs"]
+        ELIG --> EXP --> NBA --> PUSH
+    end
+
+    DASH["Dashboard<br/>Looker Studio / HTML report"]
+
+    APP --> EV
+    CRM --> IDM
+    CRM --> ELIG
+    IDM --> RISK
+    RISK --> ELIG
+    RISK --> DASH
+    PUSH -. "customer responds or not" .-> APP
+    NBA --> OUT
+    OUT --> RETRAIN
+    OUT --> DASH
+    GATE -- "yes: promote" --> SCORE
+    GATE -. "no: keep current" .-> SCORE
+
+    classDef store fill:#eef4fc,stroke:#2a78d6,color:#0b0b0b
+    classDef step fill:#fcfcfb,stroke:#52514e,color:#0b0b0b
+    classDef act fill:#fdf0ea,stroke:#eb6834,color:#0b0b0b
+    class EV,IDM,RISK,OUT store
+    class FEAT,SCORE,RETRAIN,DASH,APP,CRM step
+    class ELIG,EXP,NBA,PUSH act
+```
+
 ## Why a game dataset is a fair stand-in for a telecom app
 
 The export schema is identical for every Firebase/GA4 app: one row per event with
@@ -199,6 +298,7 @@ app-engagement-churn/
 │   ├── train.py           # CV, final evaluation, reports
 │   └── plots.py
 ├── tests/                 # SQL logic in DuckDB, end-to-end pipeline, extract
+├── docs/architecture.md   # architecture diagrams and design decisions
 └── reports/               # metrics, CV, gains, per-week results, figures
 ```
 
