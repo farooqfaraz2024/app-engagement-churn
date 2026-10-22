@@ -134,7 +134,13 @@ app-engagement-churn/
 
 You need a Google Cloud project. The free
 [BigQuery sandbox](https://cloud.google.com/bigquery/docs/sandbox) is enough, no
-credit card required.
+credit card required. The pipeline reads Google's public table directly; your project
+only runs (and, outside the sandbox, pays for) the queries.
+
+**Optional: work from your own copy.** Run
+[`copy_public_dataset.sql`](src/appchurn/sql/copy_public_dataset.sql) in the BigQuery
+console, then set `EVENTS_TABLE=your-project-id.flood_it.events`. The pipeline works
+the same on a single table as on the sharded `events_*` export.
 
 ```bash
 git clone https://github.com/GITHUB_USER/app-engagement-churn.git

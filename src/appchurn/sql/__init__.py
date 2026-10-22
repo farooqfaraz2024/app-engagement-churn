@@ -31,28 +31,37 @@ def events_source(
     dataset: DatasetConfig = DATASET,
     start: date | None = None,
     end: date | None = None,
-    wildcard: bool = True,
+    local_test: bool = False,
 ) -> str:
     """FROM clause target, restricted to the date range.
 
-    For sharded GA4 exports (``events_*``) the range is applied through
-    ``_TABLE_SUFFIX`` so BigQuery only reads the needed daily tables, which is what
-    keeps cost down. ``wildcard=False`` is used by the local tests.
+    Two kinds of table are supported:
+
+    * a sharded GA4 export (``project.dataset.events_*``, one table per day), where
+      the range is applied through ``_TABLE_SUFFIX`` so BigQuery reads only the
+      needed daily tables;
+    * a single table (for example your own copy of the export), filtered on
+      ``event_date``.
+
+    ``local_test=True`` leaves the name unquoted for the DuckDB tests.
     """
     table = dataset.events_table
     if not _TABLE.match(table):
         raise ValueError(f"Invalid table: {table!r}")
     start = start or dataset.data_start
     end = end or dataset.data_end
-    if wildcard and table.endswith("*"):
-        return f"`{table}`\n  WHERE _TABLE_SUFFIX BETWEEN '{start:%Y%m%d}' AND '{end:%Y%m%d}'"
-    return f"{table.rstrip('*')}\n  WHERE event_date BETWEEN '{start:%Y%m%d}' AND '{end:%Y%m%d}'"
+    date_filter = f"'{start:%Y%m%d}' AND '{end:%Y%m%d}'"
+    if local_test:
+        return f"{table.rstrip('*')}\n  WHERE event_date BETWEEN {date_filter}"
+    if table.endswith("*"):
+        return f"`{table}`\n  WHERE _TABLE_SUFFIX BETWEEN {date_filter}"
+    return f"`{table}`\n  WHERE event_date BETWEEN {date_filter}"
 
 
 def user_snapshot_sql(
     dataset: DatasetConfig = DATASET,
     windows: WindowConfig = WINDOWS,
-    wildcard: bool = True,
+    local_test: bool = False,
 ) -> str:
     journeys = [_check_event(e) for e in dataset.journey_events]
     passive = ", ".join(f"'{_check_event(e)}'" for e in dataset.passive_events)
@@ -71,14 +80,14 @@ def user_snapshot_sql(
         passive_events=passive,
         journey_daily_counts=daily_counts,
         journey_window_sums=window_sums,
-        events_source=events_source(dataset, start, end, wildcard),
+        events_source=events_source(dataset, start, end, local_test),
         snapshot_dates=", ".join(f"DATE '{d:%Y-%m-%d}'" for d in snaps),
         obs=obs,
         churn=churn,
     )
 
 
-def event_profile_sql(dataset: DatasetConfig = DATASET, wildcard: bool = True) -> str:
+def event_profile_sql(dataset: DatasetConfig = DATASET, local_test: bool = False) -> str:
     return _template("event_profile.sql").format(
-        events_source=events_source(dataset, wildcard=wildcard)
+        events_source=events_source(dataset, local_test=local_test)
     )

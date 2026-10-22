@@ -121,3 +121,34 @@ def test_same_user_appears_in_each_snapshot_window():
     snaps = sorted(df.loc[df["user_pseudo_id"] == "u", "snapshot_date"])
     # 20 July is inside the 28-day window of the 24 Jul, 31 Jul, 7 Aug and 14 Aug snapshots
     assert snaps == [date(2018, 7, 24), date(2018, 7, 31), date(2018, 8, 7), date(2018, 8, 14)]
+
+
+def test_table_name_is_quoted_for_both_table_kinds():
+    from dataclasses import replace
+
+    from appchurn.config import DATASET
+    from appchurn.sql import events_source
+
+    sharded = events_source(replace(DATASET, events_table="my-proj.flood_it.events_*"))
+    single = events_source(replace(DATASET, events_table="my-proj.flood_it.events"))
+    assert sharded.startswith("`my-proj.flood_it.events_*`") and "_TABLE_SUFFIX" in sharded
+    assert single.startswith("`my-proj.flood_it.events`") and "event_date BETWEEN" in single
+    for sql in (sharded, single):
+        sqlglot.parse_one(f"SELECT COUNT(*) FROM {sql}", read="bigquery")
+
+
+def test_events_table_can_be_set_from_environment(monkeypatch):
+    from appchurn.config import DatasetConfig
+
+    monkeypatch.setenv("EVENTS_TABLE", "my-proj.flood_it.events")
+    assert DatasetConfig().events_table == "my-proj.flood_it.events"
+
+
+def test_invalid_table_name_is_rejected():
+    from dataclasses import replace
+
+    from appchurn.config import DATASET
+    from appchurn.sql import events_source
+
+    with pytest.raises(ValueError):
+        events_source(replace(DATASET, events_table="x; DROP TABLE y"))

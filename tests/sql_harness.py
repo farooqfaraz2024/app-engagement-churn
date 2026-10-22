@@ -81,7 +81,7 @@ def event(
 
 
 def duckdb_sql() -> str:
-    bq = user_snapshot_sql(TEST_DATASET, wildcard=False)
+    bq = user_snapshot_sql(TEST_DATASET, local_test=True)
     sql = sqlglot.transpile(bq, read="bigquery", write="duckdb")[0]
     return sql.replace("proj.ds.events_", "events")
 

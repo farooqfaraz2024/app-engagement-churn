@@ -25,8 +25,14 @@ RANDOM_STATE = 42
 
 @dataclass(frozen=True)
 class DatasetConfig:
-    # Google's public Flood-It! demo export (obfuscated GA4 / Firebase events)
-    events_table: str = "firebase-public-project.analytics_153293282.events_*"
+    # Google's public Flood-It! demo export (obfuscated GA4 / Firebase events).
+    # Override with the EVENTS_TABLE environment variable, e.g. to use your own copy:
+    #   EVENTS_TABLE=my-project.flood_it.events
+    events_table: str = field(
+        default_factory=lambda: os.environ.get(
+            "EVENTS_TABLE", "firebase-public-project.analytics_153293282.events_*"
+        )
+    )
     data_start: date = date(2018, 6, 12)
     data_end: date = date(2018, 10, 3)
 
