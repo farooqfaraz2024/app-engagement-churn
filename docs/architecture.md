@@ -13,6 +13,7 @@ flowchart LR
         RAW[("Flood-It! GA4 / Firebase export<br/>5.7M events · 15k users<br/>public dataset")]
         COPY[("Optional copy<br/>your-project.flood_it.events")]
         SQL["Feature + label SQL<br/>events → user-days → weekly snapshots<br/>28-day features · 14-day churn label"]
+        BQML["bigquery_ml/ scripts<br/>CREATE MODEL · ML.PREDICT<br/>EXPORT DATA"]
         RAW -.-> COPY
         RAW --> SQL
         COPY -.-> SQL
@@ -33,17 +34,18 @@ flowchart LR
     subgraph CI["GitHub Actions · no Google credentials"]
         SYN["Synthetic GA4 events"]
         DUCK["Same SQL run in DuckDB<br/>via sqlglot"]
-        TESTS["26 tests<br/>windows · leakage · cost cap<br/>end-to-end pipeline"]
+        TESTS["Automated tests<br/>windows · leakage · cost cap<br/>BigQuery ML sync · end-to-end"]
         SYN --> DUCK --> TESTS
     end
 
     SQL --> EXT
+    SQL -. "same template" .-> BQML
     SQL -. "identical SQL" .-> DUCK
 
     classDef store fill:#eef4fc,stroke:#2a78d6,color:#0b0b0b
     classDef step fill:#fcfcfb,stroke:#52514e,color:#0b0b0b
     class RAW,COPY,PQ,REP,HTML store
-    class SQL,EXT,TRAIN,SCORE,SYN,DUCK,TESTS step
+    class SQL,BQML,EXT,TRAIN,SCORE,SYN,DUCK,TESTS step
 ```
 
 ## 2. Reference design for a telecom operator (production)

@@ -4,6 +4,9 @@ models/
 *.joblib
 *.parquet
 
+# BigQuery ML scripts generated with real project names
+bigquery_ml/local/
+
 # Never commit credentials
 *.json.key
 *credentials*.json

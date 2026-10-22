@@ -67,25 +67,11 @@ observation AS (
    AND d.activity_date < s.snapshot_date
   GROUP BY s.snapshot_date, d.user_pseudo_id
   HAVING COUNT(DISTINCT IF(d.active_events > 0, d.activity_date, NULL)) > 0
-),
-
-future AS (
-  SELECT
-    s.snapshot_date,
-    d.user_pseudo_id,
-    SUM(d.active_events) AS future_active_events
-  FROM snapshots AS s
-  JOIN daily AS d
-    ON d.activity_date >= s.snapshot_date
-   AND d.activity_date < DATE_ADD(s.snapshot_date, INTERVAL {churn} DAY)
-  GROUP BY s.snapshot_date, d.user_pseudo_id
-)
+){future_cte}
 
 SELECT
   o.*,
-  DATE_DIFF(o.snapshot_date, u.first_seen_date, DAY) AS tenure_days,
-  IF(COALESCE(f.future_active_events, 0) = 0, 1, 0) AS churned
+  DATE_DIFF(o.snapshot_date, u.first_seen_date, DAY) AS tenure_days{label_column}
 FROM observation AS o
-JOIN user_first_seen AS u USING (user_pseudo_id)
-LEFT JOIN future AS f USING (snapshot_date, user_pseudo_id)
+JOIN user_first_seen AS u USING (user_pseudo_id){future_join}
 ORDER BY o.snapshot_date, o.user_pseudo_id

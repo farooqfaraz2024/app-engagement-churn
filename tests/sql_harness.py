@@ -80,18 +80,26 @@ def event(
     }
 
 
-def duckdb_sql() -> str:
-    bq = user_snapshot_sql(TEST_DATASET, local_test=True)
-    sql = sqlglot.transpile(bq, read="bigquery", write="duckdb")[0]
+def to_duckdb(bigquery_sql: str) -> str:
+    sql = sqlglot.transpile(bigquery_sql, read="bigquery", write="duckdb")[0]
     return sql.replace("proj.ds.events_", "events")
 
 
-def run_features(events: list[dict]) -> pd.DataFrame:
+def duckdb_sql(score_date: date | None = None) -> str:
+    return to_duckdb(user_snapshot_sql(TEST_DATASET, local_test=True, score_date=score_date))
+
+
+def events_db(events: list[dict]) -> duckdb.DuckDBPyConnection:
     con = duckdb.connect()
     con.execute(DDL)
     con.register("staging", pd.DataFrame(events))
     con.execute("INSERT INTO events SELECT * FROM staging")
-    df = con.execute(duckdb_sql()).fetchdf()
+    return con
+
+
+def run_features(events: list[dict], score_date: date | None = None) -> pd.DataFrame:
+    con = events_db(events)
+    df = con.execute(duckdb_sql(score_date)).fetchdf()
     df["snapshot_date"] = pd.to_datetime(df["snapshot_date"]).dt.date
     return df
 

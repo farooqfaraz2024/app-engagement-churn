@@ -89,6 +89,46 @@ Tue 16 Sep 2025) so it reads as current. Weekdays are preserved, a banner on the
 says so, and every figure comes from the real 2018 data. Set `DISPLAY_SHIFT_WEEKS=0` to
 show the original dates. No events or users are simulated.
 
+## BigQuery ML version
+
+The same pipeline as three SQL scripts that run entirely inside BigQuery, with no
+Python at run time. This is how the model would typically run daily in production:
+data never leaves the warehouse and scheduled queries replace a Python server.
+
+| Script | What it does |
+|---|---|
+| [`01_train_model.sql`](bigquery_ml/01_train_model.sql) | Builds the training table (one row per regular user per week, 28 days of behaviour, 14-day churn label), trains a `BOOSTED_TREE_CLASSIFIER` on July–August, evaluates it out-of-time on September with `ML.EVALUATE`, and lists feature importance with `ML.GLOBAL_EXPLAIN` |
+| [`02_score_users.sql`](bigquery_ml/02_score_users.sql) | Builds today's features (no label: the next 14 days have not happened), scores every regular user with `ML.PREDICT`, and saves a ranked `at_risk_customers` table with High / Medium / Low bands and plain-language reasons |
+| [`03_export_at_risk.sql`](bigquery_ml/03_export_at_risk.sql) | `EXPORT DATA` of the High and Medium bands as CSV to Cloud Storage, one folder per score date, for a campaign platform to pick up |
+
+The scripts use placeholder names (`your-project-id.churn_demo`, `gs://your-bucket`).
+They are **generated** from the same SQL template as the Python pipeline, so the two
+cannot drift apart: tests check that the scoring features equal the training features
+for the same day, that the SQL ratios and reason codes match the Python ones, and that
+the committed scripts are up to date.
+
+**Run it in your own project**
+
+```bash
+python -m appchurn.bqml --project your-project-id --bucket your-bucket
+# optional: --events-table your-project-id.flood_it.events   (your own copy)
+#           --score-date 2018-10-04                          (the day to score)
+```
+
+This writes copies with your names to `bigquery_ml/local/`, which Git ignores. Paste
+each script into the BigQuery console and click **Run**; every statement in the script
+runs in order. Script 1 prints the out-of-time `roc_auc`, which should land close to
+the Python model's 0.798 (same data and model family, different library defaults).
+
+**Free sandbox limits.** Building tables works in the sandbox. `CREATE MODEL` may ask
+you to enable billing; scheduled queries and `EXPORT DATA` to Cloud Storage need it.
+Without billing, run the final `SELECT` of script 2 and use **Save results → CSV**.
+
+**Before a real campaign**, add the steps shown in the production architecture below:
+an identity map from app user to customer ID, consent and contact-cap filters, and a
+random holdout group. The demo score date is 4 Oct 2018, the day after the last day of
+data, so its outcome is genuinely unknown, exactly as on a real scoring day.
+
 ## Architecture
 
 ```mermaid
@@ -97,6 +137,7 @@ flowchart LR
         RAW[("Flood-It! GA4 / Firebase export<br/>5.7M events · 15k users<br/>public dataset")]
         COPY[("Optional copy<br/>your-project.flood_it.events")]
         SQL["Feature + label SQL<br/>events → user-days → weekly snapshots<br/>28-day features · 14-day churn label"]
+        BQML["bigquery_ml/ scripts<br/>CREATE MODEL · ML.PREDICT<br/>EXPORT DATA"]
         RAW -.-> COPY
         RAW --> SQL
         COPY -.-> SQL
@@ -117,17 +158,18 @@ flowchart LR
     subgraph CI["GitHub Actions · no Google credentials"]
         SYN["Synthetic GA4 events"]
         DUCK["Same SQL run in DuckDB<br/>via sqlglot"]
-        TESTS["26 tests<br/>windows · leakage · cost cap<br/>end-to-end pipeline"]
+        TESTS["Automated tests<br/>windows · leakage · cost cap<br/>BigQuery ML sync · end-to-end"]
         SYN --> DUCK --> TESTS
     end
 
     SQL --> EXT
+    SQL -. "same template" .-> BQML
     SQL -. "identical SQL" .-> DUCK
 
     classDef store fill:#eef4fc,stroke:#2a78d6,color:#0b0b0b
     classDef step fill:#fcfcfb,stroke:#52514e,color:#0b0b0b
     class RAW,COPY,PQ,REP,HTML store
-    class SQL,EXT,TRAIN,SCORE,SYN,DUCK,TESTS step
+    class SQL,BQML,EXT,TRAIN,SCORE,SYN,DUCK,TESTS step
 ```
 
 ### From prototype to production
@@ -337,8 +379,10 @@ app-engagement-churn/
 │   ├── score.py           # production scoring: bands, reason codes, at-risk CSV
 │   ├── report.py          # builds the interactive report from the scores
 │   ├── report_template.html
+│   ├── bqml.py            # generates the BigQuery ML scripts from the same SQL
 │   └── plots.py
-├── tests/                 # SQL logic in DuckDB, end-to-end pipeline, extract
+├── bigquery_ml/           # the BigQuery ML version: train, score, export (generated)
+├── tests/                 # SQL logic in DuckDB, end-to-end pipeline, extract, BQML
 ├── docs/
 │   ├── index.html         # the interactive report (served by GitHub Pages)
 │   └── architecture.md    # architecture diagrams and design decisions
