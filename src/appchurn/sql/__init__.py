@@ -8,6 +8,7 @@ config.py, never from end-user input, and is checked against a strict pattern.
 from __future__ import annotations
 
 import re
+from dataclasses import dataclass
 from datetime import date, timedelta
 from importlib.resources import files
 
@@ -32,6 +33,7 @@ def events_source(
     start: date | None = None,
     end: date | None = None,
     local_test: bool = False,
+    bounds_sql: tuple[str, str] | None = None,
 ) -> str:
     """FROM clause target, restricted to the date range.
 
@@ -44,13 +46,19 @@ def events_source(
       ``event_date``.
 
     ``local_test=True`` leaves the name unquoted for the DuckDB tests.
+    ``bounds_sql`` replaces the two quoted 'YYYYMMDD' bounds with SQL text, used by
+    the scheduled scripts to inject dates at run time.
     """
     table = dataset.events_table
     if not _TABLE.match(table):
         raise ValueError(f"Invalid table: {table!r}")
     start = start or dataset.data_start
     end = end or dataset.data_end
-    date_filter = f"'{start:%Y%m%d}' AND '{end:%Y%m%d}'"
+    date_filter = (
+        f"{bounds_sql[0]} AND {bounds_sql[1]}"
+        if bounds_sql
+        else f"'{start:%Y%m%d}' AND '{end:%Y%m%d}'"
+    )
     if local_test:
         return f"{table.rstrip('*')}\n  WHERE event_date BETWEEN {date_filter}"
     if table.endswith("*"):
@@ -73,11 +81,27 @@ future AS (
 )"""
 
 
+@dataclass(frozen=True)
+class RuntimeDates:
+    """Dates supplied as SQL text at run time instead of fixed literals.
+
+    snapshot_array: SQL for an ARRAY<DATE> of snapshot dates
+    first_suffix, last_suffix: SQL for the 'YYYYMMDD' bounds of the events read
+    labelled: include the 14-day churn label (training) or not (scoring)
+    """
+
+    snapshot_array: str
+    first_suffix: str
+    last_suffix: str
+    labelled: bool
+
+
 def user_snapshot_sql(
     dataset: DatasetConfig = DATASET,
     windows: WindowConfig = WINDOWS,
     local_test: bool = False,
     score_date: date | None = None,
+    runtime: RuntimeDates | None = None,
 ) -> str:
     """Feature SQL, one row per (snapshot, user).
 
@@ -90,7 +114,16 @@ def user_snapshot_sql(
     passive = ", ".join(f"'{_check_event(e)}'" for e in dataset.passive_events)
     obs, churn = windows.observation_days, windows.churn_days
 
-    if score_date is None:
+    if runtime is not None:
+        snaps = []
+        start = end = None
+        if runtime.labelled:
+            future_cte = _FUTURE_CTE.format(churn=churn)
+            label_column = ",\n  IF(COALESCE(f.future_active_events, 0) = 0, 1, 0) AS churned"
+            future_join = "\nLEFT JOIN future AS f USING (snapshot_date, user_pseudo_id)"
+        else:
+            future_cte = label_column = future_join = ""
+    elif score_date is None:
         snaps = snapshot_dates(dataset, windows)
         if not snaps:
             raise ValueError("Date range too short for the observation and churn windows")
@@ -111,8 +144,16 @@ def user_snapshot_sql(
         passive_events=passive,
         journey_daily_counts=daily_counts,
         journey_window_sums=window_sums,
-        events_source=events_source(dataset, start, end, local_test),
-        snapshot_dates=", ".join(f"DATE '{d:%Y-%m-%d}'" for d in snaps),
+        events_source=events_source(
+            dataset,
+            start,
+            end,
+            local_test,
+            (runtime.first_suffix, runtime.last_suffix) if runtime else None,
+        ),
+        snapshot_array=runtime.snapshot_array
+        if runtime
+        else "[" + ", ".join(f"DATE '{d:%Y-%m-%d}'" for d in snaps) + "]",
         obs=obs,
         future_cte=future_cte,
         label_column=label_column,

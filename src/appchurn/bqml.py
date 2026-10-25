@@ -5,7 +5,8 @@
     python -m appchurn.bqml --project my-project-id --bucket my-bucket \
         --events-table my-project-id.flood_it.events --score-date 2018-10-04
 
-The committed scripts in ``bigquery_ml/`` use placeholder names:
+Production versions for scheduled queries are written to ``bigquery_ml/scheduled/``
+(see ``appchurn.bqml_scheduled``). The committed scripts use placeholder names:
 
     01_train_model.sql      training table, CREATE MODEL, out-of-time evaluation
     02_score_users.sql      today's features, ML.PREDICT, ranked at-risk table
@@ -388,6 +389,11 @@ def main() -> None:
     # committed by accident; the repository keeps the placeholder versions.
     out = args.out or (OUT_DIR / "local" if personalised else OUT_DIR)
     for path in write(render_all(target, dataset, score_date=args.score_date), out):
+        print(f"wrote {path}")
+    from appchurn import bqml_scheduled
+
+    scheduled = bqml_scheduled.render_all(target, dataset)
+    for path in write(scheduled, out / "scheduled"):
         print(f"wrote {path}")
 
 

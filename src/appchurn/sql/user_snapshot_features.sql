@@ -27,7 +27,7 @@ WITH daily AS (
 ),
 
 snapshots AS (
-  SELECT snapshot_date FROM UNNEST([{snapshot_dates}]) AS snapshot_date
+  SELECT snapshot_date FROM UNNEST({snapshot_array}) AS snapshot_date
 ),
 
 user_first_seen AS (

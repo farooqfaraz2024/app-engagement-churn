@@ -162,10 +162,65 @@ the Python model's 0.798 (same data and model family, different library defaults
 you to enable billing; scheduled queries and `EXPORT DATA` to Cloud Storage need it.
 Without billing, run the final `SELECT` of script 2 and use **Save results → CSV**.
 
-**Before a real campaign**, add the steps shown in the production architecture below:
-an identity map from app user to customer ID, consent and contact-cap filters, and a
-random holdout group. The demo score date is 4 Oct 2018, the day after the last day of
-data, so its outcome is genuinely unknown, exactly as on a real scoring day.
+### Running it every day: scheduled scripts
+
+[`bigquery_ml/scheduled/`](bigquery_ml/scheduled) holds the production versions, built
+for BigQuery scheduled queries. They are generated from the same SQL as everything
+else and tested the same way.
+
+| Script | Schedule | What it does |
+|---|---|---|
+| [`00_setup.sql`](bigquery_ml/scheduled/00_setup.sql) | once | Creates `at_risk_customers` (partitioned by score date, so every day's list is kept), `model_registry` and `model_monitoring` |
+| [`01_retrain_monthly.sql`](bigquery_ml/scheduled/01_retrain_monthly.sql) | monthly | Trains a candidate on the latest 16 weekly snapshots whose outcome is complete, scores the newest 2 weeks with the candidate, the active model and the recency rule, and promotes the candidate only if it beats the rule and is at least as good as the active model. Every decision is logged in `model_registry`; rejected candidates are dropped |
+| [`02_score_daily.sql`](bigquery_ml/scheduled/02_score_daily.sql) | daily | Stops if yesterday's events have not landed, scores every regular user with the active model, adds bands and reasons, marks a stable 10% holdout, and replaces today's rows so a re-run is safe |
+| [`03_export_daily.sql`](bigquery_ml/scheduled/03_export_daily.sql) | daily, after 02 | Exports High and Medium users outside the holdout to a per-date folder in Cloud Storage; stops if today's scores are missing |
+| [`04_monitor_weekly.sql`](bigquery_ml/scheduled/04_monitor_weekly.sql) | weekly | Joins scores from 14+ days ago with what happened, and records ROC-AUC vs the rule, predicted vs actual churn, High-band churn and contacted vs holdout churn, with a status |
+
+**How they differ from the one-off scripts**
+
+| Production need | How the scheduled scripts handle it |
+|---|---|
+| Dates move every day | One variable, `run_date`. Its default is the demo date; when scheduling, change it to `@run_date`, which the scheduler passes to each run |
+| Keep daily cost low | Statements that read raw events are run with `EXECUTE IMMEDIATE`, so their date filters reach BigQuery as constants. Google documents that only constant `_TABLE_SUFFIX` filters limit which daily tables are scanned |
+| Never score incomplete data | 02 counts yesterday's events first and stops if there are none |
+| Keep history for monitoring | `at_risk_customers` is appended to by date (delete-then-insert for the day), not replaced |
+| A bad retrain must not reach customers | Candidate models are compared with the active model and the rule on the newest labelled weeks before promotion |
+| Prove the campaign works | `MOD(ABS(FARM_FINGERPRINT(id || salt)), 100) < 10` puts the same 10% of users in a holdout every day; 04 compares their churn with contacted users |
+| Fail loudly | Missing data, no active model or no scores stop the run with a clear message instead of producing an empty list |
+
+**What is tested locally:** the run-time SQL, once its date placeholders are filled in,
+is identical to the tested demo SQL (for both training and scoring); the SQL ROC-AUC
+matches scikit-learn, ties included; the outcome query reproduces the training label;
+the monitoring metrics match Python; every placeholder gets a value; and all
+`DECLARE` statements come first, as BigQuery requires. Scripting, `ML.PREDICT`,
+`EXPORT DATA` and `FARM_FINGERPRINT` only run in BigQuery.
+
+**Backtest walkthrough on the 2018 demo data** (change the `run_date` line in each
+script; needs billing for the `INSERT`/`DELETE` statements):
+
+1. Run `00_setup.sql`.
+2. Run `01_retrain_monthly.sql` with `run_date = 2018-09-06`. It trains on snapshots
+   up to 23 Aug, tests on 16 and 23 Aug, and the first model is promoted if it beats
+   the rule.
+3. Run `02_score_daily.sql` with `run_date` set to 2018-09-06, then 2018-09-13, then
+   2018-09-20: three days of scores from a model that never saw those weeks.
+4. Run `04_monitor_weekly.sql` with `run_date = 2018-10-04` to check those three days
+   against what actually happened.
+5. Optionally run `01_retrain_monthly.sql` with `run_date = 2018-10-04` to watch the
+   promotion gate compare a new candidate with the active model.
+
+**To schedule for real:** link a billing account with a budget alert, change each
+`run_date` default to `@run_date`, then in the BigQuery console use **Schedule** on
+each script with the timing in the table above. Schedule 02 late enough in the
+morning for yesterday's export to have landed; if it has not, the run stops and the
+next run tries again.
+
+**Before a real campaign**, two steps remain that depend on the company's own systems:
+an identity map from app user to customer ID, and consent and contact-cap filters.
+`03_export_daily.sql` marks where they join in. The holdout group is already built into
+the scheduled scripts. In all scripts the demo score date is 4 Oct 2018, the day after
+the last day of data, so its outcome is genuinely unknown, exactly as on a real
+scoring day.
 
 ## Architecture
 
@@ -421,8 +476,10 @@ app-engagement-churn/
 │   ├── report.py          # builds the interactive report from the scores
 │   ├── report_template.html
 │   ├── bqml.py            # generates the BigQuery ML scripts from the same SQL
+│   ├── bqml_scheduled.py  # generates the scheduled production scripts
 │   └── plots.py
-├── bigquery_ml/           # the BigQuery ML version: train, score, export (generated)
+├── bigquery_ml/           # BigQuery ML: one-off demo scripts (generated)
+│   └── scheduled/         # production scripts for scheduled queries (generated)
 ├── tests/                 # SQL logic in DuckDB, end-to-end pipeline, extract, BQML
 ├── docs/
 │   ├── index.html         # the interactive report (served by GitHub Pages)
