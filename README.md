@@ -73,6 +73,7 @@ plotly.js charts:
 | Segments | Risk mix by platform, device, country and tenure |
 | Drivers | Feature importance; churn rate by days since last active |
 | Calibration | Whether predicted probabilities match what happened, by decile and by band |
+| Model monitoring | Week-by-week checks: performance vs the rule, calibration, drift, event tracking |
 | Data quality | Coverage, row counts, placeholder values handled, data scanned |
 | Method | Definitions and caveats in plain language |
 
@@ -88,6 +89,43 @@ never contains outcomes.
 Tue 16 Sep 2025) so it reads as current. Weekdays are preserved, a banner on the page
 says so, and every figure comes from the real 2018 data. Set `DISPLAY_SHIFT_WEEKS=0` to
 show the original dates. No events or users are simulated.
+
+## Model monitoring
+
+`python -m appchurn.monitor` replays production week by week. Each week is scored by a
+model trained only on weeks whose 14-day outcome was already known, then checked:
+
+| Check | Compares | Warning / alert |
+|---|---|---|
+| Beats the recency rule | Realised ROC-AUC vs the no-model rule | alert if the model is not better |
+| Ranking quality stable | Realised ROC-AUC vs the first monitored week | warning if it falls by more than 0.05 |
+| Probabilities match reality | Average predicted vs actual churn rate | warning above 5 points, alert above 10 |
+| Inputs match training data | Feature distributions vs the rows the model learned from (PSI) | warning above 0.10, alert above 0.25 |
+| Scores stable | Score distribution vs the previous week (PSI) | warning only: weekly retraining reshapes scores by itself |
+| Population size normal | Users scored vs the previous week | warning above ±30% |
+| Event tracking healthy | Each event's count per user vs the training data | warning outside ×0.5–×2, alert if it drops to zero |
+
+`--fail-on-alert` makes the command exit with code 1 when the latest week alerts, so a
+scheduler can page someone. Results go to `reports/monitoring.json` and
+`reports/monitoring_weekly.csv`, and to the **Model monitoring** section of the report.
+
+**What it found on the real data** (7 weeks, 7 Aug to 18 Sep 2018):
+
+- **Early weeks alert on drift.** The first models learned only from three July weeks in
+  which users had been silent far longer than usual (about 8–10 days on average,
+  against about 6 from late July). The largest input drift fell from PSI 0.40 to 0.10
+  as normal weeks entered the training data. The likely cause is an activity dip or tracking gap
+  in early July; the daily event counts would confirm which.
+- **4 Sep alerts on calibration.** Actual churn jumped to 47% while the model predicted
+  33%. The ranking still held (ROC-AUC 0.799, above the rule's 0.767), so the right
+  response is recalibration, not a new model.
+- **28 Aug warns on a score shift** with stable inputs: that week's retrain stopped at
+  100 trees instead of 211, reshaping the lowest scores. This shows Python's random
+  early-stopping split makes retrains less stable than a time-ordered split would.
+- **App errors per user roughly doubled** against the training data through early
+  September (warning), easing back to ×1.4 by the latest week: a real trend worth
+  raising with the app team.
+- The latest week passes every check, and the model beat the recency rule in all 7 weeks.
 
 ## BigQuery ML version
 
@@ -151,7 +189,9 @@ flowchart LR
         SCORE["score.py<br/>latest snapshot · risk bands<br/>reason codes · at-risk CSV"]
         HTML["docs/index.html<br/>interactive report<br/>GitHub Pages"]
         EXT --> PQ --> TRAIN --> REP
+        MON["monitor.py<br/>weekly checks: drift<br/>calibration · tracking"]
         PQ --> SCORE --> HTML
+        PQ --> MON --> HTML
         REP --> HTML
     end
 
@@ -169,7 +209,7 @@ flowchart LR
     classDef store fill:#eef4fc,stroke:#2a78d6,color:#0b0b0b
     classDef step fill:#fcfcfb,stroke:#52514e,color:#0b0b0b
     class RAW,COPY,PQ,REP,HTML store
-    class SQL,BQML,EXT,TRAIN,SCORE,SYN,DUCK,TESTS step
+    class SQL,BQML,EXT,TRAIN,SCORE,MON,SYN,DUCK,TESTS step
 ```
 
 ### From prototype to production
@@ -377,6 +417,7 @@ app-engagement-churn/
 │   ├── model.py           # pipelines, recency-rule benchmark, gains/lift, bootstrap
 │   ├── train.py           # CV, final evaluation, reports
 │   ├── score.py           # production scoring: bands, reason codes, at-risk CSV
+│   ├── monitor.py         # weekly checks: performance, calibration, drift, tracking
 │   ├── report.py          # builds the interactive report from the scores
 │   ├── report_template.html
 │   ├── bqml.py            # generates the BigQuery ML scripts from the same SQL
@@ -414,6 +455,7 @@ export GCP_PROJECT=your-project-id                      # Windows: $env:GCP_PROJ
 python -m appchurn.extract --dry-run    # how much data each query will scan (free)
 python -m appchurn.extract              # run in BigQuery, save data/user_snapshots.parquet
 python -m appchurn.train                # train, evaluate, write reports/
+python -m appchurn.monitor              # weekly production checks (also run by report)
 python -m appchurn.report               # score latest snapshot, write docs/index.html
 open docs/index.html                    # view the report (Windows: start docs\index.html)
 pytest                                  # tests, no Google account needed

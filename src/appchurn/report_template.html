@@ -25,6 +25,8 @@
   --low: #5a6270;
   --low-bg: #eef0f3;
   --banner-bg: #eef4fc;
+  --good: #1f7a3a;
+  --good-bg: #e6f4ea;
   --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   color-scheme: light;
@@ -33,13 +35,13 @@
   :root:not([data-theme="light"]) {
     --bg: #111419; --surface: #191d24; --fg: #e7eaf0; --muted: #a0a8b5; --line: #2b313b; --grid: #232831;
     --accent: #5b9ae8; --rule: #ea7a4a; --high: #ef7b7b; --high-bg: #3a2124; --med: #e5b04a; --med-bg: #362c17;
-    --low: #a0a8b5; --low-bg: #242932; --banner-bg: #17253a; color-scheme: dark;
+    --low: #a0a8b5; --low-bg: #242932; --banner-bg: #17253a; --good: #6cc68a; --good-bg: #183324; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #111419; --surface: #191d24; --fg: #e7eaf0; --muted: #a0a8b5; --line: #2b313b; --grid: #232831;
   --accent: #5b9ae8; --rule: #ea7a4a; --high: #ef7b7b; --high-bg: #3a2124; --med: #e5b04a; --med-bg: #362c17;
-  --low: #a0a8b5; --low-bg: #242932; --banner-bg: #17253a; color-scheme: dark;
+  --low: #a0a8b5; --low-bg: #242932; --banner-bg: #17253a; --good: #6cc68a; --good-bg: #183324; color-scheme: dark;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -80,6 +82,18 @@ section.panel { background: var(--surface); border: 1px solid var(--line); borde
 .chip.High { color: var(--high); background: var(--high-bg); }
 .chip.Medium { color: var(--med); background: var(--med-bg); }
 .chip.Low { color: var(--low); background: var(--low-bg); }
+.chip.ok { color: var(--good); background: var(--good-bg); }
+.chip.warning { color: var(--med); background: var(--med-bg); }
+.chip.alert { color: var(--high); background: var(--high-bg); }
+.chip.pending { color: var(--low); background: var(--low-bg); }
+.checks { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; }
+.check { border: 1px solid var(--line); border-radius: 8px; padding: 11px 12px; display: grid; gap: 4px; align-content: start; min-width: 0; }
+.check .head { display: flex; justify-content: space-between; gap: 8px; align-items: center; font-weight: 600; font-size: 14px; }
+.check .detail { font-size: 13px; color: var(--muted); }
+.timeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)); gap: 8px; }
+.tl { border: 1px solid var(--line); border-radius: 8px; padding: 9px 10px; display: grid; gap: 4px; font-size: 13px; min-width: 0; }
+.tl .when { font-weight: 600; }
+.tl ul { margin: 0; padding-left: 16px; color: var(--muted); font-size: 12.5px; }
 .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; }
 .field { display: grid; gap: 4px; font-size: 13px; color: var(--muted); }
 select, input[type="search"] { font: inherit; font-size: 14px; color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 7px 9px; min-width: 0; }
@@ -142,7 +156,7 @@ footer { color: var(--muted); font-size: 13px; padding-bottom: 24px; }
   <div class="wrap">
     <a href="#summary">Summary</a><a href="#customers">At-risk users</a><a href="#reasons">Reasons</a>
     <a href="#planner">Campaign planner</a><a href="#performance">Model performance</a>
-    <a href="#segments">Segments</a><a href="#drivers">Drivers</a><a href="#calibration">Calibration</a>
+    <a href="#segments">Segments</a><a href="#drivers">Drivers</a><a href="#calibration">Calibration</a><a href="#monitoring">Monitoring</a>
     <a href="#quality">Data quality</a><a href="#method">Method</a>
   </div>
 </nav>
@@ -249,6 +263,27 @@ footer { color: var(--muted); font-size: 13px; padding-bottom: 24px; }
     <div class="grid-2">
       <div><h3>Predicted vs actual, test period by decile</h3><div id="chart-calib" class="chart"></div></div>
       <div><h3>Expected vs actual churn by band, score date</h3><div id="chart-bands" class="chart"></div></div>
+    </div>
+  </section>
+
+  <section class="panel" id="monitoring">
+    <div class="panel-head">
+      <h2>Model monitoring</h2>
+      <p class="sub" id="mon-sub"></p>
+    </div>
+    <div class="checks" id="mon-checks"></div>
+    <h3>Status by week</h3>
+    <div class="timeline" id="mon-timeline"></div>
+    <div class="grid-2">
+      <div><h3>Ranking quality once outcomes are known</h3><div id="chart-mon-auc" class="chart"></div></div>
+      <div><h3>Predicted vs actual churn rate</h3><div id="chart-mon-cal" class="chart"></div></div>
+    </div>
+    <div class="grid-2">
+      <div><h3>Input drift against the model's training data</h3><div id="chart-mon-drift" class="chart tall"></div>
+        <p class="caption">Population stability index (PSI): under 0.10 stable, 0.10–0.25 some shift, over 0.25 large shift.</p></div>
+      <div><h3>Event tracking, latest week</h3>
+        <div class="tablewrap"><table><thead><tr><th scope="col">Event</th><th class="num" scope="col">Per user</th><th class="num" scope="col">Training data</th><th class="num" scope="col">Ratio</th><th scope="col">Status</th></tr></thead><tbody id="mon-events"></tbody></table></div>
+        <p class="caption">Each event's average count per user against the model's training data. A drop to zero usually means the app's tracking changed, not the customers.</p></div>
     </div>
   </section>
 
@@ -540,6 +575,41 @@ footer { color: var(--muted); font-size: 13px; padding-bottom: 24px; }
       { type: "bar", name: "Expected", x: C.bands.map((b) => b.band), y: C.bands.map((b) => b.expected), marker: { color: css("--muted") }, text: C.bands.map((b) => pct(b.expected)), textposition: "outside", cliponaxis: false, hovertemplate: "%{x}: expected %{y:.0%}<extra></extra>" },
       { type: "bar", name: "Actual", x: C.bands.map((b) => b.band), y: C.bands.map((b) => b.actual), marker: { color: css("--accent") }, text: C.bands.map((b) => pct(b.actual)), textposition: "outside", cliponaxis: false, hovertemplate: "%{x}: actually churned %{y:.0%}<extra></extra>" },
     ], layout({ barmode: "group", bargap: 0.35, bargroupgap: 0.08, showlegend: true, legend: { orientation: "h", y: 1.12, x: 0, font: { color: css("--muted") } }, yaxis: { tickformat: ".0%", range: [0, 1.1], title: { text: "Churn rate" } }, xaxis: { type: "category" }, margin: { t: 30 } })]);
+  }
+
+  // Model monitoring
+  const MN = D.monitoring;
+  const STATUS = { ok: "OK", warning: "Warning", alert: "Alert", pending: "Pending" };
+  if (!MN) {
+    $("monitoring").hidden = true;
+  } else {
+    const counts = MN.weeks.reduce((a, w) => ((a[w.status] = (a[w.status] || 0) + 1), a), {});
+    $("mon-sub").textContent = `Production replayed week by week: each week is scored by a model trained only on weeks whose outcome was already known, then checked once its own outcome arrives. Latest week ${MN.latest.week}: ${STATUS[MN.latest.status]}. Across ${MN.weeks.length} weeks: ${counts.ok || 0} OK, ${counts.warning || 0} warning, ${counts.alert || 0} alert. In live use the newest ${M.churn_days} days stay pending until their outcome is known.`;
+    $("mon-checks").innerHTML = MN.latest.checks.map((c) => `<div class="check"><div class="head"><span>${esc(c.check)}</span><span class="chip ${c.status}">${STATUS[c.status]}</span></div><div class="detail">${esc(c.detail)}</div></div>`).join("");
+    $("mon-timeline").innerHTML = MN.weeks.map((w) => {
+      const items = w.issues.map((c) => `<li>${esc(c.check)}</li>`).join("");
+      return `<div class="tl"><span class="when">${esc(w.week.replace(/^\w+ /, ""))}</span><span class="chip ${w.status}">${STATUS[w.status]}</span>${items ? `<ul>${items}</ul>` : '<span class="detail" style="color:var(--muted)">All checks passed</span>'}</div>`;
+    }).join("");
+    const wk = MN.weeks.map((w) => w.week.replace(/^\w+ /, ""));
+    draw("chart-mon-auc", () => [[
+      { type: "scatter", mode: "lines+markers", x: wk, y: MN.weeks.map((w) => w.rule_roc_auc), line: { color: css("--rule"), width: 2 }, marker: { size: 8 }, name: "Recency rule", hovertemplate: "%{x}<br>Rule %{y:.3f}<extra></extra>" },
+      { type: "scatter", mode: "lines+markers", x: wk, y: MN.weeks.map((w) => w.roc_auc), line: { color: css("--accent"), width: 2.5 }, marker: { size: 9, color: MN.weeks.map((w) => (w.status === "alert" ? css("--high") : w.status === "warning" ? css("--med") : css("--accent"))) }, name: "Model", hovertemplate: "%{x}<br>Model %{y:.3f}<extra></extra>" },
+    ], layout({ showlegend: true, legend: { orientation: "h", y: 1.12, x: 0, font: { color: css("--muted") } }, xaxis: { type: "category" }, yaxis: { title: { text: "ROC-AUC" }, tickformat: ".2f" }, margin: { t: 30 } })]);
+    draw("chart-mon-cal", () => [[
+      { type: "scatter", mode: "lines+markers", x: wk, y: MN.weeks.map((w) => w.actual_churn), line: { color: css("--fg"), width: 2 }, marker: { size: 8 }, name: "Actual", hovertemplate: "%{x}<br>Actual %{y:.0%}<extra></extra>" },
+      { type: "scatter", mode: "lines+markers", x: wk, y: MN.weeks.map((w) => w.mean_predicted), line: { color: css("--accent"), width: 2.5, dash: "dot" }, marker: { size: 8 }, name: "Predicted", hovertemplate: "%{x}<br>Predicted %{y:.0%}<extra></extra>" },
+    ], layout({ showlegend: true, legend: { orientation: "h", y: 1.12, x: 0, font: { color: css("--muted") } }, xaxis: { type: "category" }, yaxis: { tickformat: ".0%", rangemode: "tozero", title: { text: "Churn rate" } }, margin: { t: 30 } })]);
+    draw("chart-mon-drift", () => {
+      const dw = MN.drift.weeks.map((w) => w.replace(/^\w+ /, ""));
+      const dark = document.documentElement.getAttribute("data-theme") === "dark" || (!document.documentElement.getAttribute("data-theme") && window.matchMedia("(prefers-color-scheme: dark)").matches);
+      return [[{
+        type: "heatmap", x: dw, y: MN.drift.features, z: MN.drift.psi, zmin: 0, zmax: 0.4,
+        colorscale: [[0, dark ? "#1b2a1f" : "#e9f5ec"], [0.25, dark ? "#4a4520" : "#fbf2df"], [0.625, dark ? "#6b3a1c" : "#f6c9a8"], [1, dark ? "#7a2626" : "#e98a8a"]],
+        text: MN.drift.psi.map((r) => r.map((v) => v.toFixed(2))), texttemplate: "%{text}", textfont: { color: css("--fg"), size: 11 },
+        xgap: 2, ygap: 2, showscale: false, hovertemplate: "%{y}<br>%{x}: PSI %{z:.2f}<extra></extra>",
+      }], layout({ xaxis: { type: "category", showgrid: false }, yaxis: { showgrid: false, automargin: true } })];
+    });
+    $("mon-events").innerHTML = MN.events.map((e) => `<tr><td>${esc(e.event)}</td><td class="num">${e.per_user.toFixed(2)}</td><td class="num">${e.baseline.toFixed(2)}</td><td class="num">×${e.ratio.toFixed(2)}</td><td><span class="chip ${e.status}">${STATUS[e.status]}</span></td></tr>`).join("");
   }
 
   // Data quality and method

@@ -1,0 +1,1741 @@
+{
+  "config": {
+    "min_train_weeks": 3,
+    "auc_drop_warn": 0.05,
+    "calibration_warn": 0.05,
+    "calibration_alert": 0.1,
+    "psi_warn": 0.1,
+    "psi_alert": 0.25,
+    "population_change_warn": 0.3,
+    "event_ratio_low": 0.5,
+    "event_ratio_high": 2.0,
+    "event_min_baseline": 0.05
+  },
+  "weeks": [
+    {
+      "week": "2018-08-07",
+      "users": 1119,
+      "mean_predicted": 0.3422008874891747,
+      "train_rows": 4814,
+      "roc_auc": 0.8257791305498577,
+      "rule_roc_auc": 0.7896365895439541,
+      "actual_churn": 0.3190348525469169,
+      "high_band_churn": 0.7053571428571429,
+      "calibration_gap": 0.02316603494225783,
+      "max_feature_psi": 0.3965387991777255,
+      "max_psi_feature": "days_since_last_active",
+      "score_psi": 0.0,
+      "population_change": 0.0,
+      "status": "alert",
+      "checks": [
+        {
+          "check": "Beats the recency rule",
+          "status": "ok",
+          "detail": "ROC-AUC 0.826 vs rule 0.790"
+        },
+        {
+          "check": "Ranking quality stable",
+          "status": "ok",
+          "detail": "ROC-AUC 0.826, first monitored week 0.826"
+        },
+        {
+          "check": "Probabilities match reality",
+          "status": "ok",
+          "detail": "predicted 34.2% vs actual 31.9%"
+        },
+        {
+          "check": "Inputs match training data",
+          "status": "alert",
+          "detail": "largest shift: days_since_last_active (PSI 0.40)"
+        },
+        {
+          "check": "Scores stable",
+          "status": "ok",
+          "detail": "PSI 0.00 vs previous week (model retrained weekly)"
+        },
+        {
+          "check": "Population size normal",
+          "status": "ok",
+          "detail": "1,119 users (+0% vs previous week)"
+        },
+        {
+          "check": "Event tracking healthy",
+          "status": "warning",
+          "detail": "spend_virtual_currency \u00d72.1; error \u00d72.1"
+        }
+      ]
+    },
+    {
+      "week": "2018-08-14",
+      "users": 1148,
+      "mean_predicted": 0.3413801626158363,
+      "train_rows": 5912,
+      "roc_auc": 0.8163368377654093,
+      "rule_roc_auc": 0.786698618841476,
+      "actual_churn": 0.32926829268292684,
+      "high_band_churn": 0.7,
+      "calibration_gap": 0.01211186993290947,
+      "max_feature_psi": 0.26353555899135045,
+      "max_psi_feature": "days_since_last_active",
+      "score_psi": 0.020269053186921994,
+      "population_change": 0.025915996425379804,
+      "status": "alert",
+      "checks": [
+        {
+          "check": "Beats the recency rule",
+          "status": "ok",
+          "detail": "ROC-AUC 0.816 vs rule 0.787"
+        },
+        {
+          "check": "Ranking quality stable",
+          "status": "ok",
+          "detail": "ROC-AUC 0.816, first monitored week 0.826"
+        },
+        {
+          "check": "Probabilities match reality",
+          "status": "ok",
+          "detail": "predicted 34.1% vs actual 32.9%"
+        },
+        {
+          "check": "Inputs match training data",
+          "status": "alert",
+          "detail": "largest shift: days_since_last_active (PSI 0.26)"
+        },
+        {
+          "check": "Scores stable",
+          "status": "ok",
+          "detail": "PSI 0.02 vs previous week (model retrained weekly)"
+        },
+        {
+          "check": "Population size normal",
+          "status": "ok",
+          "detail": "1,148 users (+3% vs previous week)"
+        },
+        {
+          "check": "Event tracking healthy",
+          "status": "warning",
+          "detail": "error \u00d72.1"
+        }
+      ]
+    },
+    {
+      "week": "2018-08-21",
+      "users": 1160,
+      "mean_predicted": 0.3458805501318937,
+      "train_rows": 7031,
+      "roc_auc": 0.8302065325580177,
+      "rule_roc_auc": 0.795770797317827,
+      "actual_churn": 0.3482758620689655,
+      "high_band_churn": 0.7112068965517241,
+      "calibration_gap": -0.0023953119370717646,
+      "max_feature_psi": 0.161629238093947,
+      "max_psi_feature": "days_since_last_active",
+      "score_psi": 0.023805325436614216,
+      "population_change": 0.010452961672473868,
+      "status": "warning",
+      "checks": [
+        {
+          "check": "Beats the recency rule",
+          "status": "ok",
+          "detail": "ROC-AUC 0.830 vs rule 0.796"
+        },
+        {
+          "check": "Ranking quality stable",
+          "status": "ok",
+          "detail": "ROC-AUC 0.830, first monitored week 0.826"
+        },
+        {
+          "check": "Probabilities match reality",
+          "status": "ok",
+          "detail": "predicted 34.6% vs actual 34.8%"
+        },
+        {
+          "check": "Inputs match training data",
+          "status": "warning",
+          "detail": "largest shift: days_since_last_active (PSI 0.16)"
+        },
+        {
+          "check": "Scores stable",
+          "status": "ok",
+          "detail": "PSI 0.02 vs previous week (model retrained weekly)"
+        },
+        {
+          "check": "Population size normal",
+          "status": "ok",
+          "detail": "1,160 users (+1% vs previous week)"
+        },
+        {
+          "check": "Event tracking healthy",
+          "status": "warning",
+          "detail": "error \u00d72.2"
+        }
+      ]
+    },
+    {
+      "week": "2018-08-28",
+      "users": 1152,
+      "mean_predicted": 0.34045307175674067,
+      "train_rows": 8179,
+      "roc_auc": 0.8472491431652184,
+      "rule_roc_auc": 0.8073758391846269,
+      "actual_churn": 0.3767361111111111,
+      "high_band_churn": 0.8,
+      "calibration_gap": -0.03628303935437044,
+      "max_feature_psi": 0.11873575848357296,
+      "max_psi_feature": "days_since_last_active",
+      "score_psi": 0.7448430494313932,
+      "population_change": -0.006896551724137931,
+      "status": "warning",
+      "checks": [
+        {
+          "check": "Beats the recency rule",
+          "status": "ok",
+          "detail": "ROC-AUC 0.847 vs rule 0.807"
+        },
+        {
+          "check": "Ranking quality stable",
+          "status": "ok",
+          "detail": "ROC-AUC 0.847, first monitored week 0.826"
+        },
+        {
+          "check": "Probabilities match reality",
+          "status": "ok",
+          "detail": "predicted 34.0% vs actual 37.7%"
+        },
+        {
+          "check": "Inputs match training data",
+          "status": "warning",
+          "detail": "largest shift: days_since_last_active (PSI 0.12)"
+        },
+        {
+          "check": "Scores stable",
+          "status": "warning",
+          "detail": "PSI 0.74 vs previous week (model retrained weekly)"
+        },
+        {
+          "check": "Population size normal",
+          "status": "ok",
+          "detail": "1,152 users (-1% vs previous week)"
+        },
+        {
+          "check": "Event tracking healthy",
+          "status": "warning",
+          "detail": "error \u00d72.2"
+        }
+      ]
+    },
+    {
+      "week": "2018-09-04",
+      "users": 1117,
+      "mean_predicted": 0.333525978557147,
+      "train_rows": 9339,
+      "roc_auc": 0.7988219608651407,
+      "rule_roc_auc": 0.7672390472632651,
+      "actual_churn": 0.4664279319606088,
+      "high_band_churn": 0.8295964125560538,
+      "calibration_gap": -0.13290195340346178,
+      "max_feature_psi": 0.09125733539563874,
+      "max_psi_feature": "sessions_28d",
+      "score_psi": 0.030077167326276175,
+      "population_change": -0.030381944444444444,
+      "status": "alert",
+      "checks": [
+        {
+          "check": "Beats the recency rule",
+          "status": "ok",
+          "detail": "ROC-AUC 0.799 vs rule 0.767"
+        },
+        {
+          "check": "Ranking quality stable",
+          "status": "ok",
+          "detail": "ROC-AUC 0.799, first monitored week 0.826"
+        },
+        {
+          "check": "Probabilities match reality",
+          "status": "alert",
+          "detail": "predicted 33.4% vs actual 46.6%"
+        },
+        {
+          "check": "Inputs match training data",
+          "status": "ok",
+          "detail": "largest shift: sessions_28d (PSI 0.09)"
+        },
+        {
+          "check": "Scores stable",
+          "status": "ok",
+          "detail": "PSI 0.03 vs previous week (model retrained weekly)"
+        },
+        {
+          "check": "Population size normal",
+          "status": "ok",
+          "detail": "1,117 users (-3% vs previous week)"
+        },
+        {
+          "check": "Event tracking healthy",
+          "status": "warning",
+          "detail": "error \u00d72.0"
+        }
+      ]
+    },
+    {
+      "week": "2018-09-11",
+      "users": 1200,
+      "mean_predicted": 0.35214902384868385,
+      "train_rows": 10491,
+      "roc_auc": 0.8279079550467265,
+      "rule_roc_auc": 0.8051654781762783,
+      "actual_churn": 0.38916666666666666,
+      "high_band_churn": 0.7875,
+      "calibration_gap": -0.03701764281798281,
+      "max_feature_psi": 0.1520136243068399,
+      "max_psi_feature": "days_since_last_active",
+      "score_psi": 0.1200605502119775,
+      "population_change": 0.07430617726051925,
+      "status": "warning",
+      "checks": [
+        {
+          "check": "Beats the recency rule",
+          "status": "ok",
+          "detail": "ROC-AUC 0.828 vs rule 0.805"
+        },
+        {
+          "check": "Ranking quality stable",
+          "status": "ok",
+          "detail": "ROC-AUC 0.828, first monitored week 0.826"
+        },
+        {
+          "check": "Probabilities match reality",
+          "status": "ok",
+          "detail": "predicted 35.2% vs actual 38.9%"
+        },
+        {
+          "check": "Inputs match training data",
+          "status": "warning",
+          "detail": "largest shift: days_since_last_active (PSI 0.15)"
+        },
+        {
+          "check": "Scores stable",
+          "status": "warning",
+          "detail": "PSI 0.12 vs previous week (model retrained weekly)"
+        },
+        {
+          "check": "Population size normal",
+          "status": "ok",
+          "detail": "1,200 users (+7% vs previous week)"
+        },
+        {
+          "check": "Event tracking healthy",
+          "status": "ok",
+          "detail": "19 events within normal range"
+        }
+      ]
+    },
+    {
+      "week": "2018-09-18",
+      "users": 1256,
+      "mean_predicted": 0.368239812799672,
+      "train_rows": 11608,
+      "roc_auc": 0.8094509886166357,
+      "rule_roc_auc": 0.7555096298367646,
+      "actual_churn": 0.3200636942675159,
+      "high_band_churn": 0.6693227091633466,
+      "calibration_gap": 0.04817611853215609,
+      "max_feature_psi": 0.09742039617175417,
+      "max_psi_feature": "sessions_28d",
+      "score_psi": 0.0185469411775594,
+      "population_change": 0.04666666666666667,
+      "status": "ok",
+      "checks": [
+        {
+          "check": "Beats the recency rule",
+          "status": "ok",
+          "detail": "ROC-AUC 0.809 vs rule 0.756"
+        },
+        {
+          "check": "Ranking quality stable",
+          "status": "ok",
+          "detail": "ROC-AUC 0.809, first monitored week 0.826"
+        },
+        {
+          "check": "Probabilities match reality",
+          "status": "ok",
+          "detail": "predicted 36.8% vs actual 32.0%"
+        },
+        {
+          "check": "Inputs match training data",
+          "status": "ok",
+          "detail": "largest shift: sessions_28d (PSI 0.10)"
+        },
+        {
+          "check": "Scores stable",
+          "status": "ok",
+          "detail": "PSI 0.02 vs previous week (model retrained weekly)"
+        },
+        {
+          "check": "Population size normal",
+          "status": "ok",
+          "detail": "1,256 users (+5% vs previous week)"
+        },
+        {
+          "check": "Event tracking healthy",
+          "status": "ok",
+          "detail": "19 events within normal range"
+        }
+      ]
+    }
+  ],
+  "latest": {
+    "week": "2018-09-18",
+    "status": "ok",
+    "checks": [
+      {
+        "check": "Beats the recency rule",
+        "status": "ok",
+        "detail": "ROC-AUC 0.809 vs rule 0.756"
+      },
+      {
+        "check": "Ranking quality stable",
+        "status": "ok",
+        "detail": "ROC-AUC 0.809, first monitored week 0.826"
+      },
+      {
+        "check": "Probabilities match reality",
+        "status": "ok",
+        "detail": "predicted 36.8% vs actual 32.0%"
+      },
+      {
+        "check": "Inputs match training data",
+        "status": "ok",
+        "detail": "largest shift: sessions_28d (PSI 0.10)"
+      },
+      {
+        "check": "Scores stable",
+        "status": "ok",
+        "detail": "PSI 0.02 vs previous week (model retrained weekly)"
+      },
+      {
+        "check": "Population size normal",
+        "status": "ok",
+        "detail": "1,256 users (+5% vs previous week)"
+      },
+      {
+        "check": "Event tracking healthy",
+        "status": "ok",
+        "detail": "19 events within normal range"
+      }
+    ]
+  },
+  "drift": [
+    {
+      "week": "2018-08-07",
+      "feature": "days_since_last_active",
+      "psi": 0.3965387991777255
+    },
+    {
+      "week": "2018-08-07",
+      "feature": "active_days_28d",
+      "psi": 0.031125509681925036
+    },
+    {
+      "week": "2018-08-07",
+      "feature": "engagement_minutes_7d",
+      "psi": 0.2170580853690789
+    },
+    {
+      "week": "2018-08-07",
+      "feature": "sessions_28d",
+      "psi": 0.270240964977087
+    },
+    {
+      "week": "2018-08-07",
+      "feature": "events_per_session",
+      "psi": 0.134087957901875
+    },
+    {
+      "week": "2018-08-07",
+      "feature": "tenure_days",
+      "psi": 0.04465666825633282
+    },
+    {
+      "week": "2018-08-07",
+      "feature": "churn_score",
+      "psi": 0.0
+    },
+    {
+      "week": "2018-08-14",
+      "feature": "days_since_last_active",
+      "psi": 0.26353555899135045
+    },
+    {
+      "week": "2018-08-14",
+      "feature": "active_days_28d",
+      "psi": 0.021696459379408554
+    },
+    {
+      "week": "2018-08-14",
+      "feature": "engagement_minutes_7d",
+      "psi": 0.173290519790752
+    },
+    {
+      "week": "2018-08-14",
+      "feature": "sessions_28d",
+      "psi": 0.20232066654494904
+    },
+    {
+      "week": "2018-08-14",
+      "feature": "events_per_session",
+      "psi": 0.08164925316401973
+    },
+    {
+      "week": "2018-08-14",
+      "feature": "tenure_days",
+      "psi": 0.048261239469375626
+    },
+    {
+      "week": "2018-08-14",
+      "feature": "churn_score",
+      "psi": 0.020269053186921994
+    },
+    {
+      "week": "2018-08-21",
+      "feature": "days_since_last_active",
+      "psi": 0.161629238093947
+    },
+    {
+      "week": "2018-08-21",
+      "feature": "active_days_28d",
+      "psi": 0.02351625253964107
+    },
+    {
+      "week": "2018-08-21",
+      "feature": "engagement_minutes_7d",
+      "psi": 0.06745010452355106
+    },
+    {
+      "week": "2018-08-21",
+      "feature": "sessions_28d",
+      "psi": 0.14277237884570523
+    },
+    {
+      "week": "2018-08-21",
+      "feature": "events_per_session",
+      "psi": 0.0576212905490331
+    },
+    {
+      "week": "2018-08-21",
+      "feature": "tenure_days",
+      "psi": 0.036212203956481955
+    },
+    {
+      "week": "2018-08-21",
+      "feature": "churn_score",
+      "psi": 0.023805325436614216
+    },
+    {
+      "week": "2018-08-28",
+      "feature": "days_since_last_active",
+      "psi": 0.11873575848357296
+    },
+    {
+      "week": "2018-08-28",
+      "feature": "active_days_28d",
+      "psi": 0.02490091749298247
+    },
+    {
+      "week": "2018-08-28",
+      "feature": "engagement_minutes_7d",
+      "psi": 0.05176818339040509
+    },
+    {
+      "week": "2018-08-28",
+      "feature": "sessions_28d",
+      "psi": 0.09019367453780078
+    },
+    {
+      "week": "2018-08-28",
+      "feature": "events_per_session",
+      "psi": 0.036562311901742334
+    },
+    {
+      "week": "2018-08-28",
+      "feature": "tenure_days",
+      "psi": 0.03125884163124944
+    },
+    {
+      "week": "2018-08-28",
+      "feature": "churn_score",
+      "psi": 0.7448430494313932
+    },
+    {
+      "week": "2018-09-04",
+      "feature": "days_since_last_active",
+      "psi": 0.0788657215625392
+    },
+    {
+      "week": "2018-09-04",
+      "feature": "active_days_28d",
+      "psi": 0.024925873551564552
+    },
+    {
+      "week": "2018-09-04",
+      "feature": "engagement_minutes_7d",
+      "psi": 0.04044665153404466
+    },
+    {
+      "week": "2018-09-04",
+      "feature": "sessions_28d",
+      "psi": 0.09125733539563874
+    },
+    {
+      "week": "2018-09-04",
+      "feature": "events_per_session",
+      "psi": 0.02544555267394407
+    },
+    {
+      "week": "2018-09-04",
+      "feature": "tenure_days",
+      "psi": 0.026693533165662146
+    },
+    {
+      "week": "2018-09-04",
+      "feature": "churn_score",
+      "psi": 0.030077167326276175
+    },
+    {
+      "week": "2018-09-11",
+      "feature": "days_since_last_active",
+      "psi": 0.1520136243068399
+    },
+    {
+      "week": "2018-09-11",
+      "feature": "active_days_28d",
+      "psi": 0.00830979185536132
+    },
+    {
+      "week": "2018-09-11",
+      "feature": "engagement_minutes_7d",
+      "psi": 0.007884884756715643
+    },
+    {
+      "week": "2018-09-11",
+      "feature": "sessions_28d",
+      "psi": 0.10619878037595545
+    },
+    {
+      "week": "2018-09-11",
+      "feature": "events_per_session",
+      "psi": 0.01545933245187603
+    },
+    {
+      "week": "2018-09-11",
+      "feature": "tenure_days",
+      "psi": 0.028596594149672007
+    },
+    {
+      "week": "2018-09-11",
+      "feature": "churn_score",
+      "psi": 0.1200605502119775
+    },
+    {
+      "week": "2018-09-18",
+      "feature": "days_since_last_active",
+      "psi": 0.04758526870468438
+    },
+    {
+      "week": "2018-09-18",
+      "feature": "active_days_28d",
+      "psi": 0.03516670117850623
+    },
+    {
+      "week": "2018-09-18",
+      "feature": "engagement_minutes_7d",
+      "psi": 0.03672449841358545
+    },
+    {
+      "week": "2018-09-18",
+      "feature": "sessions_28d",
+      "psi": 0.09742039617175417
+    },
+    {
+      "week": "2018-09-18",
+      "feature": "events_per_session",
+      "psi": 0.011950553409323954
+    },
+    {
+      "week": "2018-09-18",
+      "feature": "tenure_days",
+      "psi": 0.029616764649654875
+    },
+    {
+      "week": "2018-09-18",
+      "feature": "churn_score",
+      "psi": 0.0185469411775594
+    }
+  ],
+  "events": [
+    {
+      "week": "2018-08-07",
+      "event": "level_start_quickplay",
+      "per_user": 103.51921358355675,
+      "baseline_per_user": 80.31055255504778,
+      "ratio": 1.2889864443729349,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-07",
+      "event": "level_end_quickplay",
+      "per_user": 65.86505808757819,
+      "baseline_per_user": 55.061902783547986,
+      "ratio": 1.1962001812123735,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-07",
+      "event": "level_complete_quickplay",
+      "per_user": 39.66219839142091,
+      "baseline_per_user": 24.071250519318653,
+      "ratio": 1.6476999547484898,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-07",
+      "event": "level_reset_quickplay",
+      "per_user": 27.87846291331546,
+      "baseline_per_user": 17.417532197756543,
+      "ratio": 1.6005977538486382,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-07",
+      "event": "post_score",
+      "per_user": 44.164432529043786,
+      "baseline_per_user": 33.593061902783546,
+      "ratio": 1.3146891062462005,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-07",
+      "event": "spend_virtual_currency",
+      "per_user": 1.519213583556747,
+      "baseline_per_user": 0.7110511009555464,
+      "ratio": 2.1365744058551503,
+      "status": "warning"
+    },
+    {
+      "week": "2018-08-07",
+      "event": "ad_reward",
+      "per_user": 0.34405719392314565,
+      "baseline_per_user": 0.2769007062733693,
+      "ratio": 1.242529130942253,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-07",
+      "event": "challenge_a_friend",
+      "per_user": 0.10277033065236818,
+      "baseline_per_user": 0.056917324470294975,
+      "ratio": 1.805607196206206,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-07",
+      "event": "completed_5_levels",
+      "per_user": 0.19928507596067918,
+      "baseline_per_user": 0.10947237224761114,
+      "ratio": 1.8204143371436614,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-07",
+      "event": "use_extra_steps",
+      "per_user": 1.4146559428060768,
+      "baseline_per_user": 0.7613211466555879,
+      "ratio": 1.8581592656666994,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-07",
+      "event": "in_app_purchase",
+      "per_user": 0.002680965147453083,
+      "baseline_per_user": 0.0012463647694225177,
+      "ratio": 2.1510277033065237,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-07",
+      "event": "level_fail_quickplay",
+      "per_user": 26.202859696157283,
+      "baseline_per_user": 21.21292064810968,
+      "ratio": 1.2352311183746527,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-07",
+      "event": "level_retry_quickplay",
+      "per_user": 5.277926720285969,
+      "baseline_per_user": 4.637100124636477,
+      "ratio": 1.1381955486026365,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-07",
+      "event": "no_more_extra_steps",
+      "per_user": 0.4352100089365505,
+      "baseline_per_user": 0.3005816368923972,
+      "ratio": 1.4478928700902238,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-07",
+      "event": "error",
+      "per_user": 0.24128686327077747,
+      "baseline_per_user": 0.11321146655587869,
+      "ratio": 2.1312935041936196,
+      "status": "warning"
+    },
+    {
+      "week": "2018-08-07",
+      "event": "app_exception",
+      "per_user": 1.0196604110813225,
+      "baseline_per_user": 0.6400083090984628,
+      "ratio": 1.5931987078693561,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-07",
+      "event": "select_content",
+      "per_user": 18.144772117962468,
+      "baseline_per_user": 10.863107602825094,
+      "ratio": 1.670311367738241,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-07",
+      "event": "level_start",
+      "per_user": 10.063449508489724,
+      "baseline_per_user": 6.5120481927710845,
+      "ratio": 1.545358573921641,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-07",
+      "event": "level_up",
+      "per_user": 4.500446827524575,
+      "baseline_per_user": 2.753012048192771,
+      "ratio": 1.6347356091227123,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-14",
+      "event": "level_start_quickplay",
+      "per_user": 98.36672473867596,
+      "baseline_per_user": 84.76809878213803,
+      "ratio": 1.1604215046923216,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-14",
+      "event": "level_end_quickplay",
+      "per_user": 64.18728222996516,
+      "baseline_per_user": 57.5456698240866,
+      "ratio": 1.1154146337366746,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-14",
+      "event": "level_complete_quickplay",
+      "per_user": 39.48954703832753,
+      "baseline_per_user": 27.33660351826793,
+      "ratio": 1.444566696515106,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-14",
+      "event": "level_reset_quickplay",
+      "per_user": 25.656794425087107,
+      "baseline_per_user": 18.91441136671177,
+      "ratio": 1.3564680352803113,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-14",
+      "event": "post_score",
+      "per_user": 44.48693379790941,
+      "baseline_per_user": 35.9176251691475,
+      "ratio": 1.2385822723079913,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-14",
+      "event": "spend_virtual_currency",
+      "per_user": 1.4764808362369337,
+      "baseline_per_user": 0.8604533152909337,
+      "ratio": 1.7159336944825538,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-14",
+      "event": "ad_reward",
+      "per_user": 0.2926829268292683,
+      "baseline_per_user": 0.2917794316644114,
+      "ratio": 1.0030965005302226,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-14",
+      "event": "challenge_a_friend",
+      "per_user": 0.08623693379790941,
+      "baseline_per_user": 0.06512178619756427,
+      "ratio": 1.3242409158785466,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-14",
+      "event": "completed_5_levels",
+      "per_user": 0.22996515679442509,
+      "baseline_per_user": 0.1229702300405954,
+      "ratio": 1.8700880425978557,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-14",
+      "event": "use_extra_steps",
+      "per_user": 1.4137630662020906,
+      "baseline_per_user": 0.878213802435724,
+      "ratio": 1.6098164960298071,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-14",
+      "event": "in_app_purchase",
+      "per_user": 0.004355400696864111,
+      "baseline_per_user": 0.0013531799729364006,
+      "ratio": 3.218641114982578,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-14",
+      "event": "level_fail_quickplay",
+      "per_user": 24.69773519163763,
+      "baseline_per_user": 22.247293640054128,
+      "ratio": 1.1101456020327667,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-14",
+      "event": "level_retry_quickplay",
+      "per_user": 5.186411149825784,
+      "baseline_per_user": 4.8010825439783495,
+      "ratio": 1.0802586921424053,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-14",
+      "event": "no_more_extra_steps",
+      "per_user": 0.3797909407665505,
+      "baseline_per_user": 0.3273004059539919,
+      "ratio": 1.1603741818149078,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-14",
+      "event": "error",
+      "per_user": 0.2682926829268293,
+      "baseline_per_user": 0.12973612990527741,
+      "ratio": 2.067987407383852,
+      "status": "warning"
+    },
+    {
+      "week": "2018-08-14",
+      "event": "app_exception",
+      "per_user": 1.0522648083623694,
+      "baseline_per_user": 0.7210757780784844,
+      "ratio": 1.4592985097439193,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-14",
+      "event": "select_content",
+      "per_user": 17.027874564459932,
+      "baseline_per_user": 12.289411366711773,
+      "ratio": 1.3855728363510718,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-14",
+      "event": "level_start",
+      "per_user": 10.304006968641115,
+      "baseline_per_user": 7.121447902571042,
+      "ratio": 1.4468977530427598,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-14",
+      "event": "level_up",
+      "per_user": 4.9956445993031355,
+      "baseline_per_user": 3.0691813261163734,
+      "ratio": 1.6276798496048575,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-21",
+      "event": "level_start_quickplay",
+      "per_user": 95.65603448275863,
+      "baseline_per_user": 87.75238230692646,
+      "ratio": 1.09006766503715,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-21",
+      "event": "level_end_quickplay",
+      "per_user": 63.64913793103448,
+      "baseline_per_user": 58.869719812259994,
+      "ratio": 1.0811863575029135,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-21",
+      "event": "level_complete_quickplay",
+      "per_user": 39.935344827586206,
+      "baseline_per_user": 29.298250604465938,
+      "ratio": 1.363062435594665,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-21",
+      "event": "level_reset_quickplay",
+      "per_user": 23.90344827586207,
+      "baseline_per_user": 20.341061015502774,
+      "ratio": 1.1751328142442643,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-21",
+      "event": "post_score",
+      "per_user": 44.78706896551724,
+      "baseline_per_user": 37.230123737732896,
+      "ratio": 1.202979320751635,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-21",
+      "event": "spend_virtual_currency",
+      "per_user": 1.5043103448275863,
+      "baseline_per_user": 0.9652965438771156,
+      "ratio": 1.5583919308210932,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-21",
+      "event": "ad_reward",
+      "per_user": 0.3086206896551724,
+      "baseline_per_user": 0.3000995590954345,
+      "ratio": 1.0283943454812878,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-21",
+      "event": "challenge_a_friend",
+      "per_user": 0.07586206896551724,
+      "baseline_per_user": 0.07111363959607453,
+      "ratio": 1.0667724137931034,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-21",
+      "event": "completed_5_levels",
+      "per_user": 0.2267241379310345,
+      "baseline_per_user": 0.1351159152325416,
+      "ratio": 1.6779972776769512,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-21",
+      "event": "use_extra_steps",
+      "per_user": 1.4637931034482758,
+      "baseline_per_user": 0.9635898165268099,
+      "ratio": 1.519103957246469,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-21",
+      "event": "in_app_purchase",
+      "per_user": 0.0034482758620689655,
+      "baseline_per_user": 0.0015645000711136396,
+      "ratio": 2.204075235109718,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-21",
+      "event": "level_fail_quickplay",
+      "per_user": 23.70689655172414,
+      "baseline_per_user": 22.8768311762196,
+      "ratio": 1.0362841063568013,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-21",
+      "event": "level_retry_quickplay",
+      "per_user": 5.207758620689655,
+      "baseline_per_user": 4.876973403498791,
+      "ratio": 1.0678259219034403,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-21",
+      "event": "no_more_extra_steps",
+      "per_user": 0.3879310344827586,
+      "baseline_per_user": 0.344474470203385,
+      "ratio": 1.1261532219026738,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-21",
+      "event": "error",
+      "per_user": 0.31724137931034485,
+      "baseline_per_user": 0.14748968852225858,
+      "ratio": 2.150939380839956,
+      "status": "warning"
+    },
+    {
+      "week": "2018-08-21",
+      "event": "app_exception",
+      "per_user": 0.9448275862068966,
+      "baseline_per_user": 0.7685962167543735,
+      "ratio": 1.229289925725516,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-21",
+      "event": "select_content",
+      "per_user": 16.682758620689654,
+      "baseline_per_user": 13.221305646422984,
+      "ratio": 1.2618087098835935,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-21",
+      "event": "level_start",
+      "per_user": 10.079310344827586,
+      "baseline_per_user": 7.58967429953065,
+      "ratio": 1.328029365561958,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-21",
+      "event": "level_up",
+      "per_user": 4.850862068965517,
+      "baseline_per_user": 3.2969705589532072,
+      "ratio": 1.471308882571785,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-28",
+      "event": "level_start_quickplay",
+      "per_user": 96.97482638888889,
+      "baseline_per_user": 89.2422056486123,
+      "ratio": 1.086647575371719,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-28",
+      "event": "level_end_quickplay",
+      "per_user": 64.88020833333333,
+      "baseline_per_user": 59.616089986550925,
+      "ratio": 1.0883002952385834,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-28",
+      "event": "level_complete_quickplay",
+      "per_user": 41.549479166666664,
+      "baseline_per_user": 30.728695439540285,
+      "ratio": 1.352139378920808,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-28",
+      "event": "level_reset_quickplay",
+      "per_user": 23.74826388888889,
+      "baseline_per_user": 21.087174471206747,
+      "ratio": 1.1261946886869882,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-28",
+      "event": "post_score",
+      "per_user": 46.24305555555556,
+      "baseline_per_user": 38.24868565839345,
+      "ratio": 1.2090103165520876,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-28",
+      "event": "spend_virtual_currency",
+      "per_user": 1.5503472222222223,
+      "baseline_per_user": 1.037046093654481,
+      "ratio": 1.4949646227959863,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-28",
+      "event": "ad_reward",
+      "per_user": 0.328125,
+      "baseline_per_user": 0.29905856461670133,
+      "ratio": 1.0971931214227308,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-28",
+      "event": "challenge_a_friend",
+      "per_user": 0.06510416666666667,
+      "baseline_per_user": 0.07323633696050862,
+      "ratio": 0.8889598984418476,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-28",
+      "event": "completed_5_levels",
+      "per_user": 0.2152777777777778,
+      "baseline_per_user": 0.14842890328891062,
+      "ratio": 1.4503763957532492,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-28",
+      "event": "use_extra_steps",
+      "per_user": 1.5390625,
+      "baseline_per_user": 1.0267758894730408,
+      "ratio": 1.4989273859847583,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-28",
+      "event": "in_app_purchase",
+      "per_user": 0.0026041666666666665,
+      "baseline_per_user": 0.0019562293678933853,
+      "ratio": 1.3312174479166667,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-28",
+      "event": "level_fail_quickplay",
+      "per_user": 23.32204861111111,
+      "baseline_per_user": 23.132412275339284,
+      "ratio": 1.0081978625278951,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-28",
+      "event": "level_retry_quickplay",
+      "per_user": 5.203993055555555,
+      "baseline_per_user": 4.920405917593838,
+      "ratio": 1.0576349071014035,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-28",
+      "event": "no_more_extra_steps",
+      "per_user": 0.4010416666666667,
+      "baseline_per_user": 0.34943147083995596,
+      "ratio": 1.147697617797994,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-28",
+      "event": "error",
+      "per_user": 0.359375,
+      "baseline_per_user": 0.16444553123853772,
+      "ratio": 2.18537407063197,
+      "status": "warning"
+    },
+    {
+      "week": "2018-08-28",
+      "event": "app_exception",
+      "per_user": 1.0243055555555556,
+      "baseline_per_user": 0.8084117862819415,
+      "ratio": 1.2670591559118103,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-28",
+      "event": "select_content",
+      "per_user": 17.208333333333332,
+      "baseline_per_user": 13.75559359334882,
+      "ratio": 1.2510062336862002,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-28",
+      "event": "level_start",
+      "per_user": 9.667534722222221,
+      "baseline_per_user": 7.970656559481599,
+      "ratio": 1.2128906383153693,
+      "status": "ok"
+    },
+    {
+      "week": "2018-08-28",
+      "event": "level_up",
+      "per_user": 4.692708333333333,
+      "baseline_per_user": 3.535395525125321,
+      "ratio": 1.3273503063471204,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-04",
+      "event": "level_start_quickplay",
+      "per_user": 96.87555953446733,
+      "baseline_per_user": 90.03886925795052,
+      "ratio": 1.0759304324105905,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-04",
+      "event": "level_end_quickplay",
+      "per_user": 66.6338406445837,
+      "baseline_per_user": 60.11703608523396,
+      "ratio": 1.108401960304733,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-04",
+      "event": "level_complete_quickplay",
+      "per_user": 43.11369740376007,
+      "baseline_per_user": 31.87225613020666,
+      "ratio": 1.3527030288545978,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-04",
+      "event": "level_reset_quickplay",
+      "per_user": 21.46642793196061,
+      "baseline_per_user": 21.43698468786808,
+      "ratio": 1.0013734788040967,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-04",
+      "event": "post_score",
+      "per_user": 47.563115487914054,
+      "baseline_per_user": 39.060820216297245,
+      "ratio": 1.2176681192185876,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-04",
+      "event": "spend_virtual_currency",
+      "per_user": 1.593554162936437,
+      "baseline_per_user": 1.095085126887247,
+      "ratio": 1.4551874770375852,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-04",
+      "event": "ad_reward",
+      "per_user": 0.35273052820053713,
+      "baseline_per_user": 0.3002462790448656,
+      "ratio": 1.1748039953155551,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-04",
+      "event": "challenge_a_friend",
+      "per_user": 0.05998209489704566,
+      "baseline_per_user": 0.07356247992290395,
+      "ratio": 0.8153897878362583,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-04",
+      "event": "completed_5_levels",
+      "per_user": 0.19158460161145927,
+      "baseline_per_user": 0.1581539779419638,
+      "ratio": 1.211380226438333,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-04",
+      "event": "use_extra_steps",
+      "per_user": 1.5872873769024172,
+      "baseline_per_user": 1.0810579291144662,
+      "ratio": 1.468272267520966,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-04",
+      "event": "in_app_purchase",
+      "per_user": 0.0008952551477170994,
+      "baseline_per_user": 0.002141556911874933,
+      "ratio": 0.4180393912264996,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-04",
+      "event": "level_fail_quickplay",
+      "per_user": 23.510295434198746,
+      "baseline_per_user": 23.2037691401649,
+      "ratio": 1.0132101940931337,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-04",
+      "event": "level_retry_quickplay",
+      "per_user": 5.208594449418084,
+      "baseline_per_user": 4.956098083306564,
+      "ratio": 1.0509466039346544,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-04",
+      "event": "no_more_extra_steps",
+      "per_user": 0.42256042972247093,
+      "baseline_per_user": 0.35421351322411393,
+      "ratio": 1.1929540064021027,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-04",
+      "event": "error",
+      "per_user": 0.36884512085944493,
+      "baseline_per_user": 0.18342434950208802,
+      "ratio": 2.010884170289758,
+      "status": "warning"
+    },
+    {
+      "week": "2018-09-04",
+      "event": "app_exception",
+      "per_user": 1.0519247985675917,
+      "baseline_per_user": 0.8253560338365992,
+      "ratio": 1.2745103391051815,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-04",
+      "event": "select_content",
+      "per_user": 17.63563115487914,
+      "baseline_per_user": 14.11917764214584,
+      "ratio": 1.2490551221791177,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-04",
+      "event": "level_start",
+      "per_user": 8.899731423455686,
+      "baseline_per_user": 8.232573080629617,
+      "ratio": 1.0810388606687042,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-04",
+      "event": "level_up",
+      "per_user": 4.448522829006267,
+      "baseline_per_user": 3.6987900203447905,
+      "ratio": 1.2026967750366073,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-11",
+      "event": "level_start_quickplay",
+      "per_user": 85.82416666666667,
+      "baseline_per_user": 90.80049566294919,
+      "ratio": 0.9451949137507507,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-11",
+      "event": "level_end_quickplay",
+      "per_user": 59.295833333333334,
+      "baseline_per_user": 60.64007244304642,
+      "ratio": 0.9778324949895862,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-11",
+      "event": "level_complete_quickplay",
+      "per_user": 37.600833333333334,
+      "baseline_per_user": 32.934896578019256,
+      "ratio": 1.141671516844177,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-11",
+      "event": "level_reset_quickplay",
+      "per_user": 18.310833333333335,
+      "baseline_per_user": 21.69078257554094,
+      "ratio": 0.8441757815589872,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-11",
+      "event": "post_score",
+      "per_user": 40.524166666666666,
+      "baseline_per_user": 39.84949003908112,
+      "ratio": 1.016930621368652,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-11",
+      "event": "spend_virtual_currency",
+      "per_user": 1.2541666666666667,
+      "baseline_per_user": 1.1450767324373272,
+      "ratio": 1.0952686672771164,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-11",
+      "event": "ad_reward",
+      "per_user": 0.285,
+      "baseline_per_user": 0.3033075969878944,
+      "ratio": 0.9396401634192331,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-11",
+      "event": "challenge_a_friend",
+      "per_user": 0.05416666666666667,
+      "baseline_per_user": 0.07263368601658564,
+      "ratio": 0.7457513123359581,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-11",
+      "event": "completed_5_levels",
+      "per_user": 0.12583333333333332,
+      "baseline_per_user": 0.164426651415499,
+      "ratio": 0.7652855072463768,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-11",
+      "event": "use_extra_steps",
+      "per_user": 1.25,
+      "baseline_per_user": 1.131350681536555,
+      "ratio": 1.1048740416210296,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-11",
+      "event": "in_app_purchase",
+      "per_user": 0.0008333333333333334,
+      "baseline_per_user": 0.002192355352206653,
+      "ratio": 0.380108695652174,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-11",
+      "event": "level_fail_quickplay",
+      "per_user": 21.685833333333335,
+      "baseline_per_user": 23.216757220474694,
+      "ratio": 0.9340595298213633,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-11",
+      "event": "level_retry_quickplay",
+      "per_user": 4.559166666666667,
+      "baseline_per_user": 4.983319035363645,
+      "ratio": 0.9148855680948738,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-11",
+      "event": "no_more_extra_steps",
+      "per_user": 0.3466666666666667,
+      "baseline_per_user": 0.3593556381660471,
+      "ratio": 0.9646896551724138,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-11",
+      "event": "error",
+      "per_user": 0.3358333333333333,
+      "baseline_per_user": 0.20274521018015443,
+      "ratio": 1.656430418429713,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-11",
+      "event": "app_exception",
+      "per_user": 0.8983333333333333,
+      "baseline_per_user": 0.8472023639309885,
+      "ratio": 1.060352722772277,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-11",
+      "event": "select_content",
+      "per_user": 16.2525,
+      "baseline_per_user": 14.458392908207035,
+      "ratio": 1.1240875872708214,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-11",
+      "event": "level_start",
+      "per_user": 6.406666666666666,
+      "baseline_per_user": 8.390143932894862,
+      "ratio": 0.7635943695254541,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-11",
+      "event": "level_up",
+      "per_user": 2.9225,
+      "baseline_per_user": 3.807930607187113,
+      "ratio": 0.7674772209567198,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-18",
+      "event": "level_start_quickplay",
+      "per_user": 80.59554140127389,
+      "baseline_per_user": 91.38507925568574,
+      "ratio": 0.881933265886613,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-18",
+      "event": "level_end_quickplay",
+      "per_user": 56.18312101910828,
+      "baseline_per_user": 61.21683321847002,
+      "ratio": 0.9177724175734886,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-18",
+      "event": "level_complete_quickplay",
+      "per_user": 35.015127388535035,
+      "baseline_per_user": 33.914369400413506,
+      "ratio": 1.0324569793742975,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-18",
+      "event": "level_reset_quickplay",
+      "per_user": 16.431528662420384,
+      "baseline_per_user": 21.66919365954514,
+      "ratio": 0.7582898062836962,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-18",
+      "event": "post_score",
+      "per_user": 37.49363057324841,
+      "baseline_per_user": 40.59174707098553,
+      "ratio": 0.9236761972250361,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-18",
+      "event": "spend_virtual_currency",
+      "per_user": 1.0493630573248407,
+      "baseline_per_user": 1.1882322536181944,
+      "ratio": 0.8831295852553288,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-18",
+      "event": "ad_reward",
+      "per_user": 0.2197452229299363,
+      "baseline_per_user": 0.30806340454858716,
+      "ratio": 0.7133116744325226,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-18",
+      "event": "challenge_a_friend",
+      "per_user": 0.03980891719745223,
+      "baseline_per_user": 0.07141626464507236,
+      "ratio": 0.5574208815778353,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-18",
+      "event": "completed_5_levels",
+      "per_user": 0.11544585987261147,
+      "baseline_per_user": 0.16703997243280497,
+      "ratio": 0.6911271487371191,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-18",
+      "event": "use_extra_steps",
+      "per_user": 1.0262738853503184,
+      "baseline_per_user": 1.175223983459683,
+      "ratio": 0.8732581191281701,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-18",
+      "event": "in_app_purchase",
+      "per_user": 0.0015923566878980893,
+      "baseline_per_user": 0.002067539627842867,
+      "ratio": 0.7701698513800426,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-18",
+      "event": "level_fail_quickplay",
+      "per_user": 21.16480891719745,
+      "baseline_per_user": 23.24500344589938,
+      "ratio": 0.9105100356924709,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-18",
+      "event": "level_retry_quickplay",
+      "per_user": 4.211783439490445,
+      "baseline_per_user": 5.00499655410062,
+      "ratio": 0.841515752101709,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-18",
+      "event": "no_more_extra_steps",
+      "per_user": 0.2786624203821656,
+      "baseline_per_user": 0.36543762922122675,
+      "ratio": 0.7625444073069727,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-18",
+      "event": "error",
+      "per_user": 0.31369426751592355,
+      "baseline_per_user": 0.21872846312887664,
+      "ratio": 1.4341721375836316,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-18",
+      "event": "app_exception",
+      "per_user": 0.8909235668789809,
+      "baseline_per_user": 0.8669021364576155,
+      "ratio": 1.0277095065419068,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-18",
+      "event": "select_content",
+      "per_user": 15.721337579617835,
+      "baseline_per_user": 14.764128187456926,
+      "ratio": 1.0648334517289086,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-18",
+      "event": "level_start",
+      "per_user": 5.339968152866242,
+      "baseline_per_user": 8.439179875947623,
+      "ratio": 0.6327591343426159,
+      "status": "ok"
+    },
+    {
+      "week": "2018-09-18",
+      "event": "level_up",
+      "per_user": 2.4761146496815285,
+      "baseline_per_user": 3.8695727084769125,
+      "ratio": 0.639893558339712,
+      "status": "ok"
+    }
+  ]
+}

@@ -27,7 +27,9 @@ flowchart LR
         SCORE["score.py<br/>latest snapshot · risk bands<br/>reason codes · at-risk CSV"]
         HTML["docs/index.html<br/>interactive report<br/>GitHub Pages"]
         EXT --> PQ --> TRAIN --> REP
+        MON["monitor.py<br/>weekly checks: drift<br/>calibration · tracking"]
         PQ --> SCORE --> HTML
+        PQ --> MON --> HTML
         REP --> HTML
     end
 
@@ -45,7 +47,7 @@ flowchart LR
     classDef store fill:#eef4fc,stroke:#2a78d6,color:#0b0b0b
     classDef step fill:#fcfcfb,stroke:#52514e,color:#0b0b0b
     class RAW,COPY,PQ,REP,HTML store
-    class SQL,BQML,EXT,TRAIN,SCORE,SYN,DUCK,TESTS step
+    class SQL,BQML,EXT,TRAIN,SCORE,MON,SYN,DUCK,TESTS step
 ```
 
 ## 2. Reference design for a telecom operator (production)

@@ -41,6 +41,8 @@ from appchurn.features import (
     out_of_time_split,
 )
 from appchurn.model import recency_rule_score
+from appchurn.monitor import run as run_monitor
+from appchurn.monitor import write as write_monitor
 from appchurn.score import BANDS, ScoreResult, export, score
 
 DISPLAY_SHIFT_WEEKS = int(os.environ.get("DISPLAY_SHIFT_WEEKS", "365"))
@@ -161,6 +163,7 @@ def build_payload(
     reports_dir: Path = REPORTS_DIR,
     models_dir: Path = MODELS_DIR,
     weeks: int = DISPLAY_SHIFT_WEEKS,
+    monitoring: dict | None = None,
 ) -> dict:
     metrics = json.loads((reports_dir / "metrics.json").read_text())
     per_week = pd.read_csv(reports_dir / "test_by_snapshot.csv")
@@ -379,6 +382,75 @@ def build_payload(
         "drivers": drivers,
         "calibration": calibration,
         "quality": quality,
+        "monitoring": _monitoring_payload(monitoring, weeks) if monitoring else None,
+    }
+
+
+def _monitoring_payload(monitoring: dict, weeks: int) -> dict:
+    """Shift dates for display and keep only what the page draws."""
+
+    def week_label(iso: str) -> str:
+        return fmt(date.fromisoformat(iso), weeks)
+
+    drift_features = [
+        "days_since_last_active",
+        f"active_days_{OBS}d",
+        "engagement_minutes_7d",
+        f"sessions_{OBS}d",
+        "events_per_session",
+        "tenure_days",
+    ]
+    drift = pd.DataFrame(monitoring["drift"])
+    drift = drift[drift["feature"].isin(drift_features)]
+    events = pd.DataFrame(monitoring["events"])
+    latest_week = monitoring["latest"]["week"]
+    latest_events = events[events["week"] == latest_week].copy()
+    latest_events = latest_events[latest_events["baseline_per_user"] >= 0.05]
+    latest_events = latest_events.sort_values("ratio", key=lambda r: (r - 1).abs(), ascending=False)
+    return {
+        "weeks": [
+            {
+                "week": week_label(w["week"]),
+                "status": w["status"],
+                "users": w["users"],
+                "roc_auc": w.get("roc_auc"),
+                "rule_roc_auc": w.get("rule_roc_auc"),
+                "mean_predicted": w["mean_predicted"],
+                "actual_churn": w.get("actual_churn"),
+                "high_band_churn": w.get("high_band_churn"),
+                "max_psi": w["max_feature_psi"],
+                "max_psi_feature": feature_label(w["max_psi_feature"] or ""),
+                "issues": [c for c in w["checks"] if c["status"] not in ("ok",)],
+            }
+            for w in monitoring["weeks"]
+        ],
+        "latest": {
+            "week": week_label(latest_week),
+            "status": monitoring["latest"]["status"],
+            "checks": monitoring["latest"]["checks"],
+        },
+        "drift": {
+            "features": [feature_label(f) for f in drift_features],
+            "weeks": [week_label(w) for w in sorted(drift["week"].unique())],
+            "psi": [
+                [
+                    round(float(v), 3)
+                    for v in drift[drift["feature"] == f].sort_values("week")["psi"]
+                ]
+                for f in drift_features
+            ],
+        },
+        "events": [
+            {
+                "event": r.event.replace("_", " "),
+                "per_user": round(float(r.per_user), 2),
+                "baseline": round(float(r.baseline_per_user), 2),
+                "ratio": round(float(r.ratio), 2),
+                "status": r.status,
+            }
+            for r in latest_events.itertuples(index=False)
+        ],
+        "thresholds": monitoring["config"],
     }
 
 
@@ -398,7 +470,9 @@ def build(
 ) -> Path:
     result = score(snapshots, score_date)
     export(result, reports_dir / "at_risk_customers.csv")
-    payload = build_payload(snapshots, result, reports_dir, models_dir, weeks)
+    monitoring = run_monitor(snapshots)
+    write_monitor(monitoring, reports_dir)
+    payload = build_payload(snapshots, result, reports_dir, models_dir, weeks, monitoring)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(render(payload), encoding="utf-8")
     return out_path
